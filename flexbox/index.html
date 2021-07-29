@@ -264,7 +264,7 @@
 
 					<h2>Flex Flow (Direction &amp; Wrap)</h2>
 
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>row wrap</h3>
 						<div class="flex flex-flow-ex ex-row ex-wrap">
 							<div class="col-3 box">1</div>
@@ -276,7 +276,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>row-reverse wrap</h3>
 						<div class="flex flex-flow-ex ex-row-rev ex-wrap">
 							<div class="col-3 box">1</div>
@@ -288,7 +288,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>column wrap</h3>
 						<div class="flex flex-flow-ex ex-col ex-wrap">
 							<div class="col-3 box">1</div>
@@ -300,7 +300,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>column-reverse wrap</h3>
 						<div class="flex flex-flow-ex ex-col-rev ex-wrap">
 							<div class="col-3 box">1</div>
@@ -312,7 +312,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>row wrap-reverse</h3>
 						<div class="flex flex-flow-ex ex-row ex-wrap-rev">
 							<div class="col-3 box">1</div>
@@ -324,7 +324,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-lg-4 col-xxl-3 flex-example">
 						<h3>row-reverse wrap-reverse</h3>
 						<div class="flex flex-flow-ex ex-row-rev ex-wrap-rev">
 							<div class="col-3 box">1</div>
@@ -336,7 +336,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-xxl-3 flex-example">
 						<h3>column wrap-reverse</h3>
 						<div class="flex flex-flow-ex ex-col ex-wrap-rev">
 							<div class="col-3 box">1</div>
@@ -348,7 +348,7 @@
 							<div class="col-3 box">7</div>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 col-xl-3 flex-example">
+					<div class="col-12 col-sm-6 col-xxl-3 flex-example">
 						<h3>column-reverse wrap-reverse</h3>
 						<div class="flex flex-flow-ex ex-col-rev ex-wrap-rev">
 							<div class="col-3 box">1</div>
@@ -359,6 +359,56 @@
 							<div class="col-3 box">6</div>
 							<div class="col-3 box">7</div>
 						</div>
+					</div>
+				</div>
+
+				<div id="flex-shorthand" class="row col-12 justify-content-center align-items-start container">
+
+					<h2>Flex (Grow, Shrink, Basis)</h2>
+
+					<div class="col-12 col-sm-6 flex-example">
+						<h3>flex-grow</h3>
+						<div class="flex flex-shorthand-ex grow">
+							<div class="box grow-1">1</div>
+							<div class="box grow-2">2</div>
+							<div class="box grow-3">3</div>
+							<div class="box">off (0)</div>
+						</div>
+						<p><strong>Default:</strong> 0<br>
+							This enables each flex item to grow proportionally to fill the container depending on their flex-grow value. Values can be integers or floats. For example, 3 will absorb 3x as much of the empty space as 1.</p>
+					</div>
+					<div class="col-12 col-sm-6 flex-example">
+						<h3>flex-shrink</h3>
+						<div class="flex flex-shorthand-ex shrink">
+							<div class="box shrink-1">1</div>
+							<div class="box shrink-2">2</div>
+							<div class="box shrink-3">3</div>
+							<div class="box shrink-0">off (0)</div>
+						</div>
+						<p><strong>Default:</strong> 1<br>
+							This enables each flex item to shrink proportionally to fit inside the container depending on their flex-shrink value. Shrinking will depend on the content within an item; items will not shrink below their content size. Values can be integers or floats. For example, 3 will shrink 3x as much as 1.</p>
+					</div>
+					<div class="col-12 col-lg-6 flex-example">
+						<h3>flex-basis</h3>
+						<div class="flex flex-shorthand-ex basis">
+							<div class="box">200px</div>
+							<div class="box">20%</div>
+							<div class="box">600px</div>
+							<div class="box">auto</div>
+						</div>
+						<p><strong>Default:</strong> auto<br>
+							This tells the browser what the ideal size is for the item. It will try to render it this size, but will shrink as necessary to fit within the flex container if enabled. Values must be a dimensioned size such as % or px. Set flex-shrink to 0 and add a wrap to force items to maintain their size and break onto new lines if needed.</p>
+					</div>
+					<div class="col-12 col-lg-6 flex-example">
+						<h3>flex</h3>
+						<div class="flex flex-shorthand-ex shorthand">
+							<div class="box">1 0 200px</div>
+							<div class="box">0 3 20%</div>
+							<div class="box">2 1 200px</div>
+							<div class="box">4 1 auto</div>
+						</div>
+						<p><strong>Default:</strong> 1 0 auto</p>
+						<p><strong>Format:</strong> <code>[flex-grow] [flex-shrink] [flex-basis]</code> or <code>[max] [min] [ideal]</code></p>
 					</div>
 				</div>
 				
