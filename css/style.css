@@ -10,6 +10,8 @@ h3 { font: bold 1.25rem Arial, sans-serif; }
 h4 { font: bold 1.1rem Arial, sans-serif; }
 h5 { font: bold 1rem Arial, sans-serif; }
 
+li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; }
+
 /* ################################## QA & QC STYLES ################################## */
 
 #qa-qc-container h3, #qa-qc-container h4 { padding-top: 0.5em; }
