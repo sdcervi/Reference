@@ -2,7 +2,7 @@
 const navDiv = document.getElementById('navbar-container');
 
 const navItems = {
-	navDesign: {
+	/*navDesign: {
 		title: "Design Principles",
 		links: {
 			animation: {
@@ -11,7 +11,7 @@ const navItems = {
 				id:		"nav-animation"
 			}
 		}
-	},
+	},*/
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
