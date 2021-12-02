@@ -19,6 +19,11 @@ const navItems = {
 				title:	"Flexbox",
 				link:	"/Reference/html-css/flexbox.html",
 				id:		"nav-flexbox"
+			},
+			selectors: {
+				title:	"CSS Selectors",
+				link:	"/Reference/html-css/selectors.html",
+				id:		"nav-selectors"
 			}
 		}
 	}

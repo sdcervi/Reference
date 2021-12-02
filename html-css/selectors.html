@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>CSS Selectors | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<a class="navbar-brand col-sm-3 col-md-2" href="/Reference/">Reference</a>
+	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>CSS Selectors</h1></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-3 offset-lg-2">
+			
+			<h3>Specificity</h3>
+			
+			<p>Selectors of equal priority will always have the style defined further down in the stylesheet override the earlier one.</p>
+
+			<h4>Styles</h4>
+			
+			<p>In order of increasing priority:</p>
+
+			<ol>
+				<li><strong>External:</strong> <code>&lt;link rel="stylesheet" href="mystyle.css"&gt;</code></li>
+				<li><strong>Document head:</strong> <code>&lt;style&gt;...&lt;/style&gt;</code></li>
+				<li><strong>Inline</strong>: <code>&lt;tag style="padding: 1rem;"&gt;...&lt;/tag&gt;</code></li>
+			</ol>
+
+			<h4>Selectors</h4>
+			
+			<p>In order of increasing priority:</p>
+
+			<ol>
+				<li><strong>Type:</strong> <code>type</code></li>
+				<li><strong>Class:</strong> <code>.class</code>, <code>[attribute="value"]</code>, <code>:pseudo-class</code></li>
+				<li><strong>ID:</strong> <code>#id</code></li>
+			</ol>
+			
+			<h4>Link pseudo elements</h4>
+			
+			<p>It&rsquo;s recommended to define link pseudo-classes in this order:</p>
+			
+			<ol>
+				<li><code>:link</code> unvisited links</li>
+				<li><code>:visited</code> visited links</li>
+				<li><code>:focus</code> when a user tabs to a link using the keyboard</li>
+				<li><code>:hover</code> when a user places the mouse pointer over a link</li>
+				<li><code>:active</code> when a user clicks the link</li>
+			</ol>
+			
+			<h3>Attribute Selectors</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th scope="col">Format</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>[attr]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code>.</td>
+							<td class="d-none d-md-table-cell"><code>a[href] { ... }</code><br>
+								Any <code>a</code> element with an <code>href</code> attribute defined</td>
+						</tr>
+						<tr>
+							<td><code>[attr=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value is exactly <code>value</code>.</td>
+							<td class="d-none d-md-table-cell"><code>div[lang="en-us"] { ... }</code><br>
+								All divs in US English</td>
+						</tr>
+						<tr>
+							<td><code>[attr~=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value is a whitespace-separated list of words, one of which is exactly <code>value</code>.</td>
+							<td class="d-none d-md-table-cell"><code>img[class~="logo"] { ... }</code><br>
+								<code>&lt;img&gt;</code> elements whose class attribute contains the word "logo"</td>
+						</tr>
+						<tr>
+							<td><code>[attr|=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value can be exactly <code>value</code> or can begin with <code>value</code> immediately followed by a hyphen, - (U+002D). It is often used for language subcode matches.</td>
+							<td class="d-none d-md-table-cell"><code>div[class|="col"] { ... }</code><br>
+								All <code>div</code> elements which have classes beginning with <code>col</code></td>
+						</tr>
+						<tr>
+							<td><code>[attr^=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value is prefixed (preceded) by <code>value</code>.</td>
+							<td class="d-none d-md-table-cell"><code>a[href^="#"] { ... }</code><br>
+								Internal links, beginning with <code>"#"</code></td>
+						</tr>
+						<tr>
+							<td><code>[attr$=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value is suffixed (followed) by <code>value</code>.</td>
+							<td class="d-none d-md-table-cell"><code>a[href$=".org"] { ... }</code><br>
+								Links that end in <code>".org"</code></td>
+						</tr>
+						<tr>
+							<td><code>[attr*=value]</code></td>
+							<td>Represents elements with an attribute name of <code>attr</code> whose value contains at least one occurrence of <code>value</code> within the string.</td>
+							<td class="d-none d-md-table-cell"><code>a[href*="example"] { ... }</code><br>
+								Links with <code>"example"</code> anywhere in the URL</td>
+						</tr>
+						<tr>
+							<td><code>[attr&nbsp;operator&nbsp;value&nbsp;i]</code></td>
+							<td>Adding an i (or I) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).</td>
+							<td class="d-none d-md-table-cell"><code>a[href*="insensitive" i] { ... }</code><br>
+								Links with <code>"insensitive"</code> anywhere in the URL, regardless of capitalization</td>
+						</tr>
+						<tr>
+							<td><code>[attr&nbsp;operator&nbsp;value&nbsp;s]</code></td>
+							<td>Adding an s (or S) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).</td>
+							<td class="d-none d-md-table-cell"><code>a[href*="cAsE" s] { ... }</code><br>
+								Links with <code>"cAsE"</code> anywhere in the URL, with matching capitalization</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+				
+		</main>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script>
+	document.getElementById('nav-selectors').classList.add('active');
+</script>
+</body>
+</html>
