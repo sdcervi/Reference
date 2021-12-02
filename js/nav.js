@@ -1,14 +1,44 @@
 // JavaScript Document
 const navDiv = document.getElementById('navbar-container');
 
-navDiv.innerHTML = `
-	<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>Design Principles</h6>
-	<ul class='nav flex-column mb-2'>
-		<li class='nav-item'><a class='nav-link' id='nav-animation' href='/Reference/design/animations.html'>Animations</a></li>
-	</ul>
+const navItems = {
+	navDesign: {
+		title: "Design Principles",
+		links: {
+			animation: {
+				title:	"Animation",
+				link:	"/Reference/design/animation.html",
+				id:		"nav-animation"
+			}
+		}
+	},
+	navHTML: {
+		title:	"HTML &amp; CSS",
+		links: {
+			flexbox: {
+				title:	"Flexbox",
+				link:	"/Reference/html-css/flexbox.html",
+				id:		"nav-flexbox"
+			}
+		}
+	}
+};
 
-	<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>HTML &amp; CSS</h6>
-	<ul class='nav flex-column mb-2'>
-		<li class='nav-item'><a class='nav-link' id='nav-flexbox' href='/Reference/flexbox/index.html'>Flexbox</a></li>
-	</ul>
-`;
+let navContent = "";
+
+function createNav () {
+	for (const groupIndex in navItems) {
+		const navGroup = navItems[groupIndex];
+		navContent += "<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>" + navGroup.title + "</h6>";
+		navContent += "<ul class='nav flex-column mb-2'>";
+		for (const linkIndex in navGroup.links) {
+			const navLink = navGroup.links[linkIndex];
+			navContent += "<li class='nav-item'><a class='nav-link' id='" + navLink.id + "' href='" + navLink.link + "'>" + navLink.title + "</a></li>";
+		}
+		navContent += "</ul>";
+	}
+}
+
+createNav();
+
+navDiv.innerHTML = navContent;
