@@ -6,11 +6,20 @@ div.container { margin-bottom: 2em; }
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
 h2 { font: bold 1.5rem Arial, sans-serif; }
-h3 { font: 1.25rem Arial, sans-serif; }
+h3 { font: bold 1.25rem Arial, sans-serif; }
+h4 { font: bold 1.1rem Arial, sans-serif; }
+h5 { font: bold 1rem Arial, sans-serif; }
+
+/* ################################## QA & QC STYLES ################################## */
+
+#qa-qc-container h3, #qa-qc-container h4 { padding-top: 0.5em; }
+#qa-qc-container h5 { padding-top: 0.25em; }
+#qa-qc-container .form-check { margin-left: 1.5em; }
 
 /* ################################## FLEXBOX STYLES ################################## */
 
 #flexbox-container h2, #flexbox-container h3 { text-align: center; }
+#flexbox-container h3 { font-weight: normal; }
 
 /* Flex containers */
 .flex-example { margin-bottom: 1em; }

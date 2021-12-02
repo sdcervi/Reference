@@ -2,16 +2,16 @@
 const navDiv = document.getElementById('navbar-container');
 
 const navItems = {
-	/*navDesign: {
+	navDesign: {
 		title: "Design Principles",
 		links: {
-			animation: {
-				title:	"Animation",
-				link:	"/Reference/design/animation.html",
-				id:		"nav-animation"
+			qa_qc: {
+				title:	"QA &amp; QC",
+				link:	"/Reference/design/qa-qc.html",
+				id:		"nav-qa-qc"
 			}
 		}
-	},*/
+	},
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
