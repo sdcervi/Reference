@@ -2,16 +2,6 @@
 const navDiv = document.getElementById('navbar-container');
 
 const navItems = {
-	navDesign: {
-		title: "Design Principles",
-		links: {
-			qa_qc: {
-				title:	"QA &amp; QC",
-				link:	"/Reference/design/qa-qc.html",
-				id:		"nav-qa-qc"
-			}
-		}
-	},
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
@@ -24,6 +14,16 @@ const navItems = {
 				title:	"CSS Selectors",
 				link:	"/Reference/html-css/selectors.html",
 				id:		"nav-selectors"
+			}
+		}
+	},
+	navDesign: {
+		title: "Design Principles",
+		links: {
+			qa_qc: {
+				title:	"QA &amp; QC",
+				link:	"/Reference/design/qa-qc.html",
+				id:		"nav-qa-qc"
 			}
 		}
 	}
