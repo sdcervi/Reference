@@ -20,10 +20,25 @@ const navItems = {
 	navDesign: {
 		title: "Design Principles",
 		links: {
+			typography: {
+				title:	"Typography",
+				link:	"/Reference/design/typography.html",
+				id:		"nav-typography"
+			}
+		}
+	},
+	navResources: {
+		title: "Resources",
+		links: {
 			qa_qc: {
 				title:	"QA &amp; QC",
-				link:	"/Reference/design/qa-qc.html",
+				link:	"/Reference/resources/qa-qc.html",
 				id:		"nav-qa-qc"
+			},
+			statistics: {
+				title:	"Statistics",
+				link:	"/Reference/resources/statistics.html",
+				id:		"nav-statistics"
 			}
 		}
 	}

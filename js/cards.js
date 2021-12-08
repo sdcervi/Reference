@@ -24,11 +24,29 @@ const cardItems = {
 		title:	"Design Principles",
 		id:		"design",
 		cards: {
+			typography: {
+				title:	"Typography",
+				copy:	"Fonts, typefaces, and how they apply to web design",
+				link:	"./design/typography.html",
+				image:	"./assets/typography.svg"
+			}
+		}
+	},
+	groupResources: {
+		title:	"Resources",
+		id:		"resources",
+		cards: {
 			qa_qc: {
-				title:	"QA &amp; QC",
+				title:	"QA &amp; QC Checklists",
 				copy:	"Checklists for ensuring quality of design and content",
-				link:	"./design/qa-qc.html",
+				link:	"./resources/qa-qc.html",
 				image:	"./assets/qa-qc.svg"
+			},
+			statistics: {
+				title:	"Statistics",
+				copy:	"Current statistics on market share, from Statcounter.com",
+				link:	"./resources/statistics.html",
+				image:	"./assets/statistics.svg"
 			}
 		}
 	}
@@ -39,7 +57,7 @@ let cardContent = "";
 function createCards () {
 	for (const groupIndex in cardItems) {
 		const cardGroup = cardItems[groupIndex];
-		cardContent += "<section id='" + cardGroup.title + "'><h2 class='pb-1'>" + cardGroup.title + "</h2>";
+		cardContent += "<section id='" + cardGroup.title + "'><h2 class='pb-1 pt-3'>" + cardGroup.title + "</h2>";
 		cardContent += "<div class='row row-cols-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-4'>";
 		for (const cardIndex in cardGroup.cards) {
 			const cardData = cardGroup.cards[cardIndex];

@@ -19,6 +19,8 @@ li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: un
 /* ################################## GENERAL STYLES ################################## */
 
 #qa-qc-container .form-check { margin-left: 1.5em; }
+table.definitions td:nth-of-type(1) { font-weight: bold; }
+.stats-chart { width: 100%; height: auto; }
 
 /* ################################## FLEXBOX STYLES ################################## */
 

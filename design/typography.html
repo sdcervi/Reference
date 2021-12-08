@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Typography | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<a class="navbar-brand col-sm-3 col-md-2" href="/Reference/">Reference</a>
+	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>Typography</h1></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h3>Terminology</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Term</th>
+							<th scope="col">Definition</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>character</td>
+							<td>Digitally represents natural language. Each character can have several glyphs.</td>
+						</tr>
+						<tr>
+							<td>glyph</td>
+							<td>Variations in how to draw a specific character. For example: a <em>a</em> <span style="font-variant: small-caps">a</span> <sup>a</sup> <sub>a</sub>.</td>
+						</tr>
+						<tr>
+							<td>typeface</td>
+							<td>A set of glyphs that share a common design. Typefaces are designed by one or multiple type designers. Type designers can form a type <strong>foundry</strong>.</td>
+						</tr>
+						<tr>
+							<td>foundry</td>
+							<td>A company that designs typefaces.</td>
+						</tr>
+						<tr>
+							<td>styles</td>
+							<td>Italic, bold, condensed, etc.</td>
+						</tr>
+						<tr>
+							<td>font</td>
+							<td>The delivery format for one or more typeface styles. For example, <code>Helvetica</code> is a typeface, but <code>helvetica-regular.otf</code> is a font.</td>
+						</tr>
+						<tr>
+							<td>font&nbsp;family</td>
+							<td>A collection of fonts with the same name and multiple styles. <code>Helvetica Regular</code> and <code>Helvetica Condensed</code> are two styles of the typeface <code>Helvetica</code>; <code>helvetica-regular.otf</code> and <code>helvetica-condensed.otf</code> are two font files in the same font family.</td>
+						</tr>
+						<tr>
+							<td>script</td>
+							<td>A writing system. English and Dutch both use Latin script; Cyrillic and Arabic are two other common scripts.</td>
+						</tr>
+						<tr>
+							<td>subsetting</td>
+							<td>The process of removing glyphs and features you don&rsquo;t need from a font, mainly to reduce the file size. This is usually done by removing scripts you don&rsquo;t need.</td>
+						</tr>
+						<tr>
+							<td>rendering</td>
+							<td>When an operating system displays glyphs on a screen. Mac OS renders fonts exactly as they were designed, while Windows tries to make them more readable. Text usually appears thicker on Mac. See <a href="../resources/statistics">Statistics</a> for information on OS market share.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Usage</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Item</th>
+							<th scope="col">HTML code</th>
+							<th scope="col">Appearance</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>en-dash</td>
+							<td><code>&amp;ndash;</code></td>
+							<td>&ndash;</td>
+							<td>Used to mark ranges between two values</td>
+							<td>15&ndash;20</td>
+						</tr>
+						<tr>
+							<td>em-dash</td>
+							<td><code>&amp;mdash;</code></td>
+							<td>&mdash;</td>
+							<td>Used to mark pauses between words</td>
+							<td>This sentence has a pause&mdash;because of this em-dash.</td>
+						</tr>
+						<tr>
+							<td>hyphen</td>
+							<td><code>-</code></td>
+							<td>-</td>
+							<td>Used to connect words or add a line break mid-word</td>
+							<td>This page is about typography-oriented principles.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<hr>
+			
+			<h5 class="small">Sources</h5>
+			<p class="small">Stein, Bram. &ldquo;1: Selecting Webfonts.&rdquo; Webfont Handbook, A Book Apart, New York, NY, 2017, pp. 4&ndash;5. A Book Apart: Briefs.</p>
+	
+		</main>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script>
+	document.getElementById('nav-typography').classList.add('active');
+</script>
+</body>
+</html>
