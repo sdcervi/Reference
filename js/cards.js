@@ -26,7 +26,7 @@ const cardItems = {
 		cards: {
 			typography: {
 				title:	"Typography",
-				copy:	"Fonts, typefaces, and how they apply to web design",
+				copy:	"Fonts, typefaces, special characters, and how they apply to web design",
 				link:	"./design/typography.html",
 				image:	"./assets/typography.svg"
 			}
