@@ -2,7 +2,7 @@
 
 body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
-main { margin-top: 1em!important; }
+main { margin-top: 5em!important; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
@@ -17,6 +17,12 @@ li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: un
 .navbar-text h1 { text-align: left; font: bold 1rem Arial, sans-serif; color: white; margin: 0 1em; }
 .sources h2 { font-size: 1.25em; }
 .sources p { font-size: 0.9em; margin-left: 3em; text-indent: -3em; }
+
+nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}
+
+@media only screen and (min-width: 768px) {
+	main { margin-top: 1em!important; }
+}
 
 /* ################################## GENERAL STYLES ################################## */
 

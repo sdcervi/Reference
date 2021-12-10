@@ -1,5 +1,6 @@
 // JavaScript Document
 const navDiv = document.getElementById('navbar-container');
+const navDivMbl = document.getElementById('navbar-container-mbl');
 
 const navItems = {
 	navHTML: {
@@ -67,3 +68,4 @@ function createNav () {
 createNav();
 
 navDiv.innerHTML = navContent;
+navDivMbl.innerHTML = navContent;
