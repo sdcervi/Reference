@@ -29,6 +29,12 @@ const cardItems = {
 				copy:	"Fonts, typefaces, special characters, and how they apply to web design",
 				link:	"./design/typography.html",
 				image:	"./assets/typography.svg"
+			},
+			images: {
+				title:	"Images",
+				copy:	"Image formats, use cases, and pros and cons",
+				link:	"./design/images.html",
+				image:	"./assets/images.svg"
 			}
 		}
 	},
@@ -61,7 +67,7 @@ function createCards () {
 		cardContent += "<div class='row row-cols-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-4'>";
 		for (const cardIndex in cardGroup.cards) {
 			const cardData = cardGroup.cards[cardIndex];
-			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='" + cardData.link + "' class='btn btn-primary stretched-link'>View now</a></div></div></div>";
+			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='" + cardData.link + "' class='btn btn-primary stretched-link'>View " + cardData.title +"</a></div></div></div>";
 		}
 		cardContent += "</div></section>";
 	}

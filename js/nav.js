@@ -24,6 +24,11 @@ const navItems = {
 				title:	"Typography",
 				link:	"/Reference/design/typography.html",
 				id:		"nav-typography"
+			},
+			images: {
+				title:	"Images",
+				link:	"/Reference/design/images.html",
+				id:		"nav-images"
 			}
 		}
 	},
