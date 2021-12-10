@@ -30,6 +30,11 @@ const navItems = {
 				title:	"Images",
 				link:	"/Reference/design/images.html",
 				id:		"nav-images"
+			},
+			images: {
+				title:	"Colors",
+				link:	"/Reference/design/colors.html",
+				id:		"nav-colors"
 			}
 		}
 	},

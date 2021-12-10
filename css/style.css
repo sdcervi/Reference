@@ -17,21 +17,32 @@ li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: un
 .navbar-text h1 { text-align: left; font: bold 1rem Arial, sans-serif; color: white; margin: 0 1em; }
 .sources h2 { font-size: 1.25em; }
 .sources p { font-size: 0.9em; margin-left: 3em; text-indent: -3em; }
-
 .sidebar-heading { font-size: 1rem; }
 nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}
 #navbar-container-mbl .sidebar-heading { font-size: 1.25rem; }
 #navbar-container-mbl li.nav-item a.nav-link { font-size: 1rem; }
-
-@media only screen and (min-width: 768px) {
-	main { margin-top: 1em!important; }
-}
+figure img { max-width: 100%; }
+figure figcaption { text-align: center; max-width: 80%; margin: 0 auto; font-size: 0.9em; }
 
 /* ################################## GENERAL STYLES ################################## */
 
 #qa-qc-container .form-check { margin-left: 1.5em; }
 table.definitions td:nth-of-type(1) { font-weight: bold; }
 .stats-chart { width: 100%; height: auto; }
+#color-palette { text-align: center; }
+#color-palette p { line-height: 2.5em; }
+#color-palette span { border: 1px solid black; padding: 4px 8px; }
+
+/* ################################## MEDIA QUERIES ################################## */
+
+@media only screen and (min-width: 576px) {
+	#color-palette { text-align: left; }
+	#color-palette p { line-height: 1.5em; }
+}
+
+@media only screen and (min-width: 768px) {
+	main { margin-top: 1em!important; }
+}
 
 /* ################################## FLEXBOX STYLES ################################## */
 

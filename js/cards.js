@@ -35,6 +35,12 @@ const cardItems = {
 				copy:	"Image formats, use cases, and pros and cons",
 				link:	"./design/images.html",
 				image:	"./assets/images.svg"
+			},
+			colors: {
+				title:	"Colors",
+				copy:	"Color, color theory, and colorblind accessibility",
+				link:	"./design/colors.html",
+				image:	"./assets/colors.svg"
 			}
 		}
 	},
