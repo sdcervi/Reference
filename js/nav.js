@@ -6,6 +6,11 @@ const navItems = {
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
+			entities: {
+				title:	"HTML Entities",
+				link:	"/Reference/html-css/entities.html",
+				id:		"nav-entities"
+			},
 			flexbox: {
 				title:	"Flexbox",
 				link:	"/Reference/html-css/flexbox.html",
@@ -18,6 +23,16 @@ const navItems = {
 			}
 		}
 	},
+	navJS: {
+		title: "JavaScript",
+		links: {
+			time_date: {
+				title:	"Time &amp; Date",
+				link:	"/Reference/javascript/time-date.html",
+				id:		"nav-time-date"
+			}
+		}
+	},
 	navDesign: {
 		title: "Design Principles",
 		links: {
@@ -26,15 +41,25 @@ const navItems = {
 				link:	"/Reference/design/typography.html",
 				id:		"nav-typography"
 			},
+			copy: {
+				title:	"Copywriting",
+				link:	"/Reference/design/copy.html",
+				id:		"nav-copy"
+			},
 			images: {
 				title:	"Images",
 				link:	"/Reference/design/images.html",
 				id:		"nav-images"
 			},
-			images: {
+			colors: {
 				title:	"Colors",
 				link:	"/Reference/design/colors.html",
 				id:		"nav-colors"
+			},
+			animation: {
+				title:	"Animation",
+				link:	"/Reference/design/animation.html",
+				id:		"nav-animation"
 			}
 		}
 	},
@@ -71,6 +96,8 @@ function createNav () {
 }
 
 createNav();
+
+navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi</div>";
 
 navDiv.innerHTML = navContent;
 navDivMbl.innerHTML = navContent;

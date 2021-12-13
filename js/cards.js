@@ -6,6 +6,12 @@ const cardItems = {
 		title:	"HTML &amp; CSS",
 		id:		"html-css",
 		cards: {
+			entities: {
+				title:	"HTML Entities",
+				copy:	"Special characters and how to encode them",
+				link:	"./html-css/entities.html",
+				image:	"./assets/entities.svg"
+			},
 			flexbox: {
 				title:	"Flexbox",
 				copy:	"Quick reference and examples for CSS flexbox usage",
@@ -20,6 +26,18 @@ const cardItems = {
 			}
 		}
 	},
+	groupJS: {
+		title:	"Javascript",
+		id:		"javascript",
+		cards: {
+			time_date: {
+				title:	"Time &amp; Date",
+				copy:	"Displaying time and date with Javascript",
+				link:	"./javascript/time-date.html",
+				image:	"./assets/time-date.svg"
+			}
+		}
+	},
 	groupDesign: {
 		title:	"Design Principles",
 		id:		"design",
@@ -29,6 +47,12 @@ const cardItems = {
 				copy:	"Fonts, typefaces, special characters, and how they apply to web design",
 				link:	"./design/typography.html",
 				image:	"./assets/typography.svg"
+			},
+			copy: {
+				title:	"Copywriting",
+				copy:	"Principles, best practices, and common errors in copywriting",
+				link:	"./design/copy.html",
+				image:	"./assets/copy.svg"
 			},
 			images: {
 				title:	"Images",
@@ -41,6 +65,12 @@ const cardItems = {
 				copy:	"Color, color theory, and colorblind accessibility",
 				link:	"./design/colors.html",
 				image:	"./assets/colors.svg"
+			},
+			animation: {
+				title:	"Animation",
+				copy:	"Transitional, deocrative, and functional animations",
+				link:	"./design/animation.html",
+				image:	"./assets/animation.gif"
 			}
 		}
 	},

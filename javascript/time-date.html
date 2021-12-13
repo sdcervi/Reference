@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Page Title | Reference</title>
+	<title>Time & Date | Reference</title>
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
 	<!-- Bootstrap core CSS -->
@@ -21,7 +21,7 @@
 <!-- Top dark header bar -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
 	<a class="navbar-brand col-sm-3 col-md-2" href="/Reference/">Reference</a>
-	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>Page Title</h1></div>
+	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>Time &amp; Date</h1></div>
 </nav>
 
 <!-- Primary website container -->
@@ -50,16 +50,10 @@
         
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
-
-			<p>Page content goes here.</p>
 			
-			<hr>
-			
-			<section class="sources">
-				<h2>Sources</h2>
-				<p>Lastname, Firstname. &ldquo;#: Chapter Title.&rdquo; <i>Book Title</i>, Publisher Name, Publisher City, STATE, YYYY, pp. X&ndash;Y. Publisher Series: Subseries.</p>
-			</section>
-	
+			<p>To generate the exact current time and/or date in a webpage:</p>
+			<p><code>&lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt;</code></p>
+				
 		</main>
 		
 	</div>
@@ -73,7 +67,7 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/nav.js"></script>
 <script>
-	document.getElementById('nav-template').classList.add('active');
+	document.getElementById('nav-typography').classList.add('active');
 </script>
 </body>
 </html>

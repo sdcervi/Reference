@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Typography | Reference</title>
+	<title>HTML entities | Reference</title>
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
 	<!-- Bootstrap core CSS -->
@@ -21,7 +21,7 @@
 <!-- Top dark header bar -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
 	<a class="navbar-brand col-sm-3 col-md-2" href="/Reference/">Reference</a>
-	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>Typography</h1></div>
+	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>HTML Entities</h1></div>
 </nav>
 
 <!-- Primary website container -->
@@ -51,66 +51,130 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
-			<h2>Terminology</h2>
+			<h2>Special characters</h2>
 			
 			<div class="table-responsive">
 			
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
+							<th scope="col">Item</th>
+							<th scope="col">HTML code</th>
+							<th scope="col">Appearance</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>character</td>
-							<td>Digitally represents natural language. Each character can have several glyphs.</td>
+							<td>en-dash</td>
+							<td><code>&amp;ndash;</code></td>
+							<td>&ndash;</td>
+							<td>Used to mark ranges between two values</td>
+							<td>15&ndash;20</td>
 						</tr>
 						<tr>
-							<td>glyph</td>
-							<td>Variations in how to draw a specific character. For example: a <em>a</em> <span style="font-variant: small-caps">a</span> <sup>a</sup> <sub>a</sub>.</td>
+							<td>em-dash</td>
+							<td><code>&amp;mdash;</code></td>
+							<td>&mdash;</td>
+							<td>Used to mark pauses between words</td>
+							<td>This sentence has a pause&mdash;because of this em-dash.</td>
 						</tr>
 						<tr>
-							<td>typeface</td>
-							<td>A set of glyphs that share a common design. Typefaces are designed by one or multiple type designers. Type designers can form a type <strong>foundry</strong>.</td>
+							<td>hyphen</td>
+							<td><code>-</code></td>
+							<td>-</td>
+							<td>Used to connect words or add a line break mid-word</td>
+							<td>This page is about typography-oriented principles.</td>
 						</tr>
 						<tr>
-							<td>foundry</td>
-							<td>A company that designs typefaces.</td>
+							<td>typographer&rsquo;s&nbsp;quotes</td>
+							<td><code>&amp;ldquo; &amp;rdquo;</code></td>
+							<td>&ldquo;...&rdquo;</td>
+							<td>Quotation marks around something someone has said</td>
+							<td>&ldquo;This is a quotation from a source.&rdquo;</td>
 						</tr>
 						<tr>
-							<td>styles</td>
-							<td>Italic, bold, condensed, etc.</td>
+							<td>apostrophe</td>
+							<td><code>&amp;lsquo; &amp;rsquo;</code></td>
+							<td>&lsquo;...&rsquo;</td>
+							<td>Used for contractions and sub-quotes</td>
+							<td>&ldquo;This quotation has a &lsquo;sub-quotation&rsquo; and it&rsquo;s also got a contraction.&rdquo;</td>
 						</tr>
 						<tr>
-							<td>font</td>
-							<td>The delivery format for one or more typeface styles. For example, <code>Helvetica</code> is a typeface, but <code>helvetica-regular.otf</code> is a font.</td>
+							<td>non-breaking&nbsp;space</td>
+							<td><code>&amp;nbsp;</code></td>
+							<td>&nbsp;</td>
+							<td>Used to avoid misplaced line breaks</td>
+							<td>This has a non-breaking space at the end to avoid runt&nbsp;words.</td>
 						</tr>
 						<tr>
-							<td>font&nbsp;family</td>
-							<td>A collection of fonts with the same name and multiple styles. <code>Helvetica Regular</code> and <code>Helvetica Condensed</code> are two styles of the typeface <code>Helvetica</code>; <code>helvetica-regular.otf</code> and <code>helvetica-condensed.otf</code> are two font files in the same font family.</td>
+							<td>wordbreak</td>
+							<td><code>&lt;wbr&gt;</code></td>
+							<td></td>
+							<td>Tells the browser where to add line breaks if needed</td>
+							<td>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz will break in multiple places as needed, without hyphens.</td>
 						</tr>
 						<tr>
-							<td>script</td>
-							<td>A writing system. English and Dutch both use Latin script; Cyrillic and Arabic are two other common scripts.</td>
+							<td>shy hyphen</td>
+							<td><code>&lt;shy&gt;</code></td>
+							<td>-</td>
+							<td>Tells the browser where to hyphenate words when breaking across lines</td>
+							<td>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz will break in multiple places as needed, with hyphens.</td>
 						</tr>
 						<tr>
-							<td>subsetting</td>
-							<td>The process of removing glyphs and features you don&rsquo;t need from a font, mainly to reduce the file size. This is usually done by removing scripts you don&rsquo;t need.</td>
+							<td>copyright</td>
+							<td><code>&amp;copy;</code></td>
+							<td>&copy;</td>
+							<td>Copyright symbol</td>
+							<td>&copy;<script>document.write(new Date().getFullYear())</script> Stephanie Cervi</td>
 						</tr>
 						<tr>
-							<td>rendering</td>
-							<td>When an operating system displays glyphs on a screen. Mac OS renders fonts exactly as they were designed, while Windows tries to make them more readable. Text usually appears thicker on Mac. See <a href="../resources/statistics">Statistics</a> for information on OS market share.</td>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><code></code></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
-			
-			<h2>Special characters</h2>
-			
-			<p>Head to the <a href="../html-css/entities.html">HTML Entities</a> page for details on HTML special characters.</p>
 			
 			<hr>
 			
@@ -132,7 +196,7 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/nav.js"></script>
 <script>
-	document.getElementById('nav-typography').classList.add('active');
+	document.getElementById('nav-entities').classList.add('active');
 </script>
 </body>
 </html>

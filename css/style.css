@@ -11,6 +11,7 @@ h3 { font: bold 1.25rem Arial, sans-serif; padding-top: 0.5em; }
 h4 { font: bold 1.1rem Arial, sans-serif; padding-top: 0.5em; }
 h5 { font: bold 1rem Arial, sans-serif; padding-top: 0.25em; }
 
+.copyright { position: fixed; bottom: 1em; left: 1em; color: gray; font-size: 0.85em; display: none; }
 li.nav-item a.nav-link { padding: 0.5rem 1rem 0 2rem; line-height: 1rem; }
 li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; }
 .navbar-brand { margin-right: 0; }
@@ -42,6 +43,11 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 
 @media only screen and (min-width: 768px) {
 	main { margin-top: 1em!important; }
+}
+
+
+@media only screen and (min-width: 900px) {
+	.copyright { display: block; }
 }
 
 /* ################################## FLEXBOX STYLES ################################## */
