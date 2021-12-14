@@ -144,13 +144,77 @@
 				<div class="col-12 col-sm-5 col-lg-4 col-xl-3 col-xxl-2">
 					<img src="../assets/color-hsl.png" alt="A cylinder illustrating the HSL color space where hue is the degree of rotation, saturation is the magnitude from the origin, and lightness is the height of the cylinder" style="width: 515px; max-width: 100%;">
 				</div>
+				
+			</div>
+			
+			<h2>Color properties</h2>
+			
+			<p><strong>Color temperature:</strong> how warm (reddish) or cool (blueish) a color is. Warm colors can promote feelings of aggression and energy, and feel bolder than cooler colors. Cool colors are used for more calming, &lsquo;quieter&rsquo; interfaces.</p>
+			
+			<p><strong>Tints and shades:</strong> how close to white or black a color is. Closer to white is tinted, closer to black is shaded.</p>
+			
+			<h2>Color schemes</h2>
+			
+			<div class="row">
+				
+				<div class="col-12 col-sm-6 col-lg-8 col-xl-9">
+			
+					<p>There are four commonly used color schemes used to develop color palettes for design:</p>
+					
+					<p><strong>Monochromatic:</strong> all colors have the same hue, with variances in saturation and/or luminosity. Common in simple, clean interfaces with minimal visual distraction.</p>
+					
+					<p><strong>Complementary:</strong> colors are opposite each other on the color wheel. This creates a high contrast, high energy design and is very common in logos and uniforms. Use this for areas that need to grab the user&rsquo;s attention.</p>
+					
+					<p><strong>Analogous:</strong> colors are next to each other on the color wheel. Typically this involves one dominant color, a support color, and a third accent color. This creates a visually pleasing and calming color palette, but is low-contrast. Use this for backgrounds or areas that don&rsquo;t need to direct the user&rsquo;s attention.</p>
+					
+					<p><strong>Triadic:</strong> colors are offset in thirds (120&deg;) on the color wheel. This creates a sense of equality, vibrancy, and security in the color palette.</p>
+					
+					<p>Once you&rsquo;ve selected a color scheme, you can further develop it by taking the color palette and varying it within saturation and luminosity for your selected colors. <a href="https://paletton.com/">Paletton</a> is a very effective tool for setting up color palettes with any of the above schemes, and grabbing HTML color codes directly from the page. <a href="https://color.adobe.com/create/color-wheel">Adobe&rsquo;s Color Wheel tool</a> is another option, and also has contrast and accessibility tools available for user-selected colors.</p>
+					
+					<h3>Contrast</h3>
+					
+					<p>A very important aspect of color schemes is making sure there&rsquo;s appropriate contrast between color elements. <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">The WCAG recommends various contrast ratios for better visual accessibility</a>; higher ratios mean text is easier to read.</p>
+					<p>Use <a href="https://contrast-ratio.com/">Lea Verou&rsquo;s Contrast Ratio tool</a> for checking contrast ratios between various background and text colors. It updates in realtime to reflect your chosen colors, the contrast ratio, and how it will appear in text on a background.</p>
+					
+					<h3>Color psychology</h3>
+					
+					<p>Color associations can vary between cultures and parts of the world, so these are far from universal. For example, Chinese culture views red as a lucky, auspicious color whereas American and other western cultures use red to indicate warnings, errors, or buttons to close/cancel.</p>
+					
+					<p><span style="color: #ee0000;"><strong>Red:</strong></span> passionate, angry, energetic</p>
+					<p><span style="color: orange; background-color: black; padding: 2px 4px;"><strong>Orange:</strong></span> optimistic, playful, fun</p>
+					<p><span style="color: yellow; background-color: black; padding: 2px 4px;"><strong>Yellow:</strong></span> welcoming, intellectual, impatient</p>
+					<p><span style="color: green;"><strong>Green:</strong></span> prosperous, balanced, growing</p>
+					<p><span style="color: blue;"><strong>Blue:</strong></span> peaceful, loyal, cold</p>
+					<p><span style="color: purple;"><strong>Purple:</strong></span> imaginitive, royal, spiritual</p>
+					<p><span style="color: #767676;"><strong>Gray:</strong></span> unemotional, compromising</p>
+					<p><span style="color: white; background-color: black; padding: 2px 4px;"><strong>White:</strong></span> innocent, pure</p>
+					<p><span style="color: black;"><strong>Black:</strong></span> luxurious, powerful</p>
+					
+				</div>
+				
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<img src="../assets/color-schemes.svg" alt="The four common color schemes: monochromatic, complementary, analogous, and triadic" style="max-width: 100%;">
+				</div>
+				
+			</div>
+			
+			<h2>Best practices</h2>
+			
+			<p><strong>Use neon colors sparingly.</strong> While the use of neon colors can feel hip, they are often hard on a user&rsquo;s eyes.</p>
+			
+			<p><strong>Avoid vibrating colors.</strong> Vibrating colors result from pairing two colors with high saturation together that may be complementary to one another. It creates a glowing or moving effect, which also can be hard on one&rsquo;s eyes. For example, the red and green pairing that is common with Christmas cards is very glaring when presented on a screen: <span style="color: red; background-color: limegreen; padding: 2px 4px;"><strong>These are vibrating colors.</strong></span></p>
+			
+			<p><strong>Use backdrops or outlines to separate vibrating colors.</strong> Separating or reducing vibrating colors with a white or black outline/backdrop can make the effect more bearable for users. For example: <span style="color: red; background-color: limegreen; padding: 0 2px 2px 2px; text-stroke: 2px white; -webkit-text-stroke: 2px white;"><strong>&#9646;</strong></span></p>
+			
+			<p><strong>Avoid color combinations with insufficient contrast,</strong> including bright colors on top of bright colors (<span style="color: red; background-color: orange; padding: 2px 4px;"><strong>bright on bright</strong></span>), light colors on top of light colors (<span style="color: white; background-color: aquamarine; padding: 2px 4px;"><strong>light on light</strong></span>), and dark colors on top of dark colors (<span style="color: maroon; background-color: black; padding: 2px 4px;"><strong>dark on dark</strong></span>).</p>
 			
 			<hr>
 			
 			<section class="sources">
 				<h2>Sources</h2>
-				<p>&ldquo;File:RGB Color Cube.svg&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 6 Jan 2015, <a href="https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg">https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg</a>.</p>
-				<p>&ldquo;File:Hsl-hsv models.svg&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 24 Jun 2020, <a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg">https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg</a>.</p>
+				<p>&ldquo;File:RGB Color Cube.svg,&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 6 Jan 2015, <a href="https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg">https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg</a>.</p>
+				<p>&ldquo;File:Hsl-hsv models.svg,&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 24 Jun 2020, <a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg">https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg</a>.</p>
+				<p>&ldquo;Color Theory,&rdquo; <i>Front End Engineer Career Path,</i> Codecademy. <a href="https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-improved-styling-with-css/modules/fecp-learn-color-theory/lessons/learn-color-theory/exercises/color-schemes">https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-improved-styling-with-css/modules/fecp-learn-color-theory/lessons/learn-color-theory/exercises/color-schemes</a>.</p>
 			</section>
 	
 		</main>
