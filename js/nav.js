@@ -46,20 +46,30 @@ const navItems = {
 				link:	"/Reference/design/copy.html",
 				id:		"nav-copy"
 			},
+			color: {
+				title:	"Color &amp; Color Theory",
+				link:	"/Reference/design/color.html",
+				id:		"nav-color"
+			},
 			images: {
 				title:	"Images",
 				link:	"/Reference/design/images.html",
 				id:		"nav-images"
 			},
-			colors: {
-				title:	"Colors",
-				link:	"/Reference/design/colors.html",
-				id:		"nav-colors"
-			},
 			animation: {
 				title:	"Animation",
 				link:	"/Reference/design/animation.html",
 				id:		"nav-animation"
+			}
+		}
+	},
+	navAccessibility: {
+		title: "Accessibility",
+		links: {
+			color: {
+				title:	"Color Accessibility",
+				link:	"/Reference/accessibility/color.html",
+				id:		"nav-acc-color"
 			}
 		}
 	},

@@ -54,23 +54,35 @@ const cardItems = {
 				link:	"./design/copy.html",
 				image:	"./assets/copy.svg"
 			},
+			color: {
+				title:	"Color &amp; Color Theory",
+				copy:	"The color wheel, choosing color palettes, and color theory",
+				link:	"./design/color.html",
+				image:	"./assets/color.svg"
+			},
 			images: {
 				title:	"Images",
 				copy:	"Image formats, use cases, and pros and cons",
 				link:	"./design/images.html",
 				image:	"./assets/images.svg"
 			},
-			colors: {
-				title:	"Colors",
-				copy:	"Color, color theory, and colorblind accessibility",
-				link:	"./design/colors.html",
-				image:	"./assets/colors.svg"
-			},
 			animation: {
 				title:	"Animation",
 				copy:	"Transitional, deocrative, and functional animations",
 				link:	"./design/animation.html",
 				image:	"./assets/animation.gif"
+			}
+		}
+	},
+	groupAccessibility: {
+		title:	"Accessibility",
+		id:		"accessibility",
+		cards: {
+			color: {
+				title:	"Color Accessibility",
+				copy:	"Colorblind accessibility and safe color palettes",
+				link:	"./accessibility/color.html",
+				image:	"./assets/acc-color.svg"
 			}
 		}
 	},
