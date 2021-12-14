@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="905px" height="905px" viewBox="0 0 905 905" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>primary-color-wheel</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M421,842 C188.48812,842 0,653.51188 0,421 C0,188.48812 188.48812,0 421,0 C653.51188,0 842,188.48812 842,421 C842,653.51188 653.51188,842 421,842 Z M423,720 C589.23771,720 724,585.23771 724,419 C724,252.76229 589.23771,118 423,118 C256.76229,118 122,252.76229 122,419 C122,585.23771 256.76229,720 423,720 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="primary-color-wheel">
+            <g id="Group" transform="translate(32.000000, 32.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#FFFFFF" stroke-width="5" d="M421,844.5 C187.107408,844.5 -2.5,654.892592 -2.5,421 C-2.5,187.107408 187.107408,-2.5 421,-2.5 C654.892592,-2.5 844.5,187.107408 844.5,421 C844.5,654.892592 654.892592,844.5 421,844.5 Z M423,717.5 C587.856998,717.5 721.5,583.856998 721.5,419 C721.5,254.143002 587.856998,120.5 423,120.5 C258.143002,120.5 124.5,254.143002 124.5,419 C124.5,583.856998 258.143002,717.5 423,717.5 Z"></path>
+                </g>
+                <g mask="url(#mask-2)" stroke="#FFFFFF" id="Path-2" stroke-width="5">
+                    <g transform="translate(-110.000000, -111.000000)">
+                        <polygon fill="#59189F" points="533 533 215.5 215.5 101.5 416.5"></polygon>
+                        <polygon fill="#B5287A" transform="translate(425.463032, 287.893467) rotate(-330.000000) translate(-425.463032, -287.893467) " points="641.213032 446.643467 323.713032 129.143467 209.713032 330.143467"></polygon>
+                        <polygon fill="#EB3323" transform="translate(562.539546, 267.030019) rotate(-300.000000) translate(-562.539546, -267.030019) " points="778.289546 425.780019 460.789546 108.280019 346.789546 309.280019"></polygon>
+                        <polygon fill="#EE6F2D" transform="translate(690.133975, 317.183013) rotate(-270.000000) translate(-690.133975, -317.183013) " points="905.883975 475.933013 588.383975 158.433013 474.383975 359.433013"></polygon>
+                        <polygon fill="#F19837" transform="translate(776.374482, 424.829057) rotate(-240.000000) translate(-776.374482, -424.829057) " points="992.124482 583.579057 674.624482 266.079057 560.624482 467.079057"></polygon>
+                        <polygon fill="#F6C644" transform="translate(797.420943, 561.356533) rotate(-210.000000) translate(-797.420943, -561.356533) " points="1013.17094 720.106533 695.670943 402.606533 581.670943 603.606533"></polygon>
+                        <polygon fill="#FFFD54" transform="translate(747.334936, 690.933013) rotate(-180.000000) translate(-747.334936, -690.933013) " points="963.084936 849.683013 645.584936 532.183013 531.584936 733.183013"></polygon>
+                        <polygon fill="#99C43C" transform="translate(639.554917, 777.673520) rotate(-150.000000) translate(-639.554917, -777.673520) " points="855.304917 936.42352 537.804917 618.92352 423.804917 819.92352"></polygon>
+                        <polygon fill="#4FA931" transform="translate(503.210454, 798.170943) rotate(-120.000000) translate(-503.210454, -798.170943) " points="718.960454 956.920943 401.460454 639.420943 287.460454 840.420943"></polygon>
+                        <polygon fill="#45A1C3" transform="translate(374.017949, 748.517949) rotate(-90.000000) translate(-374.017949, -748.517949) " points="589.767949 907.267949 272.267949 589.767949 158.267949 790.767949"></polygon>
+                        <polygon fill="#2564AF" transform="translate(287.527442, 640.804917) rotate(-60.000000) translate(-287.527442, -640.804917) " points="503.277442 799.554917 185.777442 482.054917 71.7774417 683.054917"></polygon>
+                        <polygon fill="#001A9E" transform="translate(266.297968, 504.094429) rotate(-30.000000) translate(-266.297968, -504.094429) " points="482.047968 662.844429 164.547968 345.344429 50.5479683 546.344429"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

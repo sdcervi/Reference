@@ -51,6 +51,14 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
+			<h2>Main principles</h2>
+			
+			<p>Properly executed animations should be like effective waitstaff&mdash;no one should notice them unless you&rsquo;re actively trying to draw their attention in that moment.</p>
+			
+			<p>Keep animations consistent throughout an interface, and make sure every animated entrance has a consistent exist.</p>
+			
+			<p>Avoid any rapidly flashing animation, especially large areas of red. Current W3C guidelines advise elements flash no more than twice per second. Try to signal oncoming animations with a subtle motion first (i.e. a sidebar bumping slightly before it fully expands upon click).</p>
+			
 			<h2>Types of animations</h2>
 			
 			<div class="table-responsive">
@@ -58,7 +66,7 @@
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Type</th>
+							<th scope="col">Term</th>
 							<th scope="col">Action</th>
 							<th scope="col">Usage examples</th>
 						</tr>
@@ -129,6 +137,102 @@
 			</div>
 			
 			<h2>Terminology</h2>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Term</th>
+							<th scope="col">Definition</th>
+							<th scope="col">Usage examples</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>easing</td>
+							<td>The rate at which visual changes occur</td>
+							<td><ul>
+								<li><strong>Acceleration</strong> is good for system-initiated animations, like newsletter pop-ups. Use this to avoid startling users.</li>
+								<li><strong>Deceleration</strong> starts quickly and gives the UI a snappy, responsive feeling. Use this for user-initiated interactionws like button clicks and page transitions</li>
+								<li><strong>Speeding up then slowing down</strong> is best when moving elements toward each other.</li>
+								<li><strong>Linear</strong> transitions work best for fades and color changes</li>
+								<li><strong>Bounces</strong> can draw attention to elements, or add an air of &ldquo;fun&rdquo; to the UI.</li>
+							</ul></td>
+						</tr>
+						<tr>
+							<td>duration</td>
+							<td>How long an animation lasts</td>
+							<td>
+								<ul>
+									<li><strong>100ms or less</strong> feels instantaneous</li>
+									<li><strong>215ms</strong> is the average response time to changes</li>
+									<li><strong>200-300ms</strong> is the currently accepted sweet spot</li>
+									<li><strong>Up to 1s</strong> still feels connected</li>
+									<li><strong>Over 10s</strong> disconnects users</li>
+								</ul>
+								<p>Animations in the center of the cone of vision do better with short durations, and animations on the edge/in peripheral vision do better with longer durations.</p>
+								<p>Color and opacity changes do better with short durations, but movement often needs slightly longer durations.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>properties</td>
+							<td>What changes</td>
+							<td><ul>
+								<li>Color &amp; opacity convey fades</li>
+								<li>Location coveys motion</li>
+								<li>Scale and shape convey deformation and transformation</li>
+							</ul></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2>CSS timing functions</h2>
+			
+			<p>CSS has several built-in timing functions (see below), but they can also be custom defined using cubic B&eacute;zier curves. They follow the format <code>cubic-bezier(w, x, y, z)</code> and can be used to create single and double bounces. Use the tools at <a href="https://cubic-bezier.com/">cubic-bezier.com</a> and <a href="https://easings.net/">easings.net</a> to help decide which easing function to use.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Bezier curve</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ease (default)</td>
+							<td><code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code></td>
+							<td>Speeds up then slows down</td>
+						</tr>
+						<tr>
+							<td>linear</td>
+							<td><code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code></td>
+							<td>Even, constant speed</td>
+						</tr>
+						<tr>
+							<td>ease-in</td>
+							<td><code>cubic-bezier(0.42, 0, 1.0, 1.0)</code></td>
+							<td>Starts slow and speeds up</td>
+						</tr>
+						<tr>
+							<td>ease-out</td>
+							<td><code>cubic-bezier(0, 0, 0.58, 1.0)</code></td>
+							<td>Starts fast and slows down</td>
+						</tr>
+						<tr>
+							<td>ease-in-out</td>
+							<td><code>cubic-bezier(0.42, 0, 0.58, 1.0)</code></td>
+							<td>Starts slow, speeds up, then slows down again</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
 			
 			<hr>
 			

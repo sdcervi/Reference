@@ -85,7 +85,7 @@ let navContent = "";
 function createNav () {
 	for (const groupIndex in navItems) {
 		const navGroup = navItems[groupIndex];
-		navContent += "<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>" + navGroup.title + "</h6>";
+		navContent += "<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1'>" + navGroup.title + "</h6>";
 		navContent += "<ul class='nav flex-column mb-2'>";
 		for (const linkIndex in navGroup.links) {
 			const navLink = navGroup.links[linkIndex];
