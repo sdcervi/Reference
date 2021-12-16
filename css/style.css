@@ -11,6 +11,7 @@ h3 { font: bold 1.25rem Arial, sans-serif; padding-top: 0.5em; }
 h4 { font: bold 1.1rem Arial, sans-serif; padding-top: 0.5em; }
 h5 { font: bold 1rem Arial, sans-serif; padding-top: 0.25em; }
 
+img.logo { max-width: 2em; height: auto; }
 .copyright { position: fixed; bottom: 1em; left: 1em; color: #737373; font-size: 0.85em; display: none; }
 .sidebar .nav-link.active { color: #006fe7!important; }
 li.nav-item a.nav-link { padding: 0.5rem 1rem 0 2rem; line-height: 1rem; }
