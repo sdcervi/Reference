@@ -11,6 +11,11 @@ const navItems = {
 				link:	"/Reference/html-css/entities.html",
 				id:		"nav-entities"
 			},
+			links: {
+				title:	"Links",
+				link:	"/Reference/html-css/links.html",
+				id:		"nav-links"
+			},
 			flexbox: {
 				title:	"Flexbox",
 				link:	"/Reference/html-css/flexbox.html",

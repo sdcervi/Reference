@@ -13,7 +13,8 @@ h5 { font: bold 1rem Arial, sans-serif; padding-top: 0.25em; }
 
 img.logo { max-width: 2em; height: auto; }
 .copyright { position: fixed; bottom: 1em; left: 1em; color: #737373; font-size: 0.85em; display: none; }
-.sidebar .nav-link.active { color: #006fe7!important; }
+.sidebar .nav-link.active { color: #006fe7!important; position: relative; }
+.sidebar .nav-link.active::before { content: '\00BB';  position: absolute; left: 20px; bottom: 1px; }
 li.nav-item a.nav-link { padding: 0.5rem 1rem 0 2rem; line-height: 1rem; }
 li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; }
 .navbar-brand { margin-right: 0; }

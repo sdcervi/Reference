@@ -12,6 +12,12 @@ const cardItems = {
 				link:	"./html-css/entities.html",
 				image:	"./assets/entities.svg"
 			},
+			links: {
+				title:	"Links",
+				copy:	"Links, attributes and their values, and usage",
+				link:	"./html-css/links.html",
+				image:	"./assets/links.svg"
+			},
 			flexbox: {
 				title:	"Flexbox",
 				copy:	"Quick reference and examples for CSS flexbox usage",
