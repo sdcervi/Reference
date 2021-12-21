@@ -16,6 +16,16 @@ const navItems = {
 				link:	"/Reference/html-css/links.html",
 				id:		"nav-links"
 			},
+			tables: {
+				title:	"Tables",
+				link:	"/Reference/html-css/tables.html",
+				id:		"nav-tables"
+			},
+			forms: {
+				title:	"Forms",
+				link:	"/Reference/html-css/forms.html",
+				id:		"nav-forms"
+			},
 			flexbox: {
 				title:	"Flexbox",
 				link:	"/Reference/html-css/flexbox.html",

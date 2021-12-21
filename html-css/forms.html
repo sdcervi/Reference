@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Forms | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<a class="navbar-brand col-sm-3 col-md-2" href="/Reference/">Reference</a>
+	<div class="navbar-text col-sm-9 col-md-10 m-0"><h1>Forms</h1></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light d-md-none mobile-nav">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		</nav>	
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Form basics</h2>
+
+			<p>Forms can be used for anything from a simple search box to complex, multi-section application forms. Set them up with accessibility in mind from the beginning to make them work for as many users as possible.</p>
+			
+			<p>Forms must be nested inside a <code>form</code> element:</p>
+			
+			<p><code>&lt;form action="http://www.example.com/form.php" method="GET" id="formId"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&lt;/form&gt;
+			</code></p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Attribute</th>
+							<th scope="col">Values</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>action</code></td>
+							<td>The URL for the page on the server that form data is submitted to</td>
+						</tr>
+						<tr>
+							<td><code>method</code></td>
+							<td><strong>GET:</strong> The values of the form are added to the end of the URL specified in the <code>action</code> attribute. Best for short forms or simple data retrieval. Not good for database actions.<br>
+								<strong>POST:</strong> The values of the form are sent in HTTP headers. Best for uploaded files, very long forms, secure data such as passwords, and database actions.</td>
+						</tr>
+						<tr>
+							<td><code>id</code></td>
+							<td>The HTML id of the form, usually used for CSS styling or JavaScript functions such as validation</td>
+						</tr>
+						<tr>
+							<td><code>autocomplete</code></td>
+							<td>Tells the browser whether to allow autocomplete on form fields; this is generally defaulted to <code>off</code> for suspected login forms</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2>Labels and groups</h2>
+
+			<p>Use labels and groups to organize a form and make it easier to use.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions form-table">
+					<thead>
+						<tr>
+							<th scope="col">Element</th>
+							<th scope="col">HTML code</th>
+							<th scope="col">HTML appearance</th>
+							<th scope="col">Description &amp; usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Label</td>
+							<td><code>&lt;label for="inputName"&gt;</code>Label text: <code>&lt;/label&gt;</code><br>
+								<code>&lt;input type="text" name="inputName" id="inputName" /&gt;</code></td>
+							<td><label for="inputName">Label text: </label>
+								<input type="text" name="inputName" /></td>
+							<td><p>Use labels to make forms easier to navigate, and more accessible to vision-impaired users. They can either wrap around the input they&rsquo;re labeling (no <code>for</code> attribute needed in this context), or precede the input (<code>for</code> attribute needed). When setting a <code>for</code> attribute, use the <code>id</code> of the matching input or radio button.</p>
+								<p>When placing labels, put them above or to the left of text inputs, text areas, select boxes, and file uploads. Put them to the right of individual checkboxes or radio buttons.</p></td>
+						</tr>
+						<tr>
+							<td>Fieldset with legend</td>
+							<td><code>&lt;fieldset&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;</code>Legend text<code>&lt;/legend&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</code><br>
+								<code>&lt;/fieldset&gt;</code></td>
+							<td><fieldset>
+								<legend>Legend text</legend>
+								<input type="text" name="sampleTextInput" maxlength="30" placeholder="username" />
+								<input type="password" name="samplePasswordInput" maxlength="30" placeholder="password" />
+								</fieldset></td>
+							<td>Group related form controls together; this is helpful for longer forms with a lot of fields. Some browsers may render a border around fieldsets. Legends become headers for the fieldset.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2>Controls</h2>
+			
+			<p>Each form conrol must have a unique <code>name</code> for the server to know how to process all the data received. The name-value pairs sent to the server must match the code on the server, otherwise the form will not function correctly.</p>
+			
+			<p>For newer HMTL5-specific form elements, older browsers will fallback to displaying it as a simple text input.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions form-table">
+					<thead>
+						<tr>
+							<th scope="col">Control</th>
+							<th scope="col">HTML code</th>
+							<th scope="col">HTML appearance</th>
+							<th scope="col">Description &amp; usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Text input (single-line)</td>
+							<td><code>&lt;input type="text" name="inputName" maxlength="X" /&gt;</code></td>
+							<td><input type="text" name="sampleTextInput" maxlength="30" /></td>
+							<td>Use for a single line of text such as names. Set a character limit with <code>maxlength</code>. Enable spellcheck (if the browser supports it) with <code>spellcheck="true"</code>.</td>
+						</tr>
+						<tr>
+							<td>Password input</td>
+							<td><code>&lt;input type="password" name="password" maxlength="X" /&gt;</code></td>
+							<td><input type="password" name="samplePasswordInput" maxlength="30" /></td>
+							<td>Functions just like a single-line text box, but it masks the characters entered. This does not secure the data, however; do not use this for sending passwords or other sensitive information without encrypting the data first and using SSL.</td>
+						</tr>
+						<tr>
+							<td>Text area (multi-line)</td>
+							<td><code>&lt;textarea name="inputName"&gt;</code>Placeholder text<code>&lt;textarea&gt;</code></td>
+							<td><textarea name="sampleTextArea">Placeholder text</textarea></td>
+							<td>Use for longer, multi-line areas of text, such as messages and comments. Any placeholder text entered via HTML will be submitted with the form if the user does not replace it with their own entry.</td>
+						</tr>
+						<tr>
+							<td>Date</td>
+							<td><code>&lt;input type="date" name="inputName" /&gt;</code><br>
+								<code>&lt;input type="datetime-local" name="inputName" /&gt;</code><br>
+								<code>&lt;input type="month" name="inputName" /&gt;</code><br>
+								<code>&lt;input type="time" name="inputName" /&gt;</code><br>
+								<code>&lt;input type="week" name="inputName" /&gt;</code></td>
+							<td><input type="date" name="inputName" /><br>
+								<input type="datetime-local" name="inputName" /><br>
+								<input type="month" name="inputName" /><br>
+								<input type="time" name="inputName" /><br>
+								<input type="week" name="inputName" /></td>
+							<td>Allows a user to select a date and/or time. The date picker will depend on their browser and sometimes the operating system as well. Constrain possible options with <code>min="X"</code>, <code>max="Y"</code>, and <code>step="Z"</code>.</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><code>&lt;input type="email" name="inputName" /&gt;</code></td>
+							<td><input type="email" name="inputName" /></td>
+							<td>Allows a user to enter an email. Browsers that support HTML5 form validation will check that it matches the format of an email address (x@y.z). Some smartphones will change the keyboard layout for easier email entry.</td>
+						</tr>
+						<tr>
+							<td>URL</td>
+							<td><code>&lt;input type="url" name="inputName" /&gt;</code></td>
+							<td><input type="url" name="inputName" /></td>
+							<td>Allows a user to enter a URL. Browsers that support HTML5 form validation will check that it matches the format of a URL. Some smartphones will change the keyboard layout for easier URL entry.</td>
+						</tr>
+						<tr>
+							<td>Color</td>
+							<td><code>&lt;input type="color" name="inputName" /&gt;</code></td>
+							<td><input type="color" name="inputName" /></td>
+							<td>Allows a user to select a color; this displays the selected color, and always returns that color&rsquo;s lowercase 6-character hexidecimal color code. Specify a default color with <code>value="#xxxxxx"</code>.</td>
+						</tr>
+						<tr>
+							<td>Number</td>
+							<td><code>&lt;input type="number" name="inputName" /&gt;</code></td>
+							<td><input type="number" name="inputName" /></td>
+							<td>Allows a user to enter floating-point numbers. Usually this displays arrows to increase or decrease the number, or a numerical keypad on compatible smartphones. Constrain values by setting a <code>min="X"</code> and/or a <code>max="Y"</code> attribute. Set the step size for arrow increment/decrement using <code>step="Z"</code> (default is 1; to allow float numbers, use the value <code>any</code>).</td>
+						</tr>
+						<tr>
+							<td>Phone number</td>
+							<td><code>&lt;input type="tel" id="tel" name="tel" /&gt;</code></td>
+							<td><input type="tel" id="tel" name="tel" /></td>
+							<td>This will bring up a numerical keypad on compatible smartphones. Use this whenever numerical input is needed, not just for telephone numbers. This field doesn&rsquo;t enforce any specific formatting; use the <code>pattern</code> attribute for that.</td>
+						</tr>
+						<tr>
+							<td>Slider</td>
+							<td><code>&lt;input type="range" id="sliderId" name="sliderName" min="minValue" max="maxValue" step="stepSize" value="defaultValue" /&gt;</code><br>
+								<code>&lt;ouput for="sliderName"&gt;&lt;/output&gt;</code></td>
+							<td><input type="range" id="sliderId" name="sliderName" min="50" max="200" step="10" value="150" />
+								<output id="sliderOutput" for="sliderName"></output>
+								<script>
+									const slider = document.querySelector('#sliderId');
+									const output = document.querySelector('#sliderOutput');
+
+									output.textContent = slider.value;
+
+									slider.addEventListener('input', function() {
+									  output.textContent = slider.value;
+									});
+								</script></td>
+							<td>This will bring up a numerical keypad on compatible smartphones. Use this whenever numerical input is needed, not just for telephone numbers. This field doesn&rsquo;t enforce any specific formatting; use the <code>pattern</code> attribute for that. Include an <code>output</code> element (requires JavaScript) to display the current value of the slider in a more user-friendly format.</td>
+						</tr>
+						<tr>
+							<td>Search</td>
+							<td><code>&lt;input type="search" name="inputName" placeholder="Search" /&gt;</code></td>
+							<td><input type="search" name="inputName" placeholder="Search" /></td>
+							<td>Allows a user to enter a search string. Some browsers will add an <code>x</code> icon to clear the search box, and may round the corners of the input field as well.</td>
+						</tr>
+						<tr>
+							<td>Radio buttons</td>
+							<td><code>&lt;input type="radio" name="radioGroupName" value="choice1" checked="checked" /&gt;</code> Choice One<br>
+								<code>&lt;input type="radio" name="radioGroupName" value="choice2" /&gt;</code> Choice Two<br>
+								<code>&lt;input type="radio" name="radioGroupName" value="choice3" /&gt;</code> Choice Three</td>
+							<td><input type="radio" name="radioGroupName" value="choice1" checked="checked" /> Choice One<br>
+								<input type="radio" name="radioGroupName" value="choice2" /> Choice Two<br>
+								<input type="radio" name="radioGroupName" value="choice3" /> Choice Three</td>
+							<td>Use this when a user must choose only one option from a list. Keyboard navigators will use <kbd>tab</kbd> to select the radio button list, then the arrow keys to select a button from that list. Unless an option is given the <code>checked="checked"</code> attribute, none will be selected by default.</td>
+						</tr>
+						<tr>
+							<td>Checkboxes</td>
+							<td><code>&lt;input type="checkbox" name="checkGroupName" value="choice1" checked="checked" /&gt;</code> Choice One<br>
+								<code>&lt;input type="checkbox" name="checkGroupName" value="choice2" /&gt;</code> Choice Two<br>
+								<code>&lt;input type="checkbox" name="checkGroupName" value="choice3" /&gt;</code> Choice Three</td>
+							<td><input type="checkbox" name="checkGroupName" value="choice1" checked="checked" /> Choice One<br>
+								<input type="checkbox" name="checkGroupName" value="choice2" /> Choice Two<br>
+								<input type="checkbox" name="checkGroupName" value="choice3" /> Choice Three</td>
+							<td>Use this when a user can select or deselect any of the options present in the list. Keyboard navigators will use <kbd>tab</kbd> to select the checkbox list, then <kbd>space</kbd> to select or deselect specific checkboxes within the list. Unless an option is given the <code>checked="checked"</code> attribute, none will be selected by default.</td>
+						</tr>
+						<tr>
+							<td>Drop-down lists</td>
+							<td><code>&lt;select name="dropdownGroupName"&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;optgroup label="Group 1"&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice1"&gt;</code>Choice One<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice2" selected="selected"&gt;</code>Choice Two<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/optgroup&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;optgroup label="Group 2"&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice3"&gt;</code>Choice Three<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/optgroup&gt;</code><br>
+								<code>&lt;/select&gt;</code></td>
+							<td><select name="dropdownGroupName">
+								<optgroup label="Group 1">
+									<option value="choice1">Choice One</option>
+									<option value="choice2" selected="selected">Choice Two</option>
+								</optgroup>
+								<optgroup label="Group 2">
+								<option value="choice3">Choice Three</option>
+								</optgroup>
+								</select></td>
+							<td>Use this for when a user must choose one option from a drop-down list. They have similar functionality to radio buttons, and are best suited to longer lists. Keyboard navigators will use <kbd>tab</kbd> to select the drop-down list, then the arrow keys to select an option from that list. Use the attribute <code>selected="selected"</code> to specify the default value.</td>
+						</tr>
+						<tr>
+							<td>Multiple-select list boxes</td>
+							<td><code>&lt;select name="selectGroupName" multiple="multiple" size="4"&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice1"&gt;</code>Choice One<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice2" selected="selected"&gt;</code>Choice Two<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice3"&gt;</code>Choice Three<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice4"&gt;</code>Choice Four<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice5"&gt;</code>Choice Five<code>&lt;/option&gt;</code><br>
+								<code>&lt;/select&gt;</code></td>
+							<td><select name="dropdownGroupName" multiple="multiple" size="4">
+								<option value="choice1">Choice One</option>
+								<option value="choice2" selected="selected">Choice Two</option>
+								<option value="choice3">Choice Three</option>
+								<option value="choice4">Choice Four</option>
+								<option value="choice5">Choice Five</option>
+								</select></td>
+							<td>Use this for when a user may choose multiple options from a box. They have similar functionality to checklists, and are best suited to longer lists. Keyboard navigators will use <kbd>tab</kbd> to select the drop-down list, hold down <kbd>ctrl</kbd> while making selections, and use <kbd>space</kbd> to toggle selections on and off. Use the attribute <code>selected="selected"</code> to specify the default values, and <code>size="X"</code> to set how many rows are shown by default.</td>
+						</tr>
+						<tr>
+							<td>Autocomplete box</td>
+							<td><code>&lt;input type="text" name="autocomplete" id="listId" list="listId" /&gt;</code><br>
+								<code>&lt;datalist id="listId"&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice1"&gt;</code>Choice One<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice2"&gt;</code>Choice Two<code>&lt;/option&gt;</code><br>
+								<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="choice3"&gt;</code>Choice Three<code>&lt;/option&gt;</code>
+								<code>&lt;/datalist&gt;</code></td>
+							<td><input type="text" name="autocomplete" id="datalistBox" list="datalistId" />
+								<datalist id="datalistId">
+									<option>Choice One</option>
+									<option>Choice Two</option>
+									<option>Choice Three</option>
+								</datalist><br>
+								<input type="range" list="tickmarks">
+								<datalist id="tickmarks">
+									<option value="0"></option>
+									<option value="10"></option>
+									<option value="20"></option>
+									<option value="30"></option>
+									<option value="40"></option>
+									<option value="50"></option>
+									<option value="60"></option>
+									<option value="70"></option>
+									<option value="80"></option>
+									<option value="90"></option>
+									<option value="100"></option>
+								</datalist><br>
+								<input type="color" value="#000000" list="colors" />
+								<datalist id="colors">
+									<option>#ff0000</option>
+									<option>#0000ff</option>
+									<option>#00ff00</option>
+									<option>#ffff00</option>
+									<option>#00ffff</option>
+								</datalist></td>
+							<td>Allows for an autocomplete box where a user can type and then select from a specified list of fields. Datalists can be used to pre-select a color palette for the <code>color</code> control, while still allowing a custom value. Datalists can also be used for sliders to add tick marks above or below the slider bar.</td>
+						</tr>
+						<tr>
+							<td>Submit button</td>
+							<td><code>&lt;input type="submit" name="submitName" value="Submit button Text"&gt;</code></td>
+							<td><input type="submit" name="submitName" value="Submit button Text"></td>
+							<td>Submits the data the user has entered to another webpage or server.</td>
+						</tr>
+						<tr>
+							<td>Image button</td>
+							<td><code>&lt;input type="image" src="../assets/image-button.svg" style="max-height: 3em;"/&gt;</code></td>
+							<td><input type="image" src="../assets/image-button.svg" alt="Sample button" style="max-height: 3em;" /></td>
+							<td>Functions as a submit button, but uses an image instead of an HTML button.</td>
+						</tr>
+						<tr>
+							<td>Reset button</td>
+							<td><code>&lt;input type="reset" value="Reset button text" /&gt;</code></td>
+							<td><input type="reset" value="Reset button text" /></td>
+							<td>Resets all form fields to their default values.</td>
+						</tr>
+						<tr>
+							<td>File upload</td>
+							<td><code>&lt;input type="file" name="fileName" /&gt;</code></td>
+							<td><input type="file" name="fileName" /></td>
+							<td>Allows a user to upload files such as images or PDFs to a website. With this input, forms must have a method of <code>POST</code>.</td>
+						</tr>
+						<tr>
+							<td>Hidden input</td>
+							<td><code>&lt;input type="hidden" name="inputName" value="inputValue" /&gt;</code></td>
+							<td><input type="hidden" name="inputName" value="inputValue" /></td>
+							<td>Used to add controls not shown to the user, such as which page the user was on when they submitted the form.</td>
+						</tr>
+						<tr>
+							<td>Progress</td>
+							<td><code>&lt;progress max="maxValue" value="currentValue"&gt;</code>Fallback text<code>&lt;/progress&gt;</code></td>
+							<td><progress max="100" value="75">75/100</progress></td>
+							<td>Shows progress toward any goal, and can be modified using JavaScript. Examples are total files downloaded, or the number of questions filled in a questionnaire. Fallback content inside the element is for browsers that don&rsquo;t support it.</td>
+						</tr>
+						<tr>
+							<td>Meter</td>
+							<td><code>&lt;meter min="minValue" max="maxValue" value="currentValue" low="lowValue" high="highValue" optimum="optimumValue"&gt;</code>Fallback text<code>&lt;/meter&gt;</code></td>
+							<td><meter min="0" max="100" value="25" low="33" high="66" optimum="50">75</meter><br>
+							<meter min="0" max="100" value="50" low="33" high="66" optimum="50">75</meter><br>
+							<meter min="0" max="100" value="75" low="33" high="66" optimum="25">75</meter></td>
+							<td>This displays a numerical value depending on the numbers specified as attributes: low (<code>min</code>&ndash;<code>low</code>), medium (<code>low</code>&mdash;<code>high</code>), or high (<code>high</code>&ndash;<code>max</code>). The <code>optimum</code> value defines which part of the range is preferred. If the current value is in the preferred section (the range that includes <code>optimum</code>), the meter shows green. If the current value is in the average section (no more than one section away from <code>optimum</code>), the meter shows yellow. And if the current value is in the worst section (two sections away from <code>optimum</code>), the meter shows red.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2>Data validation</h2>
+				
+			<p>HTML5 form elements (email, date, etc) have built-in validation in browsers that support them. However, this is not a replacement for server-side validation. Make sure to explicity define patterns and customize error messages for client-side validation. This will ensure better error handling and less load on the server for validation.</p>
+			
+			<p><code>pattern</code> attributes follow <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, to define a four-digit number, use <code>[0-9]{4}</code>. For accessibility, when a control has a <code>pattern</code> attribute, the title must describe the pattern.</p>
+			<p>The CSS pseudo-class <code>:invalid</code> allows for styling of form fields that do not pass client-side validation.</p>
+	
+		</main>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script>
+	document.getElementById('nav-forms').classList.add('active');
+</script>
+</body>
+</html>

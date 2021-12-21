@@ -8,25 +8,37 @@ const cardItems = {
 		cards: {
 			entities: {
 				title:	"HTML Entities",
-				copy:	"Special characters and how to encode them",
+				copy:	"Special characters and how to encode&nbsp;them",
 				link:	"./html-css/entities.html",
 				image:	"./assets/entities.svg"
 			},
 			links: {
 				title:	"Links",
-				copy:	"Links, attributes and their values, and usage",
+				copy:	"Links, attributes and their values, and&nbsp;usage",
 				link:	"./html-css/links.html",
 				image:	"./assets/links.svg"
 			},
+			tables: {
+				title:	"Tables",
+				copy:	"Rows, data cells, headings, and&nbsp;formatting",
+				link:	"./html-css/tables.html",
+				image:	"./assets/tables.svg"
+			},
+			forms: {
+				title:	"Forms",
+				copy:	"Entering, validating, and submitting user data",
+				link:	"./html-css/forms.html",
+				image:	"./assets/forms.svg"
+			},
 			flexbox: {
 				title:	"Flexbox",
-				copy:	"Quick reference and examples for CSS flexbox usage",
+				copy:	"Quick reference and examples for CSS flexbox&nbsp;usage",
 				link:	"./html-css/flexbox.html",
 				image:	"./assets/flexbox.svg"
 			},
 			selectors: {
 				title:	"CSS Selectors",
-				copy:	"Examples and usage for specificity, selectors, and inheritance",
+				copy:	"Examples and usage for specificity, selectors, and&nbsp;inheritance",
 				link:	"./html-css/selectors.html",
 				image:	"./assets/selectors.svg"
 			}
@@ -38,7 +50,7 @@ const cardItems = {
 		cards: {
 			time_date: {
 				title:	"Time &amp; Date",
-				copy:	"Displaying time and date with Javascript",
+				copy:	"Displaying time and date with&nbsp;Javascript",
 				link:	"./javascript/time-date.html",
 				image:	"./assets/time-date.svg"
 			}
@@ -50,31 +62,31 @@ const cardItems = {
 		cards: {
 			typography: {
 				title:	"Typography",
-				copy:	"Fonts, typefaces, special characters, and how they apply to web design",
+				copy:	"Fonts, typefaces, special characters, and how they apply to web&nbsp;design",
 				link:	"./design/typography.html",
 				image:	"./assets/typography.svg"
 			},
 			copy: {
 				title:	"Copywriting",
-				copy:	"Principles, best practices, and common errors in copywriting",
+				copy:	"Principles, best practices, and common errors in&nbsp;copywriting",
 				link:	"./design/copy.html",
 				image:	"./assets/copy.svg"
 			},
 			color: {
 				title:	"Color &amp; Color Theory",
-				copy:	"The color wheel, choosing color palettes, and color theory",
+				copy:	"The color wheel, choosing color palettes, and color&nbsp;theory",
 				link:	"./design/color.html",
 				image:	"./assets/color.svg"
 			},
 			images: {
 				title:	"Images",
-				copy:	"Image formats, use cases, and pros and cons",
+				copy:	"Image formats, use cases, and pros and&nbsp;cons",
 				link:	"./design/images.html",
 				image:	"./assets/images.svg"
 			},
 			animation: {
 				title:	"Animation",
-				copy:	"Transitional, deocrative, and functional animations",
+				copy:	"Transitional, deocrative, and functional&nbsp;animations",
 				link:	"./design/animation.html",
 				image:	"./assets/animation.gif"
 			}
@@ -86,7 +98,7 @@ const cardItems = {
 		cards: {
 			color: {
 				title:	"Color Accessibility",
-				copy:	"Colorblind accessibility and safe color palettes",
+				copy:	"Colorblind accessibility and safe color&nbsp;palettes",
 				link:	"./accessibility/color.html",
 				image:	"./assets/acc-color.svg"
 			}
@@ -98,19 +110,19 @@ const cardItems = {
 		cards: {
 			qa_qc: {
 				title:	"QA &amp; QC Checklists",
-				copy:	"Checklists for ensuring quality of design and content",
+				copy:	"Checklists for ensuring quality of design and&nbsp;content",
 				link:	"./resources/qa-qc.html",
 				image:	"./assets/qa-qc.svg"
 			},
 			statistics: {
 				title:	"Statistics",
-				copy:	"Current statistics on market share, from Statcounter.com",
+				copy:	"Current statistics on market share, from&nbsp;Statcounter.com",
 				link:	"./resources/statistics.html",
 				image:	"./assets/statistics.svg"
 			},
 			troubleshooting: {
 				title:	"Troubleshooting",
-				copy:	"Glitches, common errors, and their workarounds and fixes",
+				copy:	"Glitches, common errors, and their workarounds and&nbsp;fixes",
 				link:	"./resources/troubleshooting.html",
 				image:	"./assets/troubleshooting.svg"
 			}
