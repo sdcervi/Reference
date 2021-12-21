@@ -85,6 +85,11 @@ const navItems = {
 				title:	"Statistics",
 				link:	"/Reference/resources/statistics.html",
 				id:		"nav-statistics"
+			},
+			troubleshooting: {
+				title:	"Troubleshooting",
+				link:	"/Reference/resources/troubleshooting.html",
+				id:		"nav-troubleshooting"
 			}
 		}
 	}

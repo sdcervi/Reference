@@ -101,6 +101,12 @@ const cardItems = {
 				copy:	"Current statistics on market share, from Statcounter.com",
 				link:	"./resources/statistics.html",
 				image:	"./assets/statistics.svg"
+			},
+			troubleshooting: {
+				title:	"Troubleshooting",
+				copy:	"Glitches, common errors, and their workarounds and fixes",
+				link:	"./resources/troubleshooting.html",
+				image:	"./assets/troubleshooting.svg"
 			}
 		}
 	}
