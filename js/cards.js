@@ -10,37 +10,37 @@ const cardItems = {
 				title:	"HTML Entities",
 				copy:	"Special characters and how to encode&nbsp;them",
 				link:	"./html-css/entities.html",
-				image:	"./assets/entities.svg"
+				image:	"./assets/homepage/entities.svg"
 			},
 			links: {
 				title:	"Links",
 				copy:	"Links, attributes and their values, and&nbsp;usage",
 				link:	"./html-css/links.html",
-				image:	"./assets/links.svg"
+				image:	"./assets/homepage/links.svg"
 			},
 			tables: {
 				title:	"Tables",
 				copy:	"Rows, data cells, headings, and&nbsp;formatting",
 				link:	"./html-css/tables.html",
-				image:	"./assets/tables.svg"
+				image:	"./assets/homepage/tables.svg"
 			},
 			forms: {
 				title:	"Forms",
 				copy:	"Entering, validating, and submitting user data",
 				link:	"./html-css/forms.html",
-				image:	"./assets/forms.svg"
+				image:	"./assets/homepage/forms.svg"
 			},
 			flexbox: {
 				title:	"Flexbox",
 				copy:	"Quick reference and examples for CSS flexbox&nbsp;usage",
 				link:	"./html-css/flexbox.html",
-				image:	"./assets/flexbox.svg"
+				image:	"./assets/homepage/flexbox.svg"
 			},
 			selectors: {
 				title:	"CSS Selectors",
 				copy:	"Examples and usage for specificity, selectors, and&nbsp;inheritance",
 				link:	"./html-css/selectors.html",
-				image:	"./assets/selectors.svg"
+				image:	"./assets/homepage/selectors.svg"
 			}
 		}
 	},
@@ -52,7 +52,7 @@ const cardItems = {
 				title:	"Time &amp; Date",
 				copy:	"Displaying time and date with&nbsp;Javascript",
 				link:	"./javascript/time-date.html",
-				image:	"./assets/time-date.svg"
+				image:	"./assets/homepage/time-date.svg"
 			}
 		}
 	},
@@ -64,31 +64,31 @@ const cardItems = {
 				title:	"Typography",
 				copy:	"Fonts, typefaces, special characters, and how they apply to web&nbsp;design",
 				link:	"./design/typography.html",
-				image:	"./assets/typography.svg"
+				image:	"./assets/homepage/typography.svg"
 			},
 			copy: {
 				title:	"Copywriting",
 				copy:	"Principles, best practices, and common errors in&nbsp;copywriting",
 				link:	"./design/copy.html",
-				image:	"./assets/copy.svg"
+				image:	"./assets/homepage/copy.svg"
 			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				copy:	"The color wheel, choosing color palettes, and color&nbsp;theory",
 				link:	"./design/color.html",
-				image:	"./assets/color.svg"
+				image:	"./assets/homepage/color.svg"
 			},
 			images: {
 				title:	"Images",
 				copy:	"Image formats, use cases, and pros and&nbsp;cons",
 				link:	"./design/images.html",
-				image:	"./assets/images.svg"
+				image:	"./assets/homepage/images.svg"
 			},
 			animation: {
 				title:	"Animation",
 				copy:	"Transitional, deocrative, and functional&nbsp;animations",
 				link:	"./design/animation.html",
-				image:	"./assets/animation.gif"
+				image:	"./assets/homepage/animation.gif"
 			}
 		}
 	},
@@ -100,7 +100,7 @@ const cardItems = {
 				title:	"Color Accessibility",
 				copy:	"Colorblind accessibility and safe color&nbsp;palettes",
 				link:	"./accessibility/color.html",
-				image:	"./assets/acc-color.svg"
+				image:	"./assets/homepage/acc-color.svg"
 			}
 		}
 	},
@@ -112,19 +112,19 @@ const cardItems = {
 				title:	"QA &amp; QC Checklists",
 				copy:	"Checklists for ensuring quality of design and&nbsp;content",
 				link:	"./resources/qa-qc.html",
-				image:	"./assets/qa-qc.svg"
+				image:	"./assets/homepage/qa-qc.svg"
 			},
 			statistics: {
 				title:	"Statistics",
 				copy:	"Current statistics on market share, from&nbsp;Statcounter.com",
 				link:	"./resources/statistics.html",
-				image:	"./assets/statistics.svg"
+				image:	"./assets/homepage/statistics.svg"
 			},
 			troubleshooting: {
 				title:	"Troubleshooting",
 				copy:	"Glitches, common errors, and their workarounds and&nbsp;fixes",
 				link:	"./resources/troubleshooting.html",
-				image:	"./assets/troubleshooting.svg"
+				image:	"./assets/homepage/troubleshooting.svg"
 			}
 		}
 	}
