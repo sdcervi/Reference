@@ -6,7 +6,8 @@ main { margin-top: 5em!important; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
-h2 { font: bold 1.5rem Arial, sans-serif; padding-top: 0.75em; color: #71a332; }
+h2 { font: bold 1.5rem Arial, sans-serif; padding-top: 0.75em; }
+h2:not(:first-child), #cards-container section:not(:first-child), h2.h2-border { margin-top: 1em; border-top: 1px solid #D79E61; }
 h3 { font: bold 1.25rem Arial, sans-serif; padding-top: 0.5em; }
 h4 { font: bold 1.1rem Arial, sans-serif; padding-top: 0.5em; }
 h5 { font: bold 1rem Arial, sans-serif; padding-top: 0.25em; }
@@ -16,12 +17,15 @@ img.logo { max-width: 2em; height: auto; }
 .navbar-brand { margin-right: 0; }
 .navbar-text h1 { text-align: left; font: bold 1rem Arial, sans-serif; color: white; margin: 0 1em; }
 
+.btn-primary { background-color: #28814C; border-color: #28814C; }
+.btn-primary:focus, .btn-primary:hover, .btn-primary:active { background-color: #B36F37; border-color: #B36F37; } 
+
 .sidebar-sticky { padding-top: 1.5rem; }
 .sidebar-heading { font-size: 1rem; }
-.sidebar .nav-link.active { color: #527f00!important; position: relative; }
+.sidebar .nav-link.active { color: #B36F37!important; position: relative; }
 .sidebar .nav-link.active::before { content: '\00BB';  position: absolute; left: 20px; bottom: 1px; }
 li.nav-item a.nav-link { padding: 0.5rem 1rem 0 2rem; line-height: 1rem; }
-li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; }
+li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; color: #B36F37; }
 nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}
 #navbar-container-mbl .sidebar-heading { font-size: 1.25rem; }
 #navbar-container-mbl li.nav-item a.nav-link { font-size: 1rem; }
@@ -29,7 +33,7 @@ nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}
 figure img { max-width: 100%; }
 figure figcaption { text-align: center; max-width: 80%; margin: 0 auto; font-size: 0.9em; }
 
-.sources h2 { font-size: 1.25em; }
+.sources h2 { font-size: 1.25em; border-top: 1px solid #D79E61; margin-top: 2em; }
 .sources p { font-size: 0.9em; margin-left: 3em; text-indent: -3em; }
 
 /* ################################## GENERAL STYLES ################################## */
