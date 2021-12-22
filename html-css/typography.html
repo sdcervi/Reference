@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>HTML Typography | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>HTML Typography</h1></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light d-md-none mobile-nav">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		</nav>	
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Headings</h2>
+			
+			<p>Headings should always follow a logical hierarchy similar to an outline. Never skip past a heading level; use CSS to restyle headings if you need them to look different than their default heading level. (For example, the Sources heading at the bottom of some of these pages.)</p>
+			
+			<p>Pages must only have one h1 heading for accessibility; this is the page title.</p>
+			
+			<div class="row">
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+					<p>
+						<code>&lt;h1&gt;</code>Heading 1<code>&lt;/h1&gt;</code><br>
+						<code>&lt;h2&gt;</code>Heading 2<code>&lt;/h2&gt;</code><br>
+						<code>&lt;h3&gt;</code>Heading 3<code>&lt;/h3&gt;</code><br>
+						<code>&lt;h4&gt;</code>Heading 4<code>&lt;/h4&gt;</code><br>
+						<code>&lt;h5&gt;</code>Heading 5<code>&lt;/h5&gt;</code><br>
+						<code>&lt;h6&gt;</code>Heading 6<code>&lt;/h6&gt;</code>
+					</p>
+				</div>
+				<div class="col-6 col-sm-8 col-md-9 col-xl-10">
+					<h1>Heading 1</h1>
+					<h2 style="border: none; margin-top: 0; padding-top: 0;">Heading 2</h2>
+					<h3 style="padding-top: 0;">Heading 3</h3>
+					<h4 style="padding-top: 0;">Heading 4</h4>
+					<h5 style="padding-top: 0;">Heading 5</h5>
+					<h6 style="padding-top: 0;">Heading 6</h6>
+				</div>
+			</div>
+			
+			<h2>Columns</h2>
+			
+			<p>Use the <code>column-count</code> CSS property with an integer value to set the number of columns in text (Width auto-determined), and <code>column-width</code> to set the minimum width of columns and have the number auto-determined.</p>
+			
+			<p><strong>Example:</strong> <code>column-count: 3;</code> will have three auto-sized columns.</p>
+			
+			<p style="column-count: 3;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porta rhoncus. Nam a tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam a ex libero. Proin ultrices sed metus suscipit suscipit. In vestibulum posuere rutrum. Vivamus sed semper dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed nulla accumsan, scelerisque nunc vel, facilisis libero. Pellentesque erat quam, condimentum id ipsum sit amet, congue accumsan mi. Ut viverra, ante non tristique iaculis, metus metus aliquet metus, eget bibendum neque purus eu eros. Nam egestas bibendum nulla, vel scelerisque nibh venenatis vel. Vestibulum malesuada eleifend turpis, sed auctor nunc consectetur ut. Integer interdum nibh sit amet aliquet aliquam. Morbi eu eros accumsan, auctor ligula sed, placerat leo. Vestibulum vestibulum rhoncus dolor vitae aliquet. Mauris id nulla fringilla, interdum urna id, euismod elit. Maecenas eu augue ac orci tempus fringilla. Duis lobortis ligula a sem congue molestie. Donec elementum nisl id sodales imperdiet. Sed molestie nunc nunc, ac hendrerit nisi aliquet sed. Suspendisse ac libero nec nunc placerat facilisis. Sed mollis elementum purus, in feugiat arcu lacinia non. Praesent facilisis malesuada mauris ultricies laoreet. Fusce in sem ut nisi porta rhoncus vel quis nunc. Duis ut bibendum ante, vel consectetur mauris. Ut vel elit ante. Praesent non aliquet sapien. Nam aliquam, orci et malesuada sollicitudin, lacus augue commodo odio, eu viverra massa velit vel nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam consequat enim placerat ligula fermentum ullamcorper.</p>
+			
+			<p><strong>Example:</strong> <code>column-width: 20em;</code> will have an automatic number of columns with a minimum width of 20em.</p>
+			
+			<p style="column-width: 20em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porta rhoncus. Nam a tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam a ex libero. Proin ultrices sed metus suscipit suscipit. In vestibulum posuere rutrum. Vivamus sed semper dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed nulla accumsan, scelerisque nunc vel, facilisis libero. Pellentesque erat quam, condimentum id ipsum sit amet, congue accumsan mi. Ut viverra, ante non tristique iaculis, metus metus aliquet metus, eget bibendum neque purus eu eros. Nam egestas bibendum nulla, vel scelerisque nibh venenatis vel. Vestibulum malesuada eleifend turpis, sed auctor nunc consectetur ut. Integer interdum nibh sit amet aliquet aliquam. Morbi eu eros accumsan, auctor ligula sed, placerat leo. Vestibulum vestibulum rhoncus dolor vitae aliquet. Mauris id nulla fringilla, interdum urna id, euismod elit. Maecenas eu augue ac orci tempus fringilla. Duis lobortis ligula a sem congue molestie. Donec elementum nisl id sodales imperdiet. Sed molestie nunc nunc, ac hendrerit nisi aliquet sed. Suspendisse ac libero nec nunc placerat facilisis. Sed mollis elementum purus, in feugiat arcu lacinia non. Praesent facilisis malesuada mauris ultricies laoreet. Fusce in sem ut nisi porta rhoncus vel quis nunc. Duis ut bibendum ante, vel consectetur mauris. Ut vel elit ante. Praesent non aliquet sapien. Nam aliquam, orci et malesuada sollicitudin, lacus augue commodo odio, eu viverra massa velit vel nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam consequat enim placerat ligula fermentum ullamcorper.</p>
+	
+		</main>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script>
+	document.getElementById('nav-html-type').classList.add('active');
+</script>
+</body>
+</html>

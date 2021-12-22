@@ -23,7 +23,7 @@ img.logo { max-width: 2em; height: auto; }
 .sidebar-sticky { padding-top: 1.5rem; }
 .sidebar-heading { font-size: 1rem; }
 .sidebar .nav-link.active { color: #B36F37!important; position: relative; }
-.sidebar .nav-link.active::before { content: '\00BB';  position: absolute; left: 20px; bottom: 1px; }
+.sidebar .nav-link.active::before { content: '\25A0'; position: absolute; left: 15px; }
 li.nav-item a.nav-link { padding: 0.5rem 1rem 0 2rem; line-height: 1rem; }
 li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; color: #B36F37; }
 nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}

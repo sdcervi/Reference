@@ -12,6 +12,12 @@ const cardItems = {
 				link:	"./html-css/entities.html",
 				image:	"./assets/homepage/entities.svg"
 			},
+			typography: {
+				title:	"Typography",
+				copy:	"Text flow, formatting, and readability",
+				link:	"./html-css/typography.html",
+				image:	"./assets/homepage/html-type.svg"
+			},
 			links: {
 				title:	"Links",
 				copy:	"Links, attributes and their values, and&nbsp;usage",

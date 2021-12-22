@@ -11,6 +11,11 @@ const navItems = {
 				link:	"/Reference/html-css/entities.html",
 				id:		"nav-entities"
 			},
+			typography: {
+				title:	"Typography",
+				link:	"/Reference/html-css/typography.html",
+				id:		"nav-html-type"
+			},
 			links: {
 				title:	"Links",
 				link:	"/Reference/html-css/links.html",
