@@ -40,6 +40,11 @@ const navItems = {
 				title:	"CSS Selectors",
 				link:	"/Reference/html-css/selectors.html",
 				id:		"nav-selectors"
+			},
+			metadata: {
+				title:	"Metadata",
+				link:	"/Reference/html-css/metadata.html",
+				id:		"nav-metadata"
 			}
 		}
 	},

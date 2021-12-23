@@ -14,7 +14,7 @@ const cardItems = {
 			},
 			typography: {
 				title:	"Typography",
-				copy:	"Text flow, formatting, and readability",
+				copy:	"Text flow, formatting, and&nbsp;readability",
 				link:	"./html-css/typography.html",
 				image:	"./assets/homepage/html-type.svg"
 			},
@@ -32,7 +32,7 @@ const cardItems = {
 			},
 			forms: {
 				title:	"Forms",
-				copy:	"Entering, validating, and submitting user data",
+				copy:	"Entering, validating, and submitting user&nbsp;data",
 				link:	"./html-css/forms.html",
 				image:	"./assets/homepage/forms.svg"
 			},
@@ -47,6 +47,12 @@ const cardItems = {
 				copy:	"Examples and usage for specificity, selectors, and&nbsp;inheritance",
 				link:	"./html-css/selectors.html",
 				image:	"./assets/homepage/selectors.svg"
+			},
+			metadata: {
+				title:	"Metadata",
+				copy:	"Page properties such as language, who wrote it, and whether to cache&nbsp;it",
+				link:	"./html-css/metadata.html",
+				image:	"./assets/homepage/metadata.svg"
 			}
 		}
 	},
