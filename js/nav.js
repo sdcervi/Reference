@@ -26,6 +26,11 @@ const navItems = {
 				link:	"/Reference/html-css/tables.html",
 				id:		"nav-tables"
 			},
+			embedded: {
+				title:	"Embedded Content",
+				link:	"/Reference/html-css/embedded.html",
+				id:		"nav-embedded"
+			},
 			forms: {
 				title:	"Forms",
 				link:	"/Reference/html-css/forms.html",

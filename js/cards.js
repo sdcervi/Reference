@@ -30,6 +30,12 @@ const cardItems = {
 				link:	"./html-css/tables.html",
 				image:	"./assets/homepage/tables.svg"
 			},
+			embedded: {
+				title:	"Embedded Content",
+				copy:	"Videos, responsive images, audio, and other embedded&nbsp;media;",
+				link:	"./html-css/embedded.html",
+				image:	"./assets/homepage/embedded.svg"
+			},
 			forms: {
 				title:	"Forms",
 				copy:	"Entering, validating, and submitting user&nbsp;data",
