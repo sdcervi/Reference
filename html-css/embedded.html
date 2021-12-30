@@ -82,12 +82,14 @@
 				<li>Ogg</li>
 			</ul>
 			
+			<p>MP4 (H.264) is the most widely supported format.
+			
 			<p>Example:</p>
 			
 			<p><code>&lt;video controls&gt;<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="myVideo.webm" type="video/webm"&gt;<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="myVideo.mp4" type="video/mp4"&gt;<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Your browser doesn&rsquo;t support HTML5 video. Here is a &lt;a href="myVideo.mp4"&gt;link to the video&lt;/a&gt; instead.<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</code>Your browser doesn&rsquo;t support HTML5 video. Here is a <code>&lt;a href="myVideo.mp4"&gt;</code>link to the video<code>&lt;/a&gt;</code> instead.<code>&lt;/p&gt;<br>
 				&lt;/video&gt;</code></p>
 			
 			<h3>Attributes</h3>
@@ -168,10 +170,100 @@
 			
 			<p><strong>Example:</strong> <code>&lt;source src="video/filename.mp4" type="video/mp4:codecs='avcl.42E01E, mp4a.40.2'" /&gt;</code></p>
 			
-			<section class="sources">
-				<h2>Sources</h2>
-				<p>Lastname, Firstname. &ldquo;#: Chapter Title.&rdquo; <i>Book Title</i>, Publisher Name, Publisher City, STATE, YYYY, pp. X&ndash;Y. Publisher Series: Subseries.</p>
-			</section>
+			<h2>Embedding audio</h2>
+			
+			<h3>External hosting</h3>
+			
+			<p>Upload your audio file to a service such as SoundCloud, and use their embeddable media player.</p>
+			
+			<h3>HTML5 embed</h3>
+					
+			<p>With HTML5, we can now embed audio files directly into a page without needing Flash or another external hosting service.</p>
+			
+			<p>Example:</p>
+			
+			<p><code>&lt;audio controls<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src="myAudio.mp3"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</code>Your browser doesn&rsquo;t support HTML5 audio. Here is a <code>&lt;a href="myAudio.mp3"&gt;</code>link to the audio file<code>&lt;/a&gt;</code> instead.<code>&lt;/p&gt;<br>
+				&lt;/audio&gt;</code></p>
+			
+			<h4>File types</h4>
+			
+			<p>Properly embedding audio files in HTML pages involves several audio formats and properties:</p>
+			<ul>
+				<li>MP3</li>
+				<li>MP4</li>
+				<li>Ogg</li>
+				<li>WAV</li>
+				<li>WebM</li>
+				<li>CAF</li>
+				<li>FLAC</li>
+				<li>ADTS</li>
+			</ul>
+			
+			<p>MP3 is the most widely supported format.</p>
+			
+			<h4>Attributes</h4>
+			
+			<p>Many of the <code>audio</code> tag&rsquo;s attributes are on/off switches; they are <code>true</code> when present and <code>false</code> when absent.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Property</th>
+							<th scope="col">Value(s)</th>
+							<th scope="col">Behavior</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>autoplay</code></td>
+							<td>No value; this is boolean. Having it present in the <code>audio</code> tag sets it to <code>true</code>.</td>
+							<td>If set to <code>true</code>, the audio file automatically starts playing as soon as it can without stopping to buffer. Avoid setting to <code>true</code> unless necessary, since this is considered a bad user experience. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Mozilla has a guide on proper use of the autoplay property</a>.</td>
+						</tr>
+						<tr>
+							<td><code>controls</code></td>
+							<td>No value; this is boolean. Having it present in the <code>audio</code> tag sets it to <code>true</code>.</td>
+							<td>If set to <code>true</code>, the audio file will have an overlay for controlling playback (play/pause, seek bar, volume).</td>
+						</tr>
+						<tr>
+							<td><code>loop</code></td>
+							<td>No value; this is boolean. Having it present in the <code>audio</code> tag sets it to <code>true</code>.</td>
+							<td>If set to <code>true</code>, the audio file will automatically replay once it reaches the end.</td>
+						</tr>
+						<tr>
+							<td><code>muted</code></td>
+							<td>No value; this is boolean. Having it present in the <code>audio</code> tag sets it to <code>true</code>.</td>
+							<td>If set to <code>true</code>, the audio file will begin playback with its audio muted.</td>
+						</tr>
+						<tr>
+							<td><code>preload</code></td>
+							<td><code>none</code>: The audio file should not be preloaded<br>
+								<code>metadata</code>: Only the metadata (i.e. audio length) is fetched<br>
+								<code>auto</code>: The whole audio file should be preloaded even if the user is not expected to play it<br>
+								<code>[empty]</code>: Defaults to <code>auto</code></td>
+							<td>This controls the preload behavior of an audio file. <strong>Note:</strong> <code>autoplay</code> has precedence over <code>preload</code>. If <code>autoplay</code> is specified, <code>preload</code> is also on by default.</td>
+						</tr>
+						<tr>
+							<td><code>src</code></td>
+							<td>URL to the audio file to embed.</td>
+							<td>This is optional, and can only provide one source file. You can also use the <code>&lt;source&gt;</code> tag within the <code>audio</code> element to specify one or more source files.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<p>For the <code>&lt;source&gt;</code> tag inside the <code>audio</code> element, it has two required attributes:</p>
+			
+			<ul>
+				<li><strong>src:</strong> URL to the path of the audio file.</li>
+				<li><strong>type:</strong> the format of the audio file. Without this, the browser will download some of the audio to see if it can play the file, which wastes time and bandwidth.</li>
+			</ul>
+			
+			<p><strong>Example:</strong> <code>&lt;source src="audio/filename.mp3" type="audio/mp3" /&gt;</code></p>
 	
 		</main>
 		
