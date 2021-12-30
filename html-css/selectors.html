@@ -70,6 +70,65 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-3 offset-lg-2">
 			
+			<h2>Selector types</h2>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Selector example</th>
+							<th scope="col">Name</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>* { ... }</code></td>
+							<td>Universal selector</td>
+							<td>Targets all elements on the page</td>
+						</tr>
+						<tr>
+							<td><code>type { ... }</code></td>
+							<td>Type selector</td>
+							<td>Targets elements by name</td>
+						</tr>
+						<tr>
+							<td><code>.class { ... }<br>
+								type.class { ... }</code></td>
+							<td>Class selector</td>
+							<td>Targets all elements whose <code>class</code> attribute contains the specified one</td>
+						</tr>
+						<tr>
+							<td><code>#id { ... }</code></td>
+							<td>ID selector</td>
+							<td>Targets an element whose <code>id</code> attribute matches the specified one. IDs are unique and should only target one element. Use classes to target multiple elements.</td>
+						</tr>
+						<tr>
+							<td><code>parent&gt;child { ... }</code></td>
+							<td>Child selector</td>
+							<td>Targets an element, class, or ID that is the direct child of another</td>
+						</tr>
+						<tr>
+							<td><code>parent child { ... }</code></td>
+							<td>Descendant selector</td>
+							<td>Targets all descendent elements within a parent, not just direct children</td>
+						</tr>
+						<tr>
+							<td><code>sibling1+sibling2 { ... }</code></td>
+							<td>Adjacent sibling selector</td>
+							<td>Targets the first <code>sibling2</code> after any <code>sibling1</code> elements</td>
+						</tr>
+						<tr>
+							<td><code>sibling1~sibling2 { ... }</code></td>
+							<td>General sibling selector</td>
+							<td>Targets a <code>sibling2</code> that is a sibling of <code>sibling1</code>, even if it isn&rsquo;t the first immediate sibling (i.e. any <code>&lt;p&gt;</code> following an <code>&lt;h2&gt;</code>, even if not the first one)</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
 			<h2>Specificity</h2>
 			
 			<p>Selectors of equal priority will always have the style defined further down in the stylesheet override the earlier one.</p>
@@ -177,6 +236,11 @@
 				</table>
 
 			</div>
+			
+			<section class="sources">
+				<h2>Sources</h2>
+				<p>Duckett, John. &ldquo;10: Introducing CSS.&rdquo; <i>HTML &amp; CSS: design and build websites</i>, John Wiley &amp; Sons, Inc., Indianapolis, IN, 2014, pp. 238.</p>
+			</section>
 				
 		</main>
 		
