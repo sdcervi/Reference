@@ -114,6 +114,16 @@
 				</table>
 
 			</div>
+			
+			<h2>Readability guidelines</h2>
+			
+			<ul>
+				<li><strong>Give cells padding:</strong> Give cell content enough padding so that it&rsquo;s easy to read and doesn&rsquo;t visually crash into the content of other cells.</li>
+				<li><strong>Make headings look different:</strong> Style <code>th</code> headings bold or otherwise styled differently helps users read your tables more easily.</li>
+				<li><strong>Shade alternate rows:</strong> Also known as zebra striping, this makes it easier to follow data along a row. Keep this subtle to avoid over-emphasizing shaded rows.</li>
+				<li><strong>Align numbers right:</strong> Align numbers to the right to help distinguish between small and large values more easily, especially with monetary values. Use <code>td { text-align: "." center; }</code> to center-align numbers around the decimal point.</li>
+				<li><strong>Manage the width:</strong> Don&rsquo;t let tables get wider than their content supports. Tables with a lot of data work better at large sizes than small, simple tables. Limit table size if the data just won&rsquo;t cover the whole screen at larger screen sizes. Wrap tables that will scroll off-screen on smaller screens in a <code>figure</code> element to let the browser handle scrolling.</li>
+			</ul>
 	
 		</main>
 		
