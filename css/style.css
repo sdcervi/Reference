@@ -68,6 +68,13 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 	.form-table th:nth-of-type(even), .form-table td:nth-of-type(even) { display: table-cell; }
 }
 
+/* ################################# BOX MODEL STYLES ################################# */
+
+#div-content { padding: 20px;background-color: #a0c6e8; border: 1px solid black; text-align: center; }
+#div-padding { padding: 15px; background-color: #c4dfb8; border: 1px dashed black; }
+#div-border { padding: 3px; background-color: #ffeebc; border: 1px solid black; }
+#div-margin { padding: 15px; background-color: #f9cc9d; border: 1px dashed black; }
+
 /* ################################## FLEXBOX STYLES ################################## */
 
 #flexbox-container h2 { text-align: center; padding-top: 1em; }

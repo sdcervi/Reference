@@ -6,6 +6,12 @@ const cardItems = {
 		title:	"HTML &amp; CSS",
 		id:		"html-css",
 		cards: {
+			box_model: {
+				title:	"The Box Model",
+				copy:	"Margin, padding, borders, and how they interact",
+				link:	"./html-css/box-model.html",
+				image:	"./assets/homepage/box-model.svg"
+			},
 			entities: {
 				title:	"HTML Entities",
 				copy:	"Special characters and how to encode&nbsp;them",

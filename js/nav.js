@@ -6,6 +6,11 @@ const navItems = {
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
+			box_model: {
+				title:	"The Box Model",
+				link:	"/Reference/html-css/box-model.html",
+				id:		"nav-box-model"
+			},
 			entities: {
 				title:	"HTML Entities",
 				link:	"/Reference/html-css/entities.html",
