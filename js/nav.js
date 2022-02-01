@@ -147,7 +147,7 @@ function createNav () {
 
 createNav();
 
-navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi</div>";
+//navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi</div>";
 
 navDiv.innerHTML = navContent;
 navDivMbl.innerHTML = navContent;
