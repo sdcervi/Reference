@@ -97,14 +97,60 @@
 				</div>
 			</div>
 			
-			<h2>Font stacks</h2>
+			<h2>CSS font definitions</h2>
 			
-			<p>Fonts and typefaces should be defined in a stack with fail-overs in case fonts aren&rsquo;t installed on the end user&rsquo;s computer.</p>
+			<h3><code>font-family</code> and font stacks</h3>
+			
+			<p>Fonts and typefaces should be defined in a stack with fail-overs in case fonts aren&rsquo;t installed on the end user&rsquo;s computer.  Put font names made up of more than one word in double quotes.</p>
 			
 			<p><strong>Example:</strong><br>
 				<code>body {<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: Georgia, "Times New Roman", Times, serif;<br>
 					}</code></p>
+			
+			<h3><code>font-size</code></h3>
+			
+			<p>Specify font size using one of the following units:</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Unit</th>
+							<th scope="col">Example</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Pixels</td>
+							<td><code>16px</code></td>
+							<td>Gives precise control over the font size as defined by the height in pixels on the user&rsquo;s screen.</td>
+						</tr>
+						<tr>
+							<td>Percentage</td>
+							<td><code>75%</code></td>
+							<td>Sets the font size as a percentage relative to the default (inherited) font size.  So with a default of <code>16px</code>, <code>75%</code> would be <code>12px</code>.</td>
+						</tr>
+						<tr>
+							<td>Ems</td>
+							<td><code>1.5em</code></td>
+							<td>Sets the font height to a unit equivalent to the width of a letter m at the inherited font size.</td>
+						</tr>
+						<tr>
+							<td>Rems</td>
+							<td><code>1.5rem</code></td>
+							<td>Sets the font height to a unit equivalent to the width of a letter m at the root font size.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3><code>&commat;font-face</code></h3>
+			
+			<p>You can load custom fonts into a stylesheet with <code>&commat;font-face</code>, however, this downloads files to the user&rsquo;s computer, and you need to make sure the font&rsquo;s license permits you to do so.  Generally, use <a href="https://www.cssfontstack.com/">web-safe fonts</a> or <a href="https://fonts.google.com/">Google fonts</a> to avoid this problem.</p>
 			
 			<h2>Columns</h2>
 			
