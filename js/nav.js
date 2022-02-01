@@ -51,6 +51,11 @@ const navItems = {
 				link:	"/Reference/html-css/selectors.html",
 				id:		"nav-selectors"
 			},
+			display: {
+				title:	"Display, Position &amp; Float",
+				link:	"/Reference/html-css/display-position.html",
+				id:		"nav-display"
+			},
 			metadata: {
 				title:	"Metadata",
 				link:	"/Reference/html-css/metadata.html",

@@ -60,6 +60,12 @@ const cardItems = {
 				link:	"./html-css/selectors.html",
 				image:	"./assets/homepage/selectors.svg"
 			},
+			display: {
+				title:	"Display, Position &amp; Float",
+				copy:	"Controlling the flow, positioning, and layering of elements in the page",
+				link:	"./html-css/display-position.html",
+				image:	"./assets/homepage/display-position.svg"
+			},
 			metadata: {
 				title:	"Metadata",
 				copy:	"Page properties such as language, who wrote it, and whether to cache&nbsp;it",
