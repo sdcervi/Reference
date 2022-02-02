@@ -11,6 +11,11 @@ const navItems = {
 				link:	"/Reference/html-css/box-model.html",
 				id:		"nav-box-model"
 			},
+			semantic: {
+				title:	"Semantic HTML",
+				link:	"/Reference/html-css/semantic.html",
+				id:		"nav-semantic"
+			},
 			entities: {
 				title:	"HTML Entities",
 				link:	"/Reference/html-css/entities.html",
@@ -30,6 +35,11 @@ const navItems = {
 				title:	"Tables",
 				link:	"/Reference/html-css/tables.html",
 				id:		"nav-tables"
+			},
+			background: {
+				title:	"Background",
+				link:	"/Reference/html-css/background.html",
+				id:		"nav-background"
 			},
 			embedded: {
 				title:	"Embedded Content",

@@ -248,130 +248,121 @@
 
 			<h2>Position</h2>
 			
+			<p>While <code>display</code> changes how elements flow relative to each other, <code>position</code> changes how they flow relative to the entire page.  You can use its values to break an element out of the DOM without changing the code significantly.</p>
+			
+			<p><strong>Accessibility:</strong> Make sure that elements positioned with <code>absolute</code> or <code>fixed</code> do not obscure other content on the page when the page is zoomed to increase text size.</p>
+			
 			<div class="table-responsive">
 			
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
+							<th scope="col">Value</th>
+							<th scope="col">Usage</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>static</code></td>
+							<td>The element is positioned with default settings. The <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, and <code>z-index</code> properties will have no effect.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>relative</code></td>
+							<td>The element is positioned within the normal flow of the document, but can be shifted relative to itself. This doesn&rsquo;t affect any other elements in the document. The space for the <code>relative</code> element is still the same as if it were set to <code>static</code>.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>absolute</code></td>
+							<td>The element is removed from the document flow, and no placeholder space is left for it. If an ancestor element has a position value, the child element will be positioned relative to that. If not, it will be positioned relative to the page. Margins of <code>absolute</code> positioned elements do not collapse like they do with <code>static</code> and other elements.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>fixed</code></td>
+							<td>The element is removed from the document flow, and no placeholder space is left for it. Its position will almost always be relative to the page, with a few rare exceptions. When printed, this element will be in the same position on every page of the printed document.</td>
+						</tr>
+						<tr>
+							<td><code>sticky</code></td>
+							<td>The element is positioned within the normal flow of the document, but when scrolled past, &ldquo;sticks&rdquo; to the top of the nearest scrolling ancestor (usually the viewport). At least one offset value (<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>) must be set or this will function like <code>relative</code> positioning.</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
+
+			<h3>Z-index</h3>
+			
+			<p>Overlapping elements can be reordered visually by using <code>z-index</code>. The higher the number, the closer that element&rsquo;s layer is to the &ldquo;front&rdquo; of the page. Values must be an integer, and best practice is to carefully manage your layer numbers to avoid lazy fixes like 9999 to force elements to the top. This works for simpler webpages, but as they get more complex and need more elements&rsquo; layer position defined, it can cause conflicts and unpredictable rendering.</p>
+			
+			<h3>Offset</h3>
+			
+			<p>Use the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties to change an element&rsquo;s position. Values can be either <code>0</code>, defined in ems, percentages, or pixels.</p>
 
 			<h2>Float</h2>
 			
+			<p>A <code>float</code> property moves an element as far left or right in a container as it can possibly go. The element is removed from the normal flow of the page, but other content still wraps around it.</p>
+			
 			<div class="table-responsive">
 			
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
+							<th scope="col">Value</th>
+							<th scope="col">Usage</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>left</code></td>
+							<td>The element is floated to the left side of its containing block.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>right</code></td>
+							<td>The element is floated to the right side of its containing block.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>none</code></td>
+							<td>The element does not float and flows according to its default properties.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>inline-start</code></td>
+							<td>The element floats on the starting side of its containing block; this is on the left for left-to-right languages, and on the right for right-to-left languages.</td>
+						</tr>
+						<tr>
+							<td><code>inline-end</code></td>
+							<td>The element floats on the ending side of its containing block; this is on the right for left-to-right languages, and on the left for right-to-left languages.</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
-
-			<h2>Offset</h2>
+			
+			<h3>Clearing floats</h3>
+			
+			<p>To force elements under a floated element, use the <code>clear</code> property:</p>
 			
 			<div class="table-responsive">
 			
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
+							<th scope="col">Value</th>
+							<th scope="col">Usage</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>none</code></td>
+							<td>The element is not moved down past any floated elements.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>left</code></td>
+							<td>The element is moved down past only <code>left</code>-floated elements.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>right</code></td>
+							<td>The element is moved down past only <code>right</code>-floated elements.</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-
-			</div>
-
-			<h2>Z-index</h2>
-			
-			<div class="table-responsive">
-			
-				<table class="table table-striped table-hover definitions">
-					<thead>
-						<tr>
-							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
+							<td><code>both</code></td>
+							<td>The element is moved down past any previous floated elements. This is most useful when using an empty div to clear floats between page sections.</td>
 						</tr>
 					</tbody>
 				</table>

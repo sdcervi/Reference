@@ -12,6 +12,12 @@ const cardItems = {
 				link:	"./html-css/box-model.html",
 				image:	"./assets/homepage/box-model.svg"
 			},
+			semantic: {
+				title:	"Semantic HTML",
+				copy:	"Elements named according to their purpose in the page",
+				link:	"./html-css/semantic.html",
+				image:	"./assets/homepage/semantic.svg"
+			},
 			entities: {
 				title:	"HTML Entities",
 				copy:	"Special characters and how to encode&nbsp;them",
@@ -36,9 +42,15 @@ const cardItems = {
 				link:	"./html-css/tables.html",
 				image:	"./assets/homepage/tables.svg"
 			},
+			background: {
+				title:	"Background",
+				copy:	"Background images, colors, positioning, and sizing",
+				link:	"./html-css/background.html",
+				image:	"./assets/homepage/background.svg"
+			},
 			embedded: {
 				title:	"Embedded Content",
-				copy:	"Videos, responsive images, audio, and other embedded&nbsp;media;",
+				copy:	"Videos, responsive images, audio, and other embedded&nbsp;media",
 				link:	"./html-css/embedded.html",
 				image:	"./assets/homepage/embedded.svg"
 			},
