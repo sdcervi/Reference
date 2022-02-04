@@ -69,8 +69,21 @@
         
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#colorspaces">Colorspaces</a></li>
+					<li><a href="#properties">Color properties</a></li>
+					<li><a href="#schemes">Color schemes</a></li>
+					<li><a href="#best-practices">Best Practices</a></li>
+				</ul>
+			</nav>
 
-			<h2>Colorspaces</h2>
+			<h2 id="colorspaces">Colorspaces</h2>
+			
+			<p>Colorspaces can either be <strong>additive</strong> (key colors are added together to get white) or <strong>subtractive</strong> (key colors are removed to get white).  Light-based color systems for screens are additive, and pigment-based colors for printing are subtractive.
 			
 			<div class="table-responsive">
 			
@@ -85,33 +98,38 @@
 					<tbody>
 						<tr>
 							<td>RGB</td>
-							<td><code>color: rgb(RR, GG, BB);</code></td>
+							<td><code>color:&nbsp;rgb(RR,&nbsp;GG,&nbsp;BB);</code></td>
 							<td>Define colors using values for each color channel</td>
 						</tr>
 						<tr>
 							<td>RGBA</td>
-							<td><code>color: rgba(RR, GG, BB, 0.A);</code></td>
+							<td><code>color:&nbsp;rgba(RR,&nbsp;GG,&nbsp;BB,&nbsp;0.A);</code></td>
 							<td>Define colors using values for each color channel (0&ndash;255) as well as alpha opacity (0.0&ndash;1.0)</td>
 						</tr>
 						<tr>
 							<td>Hex</td>
-							<td><code>color: #RRGGBB;</code></td>
+							<td><code>color:&nbsp;#RRGGBB;</code></td>
 							<td>Define colors using the hexidecimal code (equates to RGB values)</td>
 						</tr>
 						<tr>
 							<td>Named colors</td>
-							<td><code>color: name;</code></td>
+							<td><code>color:&nbsp;name;</code></td>
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Use pre-defined CSS colors</a> for solid, plain colors that are fully opaque</td>
 						</tr>
 						<tr>
 							<td>HSL</td>
-							<td><code>color: hsl(HH, SS%, LL%);</code></td>
+							<td><code>color:&nbsp;hsl(HH,&nbsp;SS%,&nbsp;LL%);</code></td>
 							<td>Defines color by hue (0&deg;&ndash;360&deg;; red is at 0&deg;), saturation (0%&ndash;100%), and luminosity (0%&ndash;100%)</td>
 						</tr>
 						<tr>
 							<td>HSLA</td>
-							<td><code>color: hsl(HH, SS%, LL%, 0.A);</code></td>
+							<td><code>color:&nbsp;hsla(HH,&nbsp;SS%,&nbsp;LL%,&nbsp;0.A);</code></td>
 							<td>Defines color by hue (0&deg;&ndash;360&deg;; red is at 0&deg;), saturation (0%&ndash;100%), luminosity (0%&ndash;100%), and alpha opacity (0.0&ndash;1.0)</td>
+						</tr>
+						<tr>
+							<td>CMYK</td>
+							<td>C: CC%<br>M: MM%<br>Y: YY%<br>K: KK%</td>
+							<td>Defines color based on a four-coordinate system from four key pigments used in printing: cyan, magenta, yellow, and black.</td>
 						</tr>
 					</tbody>
 				</table>
@@ -166,13 +184,43 @@
 				
 			</div>
 			
-			<h2>Color properties</h2>
+			<h3>CMYK</h3>
+			
+			<div class="row">
+				
+				<div class="col-12 col-sm-7 col-lg-8 col-xl-9 col-xxl-10">
+			
+					<p>CMYK colors are created by combining colored ink on paper to create blended colors.  This is typically referred to as <strong>process printing</strong>, either 4-color (CMYK) or 6-color (CMYKOG).  6-color process printing adds a green and orange pigment since those are hardest to produce with 4-color process.  CMYK colors are most commonly used with inkjet and laserjet home printers and digital printing presses.</p>
+					
+					<p>Since black (K for &ldquo;key&rdquo;) typically prints more of a dark charcoal gray, most printers will use a <strong>rich black</strong> that combines all four colors in different amounts for a richer, darker black.  For example:</p>
+					
+					<img src="../assets/color/color-black-rich-true.jpg" style="float: left; max-height: 85px; margin-right: 1em;" alt="True (key) black compared to rich black. True black looks washed out and faded next to rich black." />
+					
+					<p><strong>C:</strong> 50%<br>
+						<strong>M:</strong> 40%<br>
+						<strong>Y:</strong> 40%<br>
+						<strong>K:</strong> 100%</p>
+					
+					<div style="clear: both;"></div>
+					
+					<h4>Pantone</h4>
+					<p><a href="https://www.pantone.com/">Pantone colors</a> use a single pigment for their defined color.  This can be helpful when needing to match specific colors, and Pantone inks are most commonly used in offset printing.  To match process colors to Pantone colors, create a <strong>spot color</strong> that looks as close as possible in natural sunlight.</p>
+					
+				</div>
+				
+				<div class="col-12 col-sm-5 col-lg-4 col-xl-3 col-xxl-2">
+					<img src="../assets/color/cmyk.png" alt="A three-circle Venn diagram showing the intersection between Cyan, Magenta, and Yellow colors" style="width: 515px; max-width: 100%;">
+				</div>
+				
+			</div>
+			
+			<h2 id="properties">Color properties</h2>
 			
 			<p><strong>Color temperature:</strong> how warm (reddish) or cool (blueish) a color is. Warm colors can promote feelings of aggression and energy, and feel bolder than cooler colors. Cool colors are used for more calming, &lsquo;quieter&rsquo; interfaces.</p>
 			
 			<p><strong>Tints and shades:</strong> how close to white or black a color is. Closer to white is tinted, closer to black is shaded.</p>
 			
-			<h2>Color schemes</h2>
+			<h2 id="schemes">Color schemes</h2>
 			
 			<div class="row">
 				
@@ -217,7 +265,7 @@
 				
 			</div>
 			
-			<h2>Best practices</h2>
+			<h2 id="best-practices">Best practices</h2>
 			
 			<p><strong>Use neon colors sparingly.</strong> While the use of neon colors can feel hip, they are often hard on a user&rsquo;s eyes.</p>
 			
@@ -231,6 +279,7 @@
 				<h2>Sources</h2>
 				<p>&ldquo;File:RGB Color Cube.svg,&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 6 Jan 2015, <a href="https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg">https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg</a>.</p>
 				<p>&ldquo;File:Hsl-hsv models.svg,&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 24 Jun 2020, <a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg">https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg</a>.</p>
+				<p>&ldquo;File:CMYK_subtractive_color_mixing.svg,&rdquo; <i>Wikimedia Commons,</i> Wikimedia Commons, 28 March 2017, <a href="https://upload.wikimedia.org/wikipedia/commons/c/c9/CMYK_subtractive_color_mixing.svg">https://upload.wikimedia.org/wikipedia/commons/c/c9/CMYK_subtractive_color_mixing.svg</a>.</p>
 				<p>&ldquo;Color Theory,&rdquo; <i>Front End Engineer Career Path,</i> Codecademy. <a href="https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-improved-styling-with-css/modules/fecp-learn-color-theory/lessons/learn-color-theory/exercises/color-schemes">https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-improved-styling-with-css/modules/fecp-learn-color-theory/lessons/learn-color-theory/exercises/color-schemes</a>.</p>
 			</section>
 	

@@ -178,12 +178,17 @@ const cardItems = {
 	}
 };
 
-let cardContent = "";
+let cardContent = "<h2>Quick links</h2><nav class='quick-links'><ul>";
 
 function createCards () {
 	for (const groupIndex in cardItems) {
 		const cardGroup = cardItems[groupIndex];
-		cardContent += "<section id='" + cardGroup.title + "'><h2 class='pb-1 pt-3'>" + cardGroup.title + "</h2>";
+		cardContent += "<li><a href='#" + cardGroup.id + "'>" + cardGroup.title + "</a></li>";
+	}
+	cardContent += "</ul></nav>";
+	for (const groupIndex in cardItems) {
+		const cardGroup = cardItems[groupIndex];
+		cardContent += "<section id='" + cardGroup.id + "'><h2 class='pb-1 pt-3'>" + cardGroup.title + "</h2>";
 		cardContent += "<div class='row row-cols-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-4'>";
 		for (const cardIndex in cardGroup.cards) {
 			const cardData = cardGroup.cards[cardIndex];
