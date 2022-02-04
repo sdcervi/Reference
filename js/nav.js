@@ -136,6 +136,11 @@ const navItems = {
 				link:	"/Reference/resources/tips-tricks.html",
 				id:		"nav-tips-tricks"
 			},
+			audience: {
+				title:	"Identifying an Audience",
+				link:	"/Reference/resources/audience.html",
+				id:		"nav-audience"
+			},
 			statistics: {
 				title:	"Statistics",
 				link:	"/Reference/resources/statistics.html",

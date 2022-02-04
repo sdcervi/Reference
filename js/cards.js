@@ -162,6 +162,12 @@ const cardItems = {
 				link:	"./resources/tips-tricks.html",
 				image:	"./assets/homepage/tips-tricks.svg"
 			},
+			audience: {
+				title:	"Identifying an Audience",
+				copy:	"Coming up with use cases, scenarios, and stories",
+				link:	"./resources/audience.html",
+				image:	"./assets/homepage/audience.svg"
+			},
 			statistics: {
 				title:	"Statistics",
 				copy:	"Current statistics on market share, from&nbsp;Statcounter.com",
