@@ -131,6 +131,11 @@ const navItems = {
 				link:	"/Reference/resources/qa-qc.html",
 				id:		"nav-qa-qc"
 			},
+			tips_tricks: {
+				title:	"Tips &amp; Tricks",
+				link:	"/Reference/resources/tips-tricks.html",
+				id:		"nav-tips-tricks"
+			},
 			statistics: {
 				title:	"Statistics",
 				link:	"/Reference/resources/statistics.html",

@@ -156,6 +156,12 @@ const cardItems = {
 				link:	"./resources/qa-qc.html",
 				image:	"./assets/homepage/qa-qc.svg"
 			},
+			tips_tricks: {
+				title:	"Tips &amp; Tricks",
+				copy:	"Tips, tricks, and workarounds for software and systems",
+				link:	"./resources/tips-tricks.html",
+				image:	"./assets/homepage/tips-tricks.svg"
+			},
 			statistics: {
 				title:	"Statistics",
 				copy:	"Current statistics on market share, from&nbsp;Statcounter.com",
