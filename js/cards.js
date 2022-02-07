@@ -114,6 +114,12 @@ const cardItems = {
 				link:	"./design/copy.html",
 				image:	"./assets/homepage/copy.svg"
 			},
+			sitemap: {
+				title:	"Sitemaps &amp; Wireframes",
+				copy:	"Setting up information hierarchy and page structure",
+				link:	"./design/sitemap.html",
+				image:	"./assets/homepage/sitemap.svg"
+			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				copy:	"The color wheel, choosing color palettes, and color&nbsp;theory",

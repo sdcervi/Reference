@@ -96,6 +96,11 @@ const navItems = {
 				link:	"/Reference/design/copy.html",
 				id:		"nav-copy"
 			},
+			sitemap: {
+				title:	"Sitemaps &amp; Wireframes",
+				link:	"/Reference/design/sitemap.html",
+				id:		"nav-sitemap"
+			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				link:	"/Reference/design/color.html",
