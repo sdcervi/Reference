@@ -114,6 +114,12 @@ const cardItems = {
 				link:	"./design/copy.html",
 				image:	"./assets/homepage/copy.svg"
 			},
+			content: {
+				title:	"Content Design",
+				copy:	"Visual hierarchy, grouping, information flow, and navigation",
+				link:	"./design/content.html",
+				image:	"./assets/homepage/content.svg"
+			},
 			sitemap: {
 				title:	"Sitemaps &amp; Wireframes",
 				copy:	"Setting up information hierarchy and page structure",

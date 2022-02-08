@@ -96,6 +96,11 @@ const navItems = {
 				link:	"/Reference/design/copy.html",
 				id:		"nav-copy"
 			},
+			content: {
+				title:	"Content Design",
+				link:	"/Reference/design/content.html",
+				id:		"nav-content"
+			},
 			sitemap: {
 				title:	"Sitemaps &amp; Wireframes",
 				link:	"/Reference/design/sitemap.html",
