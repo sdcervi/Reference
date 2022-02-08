@@ -106,6 +106,11 @@ const navItems = {
 				link:	"/Reference/design/sitemap.html",
 				id:		"nav-sitemap"
 			},
+			seo: {
+				title:	"SEO: Search Engine Optimization",
+				link:	"/Reference/design/seo.html",
+				id:		"nav-seo"
+			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				link:	"/Reference/design/color.html",

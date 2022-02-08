@@ -126,6 +126,12 @@ const cardItems = {
 				link:	"./design/sitemap.html",
 				image:	"./assets/homepage/sitemap.svg"
 			},
+			seo: {
+				title:	"SEO",
+				copy:	"Techniques to improve rankings in search results",
+				link:	"./design/seo.html",
+				image:	"./assets/homepage/seo.svg"
+			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				copy:	"The color wheel, choosing color palettes, and color&nbsp;theory",
