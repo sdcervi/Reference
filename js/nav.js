@@ -6,55 +6,15 @@ const navItems = {
 	navHTML: {
 		title:	"HTML &amp; CSS",
 		links: {
-			box_model: {
-				title:	"The Box Model",
-				link:	"/Reference/html-css/box-model.html",
-				id:		"nav-box-model"
-			},
-			semantic: {
-				title:	"Semantic HTML",
-				link:	"/Reference/html-css/semantic.html",
-				id:		"nav-semantic"
-			},
-			entities: {
-				title:	"HTML Entities",
-				link:	"/Reference/html-css/entities.html",
-				id:		"nav-entities"
-			},
-			typography: {
-				title:	"Typography",
-				link:	"/Reference/html-css/typography.html",
-				id:		"nav-html-type"
-			},
-			links: {
-				title:	"Links",
-				link:	"/Reference/html-css/links.html",
-				id:		"nav-links"
-			},
-			tables: {
-				title:	"Tables",
-				link:	"/Reference/html-css/tables.html",
-				id:		"nav-tables"
-			},
 			background: {
 				title:	"Background",
 				link:	"/Reference/html-css/background.html",
 				id:		"nav-background"
 			},
-			embedded: {
-				title:	"Embedded Content",
-				link:	"/Reference/html-css/embedded.html",
-				id:		"nav-embedded"
-			},
-			forms: {
-				title:	"Forms",
-				link:	"/Reference/html-css/forms.html",
-				id:		"nav-forms"
-			},
-			flexbox: {
-				title:	"Flexbox",
-				link:	"/Reference/html-css/flexbox.html",
-				id:		"nav-flexbox"
+			box_model: {
+				title:	"The Box Model",
+				link:	"/Reference/html-css/box-model.html",
+				id:		"nav-box-model"
 			},
 			selectors: {
 				title:	"CSS Selectors",
@@ -66,10 +26,50 @@ const navItems = {
 				link:	"/Reference/html-css/display-position.html",
 				id:		"nav-display"
 			},
+			embedded: {
+				title:	"Embedded Content",
+				link:	"/Reference/html-css/embedded.html",
+				id:		"nav-embedded"
+			},
+			flexbox: {
+				title:	"Flexbox",
+				link:	"/Reference/html-css/flexbox.html",
+				id:		"nav-flexbox"
+			},
+			forms: {
+				title:	"Forms",
+				link:	"/Reference/html-css/forms.html",
+				id:		"nav-forms"
+			},
+			entities: {
+				title:	"HTML Entities",
+				link:	"/Reference/html-css/entities.html",
+				id:		"nav-entities"
+			},
+			links: {
+				title:	"Links",
+				link:	"/Reference/html-css/links.html",
+				id:		"nav-links"
+			},
 			metadata: {
 				title:	"Metadata",
 				link:	"/Reference/html-css/metadata.html",
 				id:		"nav-metadata"
+			},
+			semantic: {
+				title:	"Semantic HTML",
+				link:	"/Reference/html-css/semantic.html",
+				id:		"nav-semantic"
+			},
+			tables: {
+				title:	"Tables",
+				link:	"/Reference/html-css/tables.html",
+				id:		"nav-tables"
+			},
+			typography: {
+				title:	"Typography",
+				link:	"/Reference/html-css/typography.html",
+				id:		"nav-html-type"
 			}
 		}
 	},
@@ -86,45 +86,45 @@ const navItems = {
 	navDesign: {
 		title: "Design Principles",
 		links: {
-			typography: {
-				title:	"Typography",
-				link:	"/Reference/design/typography.html",
-				id:		"nav-typography"
-			},
-			copy: {
-				title:	"Copywriting",
-				link:	"/Reference/design/copy.html",
-				id:		"nav-copy"
-			},
-			content: {
-				title:	"Content Design",
-				link:	"/Reference/design/content.html",
-				id:		"nav-content"
-			},
-			sitemap: {
-				title:	"Sitemaps &amp; Wireframes",
-				link:	"/Reference/design/sitemap.html",
-				id:		"nav-sitemap"
-			},
-			seo: {
-				title:	"SEO: Search Engine Optimization",
-				link:	"/Reference/design/seo.html",
-				id:		"nav-seo"
+			animation: {
+				title:	"Animation",
+				link:	"/Reference/design/animation.html",
+				id:		"nav-animation"
 			},
 			color: {
 				title:	"Color &amp; Color Theory",
 				link:	"/Reference/design/color.html",
 				id:		"nav-color"
 			},
+			content: {
+				title:	"Content Design",
+				link:	"/Reference/design/content.html",
+				id:		"nav-content"
+			},
+			copy: {
+				title:	"Copywriting",
+				link:	"/Reference/design/copy.html",
+				id:		"nav-copy"
+			},
 			images: {
 				title:	"Images",
 				link:	"/Reference/design/images.html",
 				id:		"nav-images"
 			},
-			animation: {
-				title:	"Animation",
-				link:	"/Reference/design/animation.html",
-				id:		"nav-animation"
+			seo: {
+				title:	"SEO: Search Engine Optimization",
+				link:	"/Reference/design/seo.html",
+				id:		"nav-seo"
+			},
+			sitemap: {
+				title:	"Sitemaps &amp; Wireframes",
+				link:	"/Reference/design/sitemap.html",
+				id:		"nav-sitemap"
+			},
+			typography: {
+				title:	"Typography",
+				link:	"/Reference/design/typography.html",
+				id:		"nav-typography"
 			}
 		}
 	},
@@ -141,25 +141,25 @@ const navItems = {
 	navResources: {
 		title: "Resources",
 		links: {
-			qa_qc: {
-				title:	"QA &amp; QC",
-				link:	"/Reference/resources/qa-qc.html",
-				id:		"nav-qa-qc"
-			},
-			tips_tricks: {
-				title:	"Tips &amp; Tricks",
-				link:	"/Reference/resources/tips-tricks.html",
-				id:		"nav-tips-tricks"
-			},
 			audience: {
 				title:	"Identifying an Audience",
 				link:	"/Reference/resources/audience.html",
 				id:		"nav-audience"
 			},
+			qa_qc: {
+				title:	"QA &amp; QC Checklists",
+				link:	"/Reference/resources/qa-qc.html",
+				id:		"nav-qa-qc"
+			},
 			statistics: {
 				title:	"Statistics",
 				link:	"/Reference/resources/statistics.html",
 				id:		"nav-statistics"
+			},
+			tips_tricks: {
+				title:	"Tips &amp; Tricks",
+				link:	"/Reference/resources/tips-tricks.html",
+				id:		"nav-tips-tricks"
 			},
 			troubleshooting: {
 				title:	"Troubleshooting",
