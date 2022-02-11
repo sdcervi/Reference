@@ -106,6 +106,11 @@ const navItems = {
 				link:	"/Reference/design/copy.html",
 				id:		"nav-copy"
 			},
+			audience: {
+				title:	"Identifying an Audience",
+				link:	"/Reference/design/audience.html",
+				id:		"nav-audience"
+			},
 			images: {
 				title:	"Images",
 				link:	"/Reference/design/images.html",
@@ -141,11 +146,6 @@ const navItems = {
 	navResources: {
 		title: "Resources",
 		links: {
-			audience: {
-				title:	"Identifying an Audience",
-				link:	"/Reference/resources/audience.html",
-				id:		"nav-audience"
-			},
 			qa_qc: {
 				title:	"QA &amp; QC Checklists",
 				link:	"/Reference/resources/qa-qc.html",

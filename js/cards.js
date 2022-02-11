@@ -126,6 +126,12 @@ const cardItems = {
 				link:	"./design/copy.html",
 				image:	"./assets/homepage/copy.svg"
 			},
+			audience: {
+				title:	"Identifying an Audience",
+				copy:	"Coming up with use cases, scenarios, and stories",
+				link:	"./design/audience.html",
+				image:	"./assets/homepage/audience.svg"
+			},
 			images: {
 				title:	"Images",
 				copy:	"Image formats, use cases, and pros and&nbsp;cons",
@@ -168,12 +174,6 @@ const cardItems = {
 		title:	"Resources",
 		id:		"resources",
 		cards: {
-			audience: {
-				title:	"Identifying an Audience",
-				copy:	"Coming up with use cases, scenarios, and stories",
-				link:	"./resources/audience.html",
-				image:	"./assets/homepage/audience.svg"
-			},
 			qa_qc: {
 				title:	"QA &amp; QC Checklists",
 				copy:	"Checklists for ensuring quality of design and&nbsp;content",
