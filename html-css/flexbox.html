@@ -446,7 +446,11 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/nav.js"></script>
 <script>
-	document.getElementById('nav-flexbox').classList.add('active');
+	const currentPage = document.getElementById('nav-flexbox');
+	currentPage.classList.add('active');
+	currentPage.parentElement.parentElement.parentElement.parentElement.classList.add('show');
+	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.classList.remove('collapsed');
+	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.setAttribute("aria-expanded", "true");
 </script>
 </body>
 </html>

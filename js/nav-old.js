@@ -175,17 +175,13 @@ let navContent = "";
 function createNav () {
 	for (const groupIndex in navItems) {
 		const navGroup = navItems[groupIndex];
-		navContent += "<div class='accordion-item'><h2 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 accordion-header' id='navgroup-" + navGroup.title + "'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse-" + groupIndex + "' aria-expanded='false' aria-controls='collapse-" + groupIndex + "'>" + navGroup.title + "</button></h2>";
-		navContent += "<div id='collapse-" + groupIndex + "' class='accordion-collapse collapse' aria-labelledby='navgroup-" + navGroup.title + "' data-bs-parent='#navbar-container'><div class='accordion-body'><ul class='nav'>";
-		
-		
-		
-		
+		navContent += "<h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1'>" + navGroup.title + "</h6>";
+		navContent += "<ul class='nav flex-column mb-2'>";
 		for (const linkIndex in navGroup.links) {
 			const navLink = navGroup.links[linkIndex];
 			navContent += "<li class='nav-item'><a class='nav-link' id='" + navLink.id + "' href='" + navLink.link + "'>" + navLink.title + "</a></li>";
 		}
-		navContent += "</ul></div></div></div>";
+		navContent += "</ul>";
 	}
 }
 
