@@ -17,6 +17,9 @@ img.logo { max-width: 2em; height: auto; }
 .navbar-brand { margin-right: 0; }
 .navbar-text h1 { text-align: left; font: bold 1rem Arial, sans-serif; color: white; margin: 0 1em; }
 
+#btn-back-to-top { position: fixed; bottom: 20px; right: 20px; z-index: 10; display: none; width: 2.5em; height: 2.5em; border: 2px solid white; border-radius: 50%; box-shadow: 0 0 10px gray;  background-color: #B36F37; color: white; padding: 0; }
+#btn-back-to-top svg { vertical-align: baseline; }
+
 .btn-primary { background-color: #28814C; border-color: #28814C; }
 .btn-primary:focus, .btn-primary:hover, .btn-primary:active { background-color: #B36F37; border-color: #B36F37; } 
 
