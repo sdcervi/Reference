@@ -39,8 +39,10 @@
 	
 <!-- Top dark header bar -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
 	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
 	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Background</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
 </nav>
 
 <!-- Primary website container -->
@@ -59,13 +61,6 @@
 		
             </div>
         </nav>
-		
-		<nav class="navbar navbar-expand-lg navbar-light bg-light d-md-none mobile-nav">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
-		</nav>	
         
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
@@ -79,14 +74,14 @@
 						<tr>
 							<th scope="col">Property</th>
 							<th scope="col">Value(s)</th>
-							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Usage</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td><code>background&#8209;image</code></td>
 							<td><code>url("path&#8209;to&#8209;image.jpg");</code></td>
-							<td>Allows you to set any image as a background. Make sure it has sufficient resolution, is positioned correctly, and follows accessibility guidelines by having sufficient contrast with any text overlaid on top of it and not being too visually busy.</td>
+							<td class="d-none d-md-table-cell">Allows you to set any image as a background. Make sure it has sufficient resolution, is positioned correctly, and follows accessibility guidelines by having sufficient contrast with any text overlaid on top of it and not being too visually busy.</td>
 						</tr>
 						<tr>
 							<td><code>background&#8209;repeat</code></td>
@@ -96,32 +91,32 @@
 								<code>space</code>: Repeats as many times as possible without clipping, pins the outside repeats to the edges of the element, and evenly distributes space between repeats<br>
 								<code>round</code>: Functions like <code>space</code> but stretches the image to fit the empty spaces<br>
 								<code>no&#8209;repeat</code>: Will not repeat on any axis</td>
-							<td>Allows you to change how and whether a background will repeat within its container</td>
+							<td class="d-none d-md-table-cell">Allows you to change how and whether a background will repeat within its container</td>
 						</tr>
 						<tr>
 							<td><code>background&#8209;attachment</code></td>
 							<td><code>fixed</code>: The background will stay fixed relative to the viewport, and foreground content will scroll over it<br>
 								<code>scroll</code>: The background is fixed relative to its container, will not scroll with its foreground content, but will scroll with the container<br>
 								<code>local</code>: The background will scroll with its foreground content within its container</td>
-							<td>Changes the scrolling behavior of the background relative to its container and foreground content</td>
+							<td class="d-none d-md-table-cell">Changes the scrolling behavior of the background relative to its container and foreground content</td>
 						</tr>
 						<tr>
 							<td><code>background&#8209;position</code></td>
 							<td><code>top</code>,&nbsp;<code>right</code>,&nbsp;<code>bottom</code>,&nbsp;<code>left</code>,&nbsp;<code>center</code>: Keywords to fix a background to a particular border of its container, or center it within the container. Will set the other axis to 50% to center it on the edge specified. Two keywords can be used to define both X and Y position. Default value is <code>top left</code>.<br>
 								<code>[length]</code>&nbsp;or&nbsp;<code>[percentage]</code>: Specifies the X-coordiate relative to the left edge, with the Y-coordinate set to 50%. Default value is <code>0 0</code>.<br>
 								<code>[keyword]&nbsp;[offset]</code>: Defines a length offset for the preceding keyword. If a keyword has no length value following it, the length defaults to <code>0</code>.</td>
-							<td>Allows for adjustment of a background image&rsquo;s position within its container</td>
+							<td class="d-none d-md-table-cell">Allows for adjustment of a background image&rsquo;s position within its container</td>
 						</tr>
 						<tr>
 							<td><code>background&#8209;size</code></td>
 							<td><code>contain</code>: Scales the image proportionally to fit within the container<br>
 								<code>cover</code>: Stretches the image proportionally to completely fill the container, and crops the image so that no empty space is left</td>
-							<td>Changes how and if a background is scaled to fit or fill the container</td>
+							<td class="d-none d-md-table-cell">Changes how and if a background is scaled to fit or fill the container</td>
 						</tr>
 						<tr>
 							<td><code>background&#8209;color</code></td>
 							<td>Hex value, keyword, RGB, RGBa, HSL, HSLa</td>
-							<td>Sets a solid background color; this is behind the <code>background-image</code> layer and can be used as a fallback if the image fails to load. It will be visible through any transparent pixels in the background image.</td>
+							<td class="d-none d-md-table-cell">Sets a solid background color; this is behind the <code>background-image</code> layer and can be used as a fallback if the image fails to load. It will be visible through any transparent pixels in the background image.</td>
 						</tr>
 					</tbody>
 				</table>

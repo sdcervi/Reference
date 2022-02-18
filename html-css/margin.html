@@ -39,8 +39,10 @@
 	
 <!-- Top dark header bar -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
 	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
 	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Margin, Padding &amp; Borders</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
 </nav>
 
 <!-- Primary website container -->
@@ -59,13 +61,6 @@
 		
             </div>
         </nav>
-		
-		<nav class="navbar navbar-expand-lg navbar-light bg-light d-md-none mobile-nav">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
-		</nav>	
         
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
@@ -103,12 +98,12 @@
 								</tr>
 								<tr>
 									<td><code>border</code></td>
-									<td>Borders are rendered between padding and margin. In the diagram, this is yellow.</td>
+									<td>Borders are rendered between padding and margin.</td>
 									<td><span style="min-width: 25px; min-height: 25px; background-color: #ffeebc; border: 1px solid black; display: block;">&nbsp;</span></td>
 								</tr>
 								<tr>
 									<td><code>margin</code></td>
-									<td>Margin sits outside of everything else. In the diagram, this is orange.</td>
+									<td>Margin sits outside of everything else.</td>
 									<td><span style="min-width: 25px; min-height: 25px; background-color: #f9cc9d; border: 1px dashed black; display: block;">&nbsp;</span></td>
 								</tr>
 							</tbody>
@@ -198,9 +193,18 @@
 			<p>To get a fully-rounded pill button, set the border radius to a measurement larger than 50% the smallest side.  Setting it to 50% will instead give you an oval (or circle, if width and height are equal).</p>
 			
 			<p><button type="button" class="btn btn-primary">Default corners</button>&nbsp;&nbsp;
-				<button type="button" class="btn btn-primary" style="border-radius: 1em;">Radius 1em</button>&nbsp;&nbsp;
-				<button type="button" class="btn btn-primary" style="border-radius: 5em;">Fully rounded pill</button>&nbsp;&nbsp;
+				<button type="button" class="btn btn-primary" style="border-radius: 1em;">Radius 1em</button></p>
+			<p><button type="button" class="btn btn-primary" style="border-radius: 5em;">Fully rounded pill</button>&nbsp;&nbsp;
 				<button type="button" class="btn btn-primary" style="border-radius: 50%;">Radius 50%</button></p>
+			
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-5 col-xl-4 col-xxl-3 mb-2">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Polarlicht_2.jpg/320px-Polarlicht_2.jpg" alt="Aurora borealis" style="max-width: 100%;"/>
+				</div>
+				<div class="col-12 col-md-6 col-lg-5 col-xl-4 col-xxl-3 mb-2">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Polarlicht_2.jpg/320px-Polarlicht_2.jpg" alt="Aurora borealis" style="max-width: 100%; border-radius: 200px;" />
+				</div>
+			</div>
 	
 		</main>
 		

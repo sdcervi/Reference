@@ -2,7 +2,7 @@
 
 body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
-main { margin-top: 5em!important; padding-bottom: 1em; }
+main { margin-top: 1em!important; padding-bottom: 1em; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
@@ -36,7 +36,7 @@ li.nav-item a.nav-link#nav-home.active::before { content: '\25A0'; position: abs
 li.nav-item a.nav-link { padding: 0 0 0.75rem 0.25rem; line-height: 1rem; }
 li.nav-item a.nav-link:focus, li.nav-item a.nav-link:hover { text-decoration: underline; color: #B36F37; }
 .nav { display: block; }
-nav.mobile-nav { position: fixed; top: 48px; z-index: 100;}
+nav.mobile-nav { position: fixed; top: 56px; z-index: 100; border-bottom: 1px solid lightgray; }
 #navbar-container-mbl .sidebar-heading { font-size: 1.25rem; }
 #navbar-container-mbl li.nav-item a.nav-link { font-size: 1rem; }
 h2.accordion-header { margin: 0!important; padding: 0!important; }
