@@ -176,16 +176,13 @@ const navItems = {
 };
 
 let navContent = "";
+let navContentMbl = "";
 
 function createNav () {
 	for (const groupIndex in navItems) {
 		const navGroup = navItems[groupIndex];
 		navContent += "<div class='accordion-item'><h2 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 accordion-header' id='navgroup-" + navGroup.title + "'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse-" + groupIndex + "' aria-expanded='false' aria-controls='collapse-" + groupIndex + "'>" + navGroup.title + "</button></h2>";
 		navContent += "<div id='collapse-" + groupIndex + "' class='accordion-collapse collapse' aria-labelledby='navgroup-" + navGroup.title + "' data-bs-parent='#navbar-container'><div class='accordion-body'><ul class='nav'>";
-		
-		
-		
-		
 		for (const linkIndex in navGroup.links) {
 			const navLink = navGroup.links[linkIndex];
 			navContent += "<li class='nav-item'><a class='nav-link' id='" + navLink.id + "' href='" + navLink.link + "'>" + navLink.title + "</a></li>";
@@ -194,9 +191,23 @@ function createNav () {
 	}
 }
 
+function createNavMbl () {
+	for (const groupIndex in navItems) {
+		const navGroup = navItems[groupIndex];
+		navContentMbl += "<div class='accordion-item'><h2 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 accordion-header' id='navgroup-" + navGroup.title + "'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse-" + groupIndex + "' aria-expanded='false' aria-controls='collapse-" + groupIndex + "'>" + navGroup.title + "</button></h2>";
+		navContentMbl += "<div id='collapse-" + groupIndex + "' class='accordion-collapse collapse' aria-labelledby='navgroup-" + navGroup.title + "' data-bs-parent='#navbar-container'><div class='accordion-body'><ul class='nav'>";
+		for (const linkIndex in navGroup.links) {
+			const navLink = navGroup.links[linkIndex];
+			navContentMbl += "<li class='nav-item'><a class='nav-link' id='" + navLink.id + "-mbl' href='" + navLink.link + "'>" + navLink.title + "</a></li>";
+		}
+		navContentMbl += "</ul></div></div></div>";
+	}
+}
+
 createNav();
+createNavMbl();
 
 navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi<br><a href='/contact.html'>Report an error or contact me</a></div>";
 
 navDiv.innerHTML = navContent;
-navDivMbl.innerHTML = navContent;
+navDivMbl.innerHTML = navContentMbl;

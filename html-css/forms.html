@@ -131,7 +131,8 @@
 							<td><label for="inputName">Label text: </label>
 								<input type="text" name="inputName" /></td>
 							<td><p>Use labels to make forms easier to navigate, and more accessible to vision-impaired users. They can either wrap around the input they&rsquo;re labeling (no <code>for</code> attribute needed in this context), or precede the input (<code>for</code> attribute needed). When setting a <code>for</code> attribute, use the <code>id</code> of the matching input or radio button.</p>
-								<p>When placing labels, put them above or to the left of text inputs, text areas, select boxes, and file uploads. Put them to the right of individual checkboxes or radio buttons.</p></td>
+								<p>When placing labels, put them above or to the left of text inputs, text areas, select boxes, and file uploads. Put them to the right of individual checkboxes or radio buttons.</p>
+								<p>Click on a field&rsquo;s label to automatically select that field.</p></td>
 						</tr>
 						<tr>
 							<td>Fieldset with legend</td>
@@ -403,11 +404,47 @@
 			</div>
 			
 			<h2>Data validation</h2>
+			
+			<h3>Client-side validation</h3>
 				
 			<p>HTML5 form elements (email, date, etc) have built-in validation in browsers that support them. However, this is not a replacement for server-side validation. Make sure to explicity define patterns and customize error messages for client-side validation. This will ensure better error handling and less load on the server for validation.</p>
 			
-			<p><code>pattern</code> attributes follow <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, to define a four-digit number, use <code>[0-9]{4}</code>. For accessibility, when a control has a <code>pattern</code> attribute, the title must describe the pattern.</p>
 			<p>The CSS pseudo-class <code>:invalid</code> allows for styling of form fields that do not pass client-side validation.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Attribute</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>pattern</code></td>
+							<td><code>pattern</code> attributes follow <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, to define a four-digit number, use <code>[0-9]{4}</code>. For accessibility, when a control has a <code>pattern</code> attribute, the title must describe the pattern.</td>
+						</tr>
+						<tr>
+							<td><code>required</code></td>
+							<td>This specifies whether a form field needs to have data (of any type and format) in it before the form can be submitted.</td>
+						</tr>
+						<tr>
+							<td><code>minlength</code>&nbsp;and&nbsp;<code>maxlength</code></td>
+							<td>These specify the minimum and maximum character counts of text-based data input.</td>
+						</tr>
+						<tr>
+							<td><code>min</code>&nbsp;and&nbsp;<code>max</code></td>
+							<td>These specify the minimum and maximum value of numerical data input.</td>
+						</tr>
+						<tr>
+							<td><code>type</code></td>
+							<td>This specifies whether the data input needs to be a number, email address, or other specific preset type. This can save time with certain data types to avoid having to set them with <code>pattern</code>, since the presets already have regular expressions specified.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
 	
 		</main>
 		
@@ -425,10 +462,10 @@
 <script src="../js/nav.js"></script>
 <script src="../js/back-to-top.js"></script>
 <script>
-	const currentPage = document.getElementById('nav-forms');
-	currentPage.classList.add('active');
-	currentPage.parentElement.parentElement.parentElement.parentElement.classList.add('show');
-	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.classList.remove('collapsed');
+	const currentPage = document.getElementById("nav-forms");
+	currentPage.classList.add("active");
+	currentPage.parentElement.parentElement.parentElement.parentElement.classList.add("show");
+	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.classList.remove("collapsed");
 	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.setAttribute("aria-expanded", "true");
 </script>
 </body>
