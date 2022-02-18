@@ -27,7 +27,7 @@ const navItems = {
 				id:		"nav-display"
 			},
 			embedded: {
-				title:	"Embedded Content",
+				title:	"Embedded Video &amp; Audio",
 				link:	"/Reference/html-css/embedded.html",
 				id:		"nav-embedded"
 			},
@@ -50,6 +50,11 @@ const navItems = {
 				title:	"Links",
 				link:	"/Reference/html-css/links.html",
 				id:		"nav-links"
+			},
+			margin: {
+				title:	"Margin, Padding &amp; Borders",
+				link:	"/Reference/html-css/margin.html",
+				id:		"nav-margin"
 			},
 			metadata: {
 				title:	"Metadata",

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>The Box Model | Reference</title>
+	<title>Margin, Padding & Borders | Reference</title>
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
 	<!-- Bootstrap core CSS -->
@@ -40,7 +40,7 @@
 <!-- Top dark header bar -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
 	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
-	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>The Box Model</h1></div>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Margin, Padding &amp; Borders</h1></div>
 </nav>
 
 <!-- Primary website container -->
@@ -55,7 +55,7 @@
                     <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
                 </ul>
 				
-				<div id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
 		
             </div>
         </nav>
@@ -72,9 +72,11 @@
 			
 			<div class="row">
 				
-				<h2>Box model components</h2>
+				<h2>Margin, padding &amp; borders</h2>
 
-				<p>Every content box around an element has properties that affect its final size and appearance. If a width and/or height is specified for the content box, then the padding, borders, and margin are all added to that, which can make an element take up more space on a page than expected.</p>
+				<p>HTML elements can be given <code>margin</code>, <code>padding</code>, and <code>borders</code> to style them and space them relative to elements around them.</p>
+				
+				<p>How margins and borders interact with an element&rsquo;s defined size is governed by which <code>box-model</code> setting you&rsquo;ve applied.  <a href="box-model.html">Click here for more information on the Box Model</a>.</p>
 			
 				<div class="col-12 col-sm-9">
 
@@ -130,41 +132,75 @@
 				
 			</div>
 			
-			<h2>Box model sizing options</h2>
+			<h2>Margin collapse</h2>
 			
-			<p>By default, modern browsers use the <code>content-box</code> method, as shown above, which adds padding and borders on the outside of the defined element&rsquo;s size.  However, by setting <code>box-sizing: border-box;</code> you can tell the browser to include any width/height, padding, and borders into the calculation of the total element size.</p>
+			<p>Vertical (top and bottom) margins collapse between elements and only display the larger of the two defined margins.</p>
 			
-			<div class="row">
-				
-				<div class="col-12 col-md-6 col-lg-5 col-xl-4 col-xxl-3 mb-2">
+			<p>Horizontal (left and right) margins do <em>not</em> collapse between elements, and will always add together to display the sum of the defined margins.</p>
+			
+			<h2>Borders</h2>
+			
+			<p>Borders, displayed between the margin and padding, can be defined in a variety of ways.</p>
+			
+			<p><strong>CSS shorthand:</strong> <code>border: [border-width] [border-style] [border-color];</code>.  Note that this sets all four borders to be the same; shorthands for each parameter don&rsquo;t work here.</p>
+			
+			<p>For longhand, just target each side (i.e. <code>border-top</code>).</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Parameter</th>
+							<th scope="col">Values</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>border&#8209;width</code></td>
+							<td><code>px</code>, <code>em</code>, or <code>rem</code><br>
+								<code>thin</code><br>
+								<code>medium</code><br>
+								<code>thick</code></td>
+							<td>Allows you to either define all four sides if within the <code>border</code> shorthand, or combine a shorthand definition if used on its own (top, right, bottom, left).</td>
+						</tr>
+						<tr>
+							<td><code>border&#8209;style</code></td>
+							<td><code>none</code>: <span style="display: inline-block; width: 20px; height: 15px; border: none;"></span><br>
+								<code>hidden</code>: <span style="display: inline-block; width: 20px; height: 15px; border: hidden;"></span><br>
+								<code>dotted</code>: <span style="display: inline-block; width: 20px; height: 15px; border: dotted;"></span><br>
+								<code>dashed</code>: <span style="display: inline-block; width: 20px; height: 15px; border: dashed;"></span><br>
+								<code>solid</code>: <span style="display: inline-block; width: 20px; height: 15px; border: solid;"></span><br>
+								<code>double</code>: <span style="display: inline-block; width: 20px; height: 15px; border: double;"></span><br>
+								<code>groove</code>: <span style="display: inline-block; width: 20px; height: 15px; border: groove;"></span><br>
+								<code>ridge</code>: <span style="display: inline-block; width: 20px; height: 15px; border: ridge;"></span><br>
+								<code>inset</code>: <span style="display: inline-block; width: 20px; height: 15px; border: inset;"></span><br>
+								<code>outset</code>: <span style="display: inline-block; width: 20px; height: 15px; border: outset;"></span></td>
+							<td>Allows you to either define all four sides if within the <code>border</code> shorthand, or combine a shorthand definition if used on its own (top, right, bottom, left).</td>
+						</tr>
+						<tr>
+							<td><code>border&#8209;color</code></td>
+							<td>Any HTML-compatible color definition (rgb, rgba, hsl, hsla, hex)</td>
+							<td>Allows you to either define all four sides if within the <code>border</code> shorthand, or combine a shorthand definition if used on its own (top, right, bottom, left).</td>
+						</tr>
+					</tbody>
+				</table>
 
-					<div style="width: 200px; border-bottom: 1px dashed black; text-align: center; box-sizing: border-box; margin: 0 auto 10px auto;">200px wide; box size is 200px</div>
-
-					<div class="box-margin" style="width: 268px; margin: 0 auto;">
-						<div class="box-border" style="width: 238px;">
-							<div class="box-padding" style="width: 230px;">
-								<div class="box-content" style="width: 200px;"><code style="color: black;">content-box</code></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="col-12 col-md-6 col-lg-5 col-xl-4 col-xxl-3 b-2">
-
-					<div style="width: 200px; border-bottom: 1px dashed black; text-align: center; box-sizing: border-box; margin: 0 auto 10px auto;">200px wide; box size is 200px</div>
-
-					<div class="box-margin" style="width: 230px; margin: 0 auto;">
-						<div class="box-border" style="width: 200px;">
-							<div class="box-padding" style="width: 192px;">
-								<div class="box-content" style="width: 162px;"><code style="color: black;">border-box</code></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				
 			</div>
+			
+			<h3>Rounded corners</h3>
+			
+			<p>To round the corners of buttons, images, or other HTML elements, use the <code>border-radius</code> CSS property.  This can be set to any HTML-compatible unit: <code>px</code>, <code>em</code>, <code>%</code>, or <code>rem</code>.</p>
+			
+			<p>When setting values individually, the order goes top-left, top-right, bottom-right, bottom-left.</p>
+			
+			<p>To get a fully-rounded pill button, set the border radius to a measurement larger than 50% the smallest side.  Setting it to 50% will instead give you an oval (or circle, if width and height are equal).</p>
+			
+			<p><button type="button" class="btn btn-primary">Default corners</button>&nbsp;&nbsp;
+				<button type="button" class="btn btn-primary" style="border-radius: 1em;">Radius 1em</button>&nbsp;&nbsp;
+				<button type="button" class="btn btn-primary" style="border-radius: 5em;">Fully rounded pill</button>&nbsp;&nbsp;
+				<button type="button" class="btn btn-primary" style="border-radius: 50%;">Radius 50%</button></p>
 	
 		</main>
 		
@@ -182,7 +218,7 @@
 <script src="../js/nav.js"></script>
 <script src="../js/back-to-top.js"></script>
 <script>
-	const currentPage = document.getElementById('nav-box-model');
+	const currentPage = document.getElementById('nav-margin');
 	currentPage.classList.add('active');
 	currentPage.parentElement.parentElement.parentElement.parentElement.classList.add('show');
 	currentPage.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.classList.remove('collapsed');

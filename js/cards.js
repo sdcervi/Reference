@@ -31,8 +31,8 @@ const cardItems = {
 				image:	"./assets/homepage/display-position.svg"
 			},
 			embedded: {
-				title:	"Embedded Content",
-				copy:	"Videos, responsive images, audio, and other embedded&nbsp;media",
+				title:	"Embedded Video &amp; Audio",
+				copy:	"Displaying video and audio files in an interactive player",
 				link:	"./html-css/embedded.html",
 				image:	"./assets/homepage/embedded.svg"
 			},
@@ -59,6 +59,12 @@ const cardItems = {
 				copy:	"Links, attributes and their values, and&nbsp;usage",
 				link:	"./html-css/links.html",
 				image:	"./assets/homepage/links.svg"
+			},
+			margin: {
+				title:	"Margin, Padding &amp; Borders",
+				copy:	"Sizing, collapsing, and properties of margin, padding, and borders",
+				link:	"./html-css/margin.html",
+				image:	"./assets/homepage/margin.svg"
 			},
 			metadata: {
 				title:	"Metadata",
@@ -216,7 +222,7 @@ function createCards () {
 		cardContent += "<div class='row row-cols-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-4'>";
 		for (const cardIndex in cardGroup.cards) {
 			const cardData = cardGroup.cards[cardIndex];
-			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='" + cardData.link + "' class='btn btn-primary stretched-link'>View " + cardData.title +"</a></div></div></div>";
+			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='" + cardData.link + "' class='btn btn-primary stretched-link'>Read now</a></div></div></div>";
 		}
 		cardContent += "</div></section>";
 	}

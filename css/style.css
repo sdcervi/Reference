@@ -2,7 +2,7 @@
 
 body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
-main { margin-top: 5em!important; }
+main { margin-top: 5em!important; padding-bottom: 1em; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
@@ -19,6 +19,7 @@ img.logo { max-width: 2em; height: auto; }
 
 #btn-back-to-top { position: fixed; bottom: 20px; right: 20px; z-index: 10; display: none; width: 2.5em; height: 2.5em; border: 2px solid white; border-radius: 50%; box-shadow: 0 0 10px gray;  background-color: #B36F37; color: white; padding: 0; }
 #btn-back-to-top svg { vertical-align: baseline; }
+#btn-back-to-top:focus, #btn-back-to-top:hover, #btn-back-to-top:active { background-color: #28814C; }
 
 .btn-primary { background-color: #28814C; border-color: #28814C; }
 .btn-primary:focus, .btn-primary:hover, .btn-primary:active { background-color: #B36F37; border-color: #B36F37; } 
@@ -81,10 +82,10 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 
 /* ################################# BOX MODEL STYLES ################################# */
 
-#div-content { padding: 20px;background-color: #a0c6e8; border: 1px solid black; text-align: center; }
-#div-padding { padding: 15px; background-color: #c4dfb8; border: 1px dashed black; }
-#div-border { padding: 3px; background-color: #ffeebc; border: 1px solid black; }
-#div-margin { padding: 15px; background-color: #f9cc9d; border: 1px dashed black; }
+.box-content { padding: 20px;background-color: #a0c6e8; border: 1px solid black; text-align: center; }
+.box-padding { padding: 15px; background-color: #c4dfb8; border: 1px dashed black; }
+.box-border { padding: 3px; background-color: #ffeebc; border: 1px solid black; }
+.box-margin { padding: 15px; background-color: #f9cc9d; border: 1px dashed black; }
 
 /* ################################## FLEXBOX STYLES ################################## */
 
