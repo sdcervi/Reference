@@ -186,6 +186,12 @@ const cardItems = {
 				link:	"./resources/qa-qc.html",
 				image:	"./assets/homepage/qa-qc.svg"
 			},
+			quotes: {
+				title:	"Quotes",
+				copy:	"Useful, thought-provoking, and informative quotes",
+				link:	"./resources/quotes.html",
+				image:	"./assets/homepage/quotes.svg"
+			},
 			statistics: {
 				title:	"Statistics",
 				copy:	"Current statistics on market share, from&nbsp;Statcounter.com",

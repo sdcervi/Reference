@@ -156,6 +156,11 @@ const navItems = {
 				link:	"/Reference/resources/qa-qc.html",
 				id:		"nav-qa-qc"
 			},
+			quotes: {
+				title:	"Quotes",
+				link:	"/Reference/resources/quotes.html",
+				id:		"nav-quotes"
+			},
 			statistics: {
 				title:	"Statistics",
 				link:	"/Reference/resources/statistics.html",

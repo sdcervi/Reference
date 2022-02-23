@@ -45,6 +45,14 @@ h2.accordion-header { margin: 0!important; padding: 0!important; }
 figure img { max-width: 100%; }
 figure figcaption { text-align: center; max-width: 80%; margin: 0 auto; font-size: 0.9em; }
 
+.quotes-container { margin-top: 1em; }
+.quotes-container .grid-item { border: 1px solid lightgray; border-radius: 5px; padding: 1em; margin: 1em; width: 430px; }
+.quotes-container blockquote { font-size: 1.1em; }
+.quotes-container blockquote::before { content: "\201C"; }
+.quotes-container blockquote::after { content: "\201D"; }
+.quotes-container figcaption { font-size: 0.85em; text-align: left; margin-left: 2em; color: slategray; }
+.quotes-container figcaption::before { content: "\2014"; }
+
 .sources h2 { font-size: 1.25em; border-top: 1px solid #D79E61; margin-top: 2em; }
 .sources p { font-size: 0.9em; margin-left: 3em; text-indent: -3em; }
 
