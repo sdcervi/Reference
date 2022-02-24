@@ -135,6 +135,11 @@ const navItems = {
 				title:	"Typography",
 				link:	"/Reference/design/typography.html",
 				id:		"nav-typography"
+			},
+			whitespace: {
+				title:	"Whitespace",
+				link:	"/Reference/design/whitespace.html",
+				id:		"nav-whitespace"
 			}
 		}
 	},
