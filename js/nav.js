@@ -16,6 +16,11 @@ const navItems = {
 				link:	"/Reference/html-css/box-model.html",
 				id:		"nav-box-model"
 			},
+			css_grid: {
+				title:	"CSS Grid",
+				link:	"./html-css/css-grid.html",
+				id:		"nav-css-grid"
+			},
 			selectors: {
 				title:	"CSS Selectors",
 				link:	"/Reference/html-css/selectors.html",

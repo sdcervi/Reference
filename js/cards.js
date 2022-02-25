@@ -18,6 +18,12 @@ const cardItems = {
 				link:	"./html-css/box-model.html",
 				image:	"./assets/homepage/box-model.svg"
 			},
+			css_grid: {
+				title:	"CSS Grid",
+				copy:	"Properties, capabilities, and how to use CSS Grid as a layout tool",
+				link:	"./html-css/css-grid.html",
+				image:	"./assets/homepage/css-grid.svg"
+			},
 			selectors: {
 				title:	"CSS Selectors",
 				copy:	"Examples and usage for specificity, selectors, and&nbsp;inheritance",

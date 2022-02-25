@@ -166,3 +166,31 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 .flex-shorthand-ex.shorthand .box:nth-of-type(2) { flex: 0 3 20%; }
 .flex-shorthand-ex.shorthand .box:nth-of-type(3) { flex: 2 1 200px; }
 .flex-shorthand-ex.shorthand .box:nth-of-type(4) { flex: 4 1 auto; }
+
+/* ################################## CSS GRID STYLES ################################## */
+
+.fields-grid { display: grid; max-width: 800px; max-height: 600px; grid-template: repeat(10, 1fr) / repeat(16, 1fr); grid-gap: 10px; }
+.fields-grid div { background-color: slategray; color: white; border-radius: 3px; padding: 10px; }
+.fields-grid .dark { background-color: darkslategray; color: white; }
+.vonzipper { grid-area: 1 / 1 / span 2 / span 4; }
+.hyperball { grid-area: 1 / 5 / span 2 / span 3; }
+.pipes { grid-area: 1 / 8 / span 2 / span 4; }
+.bunker { grid-area: 1 / 12 / span 3 / span 5; }
+.speedball { grid-area: 3 / 1 / span 2 / span 5; }
+.fiftycal { grid-area: 3 / 6 / span 2 / span 2; }
+.urban { grid-area: 3 / 8 / span 3 / span 4; }
+.tree { grid-area: 4 / 12 / span 2 / span 5; }
+.bleachers { grid-area: 5 / 1 / span 1 / span 3; }
+.nerf { grid-area: 5 / 4 / span 1 / span 3; }
+.chrono { grid-area: 5 / 7 / span 6 / span 1; }
+.lot { grid-area: 6 / 1 / span 5 / span 6; }
+.shed { z-index: 10; grid-area: 8 / 2 / span 2 / span 1; }
+.picnic1 { z-index: 10; grid-area: 7 / 4 / span 1 / span 2; }
+.proshop { z-index: 10; grid-area: 8 / 4 / span 1 / span 2; }
+.picnic2 { z-index: 10; grid-area: 9 / 4 / span 1 / span 2; }
+.junkyard { grid-area: 6 / 8 / span 5 / span 4; }
+.spools { grid-area: 6 / 12 / span 5 / span 5; }
+
+@media only screen and (max-width: 850px) {
+	.picnic1 p, .proshop p, .picnic2 p { display: none; }
+}
