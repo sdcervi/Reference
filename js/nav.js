@@ -217,7 +217,7 @@ function createNavMbl () {
 createNav();
 createNavMbl();
 
-navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi<br><a href='/contact.html'>Report an error or contact me</a></div>";
+navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Stephanie Cervi<br><a href='/Reference/contact.html'>Report an error or contact me</a></div>";
 
 navDiv.innerHTML = navContent;
 navDivMbl.innerHTML = navContentMbl;
