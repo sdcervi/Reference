@@ -24,7 +24,7 @@ const navItems = {
 			display: {
 				title:	"Display, Position &amp; Float",
 				link:	"/Reference/html-css/display-position.html",
-				id:		"nav-display"
+				id:		"nav-display-position"
 			},
 			embedded: {
 				title:	"Embedded Video &amp; Audio",
@@ -73,7 +73,7 @@ const navItems = {
 			},
 			typography: {
 				title:	"Typography",
-				link:	"/Reference/html-css/typography.html",
+				link:	"/Reference/html-css/html-type.html",
 				id:		"nav-html-type"
 			}
 		}
@@ -98,8 +98,8 @@ const navItems = {
 			},
 			color: {
 				title:	"Color &amp; Color Theory",
-				link:	"/Reference/design/color.html",
-				id:		"nav-color"
+				link:	"/Reference/design/color-theory.html",
+				id:		"nav-color-theory"
 			},
 			content: {
 				title:	"Content Design",
@@ -149,7 +149,7 @@ const navItems = {
 			color: {
 				title:	"Color Accessibility",
 				link:	"/Reference/accessibility/color.html",
-				id:		"nav-acc-color"
+				id:		"nav-color"
 			}
 		}
 	},

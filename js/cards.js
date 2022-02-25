@@ -87,7 +87,7 @@ const cardItems = {
 			typography: {
 				title:	"Typography",
 				copy:	"Text flow, formatting, and&nbsp;readability",
-				link:	"./html-css/typography.html",
+				link:	"./html-css/html-type.html",
 				image:	"./assets/homepage/html-type.svg"
 			}
 		}
@@ -117,7 +117,7 @@ const cardItems = {
 			color: {
 				title:	"Color &amp; Color Theory",
 				copy:	"The color wheel, choosing color palettes, and color&nbsp;theory",
-				link:	"./design/color.html",
+				link:	"./design/color-theory.html",
 				image:	"./assets/homepage/color.svg"
 			},
 			content: {
@@ -161,6 +161,12 @@ const cardItems = {
 				copy:	"Fonts, typefaces, special characters, and how they apply to web&nbsp;design",
 				link:	"./design/typography.html",
 				image:	"./assets/homepage/typography.svg"
+			},
+			whitespace: {
+				title:	"whitespace",
+				copy:	"Negative space, balanced design, and how to let your designs breathe",
+				link:	"./design/whitespace.html",
+				image:	"./assets/homepage/whitespace.svg"
 			}
 		}
 	},
