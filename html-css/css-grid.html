@@ -65,15 +65,38 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
-			<h2>CSS grid and when to use it</h2>
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#intro">CSS grid and when to use it</a></li>
+					<li><a href="#implementing">Implementing CSS grid</a></li>
+					<ul>
+						<li><a href="#templates">Grid templates and areas</a></li>
+						<li><a href="#spacing">Spacing between grid elements</a></li>
+						<li><a href="#sizes">Defining element sizes</a></li>
+					</ul>
+					<li><a href="#example">Example</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="intro">CSS grid and when to use it</h2>
 			
 			<p>CSS grid is a powerful layout tool useful for organizing elements in a two-dimensional layout; <a href="flexbox.html">flexbox</a> is best suited to one-dimensional layouts.  With CSS grid, you can define various properties that let you place each element&rsquo;s starting and ending edges precisely within your container.</p>
 			
 			<p>While flexbox is best suited to content blocks within a page, CSS grid can be used to build entire webpages.  <code>grid-template-areas</code> allows you to define sections of the grid with specific names (i.e. <code>header</code> and <code>sidebar</code>).  Think of it like a movable scaffolding, or dividers in an organizer box that can be repositioned as needed.</p>
 			
-			<h2>Implementing CSS grid</h2>
+			<h2 id="implementing">Implementing CSS grid</h2>
 			
 			<p>Set <code>display: grid;</code> on the containing <code>div</code> to enable grid layout.  The default arrangement will put every child element on its own row in a single column, and stretch it to fill the width of the container.</p>
+			
+			<h3 id="templates">Grid templates and areas</h3>
+			
+			<p>The <code>fr</code> unit specifies a fractional portion of the total container size less any non-fractional sizes.  For example, <code>1fr 3fr 2fr</code> defines a total unit amount of 6 (1 + 3 + 2), divided fractionally by each number.  The first section would be 1/6, the second 3/6, and the third 2/6 units.  If you had one section of the grid defined in an absolute measurement (<code>em</code>, <code>px</code>, etc.) then the <code>fr</code> measurements would be relative to the remaining space.</p>
+			
+			<p>The <code>repeat</code> function will duplicate specifications for rows or columns a given number of times.  <code>repeat(3, 100px)</code> will create three 100px wide sections.  <code>repeat(2, 20px 50px);</code> will create four columns (two sets of two) where the first and third columns are 20px wide, and the second and fourth columns are 50px wide.</p>
+			
+			<p>When you want to set a section&rsquo;s size within a range (similar to the CSS function <code>clamp(...)</code>), use <code>minmax(minval, maxval)</code>.</p>
 			
 			<div class="table-responsive">
 			
@@ -89,48 +112,137 @@
 					<tbody>
 						<tr>
 							<td><code>grid&#8209;template&#8209;columns</code></td>
-							<td><code>px</code>, <code>%</code>, <code>fr</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
 							<td><code>grid-template-columns: 200px 40% 150px;</code></td>
 							<td class="d-none d-md-table-cell">Define column sizes sequentially; don&rsquo;t separate with commas.</td>
 						</tr>
 						<tr>
 							<td><code>grid&#8209;template&#8209;rows</code></td>
-							<td><code>px</code>, <code>%</code>, <code>fr</code></td>
-							<td><code>grid-template-columns: 200px 40% 150px;</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
+							<td><code>grid-template-rows: 200px 40% 150px;</code></td>
 							<td class="d-none d-md-table-cell">Define row sizes sequentially; don&rsquo;t separate with commas.</td>
 						</tr>
 						<tr>
 							<td><code>grid&#8209;template&#8209;areas</code></td>
-							<td><code></code></td>
-							<td><code></code></td>
-							<td class="d-none d-md-table-cell"></td>
+							<td><code>"[...]"</code> for each row</td>
+							<td><code>grid&#8209;template&#8209;areas: "header header"<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sidebar main"<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"footer footer";</code></td>
+							<td class="d-none d-md-table-cell">Defines named template areas; a row is created for each quote-enclosed string, and a column for each cell within that string.  Create areas that span muliple columns by simply repeating the name of the area across those columns within that row.</td>
+						</tr>
+						<tr>
+							<td><code>grid&#8209;area</code></td>
+							<td>the name of the corresponding area set with <code>grid&#8209;template&#8209;areas</code></td>
+							<td><code>grid&#8209;area: sidebar;</code></td>
+							<td class="d-none d-md-table-cell">Allows easy assignment of a particular element to a specific named section of the parent CSS grid.  If there are no named sections, <code>grid-area</code> will require numerical values; see <a href="#sizes">Defining element sizes</a> below.</td>
 						</tr>
 						<tr>
 							<td><code>grid&#8209;template</code></td>
-							<td><code>[grid-template-areas] [grid-template-rows] / [grid-template-columns]</code></td>
+							<td><code>[grid-template-areas] [grid-template-rows] / [grid-template-columns]</code><br>
+								HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
 							<td><code>grid&#8209;template:&nbsp;[header&#8209;top]&nbsp;"a&nbsp;a&nbsp;a"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[header&#8209;bottom]<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[main&#8209;top]&nbsp;"b&nbsp;b&nbsp;b"&nbsp;1fr&nbsp;[main&#8209;bottom]<br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;auto&nbsp;1fr&nbsp;auto;</code></td>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;auto&nbsp;1fr&nbsp;auto;</code><br>
+								<code>grid&#8209;template:&nbsp;200px 40% 150px / 1fr 5fr 2fr;</code></td>
 							<td class="d-none d-md-table-cell">Used to combine <code>grid&#8209;template&#8209;areas</code>, <code>grid&#8209;template&#8209;columns</code>, and <code>grid&#8209;template&#8209;rows</code>. A <code>/</code> must separate the <code>grid&#8209;template&#8209;areas</code> and <code>grid&#8209;template&#8209;columns</code> from the <code>grid&#8209;template&#8209;rows</code> values.</td>
-						</tr>
-						<tr>
-							<td><code></code></td>
-							<td><code></code></td>
-							<td><code></code></td>
-							<td class="d-none d-md-table-cell"></td>
-						</tr>
-						<tr>
-							<td><code></code></td>
-							<td><code></code></td>
-							<td><code></code></td>
-							<td class="d-none d-md-table-cell"></td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 			
-			<h2>Example</h2>
+			<h3 id="spacing">Spacing between grid elements</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Property</th>
+							<th scope="col">Value(s)</th>
+							<th scope="col">Example</th>
+							<th scope="col" class="d-none d-md-table-cell">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>row&#8209;gap</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
+							<td><code>row&#8209;gap: 1em;</code></td>
+							<td class="d-none d-md-table-cell">Used to set spacing between rows in a grid.</td>
+						</tr>
+						<tr>
+							<td><code>column&#8209;gap</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
+							<td><code>column&#8209;gap: 1em;</code></td>
+							<td class="d-none d-md-table-cell">Used to set spacing between columns in a grid.</td>
+						</tr>
+						<tr>
+							<td><code>gap</code></td>
+							<td><code>[row&#8209;gap]&nbsp;[column&#8209;gap]</code></td>
+							<td><code>gap: 1em 1em;</code></td>
+							<td class="d-none d-md-table-cell">Used to combine <code>row&#8209;gap</code> and <code>column&#8209;gap</code> into a shorthand.  If only one value is present, it will set both <code>row&#8209;gap</code> and <code>column&#8209;gap</code> to the same value.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="sizes">Defining element sizes</h3>
+			
+			<p>Grid lines are counted from the outside edge of the grid, starting at 1.  Negative values will reverse the counting direction, starting from the final grid line and counting backwards.  For example, <code>grid&#8209;row&#8209;start: -3;</code> would place the element starting at the third grid line from the end of the grid.</p>
+			
+			<p>Use the <code>span</code> property to set an element to a certain number of units wide.  Example: <code>grid-row: 2 / span 3;</code> will make an element start from the second gridline and span three rows or columns.  This can help avoid off-by-one errors when trying to set grid element sizes by grid line numbers.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Property</th>
+							<th scope="col">Value(s)</th>
+							<th scope="col">Example</th>
+							<th scope="col" class="d-none d-md-table-cell">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>grid&#8209;row&#8209;start</code>&nbsp;or<br>
+								<code>grid&#8209;column&#8209;start</code></td>
+							<td>integers</td>
+							<td><code>grid&#8209;row&#8209;start:&nbsp;3;</code><br>
+								<code>grid&#8209;column&#8209;start:&nbsp;4;</code></td>
+							<td class="d-none d-md-table-cell">Specifices the number of the grid line that the element starts on.</td>
+						</tr>
+						<tr>
+							<td><code>grid&#8209;row&#8209;end</code>&nbsp;or<br>
+								<code>grid&#8209;column&#8209;end</code></td>
+							<td>integers</td>
+							<td><code>grid&#8209;row&#8209;end:&nbsp;7;</code><br>
+								<code>grid&#8209;column&#8209;end:&nbsp;8;</code></td>
+							<td class="d-none d-md-table-cell">Specifices the number of the grid line that the element ends on.</td>
+						</tr>
+						<tr>
+							<td><code>grid&#8209;row</code>&nbsp;or<br>
+								<code>grid&#8209;column</code></td>
+							<td><code>[grid&#8209;row&#8209;start]&nbsp;/&nbsp;[grid&#8209;row&#8209;end]</code><br>
+								<code>[grid&#8209;column&#8209;start]&nbsp;/&nbsp;[grid&#8209;column&#8209;end]</code></td>
+							<td><code>grid&#8209;row:&nbsp;3&nbsp;/&nbsp;7;</code><br>
+								<code>grid&#8209;column:&nbsp;4&nbsp;/&nbsp;8;</code></td>
+							<td class="d-none d-md-table-cell">Combines row/column specifications into a shorthand for each of them.  There must always be two values, and they must always have a <code>/</code> between them.</td>
+						</tr>
+						<tr>
+							<td><code>grid&#8209;area</code></td>
+							<td><code>[grid&#8209;row&#8209;start]&nbsp;/&nbsp;[grid&#8209;column&#8209;start] / [grid&#8209;row&#8209;end]&nbsp;/&nbsp;[grid&#8209;column&#8209;end]</code></td>
+							<td><code>grid&#8209;area:&nbsp;3&nbsp;/&nbsp;4&nbsp;/&nbsp;7&nbsp;/&nbsp;8;</code></td>
+							<td class="d-none d-md-table-cell">Combines row/column specifications into one unified shorthand.  There must always be four values, and they must always have <code>/</code> between them.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="example">Example</h2>
 			
 			<p>This CSS grid was created as a map for a paintball park; the previous version used <code>div</code>s, <code>float</code>s, and hard-coded sizes, which meant that it wasn&rsquo;t responsive and didn&rsquo;t work well on mobile.  This newer version using CSS grid is much tidier, easier to maintain, and resizes to work well on smaller screens.</p>
 			
