@@ -75,7 +75,9 @@
 						<li><a href="#templates">Grid templates and areas</a></li>
 						<li><a href="#spacing">Spacing between grid elements</a></li>
 						<li><a href="#sizes">Defining element sizes</a></li>
+						<li><a href="#align">Justify and align</a></li>
 					</ul>
+					<li><a href="#implicit">Implicit grid</a></li>
 					<li><a href="#example">Example</a></li>
 				</ul>
 			</nav>
@@ -128,7 +130,7 @@
 							<td><code>grid&#8209;template&#8209;areas: "header header"<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"sidebar main"<br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"footer footer";</code></td>
-							<td class="d-none d-md-table-cell">Defines named template areas; a row is created for each quote-enclosed string, and a column for each cell within that string.  Create areas that span muliple columns by simply repeating the name of the area across those columns within that row.</td>
+							<td class="d-none d-md-table-cell">Defines named template areas; a row is created for each quote-enclosed string, and a column for each cell within that string.  Create areas that span muliple columns by simply repeating the name of the area across those columns within that row.  Implement this by setting an HTML element&rsquo;s <code>class="[area]"</code> and adding the CSS for <code>.[area] { grid-area: [area]; }</code>.</td>
 						</tr>
 						<tr>
 							<td><code>grid&#8209;area</code></td>
@@ -241,6 +243,379 @@
 				</table>
 
 			</div>
+			
+			<h3 id="align">Justify and align</h3>
+			
+			<h4><code>justify-items</code></h4>
+			
+			<p>This positions grid items within their columns along the row axis, left-to-right across the webpage.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start</h3>
+					<div class="grid justify item start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid justify item end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid justify item center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch (default)</h3>
+					<div class="grid justify item stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h4><code>justify-content</code></h4>
+			
+			<p>This positions a grid within its parent element along the row axis, left-to-right across the webpage.</p>
+			
+			<p><code>justify-content: stretch;</code> will only resize grid items in columns set to <code>auto</code> or a <code>fr</code> value.  Explicit sizes such as <code>%</code>, <code>em</code>, and <code>px</code> will not resize to fill the grid&rsquo;s parent container.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start (default)</h3>
+					<div class="grid justify content start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid justify content end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid justify content center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch</h3>
+					<div class="grid justify content stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-around</h3>
+					<div class="grid justify content space-around">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-between</h3>
+					<div class="grid justify content space-between">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-evenly</h3>
+					<div class="grid justify content space-evenly">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h4><code>align-items</code></h4>
+			
+			<p>This positions grid items within their rows along the column axis, top-to-bottom across the webpage.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start</h3>
+					<div class="grid align item start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid align item end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid align item center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch (default)</h3>
+					<div class="grid align item stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h4><code>align-content</code></h4>
+			
+			<p>This positions a grid within its parent element along the column axis, top-to-bottom across the webpage.</p>
+			
+			<p><code>align-content: stretch;</code> will only resize grid items in columns set to <code>auto</code> or a <code>fr</code> value.  Explicit sizes such as <code>%</code>, <code>em</code>, and <code>px</code> will not resize to fill the grid&rsquo;s parent container.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start (default)</h3>
+					<div class="grid align content start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid align content end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid align content center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch</h3>
+					<div class="grid align content stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-around</h3>
+					<div class="grid align content space-around">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-between</h3>
+					<div class="grid align content space-between">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>space-evenly</h3>
+					<div class="grid align content space-evenly">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+						<div class="box">4</div>
+						<div class="box">5</div>
+						<div class="box">6</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h4><code>justify-self</code></h4>
+			
+			<p>This positions grid items within their grid section along the row axis, left-to-right across the webpage.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start</h3>
+					<div class="grid justify self start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid justify self end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid justify self center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch (default)</h3>
+					<div class="grid justify self stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h4><code>align-self</code></h4>
+			
+			<p>This positions grid items within their grid section along the column axis, top-to-bottom across the webpage.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+			
+				<div class="col grid-example">
+					<h3>start</h3>
+					<div class="grid align self start">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>end</h3>
+					<div class="grid align self end">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>center</h3>
+					<div class="grid align self center">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				<div class="col grid-example">
+					<h3>stretch (default)</h3>
+					<div class="grid align self stretch">
+						<div class="box">1</div>
+						<div class="box">2</div>
+						<div class="box">3</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<h2 id="implicit">Implicit grid</h2>
+			
+			<p>When the number of elements placed in a grid overflows outside of the explicity defined layout (X rows, Y columns), <strong>implicity grid</strong> allows the browser to add more rows to contain the additional content.</p>
+			
+			<p><strong>Default behavior:</strong></p>
+			<ul>
+				<li>Items will fill up rows first</li>
+				<li>New rows are added as necessary</li>
+				<li>New grid rows will only be tall enough to contain the new content</li>
+			</ul>
+			
+			<h3>Auto-size rows and columns</h3>
+			
+			<p>To change the default behavior of the implicit grid, you can define <code>grid-auto-rows</code> and <code>grid-auto-columns</code>.  To change the size of each auto row or column, just add a new size to the property&rsquo;s value.  New rows or columns will cycle through the sizes specified in <code>grid-auto-rows</code> and <code>grid-auto-columns</code> and repeat as needed.</p>
+			
+			<p>The <code>repeat</code> function will duplicate specifications for rows or columns a given number of times.  <code>repeat(3, 100px)</code> will create three 100px wide sections.  <code>repeat(2, 20px 50px);</code> will create four columns (two sets of two) where the first and third columns are 20px wide, and the second and fourth columns are 50px wide.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Property</th>
+							<th scope="col">Value(s)</th>
+							<th scope="col">Example</th>
+							<th scope="col" class="d-none d-md-table-cell">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>grid&#8209;auto&#8209;columns</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
+							<td><code>grid-auto-rows: 200px 100px;</code></td>
+							<td class="d-none d-md-table-cell">Define column sizes sequentially; don&rsquo;t separate with commas.</td>
+						</tr>
+						<tr>
+							<td><code>grid&#8209;auto&#8209;rows</code></td>
+							<td>HTML units: <code>px</code>, <code>%</code>, <code>fr</code>, <code>em</code>, etc.</td>
+							<td><code>grid-template-rows: 40%;</code></td>
+							<td class="d-none d-md-table-cell">Define row sizes sequentially; don&rsquo;t separate with commas.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Auto flow</h3>
+			
+			<p><code>grid-auto-flow</code> speficies whether new elements are added to rows or columns.  <code>row</code> adds new elements to a new row, <code>column</code> adds new elements to a new column, and <code>dense</code> attempts to fill holes in the layout with smaller elements.  <code>row</code> and <code>column</code> can both be paired with <code>dense</code>.</p>
+			
+			<p><strong>Example:</strong> <code>grid-auto-flow: row dense;</code></p>
 			
 			<h2 id="example">Example</h2>
 			

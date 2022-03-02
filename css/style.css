@@ -101,71 +101,71 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 #flexbox-container h3 { text-align: center; padding-top: 0; font-weight: normal; }
 
 /* Flex containers */
-.flex-example { margin-bottom: 1em; }
-.flex { display: flex; background: lightgray; height: 100px; flex-wrap: wrap; }
-.flex.items.align, .flex.item-specific.align { justify-content: space-evenly; }
-.box { padding: 0.5em; color: white; font: bold 1rem Arial; text-align: center;}
+.flex-example .flex-example { margin-bottom: 1em; }
+.flex-example .flex { display: flex; background: lightgray; height: 100px; flex-wrap: wrap; }
+.flex-example .flex.items.align, .flex.item-specific.align { justify-content: space-evenly; }
+.flex-example .box { padding: 0.5em; color: white; font: bold 1rem Arial; text-align: center;}
 
 /* Flex box items */
-.content.justify .box { background-color: dodgerblue; border: 1px solid #1a82f0; align-self: stretch; }
-.content.align .box { background-color: darkkhaki; border: 1px solid #a9a668; }
-.items.align .box { background-color: darkseagreen; border: 1px solid #7aaf7a; }
-.item-specific.align .box { background-color: lightcoral; border: 1px solid #ec5f5f; }
-.flex-flow-ex .box { background-color: thistle; border: 1px solid #cfb0cf; }
-.flex-shorthand-ex .box { background-color: lightsalmon; border: 1px solid #ff9166; }
+.flex-example .content.justify .box { background-color: dodgerblue; border: 1px solid #1a82f0; align-self: stretch; }
+.flex-example .content.align .box { background-color: darkkhaki; border: 1px solid #a9a668; }
+.flex-example .items.align .box { background-color: darkseagreen; border: 1px solid #7aaf7a; }
+.flex-example .item-specific.align .box { background-color: lightcoral; border: 1px solid #ec5f5f; }
+.flex-example .flex-flow-ex .box { background-color: thistle; border: 1px solid #cfb0cf; }
+.flex-example .flex-shorthand-ex .box { background-color: lightsalmon; border: 1px solid #ff9166; }
 
 /* Flex examples */
-.content.justify.start { justify-content: flex-start; }
-.content.justify.end { justify-content: flex-end; }
-.content.justify.center { justify-content: center; }
-.content.justify.between { justify-content: space-between; }
-.content.justify.around { justify-content: space-around; }
-.content.justify.evenly { justify-content: space-evenly; }
+.flex-example .content.justify.start { justify-content: flex-start; }
+.flex-example .content.justify.end { justify-content: flex-end; }
+.flex-example .content.justify.center { justify-content: center; }
+.flex-example .content.justify.between { justify-content: space-between; }
+.flex-example .content.justify.around { justify-content: space-around; }
+.flex-example .content.justify.evenly { justify-content: space-evenly; }
 
-.content.align.start { align-content: flex-start; }
-.content.align.end { align-content: flex-end; }
-.content.align.center { align-content: center; }
-.content.align.between { align-content: space-between; }
-.content.align.around { align-content: space-around; }
-.content.align.evenly { align-content: space-evenly; }
+.flex-example .content.align.start { align-content: flex-start; }
+.flex-example .content.align.end { align-content: flex-end; }
+.flex-example .content.align.center { align-content: center; }
+.flex-example .content.align.between { align-content: space-between; }
+.flex-example .content.align.around { align-content: space-around; }
+.flex-example .content.align.evenly { align-content: space-evenly; }
 
-.items.align.start { justify-content: space-evenly; align-items: flex-start; }
-.items.align.end { justify-content: space-evenly; align-items: flex-end; }
-.items.align.center { justify-content: space-evenly; align-items: center; }
-.items.align.stretch { justify-content: space-evenly; align-items: stretch; }
-.items.align.baseline { justify-content: space-evenly; align-items: baseline; }
-.items.align.baseline .box:nth-of-type(1) { font-size: 2rem; }
-.items.align.baseline .box:nth-of-type(2) { font-size: 1.5rem; }
+.flex-example .items.align.start { justify-content: space-evenly; align-items: flex-start; }
+.flex-example .items.align.end { justify-content: space-evenly; align-items: flex-end; }
+.flex-example .items.align.center { justify-content: space-evenly; align-items: center; }
+.flex-example .items.align.stretch { justify-content: space-evenly; align-items: stretch; }
+.flex-example .items.align.baseline { justify-content: space-evenly; align-items: baseline; }
+.flex-example .items.align.baseline .box:nth-of-type(1) { font-size: 2rem; }
+.flex-example .items.align.baseline .box:nth-of-type(2) { font-size: 1.5rem; }
 
-.item-specific.align .start { align-self: flex-start; }
-.item-specific.align .end { align-self: flex-end; }
-.item-specific.align .center { align-self: center; }
-.item-specific.align .stretch { align-self: stretch; }
+.flex-example .item-specific.align .start { align-self: flex-start; }
+.flex-example .item-specific.align .end { align-self: flex-end; }
+.flex-example .item-specific.align .center { align-self: center; }
+.flex-example .item-specific.align .stretch { align-self: stretch; }
 
-.flex-flow-ex.ex-wrap { flex-wrap: wrap; }
-.flex-flow-ex.ex-wrap-rev { flex-wrap: wrap-reverse; }
-.flex-flow-ex.ex-row { flex-direction: row; }
-.flex-flow-ex.ex-row-rev { flex-direction: row-reverse; }
-.flex-flow-ex.ex-col { flex-direction: column; }
-.flex-flow-ex.ex-col-rev { flex-direction: column-reverse; }
+.flex-example .flex-flow-ex.ex-wrap { flex-wrap: wrap; }
+.flex-example .flex-flow-ex.ex-wrap-rev { flex-wrap: wrap-reverse; }
+.flex-example .flex-flow-ex.ex-row { flex-direction: row; }
+.flex-example .flex-flow-ex.ex-row-rev { flex-direction: row-reverse; }
+.flex-example .flex-flow-ex.ex-col { flex-direction: column; }
+.flex-example .flex-flow-ex.ex-col-rev { flex-direction: column-reverse; }
 
-.flex-shorthand-ex.shrink, .flex-shorthand-ex.basis, .flex-shorthand-ex.shorthand { flex-wrap: nowrap; }
-.flex-shorthand-ex.grow .grow-1 { flex-grow: 1; }
-.flex-shorthand-ex.grow .grow-2 { flex-grow: 2; }
-.flex-shorthand-ex.grow .grow-3 { flex-grow: 3; }
-.flex-shorthand-ex.shrink .box { width: 40%; }
-.flex-shorthand-ex.shrink .shrink-1 { flex-shrink: 1; }
-.flex-shorthand-ex.shrink .shrink-2 { flex-shrink: 2; }
-.flex-shorthand-ex.shrink .shrink-3 { flex-shrink: 3; }
-.flex-shorthand-ex.shrink .shrink-0 { flex-shrink: 0; }
-.flex-shorthand-ex.basis .box:nth-of-type(1) { flex-basis: 300px; }
-.flex-shorthand-ex.basis .box:nth-of-type(2) { flex-basis: 20%; }
-.flex-shorthand-ex.basis .box:nth-of-type(3) { flex-basis: 600px; }
-.flex-shorthand-ex.basis .box:nth-of-type(4) { flex-basis: auto; }
-.flex-shorthand-ex.shorthand .box:nth-of-type(1) { flex: 1 0 200px; }
-.flex-shorthand-ex.shorthand .box:nth-of-type(2) { flex: 0 3 20%; }
-.flex-shorthand-ex.shorthand .box:nth-of-type(3) { flex: 2 1 200px; }
-.flex-shorthand-ex.shorthand .box:nth-of-type(4) { flex: 4 1 auto; }
+.flex-example .flex-shorthand-ex.shrink, .flex-shorthand-ex.basis, .flex-shorthand-ex.shorthand { flex-wrap: nowrap; }
+.flex-example .flex-shorthand-ex.grow .grow-1 { flex-grow: 1; }
+.flex-example .flex-shorthand-ex.grow .grow-2 { flex-grow: 2; }
+.flex-example .flex-shorthand-ex.grow .grow-3 { flex-grow: 3; }
+.flex-example .flex-shorthand-ex.shrink .box { width: 40%; }
+.flex-example .flex-shorthand-ex.shrink .shrink-1 { flex-shrink: 1; }
+.flex-example .flex-shorthand-ex.shrink .shrink-2 { flex-shrink: 2; }
+.flex-example .flex-shorthand-ex.shrink .shrink-3 { flex-shrink: 3; }
+.flex-example .flex-shorthand-ex.shrink .shrink-0 { flex-shrink: 0; }
+.flex-example .flex-shorthand-ex.basis .box:nth-of-type(1) { flex-basis: 300px; }
+.flex-example .flex-shorthand-ex.basis .box:nth-of-type(2) { flex-basis: 20%; }
+.flex-example .flex-shorthand-ex.basis .box:nth-of-type(3) { flex-basis: 600px; }
+.flex-example .flex-shorthand-ex.basis .box:nth-of-type(4) { flex-basis: auto; }
+.flex-example .flex-shorthand-ex.shorthand .box:nth-of-type(1) { flex: 1 0 200px; }
+.flex-example .flex-shorthand-ex.shorthand .box:nth-of-type(2) { flex: 0 3 20%; }
+.flex-example .flex-shorthand-ex.shorthand .box:nth-of-type(3) { flex: 2 1 200px; }
+.flex-example .flex-shorthand-ex.shorthand .box:nth-of-type(4) { flex: 4 1 auto; }
 
 /* ################################## CSS GRID STYLES ################################## */
 
@@ -194,3 +194,57 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 @media only screen and (max-width: 850px) {
 	.picnic1 p, .proshop p, .picnic2 p { display: none; }
 }
+
+/* Grid containers */
+.grid-example { margin-bottom: 1em; }
+.grid-example .grid { display: grid; grid-template-columns: repeat(3, 1fr); background: lightgray; height: 75px; }
+.grid-example .grid.justify.content { grid-template-columns: repeat(3, 25%); }
+.grid-example .grid.align.content { grid-template: repeat(2, 35%) / repeat(3, 1fr); height: 100px;}
+.grid-example .grid.justify.content.stretch { grid-template-columns: auto 60px 60px; }
+.grid-example .grid.align.content.stretch { grid-template-rows: auto auto; }
+.grid-example .box { padding: 0.5em; color: white; font: bold 1rem Arial; text-align: center;}
+
+/* Grid box items */
+.grid-example .justify.item .box { background-color: dodgerblue; border: 1px solid #1a82f0; }
+.grid-example .justify.content .box { background-color: darkkhaki; border: 1px solid #a9a668; }
+.grid-example .align.item .box { background-color: darkseagreen; border: 1px solid #7aaf7a; }
+.grid-example .align.content .box { background-color: lightcoral; border: 1px solid #ec5f5f; }
+.grid-example .justify.self .box { background-color: thistle; border: 1px solid #cfb0cf; width: 75%; height: 75%; }
+.grid-example .align.self .box { background-color: lightsalmon; border: 1px solid #ff9166; width: 75%; height: 75%; }
+
+/* Grid examples */
+.grid-example .justify.item.start { justify-items: start; }
+.grid-example .justify.item.end { justify-items: end; }
+.grid-example .justify.item.center { justify-items: center; }
+.grid-example .justify.item.stretch { justify-items: stretch; }
+
+.grid-example .justify.content.start { justify-content: start; }
+.grid-example .justify.content.end { justify-content: end; }
+.grid-example .justify.content.center { justify-content: center; }
+.grid-example .justify.content.stretch { justify-content: stretch; }
+.grid-example .justify.content.space-around { justify-content: space-around; }
+.grid-example .justify.content.space-between { justify-content: space-between; }
+.grid-example .justify.content.space-evenly { justify-content: space-evenly; }
+
+.grid-example .align.item.start { align-items: start; }
+.grid-example .align.item.end { align-items: end; }
+.grid-example .align.item.center { align-items: center; }
+.grid-example .align.item.stretch { align-items: stretch; }
+
+.grid-example .align.content.start { align-content: start; }
+.grid-example .align.content.end { align-content: end; }
+.grid-example .align.content.center { align-content: center; }
+.grid-example .align.content.stretch { align-content: stretch; }
+.grid-example .align.content.space-around { align-content: space-around; }
+.grid-example .align.content.space-between { align-content: space-between; }
+.grid-example .align.content.space-evenly { align-content: space-evenly; }
+
+.grid-example .justify.self.start .box { justify-self: start; }
+.grid-example .justify.self.end .box { justify-self: end; }
+.grid-example .justify.self.center .box { justify-self: center; }
+.grid-example .justify.self.stretch .box { justify-self: stretch; width: auto; }
+
+.grid-example .align.self.start .box { align-self: start; }
+.grid-example .align.self.end .box { align-self: end; }
+.grid-example .align.self.center .box { align-self: center; }
+.grid-example .align.self.stretch .box { align-self: stretch; height: auto; }
