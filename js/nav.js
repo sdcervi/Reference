@@ -61,6 +61,11 @@ const navItems = {
 				link:	"/Reference/html-css/margin.html",
 				id:		"nav-margin"
 			},
+			media_queries: {
+				title:	"Media Queries &amp; Breakpoints",
+				link:	"/Reference/html-css/media-queries.html",
+				id:		"nav-media-queries"
+			},
 			metadata: {
 				title:	"Metadata",
 				link:	"/Reference/html-css/metadata.html",

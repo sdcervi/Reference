@@ -72,6 +72,12 @@ const cardItems = {
 				link:	"./html-css/margin.html",
 				image:	"./assets/homepage/margin.svg"
 			},
+			media_queries: {
+				title:	"Media Queries &amp; Breakpoints",
+				copy:	"Targeting CSS rules based on device screen size, orientation, and more",
+				link:	"./html-css/media-queries.html",
+				image:	"./assets/homepage/media-queries.svg"
+			},
 			metadata: {
 				title:	"Metadata",
 				copy:	"Page properties such as language, who wrote it, and whether to cache&nbsp;it",
@@ -212,7 +218,7 @@ const cardItems = {
 			},
 			tips_tricks: {
 				title:	"Tips &amp; Tricks",
-				copy:	"Tips, tricks, and workarounds for software and systems",
+				copy:	"Tips and tricks for software and systems",
 				link:	"./resources/tips-tricks.html",
 				image:	"./assets/homepage/tips-tricks.svg"
 			},
