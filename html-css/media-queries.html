@@ -69,22 +69,70 @@
 
 			<p>Media queries allow you to target specific screen sizes, ranges of sizes, or properties such as landscape or portrait orientation.</p>
 			
+			<p>To add logic and conditionals to a media query, use the operators <code>and</code>, <code>not</code>, and <code>only</code>.</p>
+			
+			<ul>
+				<li><code>and</code>: Combines multiple media features together into a single media query; each must evaluate to <code>true</code> for the media query to apply. This is also used to join media features with media types.</li>
+				<li><code>not</code>: Negates a media query, returning <code>true</code> if the query evaluates to <code>false</code>; this applies to the entire query and not to individual features within a query. This requires a media type to be defined as part of the query.</li>
+				<li><code>only</code>: Applies a CSS definition set only if every query matches. This helps prevent older browsers from incorrectly applying styles (Example: <code>@media screen and (max-width: 500px) {...}</code> would be applied to all screens). This requires a media type to be defined as part of the query.</li>
+			</ul>
+			
+			<p><strong>Example:</strong> <code>@media only screen and (min-width: 768px;) and (orientation: portrait) {...}</code></p>
+			
+			<p>To add multiple queries to a single CSS definition set, separate them with a comma.  Example: <code>@media screen, print</code>.  This will mean that if any of the media queries evaluates to <code>true</code>, the CSS will apply.</p>
+			
 			<h3>Media types</h3>
 			
 			<p>Media types target a specific category of experience: <code>all</code>, <code>print</code>, or <code>screen</code>.  The type is optional (default is <code>all</code>), except when using <code>not</code> or <code>only</code>.</p>
 			
-			<p><strong>Examples:</strong></p>
+			<div class="table-responsive">
 			
-			<ul>
-				<li><code>@media all</code> targets all formats</li>
-				<li><code>@media only print</code> targets only print formats</li>
-				<li><code>@media not print</code> targets everything except print formats</li>
-				<li><code>@media only screen</code> targets only digital (screen) formats</li>
-				<li><code>@media not screen</code> targets everything except digital formats</li>
-				<li><code>@media screen, print</code> targets both digital and print formats</li>
-			</ul>
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Media type</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>@media all</code></td>
+							<td>All formats</td>
+						</tr>
+						<tr>
+							<td><code>@media only print</code></td>
+							<td>Only print formats</td>
+						</tr>
+						<tr>
+							<td><code>@media not print</code></td>
+							<td>Everything except print formats</td>
+						</tr>
+						<tr>
+							<td><code>@media only screen</code></td>
+							<td>Only digital (screen) formats</td>
+						</tr>
+						<tr>
+							<td><code>@media not screen</code></td>
+							<td>Everything except digital formats</td>
+						</tr>
+						<tr>
+							<td><code>@media screen, print</code></td>
+							<td>Both digital and print formats</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
 			
-			<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries -->
+			<h3>Media features</h3>
+			
+			<p>Media features describe specific characteristics of the user agent (browser), device, or environment the web page is being viewed in.  These expressions test for their presence (as a boolean) or their value, and are optional.  Each media feature expression needs to be in parenthesis.</p>
+			
+			<p><strong>Example:</strong> <code>@media (max-width: 768px) {...}</code></p>
+			
+			<p>If you create a media query without specifying a value (<code>@media (color) {...}</code>), the CSS rules will apply as long as the feature&rsquo;s value is not <code>0</code> or <code>none</code>.</p>
+			
+			<p>The table below only contains commonly used media features; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features">here&rsquo;s a full list of them</a>.</p>
 			
 			<div class="table-responsive">
 			
@@ -92,36 +140,108 @@
 					<thead>
 						<tr>
 							<th scope="col">Term</th>
-							<th scope="col">Definition</th>
+							<th scope="col">Value</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Example</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>aspect&#8209;ratio</code></td>
+							<td><code>[width]/[height]</code></td>
+							<td>Width-to-height aspect ratio of the viewport (window), separated by a <code>/</code></td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(aspect&#8209;ratio:&nbsp;16/9) {...}</code></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>color</code></td>
+							<td>number</td>
+							<td>Number of bits per color component of the device, or <code>0</code> if the device is grayscale-only</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(color:&nbsp;0) {...}</code></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>color&#8209;gamut</code></td>
+							<td><code><a href="https://en.wikipedia.org/wiki/SRGB">srgb</a></code>, <code><a href="https://www.color.org/chardata/rgb/DisplayP3.xalter">p3</a></code>, or <code><a href="https://en.wikipedia.org/wiki/Rec._2020">rec2020</a></code></td>
+							<td>The range of colors supported by the user agent and output device</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(color&#8209;gamut:&nbsp;srgb) {...}</code></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
+							<td><code>display&#8209;mode</code></td>
+							<td><code>fullscreen</code>, <code>standalone</code>, <code>minimal-ui</code>, or <code>browser</code></td>
+							<td>Determines how a web app should run, depending on whether it&rsquo;s running in-browser, as a standalone app, or in full screen.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(display&#8209;mode&nbsp;standalone) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>forced&#8209;colors</code></td>
+							<td><code>none</code> or <code>active</code></td>
+							<td>Whether the browser should display colors normally or is using a restricted color palette such as High Contrast Mode.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors">More information about what CSS this affects</a></td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(forced&#8209;colors: active) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>grid</code></td>
+							<td>boolean (<code>0</code> or <code>1</code>)</td>
+							<td>Whether the device uses a grid-based screen; almost all modern computers and mobile devices use bitmap screens. Grid-based screens include text-only terminals and basic phones with only one fixed font (i.e. digital dot matrix displays).</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(grid:&nbsp;1) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>height</code></td>
+							<td><code>[height]px</code></td>
+							<td>The height of the viewport in pixels. You can also use <code>min-height</code>, <code>max-height</code>, or both to target ranges of screen sizes.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(min&#8209;height:&nbsp;360px) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>orientation</code></td>
+							<td><code>portrait</code> or <code>landscape</code></td>
+							<td>Determines whether the device is in portrait orientation (height greater than or equal to width) or landscape orientation (width greater than height).  This is especially useful for mobile devices, if you want to adapt the experience when a user rotates their device.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(orientation:&nbsp;portrait) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>prefers&#8209;color&#8209;scheme</code></td>
+							<td><code>light</code> or <code>dark</code></td>
+							<td>Whether the user has light more or dark mode active; this can be either through the browser or their OS. This would allow for use of a different color palette to work better with dark mode or light mode backgrounds.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(prefers&#8209;color&#8209;scheme:&nbsp;dark) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>prefers&#8209;reduced&#8209;motion</code></td>
+							<td><code>no&#8209;preference</code> or <code>reduce</code></td>
+							<td>Whether the user has enabled the reduced motion feature on their browser and/or OS. This is common for users with vestibular motion disorders. The use case for this feature is to reduce or remove any interface animations.</td>
+							<td class="d-none d-md-table-cell"><code>@media () {prefers&#8209;reduced&#8209;motion&nbsp;reduce}</code></td>
+						</tr>
+						<tr>
+							<td><code>resolution</code></td>
+							<td>[resolution]dpi</td>
+							<td>The pixel density of the device. You can also use <code>min-resolution</code>, <code>max-resolution</code>, or both to target ranges of resolutions. One use case for this is serving higher resolution images only on higher resolution displays.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;() {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>scripting</code></td>
+							<td><code>none</code>, <code>initial-only</code>, or <code>enabled</code></td>
+							<td>Tests whether JavaScript is available.  <code>initial-only</code> indicates that JavaScript is only supported on page load and not afterwards.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(scripting:&nbsp;enabled) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>update</code></td>
+							<td><code>none</code>, <code>slow</code>, or <code>fast</code></td>
+							<td>How frequently (if at all) the device is able to modify (re-render) content.  <code>none</code> means that a page is static after load and can&rsquo;t be updated.  <code>slow</code> means the refresh rate is slow and animations may not display quickly enough to appear smooth, like with e-readers or very slow devices.  <code>fast</code> means the layout can change and re-render as needed and should appear smooth; most modern devices fall in this category.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(update:&nbsp;slow) {...}</code></td>
+						</tr>
+						<tr>
+							<td><code>width</code></td>
+							<td><code>[width]px</code></td>
+							<td>The width of the viewport in pixels. You can also use <code>min-width</code>, <code>max-width</code>, or both to target ranges of screen sizes.</td>
+							<td class="d-none d-md-table-cell"><code>@media&nbsp;(min&#8209;width:&nbsp;360px) {...}</code></td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 			
-			<section class="sources">
-				<h2>Sources</h2>
-				<p>Lastname, Firstname. &ldquo;#: Chapter Title.&rdquo; <i>Book Title</i>, Publisher Name, Publisher City, STATE, YYYY, pp. X&ndash;Y. Publisher Series: Subseries.</p>
-				<p>Lastname, Firstname. &ldquo;Webpage title.&rdquo; <em>Website name</em>, DD Mmmm. YYYY, <a href=""></a>.</p>
-			</section>
+			<h2>Breakpoints</h2>
+			
+			<p>Breakpoints are where your page&rsquo;s layout naturally breaks or looks strange.  These become the points where you need to rearrange or restyle your layout to work better on the new screen size.</p>
+			
+			<p>Best practices for design mean building websites from a <strong>mobile-first</strong> perspective: design it on the smallest screen size you want it to work on, then restyle as needed moving upward to each breakpoint.  Frameworks like <a href="https://getbootstrap.com/">Bootstrap</a> make this more straightforward for developers and designers, since their base styling system is designed for screens under 576px and scales up from there.</p>
+			
+			<p>Designing mobile-first and then checking for breakpoints helps ensure a smooth, responsive, and consistent user experience across as many devices as possible.  Rather than design for individual devices (iPhone, iPhone Plus, etc.), design for ranges of screen sizes to accomodate diverse users.</p>
 	
 		</main>
 		
