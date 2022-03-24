@@ -216,8 +216,9 @@ let navContentMbl = "";
 function createNav () {
 	for (const groupIndex in navItems) {
 		const navGroup = navItems[groupIndex];
-		navContent += "<div class='accordion-item'><h2 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 accordion-header' id='navgroup-" + navGroup.title + "'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse-" + groupIndex + "' aria-expanded='false' aria-controls='collapse-" + groupIndex + "'>" + navGroup.title + "</button></h2>";
-		navContent += "<div id='collapse-" + groupIndex + "' class='accordion-collapse collapse' aria-labelledby='navgroup-" + navGroup.title + "' data-bs-parent='#navbar-container'><div class='accordion-body'><ul class='nav'>";
+		const groupID = groupIndex.charAt(0).toUpperCase() + groupIndex.slice(1);
+		navContent += "<div class='accordion-item'><h2 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 accordion-header' id='header" + groupID + "'><button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse" + groupID + "' aria-expanded='false' aria-controls='collapse" + groupID + "'>" + navGroup.title + "</button></h2>";
+		navContent += "<div id='collapse" + groupID + "' class='accordion-collapse collapse' aria-labelledby='header" + groupID + "' data-bs-parent='#navbar-container'><div class='accordion-body'><ul class='nav'>";
 		for (const linkIndex in navGroup.links) {
 			const navLink = navGroup.links[linkIndex];
 			navContent += "<li class='nav-item'><a class='nav-link' id='" + navLink.id + "' href='" + navLink.link + "'>" + navLink.title + "</a></li>";
@@ -246,3 +247,17 @@ navContent += "<div class='copyright'>&copy;" + new Date().getFullYear() + " Ste
 
 navDiv.innerHTML = navContent;
 navDivMbl.innerHTML = navContentMbl;
+
+const currentPage = document.location.pathname;
+
+let filename = currentPage.substring(currentPage.lastIndexOf('/')+1);
+filename = filename.substring(0, filename.length - 5);
+let navID = "nav-" + filename;
+
+const navElement = document.getElementById(navID);
+
+navElement.classList.add('active');
+
+navElement.parentElement.parentElement.parentElement.parentElement.classList.add('show');
+navElement.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.classList.remove('collapsed');
+navElement.parentElement.parentElement.parentElement.parentElement.previousSibling.firstChild.setAttribute("aria-expanded", "true");
