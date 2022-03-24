@@ -204,6 +204,12 @@ const cardItems = {
 		title:	"Resources",
 		id:		"resources",
 		cards: {
+			design: {
+				title:	"Design Resources",
+				copy:	"Documentation, guides, tutorials, tools, and testing",
+				link:	"./resources/design-resources.html",
+				image:	"./assets/homepage/design-resources.svg"
+			},
 			qa_qc: {
 				title:	"QA &amp; QC Checklists",
 				copy:	"Checklists for ensuring quality of design and&nbsp;content",

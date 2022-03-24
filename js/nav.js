@@ -171,6 +171,11 @@ const navItems = {
 	navResources: {
 		title: "Resources",
 		links: {
+			design: {
+				title:	"Design Resources",
+				link:	"/Reference/resources/design-resources.html",
+				id:		"nav-design-resources"
+			},
 			qa_qc: {
 				title:	"QA &amp; QC Checklists",
 				link:	"/Reference/resources/qa-qc.html",
