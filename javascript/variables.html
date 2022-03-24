@@ -74,8 +74,12 @@
 						<li><a href="#assign">Assigning values and performing arithmetic</a></li>
 					</ul>
 					<li><a href="#defaults">Setting default values</a></li>
-					<li><a href="#strings">Strings</a></li>
-					<li><a href="#arrays">Arrays</a></li>
+					<li><a href="#types">Data types</a></li>
+					<ul>
+						<li><a href="#simple-data">Simple data types (number, boolean, null, undefined)</a></li>
+						<li><a href="#strings">Strings</a></li>
+						<li><a href="#arrays">Arrays</a></li>
+					</ul>
 				</ul>
 			</nav>
 			
@@ -258,7 +262,16 @@
 			
 			<p>This is known as short-circuit evaluation and allows for failsafes in case of invalid or null input.</p>
 			
-			<h2 id="strings">Strings</h2>
+			<h2 id="types">Data types</h2>
+			
+			<h3 id="simple-data">Simple data types (number, boolean, null, undefined)</h3>
+			
+			<p><strong>Numbers</strong> can be any number, either a whole number (integer) or with decimal points (float).</p>
+			<p><strong>Booleans</strong> are a binary <code>true</code> or <code>false</code>, usually used as an indicator flag or an on/off switch.</p>
+			<p><strong>Null</strong> variables have the intentional absence of a value; the variable exists but does not have a valid value.  Example: <code>let x = null;</code></p>
+			<p><strong>Undefined</strong> variables have not yet been declared, or have not had a value defined.  Example: <code>let x;</code></p>
+			
+			<h3 id="strings">Strings</h3>
 			
 			<p>Strings are how plain text or other simple non-numerical values are stored.  For example, <code>'foobar'</code> is a string instead of a number, array, etc.</p>
 			
@@ -276,11 +289,13 @@
 			
 			<p><code>`Use template literals to add in ${variables} directly to a string.`;</code></p>
 				
-			<h2 id="arrays">Arrays</h2>
+			<h3 id="arrays">Arrays</h3>
 			
 			<p>Arrays are best used to hold sets of data that need to remain in a specific order.  Their data can be accessed by numerical index, starting at 0.</p>
 			
-			<h3>Methods</h3>
+			<p>To get the size of an array, use <code>arrayName.length</code>.</p>
+			
+			<h4>Methods</h4>
 			
 			<p>Arrays come with default methods attached to them, to perform basic operations.  Use these methods with <code>arrayName.method()</code>.</p>
 			
@@ -314,10 +329,49 @@
 							<td><code>.slice([start], [end])</code></td>
 							<td>Copies the indicated range of an array into a new array; <code>end</code> is not included and the operation proceeds only up to <code>end - 1</code>. The original array is not modified.</td>
 						</tr>
+						<tr>
+							<td><code>.isArray([variable])</code></td>
+							<td>Returns <code>true</code> if the variable contains an array, <code>false</code> otherwise</td>
+						</tr>
+						<tr>
+							<td><code>.every([function])</code></td>
+							<td>Returns <code>true</code> if every element in the array satisfies the <code>function</code></td>
+						</tr>
+						<tr>
+							<td><code>.filter([function])</code></td>
+							<td>Returns a new array containing all elements that satisfy the filtering <code>function</code></td>
+						</tr>
+						<tr>
+							<td><code>.forEach([function])</code></td>
+							<td>Calls a function for each element in the array; <a href="program-logic.html#for">more on forEach() loops here</a></td>
+						</tr>
+						<tr>
+							<td><code>.join()</code></td>
+							<td>Joins all array elements together into one string</td>
+						</tr>
+						<tr>
+							<td><code>.reverse()</code></td>
+							<td>Reverses the elements of an array in place; first becomes last, and vice versa</td>
+						</tr>
+						<tr>
+							<td><code>.sort()</code></td>
+							<td>Sorts the elements of an array in place</td>
+						</tr>
 					</tbody>
 				</table>
 
 			</div>
+			
+			<h3>Objects</h3>
+			
+			<p>Objects are collections of related data organized into key-value pairs.  They are similar to arrays, except properties can be accessed by name using dot notation: <code>object.property</code>, and their order within the object may change without warning.</p>
+			
+			<p>Object properties can also be accessed with bracket notation: <code>object[property]</code>, and this is most useful when iterating through an object.  For example:</p>
+			
+			<p><code>for (const propertyName in objectName) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let property = objectName[propertyName];<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute for each iteration]<br>
+				}</code></p>
 				
 		</main>
 		
