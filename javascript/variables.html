@@ -65,7 +65,20 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
-			<h2>Declaring variables</h2>
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#declaring">Declaring variables</a></li>
+					<ul>
+						<li><a href="#assign">Assigning values and performing arithmetic</a></li>
+					</ul>
+					<li><a href="#defaults">Setting default values</a></li>
+					<li><a href="#strings">Strings</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="declaring">Declaring variables</h2>
 			
 			<p>ES6 JavaScript introduces two new declaration keywords: <code>const</code> and <code>let</code>.</p>
 			
@@ -77,7 +90,7 @@
 							<th scope="col">Keyword</th>
 							<th scope="col">Scope</th>
 							<th scope="col">Usage</th>
-							<th scope="col">Examples</th>
+							<th scope="col" class="d-none d-sm-table-cell">Examples</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -85,14 +98,14 @@
 							<td><code>var</code></td>
 							<td>Global</td>
 							<td>Allows declaration of mutable variables. New variables declared locally with the same name will overwrite global variables&rsquo;s values.</td>
-							<td>Avoid using <code>var</code>; use <code>const</code> or <code>let</code> instead.</td>
+							<td class="d-none d-sm-table-cell">Avoid using <code>var</code>; use <code>const</code> or <code>let</code> instead.</td>
 						</tr>
 						<tr>
 							<td><code>const</code></td>
 							<td>Block</td>
 							<td><p>Allows declaration of immutable (constant) block-scope variables. New variables declared locally with the same name will <em>not</em> overwrite global variables&rsquo;s values. This is best for variables that don&rsquo;t need to be updated or re-declared.  <code>const</code> declarations must be initialized when declared.</p>
 								<p>Note that while objects declared with <code>const</code> cannot be updated, the properties and child objects within it can.</p></td>
-							<td><ul>
+							<td class="d-none d-sm-table-cell"><ul>
 								<li>Data structures</li>
 								<li>Dates and times</li>
 							</ul></td>
@@ -101,7 +114,7 @@
 							<td><code>let</code></td>
 							<td>Block</td>
 							<td>Allows declaration of mutable block-scope variables. New variables declared locally with the same name will <em>not</em> overwrite global variables&rsquo;s values. This is best for variables whose values need to change based on program flow. <code>let</code> declarations do not need to be initialized with a value when declared.</td>
-							<td><ul>
+							<td class="d-none d-sm-table-cell"><ul>
 								<li>Counters and loop iterators</li>
 								<li>Results of logic evaluations (true/false with different values depending on outcome)</li>
 							</ul></td>
@@ -111,13 +124,156 @@
 
 			</div>
 			
-			<h2>Setting default values</h2>
+			<h3 id="assign">Assigning values and performing arithmetic</h3>
+			
+			<p>To assign or increment a variable, use the following commomly used operators.  The full list of assignment operators can be found here.</p>
+			
+			<h4>Assignment operators</h4>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Operator</th>
+							<th scope="col">Description</th>
+							<th scope="col" class="d-none d-sm-table-cell">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>=</code></td>
+							<td>Assignment</td>
+							<td class="d-none d-sm-table-cell">Sets a variable equal to a value</td>
+							<td><code>x = 5;</code></td>
+						</tr>
+						<tr>
+							<td><code>+=</code></td>
+							<td>Addition assignment</td>
+							<td class="d-none d-sm-table-cell">Increments a variable by a value, or concatenates strings together</td>
+							<td><code>x += 5;<br>
+								x += 'string';</code></td>
+						</tr>
+						<tr>
+							<td><code>-=</code></td>
+							<td>Subtraction assignment</td>
+							<td class="d-none d-sm-table-cell">Subtracks a value from a variable&rsquo;s value (only works on numbers)</td>
+							<td><code>x -= 5;</code></td>
+						</tr>
+						<tr>
+							<td><code>*=</code></td>
+							<td>Multiplication assignment</td>
+							<td class="d-none d-sm-table-cell">Multiples a variable by a value (only works on numbers)</td>
+							<td><code>x *= 5;</code></td>
+						</tr>
+						<tr>
+							<td><code>/=</code></td>
+							<td>Division assignment</td>
+							<td class="d-none d-sm-table-cell">Divides a variable by a value (only works on numbers)</td>
+							<td><code>x /= 5;</code></td>
+						</tr>
+						<tr>
+							<td><code>%=</code></td>
+							<td>Remainder assignment</td>
+							<td class="d-none d-sm-table-cell">Assigns a variable the remainder of it divided by a value</td>
+							<td><code>let a = 3;<br>
+								a %= 2; // outputs 1</code></td>
+						</tr>
+						<tr>
+							<td><code>**</code></td>
+							<td>Exponentiation assignment</td>
+							<td class="d-none d-sm-table-cell">Multiples a variable by itself a specified number of times (sets its exponent)</td>
+							<td><code>let a = 3;<br>
+								a ** 2; // outputs 9</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h4>Arithmetic operators</h4>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Operator</th>
+							<th scope="col">Description</th>
+							<th scope="col" class="d-none d-sm-table-cell">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>%</code></td>
+							<td>Remainder</td>
+							<td class="d-none d-sm-table-cell">Returns the integer remainder of dividing two values</td>
+							<td><code>x = 12 % 5; // sets x to 2</code></td>
+						</tr>
+						<tr>
+							<td><code>++</code></td>
+							<td>Increment</td>
+							<td class="d-none d-sm-table-cell">Adds 1 to the value of an operand</td>
+							<td><code>x++;</code></td>
+						</tr>
+						<tr>
+							<td><code>--</code></td>
+							<td>Decrement</td>
+							<td class="d-none d-sm-table-cell">Subtracts 1 from the value of an operand</td>
+							<td><code>x--;</code></td>
+						</tr>
+						<tr>
+							<td><code>-</code></td>
+							<td>Unary negation</td>
+							<td class="d-none d-sm-table-cell">Returns the negation of an operand</td>
+							<td><code>let x = 3;
+								return (-x); // returns -3</code></td>
+						</tr>
+						<tr>
+							<td><code>+</code></td>
+							<td>Unary plus</td>
+							<td class="d-none d-sm-table-cell">Attempts to convert the operand to a number if it isn&rsquo;t one already</td>
+							<td><code>+"3" // returns 3<br>
+								+true // returns 1</code></td>
+						</tr>
+						<tr>
+							<td><code>**</code></td>
+							<td>Exponentiation operator</td>
+							<td class="d-none d-sm-table-cell">Calculates the base to the exponent power</td>
+							<td><code>2 ** 3 // returns 8</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="defaults">Setting default values</h2>
 			
 			<p>If a value input into a variable is null, you can set a default value to display instead.</p>
 			
 			<p><code>let username = usernameInput || 'Default value';</code></p>
 			
 			<p>This is known as short-circuit evaluation and allows for failsafes in case of invalid or null input.</p>
+			
+			<h2 id="strings">Strings</h2>
+			
+			<p>Strings are how plain text or other simple non-numerical values are stored.  For example, <code>'foobar'</code> is a string instead of a number, array, etc.</p>
+			
+			<p>Enclose strings in 'single quotes', "double quotes", or `backticks`; it doesn&rsquo;t matter what method as long as it&rsquo;s consistent.  Single quotes and backticks are best when generating HTML code via JavaScript, to avoid having to escape double quotes.  Backticks are used for <strong>template literals</strong>; more on this in a bit.</p>
+			
+			<p><code>'This is a string.'<br>
+				"This is also a string."<br>
+				`And this is another string.`</code></p>
+			
+			<p>To escape a character in a string and prevent it from terminating the string early, use a <code>\</code> before the character.</p>
+			
+			<p><code>'Use a backslash to make sure that any use of the same character doesn\'t break your string.'</code></p>
+			
+			<p>Strings can be concatenated (added) with the <code>+</code> operator.  When constructing strings of HTML code containing variables, however, this can get messy and lead to mistakes; it&rsquo;s best to use <strong>template literals</strong> instead.  Enclose variables and operations in <code>${curly&nbsp;braces}</code> with a dollar sign preceding them.</p>
+			
+			<p><code>`Use template literals to add in ${variables} directly to a string.`;
 				
 		</main>
 		

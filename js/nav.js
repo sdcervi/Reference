@@ -91,15 +91,20 @@ const navItems = {
 	navJS: {
 		title: "JavaScript",
 		links: {
-			variables: {
-				title:	"Variables",
-				link:	"/Reference/javascript/variables.html",
-				id:		"nav-variables"
+			logic: {
+				title:	"Program Logic: Loops &amp; Conditionals",
+				link:	"/Reference/javascript/program-logic.html",
+				id:		"nav-program-logic"
 			},
 			time_date: {
 				title:	"Time &amp; Date",
 				link:	"/Reference/javascript/time-date.html",
 				id:		"nav-time-date"
+			},
+			variables: {
+				title:	"Variables",
+				link:	"/Reference/javascript/variables.html",
+				id:		"nav-variables"
 			}
 		}
 	},

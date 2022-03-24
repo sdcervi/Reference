@@ -108,17 +108,23 @@ const cardItems = {
 		title:	"Javascript",
 		id:		"javascript",
 		cards: {
-			variables: {
-				title:	"Variables",
-				copy:	"Variable types, usage, and manipulation",
-				link:	"./javascript/variables.html",
-				image:	"./assets/homepage/variables.svg"
+			logic: {
+				title:	"Program Logic: Loops &amp; Conditionals",
+				copy:	"Loops, conditionals, and other logical operators",
+				link:	"./javascript/program-logic.html",
+				image:	"./assets/homepage/program-logic.svg"
 			},
 			time_date: {
 				title:	"Time &amp; Date",
 				copy:	"Displaying time and date with&nbsp;Javascript",
 				link:	"./javascript/time-date.html",
 				image:	"./assets/homepage/time-date.svg"
+			},
+			variables: {
+				title:	"Variables",
+				copy:	"Variable types, usage, and manipulation",
+				link:	"./javascript/variables.html",
+				image:	"./assets/homepage/variables.svg"
 			}
 		}
 	},
