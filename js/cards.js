@@ -121,7 +121,7 @@ const cardItems = {
 				image:	"./assets/homepage/time-date.svg"
 			},
 			variables: {
-				title:	"Variables",
+				title:	"Variables &amp; Data Types",
 				copy:	"Variable types, usage, and manipulation",
 				link:	"./javascript/variables.html",
 				image:	"./assets/homepage/variables.svg"

@@ -102,7 +102,7 @@ const navItems = {
 				id:		"nav-time-date"
 			},
 			variables: {
-				title:	"Variables",
+				title:	"Variables &amp; Data Types",
 				link:	"/Reference/javascript/variables.html",
 				id:		"nav-variables"
 			}
