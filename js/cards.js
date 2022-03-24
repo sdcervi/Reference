@@ -108,6 +108,12 @@ const cardItems = {
 		title:	"Javascript",
 		id:		"javascript",
 		cards: {
+			variables: {
+				title:	"Variables",
+				copy:	"Variable types, usage, and manipulation",
+				link:	"./javascript/variables.html",
+				image:	"./assets/homepage/variables.svg"
+			},
 			time_date: {
 				title:	"Time &amp; Date",
 				copy:	"Displaying time and date with&nbsp;Javascript",

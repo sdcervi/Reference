@@ -91,6 +91,11 @@ const navItems = {
 	navJS: {
 		title: "JavaScript",
 		links: {
+			variables: {
+				title:	"Variables",
+				link:	"/Reference/javascript/variables.html",
+				id:		"nav-variables"
+			},
 			time_date: {
 				title:	"Time &amp; Date",
 				link:	"/Reference/javascript/time-date.html",
