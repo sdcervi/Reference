@@ -69,6 +69,7 @@
 			
 			<nav class="quick-links">
 				<ul>
+					<li><a href="#general">General notes</a></li>
 					<li><a href="#universal">Universal time</a></li>
 					<li><a href="#generate">Generate today&rsquo;s date</a></li>
 					<li><a href="#setting">Setting sections of a <code>Date</code></a></li>
@@ -76,6 +77,17 @@
 					<li><a href="#manipulate">Manipulating a <code>Date</code> with methods</a></li>
 				</ul>
 			</nav>
+			
+			<h2 id="general">General notes</h2>
+			
+			<p>When working with devices running iOS, dates must be in a <code>Date</code>-compatible format, or ISO format.  Otherwise, the output will generate <code>NaN</code>: not a number</p>
+			
+			<p>Additionally, when doing math with dates, make sure to convert that portion of a date to a number or it could lead to unexpected and strange outputs such as <code>1 + 2 = 9</code> and other equally confusing problems.</p>
+			
+			<p>To calculate the number of days between two dates, use the following code.  <code>difference</code> is initially set to the difference in milliseconds; the second line converts that to days using the multipliers for each unit of time.</p>
+			
+			<p><code>let difference = date1.getTime() - date2.getTime();<br>
+				difference *= (1000 * 60 * 60 * 24);</code></p>
 			
 			<h2 id="universal">Universal time</h2>
 			
