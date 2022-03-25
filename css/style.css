@@ -260,3 +260,22 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 .grid-example .align.self.end .box { align-self: end; }
 .grid-example .align.self.center .box { align-self: center; }
 .grid-example .align.self.stretch .box { align-self: stretch; height: auto; }
+
+/* ################################### STICKY STYLES ################################### */
+
+#results { border: 1px solid lightgray; height: 300px; overflow-y: scroll; }
+#results .top-container { background-color: #f1f1f1; padding: 1em; text-align: center; }
+#results .header { padding: 10px 16px; background: #555; color: #f1f1f1; position: sticky; top: 0; }
+#results .header h2 { font-size: 1.25rem; }
+#results .content { padding: 16px; }
+#results .sticky { position: fixed; top: 0; width: 100%; }
+#results .sticky + .content { padding-top: 102px; }	
+
+/* ################################## DATE/TIME STYLES ################################# */
+
+.date-sticky { position: fixed; top: 80px; width: calc(100% - 3rem); box-shadow: 0 0 20px gray; }
+.date-sticky-follow { margin-top: 87px; }
+
+@media only screen and (min-width: 768px) {
+	.date-sticky { width: calc(83.333333333% - 3rem); }
+}

@@ -65,8 +65,383 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
-			<p>To generate the exact current time and/or date in a webpage:</p>
-			<p><code>&lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt;</code></p>
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#universal">Universal time</a></li>
+					<li><a href="#generate">Generate today&rsquo;s date</a></li>
+					<li><a href="#setting">Setting sections of a <code>Date</code></a></li>
+					<li><a href="#output">Outputting sections of a <code>Date</code></a></li>
+					<li><a href="#manipulate">Manipulating a <code>Date</code> with methods</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="universal">Universal time</h2>
+			
+			<p>All <code>Date</code> objects are relative to Universal Time Coordinated (UTC), also known as the GMT time zone.</p>
+			
+			<h2 id="generate">Generate today&rsquo;s date</h2>
+			
+			<p>To generate today&rsquo;s date as a date object, call the <code>Date</code> constructor.</p>
+			
+			<p><code>const todaysDate = new Date();</code></p>
+			
+			<p>And to convert it to plain text to display easily:</p>
+			
+			<p><code>const dateString = Date(todaysDate).toString();</code></p>
+			
+			<p>Output:</p>
+			
+			<p id="dateStringOutput"></p>
+			
+			<h2 id="setting">Setting sections of a <code>Date</code></h2>
+			
+			<p>To set specific sections of a <code>Date</code> object, use these setter methods:</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">JavaScript</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>todaysDate.setFullYear()</code></td>
+							<td>Sets the 4-digit year, according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setMonth()</code></td>
+							<td>Sets the month (0&ndash;11), according to local time</td>
+							<td class="d-none d-md-table-cell">0 corresponds to January</td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setDate([1&ndash;31])</code></td>
+							<td>Sets the day of the month, according to local time</td>
+							<td class="d-none d-md-table-cell">If the date provided is outside range for that month (i.e. <code>0</code>, or <code>30</code> for February), the month will update accordingly.  <code>0</code> will set the date to the last day of the previous month, any values over the last day of the month will increment into the following month, and negative values will backtrack into the previous month.</td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setTime()</code></td>
+							<td>Sets the exact time represented by milliseconds since Jan 1, 1970, 00:00:00.000 GMT (the EcmaScript Epoch), according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setHours()</code></td>
+							<td>Sets the hour (0&ndash;23), according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setMinutes()</code></td>
+							<td>Sets the milliseconds, according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setSeconds()</code></td>
+							<td>Sets the seconds (0&ndash;59), according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setMilliseconds()</code></td>
+							<td>Sets the milliseconds, according to local time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCFullYear()</code></td>
+							<td>Sets the 4-digit year, according to UTC time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCMonth()</code></td>
+							<td>Sets the month (0&ndash;11), according to UTC time</td>
+							<td class="d-none d-md-table-cell">0 corresponds to January</td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCDate()</code></td>
+							<td>Sets the day of the month, according to UTC time</td>
+							<td class="d-none d-md-table-cell">If the date provided is outside range for that month (i.e. <code>0</code>, or <code>30</code> for February), the month will update accordingly.  <code>0</code> will set the date to the last day of the previous month, any values over the last day of the month will increment into the following month, and negative values will backtrack into the previous month.</td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCHours()</code></td>
+							<td>Sets the hours (0&ndash;23), according to UTC time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCMinutes()</code></td>
+							<td>Sets the minutes (0&ndash;59), according to UTC time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCSeconds()</code></td>
+							<td>Sets the seconds (0&ndash;59), according to UTC time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.setUTCMilliseconds()</code></td>
+							<td>Sets the milliseconds, according to UTC time</td>
+							<td class="d-none d-md-table-cell"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="output">Outputting sections of a <code>Date</code></h2>
+			
+			<p>All examples below will be using <code>todaysDate</code> to generate the output.</p>
+			
+			<div class="alert alert-info" id="todaysDateOutput"></div>
+			
+			<p id="stickyfollow"><strong>Note:</strong> If the time zone is not defined on a <code>Date</code>, it can lead to unexpected behavior.  If the date output looks offset from what it should be, this is what&rsquo;s happening.</p>
+			
+			<h3>Time</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">JavaScript</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Notes</th>
+							<th scope="col">Output</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>todaysDate.getTime()</code></td>
+							<td>Returns the duration in milliseconds between the <code>Date</code> object and Jan 1, 1970, 00:00:00.000 GMT (the EcmaScript Epoch)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getTimeOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getTimezoneOffset()</code></td>
+							<td>Returns the difference between the <code>Date</code> and UTC, in minutes</td>
+							<td class="d-none d-md-table-cell">This is not the same as the timezone offset; it merely gives you the difference in minutes</td>
+							<td id="getTimezoneOffsetOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getHours()</code></td>
+							<td>Returns the hour (0&ndash;23)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getHoursOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getMinutes()</code></td>
+							<td>Returns the minutes (0&ndash;59)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getMinutesOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getSeconds()</code></td>
+							<td>Returns the seconds (0&ndash;60)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getSecondsOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getMilliseconds()</code></td>
+							<td>Returns the milliseconds</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getMillisecondsOutput"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Date</h3>
+			
+			<p>All of these methods return values relative to the local time of the <code>Date</code> object.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">JavaScript</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Notes</th>
+							<th scope="col">Output</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>todaysDate.getFullYear()</code></td>
+							<td>Returns the 4-digit year</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getFullYearOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getMonth()</code></td>
+							<td>Returns the month (0&ndash;11)</td>
+							<td class="d-none d-md-table-cell">0 corresponds to January</td>
+							<td id="getMonthOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getDay()</code></td>
+							<td>Returns the day of the week (0&ndash;6)</td>
+							<td class="d-none d-md-table-cell">0 corresponds to Sunday</td>
+							<td id="getDayOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getDate()</code></td>
+							<td>Returns the day of the month</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getDateOutput"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>UTC</h3>
+			
+			<p>All of these methods return values relative to UTC, regardless of the local time of the <code>Date</code> object.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">JavaScript</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Notes</th>
+							<th scope="col">Output</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>todaysDate.getUTCFullYear()</code></td>
+							<td>Returns the 4-digit year</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCFullYearOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCMonth()</code></td>
+							<td>Returns the month (0&ndash;11)</td>
+							<td class="d-none d-md-table-cell">0 corresponds to January</td>
+							<td id="getUTCMonthOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCDate()</code></td>
+							<td>Returns the day of the month (1&ndash;31)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCDateOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCDay()</code></td>
+							<td>Returns the day of the week (0&ndash;6)</td>
+							<td class="d-none d-md-table-cell">0 corresponds to Sunday</td>
+							<td id="getUTCDayOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCHours()</code></td>
+							<td>Returns the hours (0&ndash;23)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCHoursOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCMinutes()</code></td>
+							<td>Returns the minutes (0&ndash;59)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCMinutesOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCSeconds()</code></td>
+							<td>Returns the seconds (0&ndash;59)</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCSecondsOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.getUTCMilliseconds()</code></td>
+							<td>Returns the milliseconds</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="getUTCMillisecondsOutput"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="manipulate">Manipulating a date with methods</h2>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">JavaScript</th>
+							<th scope="col">Usage</th>
+							<th scope="col" class="d-none d-md-table-cell">Notes</th>
+							<th scope="col">Output</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>todaysDate.toDateString()</code></td>
+							<td>Returns a string in <code>Ddd Mmm DD YYYY</code> format</td>
+							<td class="d-none d-md-table-cell">Use this rather than <code>.toString()</code> since formats for <code>.toString()</code> may differ depending on platform and engine</td>
+							<td id="toDateStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toISOString</code></td>
+							<td>Returns a string in simplified ISO format: <code>YYYY-MM-DDTHH:MM:SS.mSSZ</code></td>
+							<td class="d-none d-md-table-cell">The time zone is always zero UTC offset, as denoted by Z on the end</td>
+							<td id="toISOStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toJSON()</code></td>
+							<td>Returns a string representation of the <code>Date</code> object in <code>YYYY-MM-DDTHH:MM:SS.mSSZ</code> format</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="toJSONOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toLocaleDateString([locale], [options])</code></td>
+							<td>Returns a string with language-sensitive representation according to the user&rsquo;s settings. Default output does not include time.</td>
+							<td class="d-none d-md-table-cell">The <code>options</code> object allows customization of the date string:<br>
+								<code>{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }</code> etc.</td>
+							<td id="toLocaleDateStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toLocaleString([locale], [options]</code></td>
+							<td>Returns a string with language-sensitive representation according to the user&rsquo;s settings. Default output does include time.</td>
+							<td class="d-none d-md-table-cell">The <code>options</code> object allows customization of the date string:<br>
+								<code>{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }</code> etc.</td>
+							<td id="toLocaleStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toLocaleTimeString([locale], [options])</code></td>
+							<td>Returns a string with language-sensitive representation of the time portion of the date</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="toLocaleTimeStringOutput">The <code>options</code> object allows customization of the date string:<br>
+								<code>{ timeZone: 'UTC', timeZoneName: 'short' }</code> etc.</td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toString()</code></td>
+							<td>Returns a string</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="toStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toTimeString()</code></td>
+							<td>Returns a string of the time portion of the date in human-readable format</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="toTimeStringOutput"></td>
+						</tr>
+						<tr>
+							<td><code>todaysDate.toUTCString()</code></td>
+							<td>Returns a string using the UTC time zone</td>
+							<td class="d-none d-md-table-cell"></td>
+							<td id="toUTCStringOutput"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
 				
 		</main>
 		
@@ -83,5 +458,62 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/nav.js"></script>
 <script src="../js/back-to-top.js"></script>
+	
+<script>
+	window.onscroll = function() {myFunction()};
+
+	const todaysDateOutput = document.getElementById('todaysDateOutput');
+	const stickyFollow = document.getElementById('stickyfollow');
+	const sticky = todaysDateOutput.offsetTop - 42;
+
+	function myFunction() {
+		if (window.pageYOffset > sticky) {
+			todaysDateOutput.classList.add("date-sticky");
+			stickyFollow.classList.add("date-sticky-follow");
+		} else {
+			todaysDateOutput.classList.remove("date-sticky");
+			stickyFollow.classList.remove("date-sticky-follow");
+		}
+	}
+	
+	const todaysDate = new Date();
+	
+	// Convert to date string for display
+	const dateString = Date(todaysDate).toString();
+	document.getElementById('dateStringOutput').innerHTML = dateString;
+	document.getElementById('todaysDateOutput').innerHTML = `<strong>todaysDate current value:</strong> ${dateString}`;
+	
+	document.getElementById('getTimeOutput').innerHTML = todaysDate.getTime();
+	document.getElementById('getTimezoneOffsetOutput').innerHTML = todaysDate.getTimezoneOffset();
+	document.getElementById('getHoursOutput').innerHTML = todaysDate.getHours();
+	document.getElementById('getMinutesOutput').innerHTML = todaysDate.getMinutes();
+	document.getElementById('getSecondsOutput').innerHTML = todaysDate.getSeconds();
+	document.getElementById('getMillisecondsOutput').innerHTML = todaysDate.getMilliseconds();
+	
+	document.getElementById('getFullYearOutput').innerHTML = todaysDate.getFullYear();
+	document.getElementById('getMonthOutput').innerHTML = todaysDate.getMonth();
+	document.getElementById('getDateOutput').innerHTML = todaysDate.getDate();
+	document.getElementById('getDayOutput').innerHTML = todaysDate.getDay();
+	
+	document.getElementById('getUTCFullYearOutput').innerHTML = todaysDate.getFullYear();
+	document.getElementById('getUTCMonthOutput').innerHTML = todaysDate.getUTCMonth();
+	document.getElementById('getUTCDateOutput').innerHTML = todaysDate.getUTCDate();
+	document.getElementById('getUTCDayOutput').innerHTML = todaysDate.getUTCDay();
+	document.getElementById('getUTCHoursOutput').innerHTML = todaysDate.getUTCHours();
+	document.getElementById('getUTCMinutesOutput').innerHTML = todaysDate.getUTCMinutes();
+	document.getElementById('getUTCSecondsOutput').innerHTML = todaysDate.getUTCSeconds();
+	document.getElementById('getUTCMillisecondsOutput').innerHTML = todaysDate.getUTCMilliseconds();
+	
+	document.getElementById('toDateStringOutput').innerHTML = todaysDate.toDateString();
+	document.getElementById('toISOStringOutput').innerHTML = todaysDate.toISOString();
+	document.getElementById('toJSONOutput').innerHTML = todaysDate.toJSON();
+	document.getElementById('toLocaleDateStringOutput').innerHTML = todaysDate.toLocaleDateString('de-DE');
+	document.getElementById('toLocaleStringOutput').innerHTML = todaysDate.toLocaleString('de-DE');
+	document.getElementById('toLocaleTimeStringOutput').innerHTML = todaysDate.toLocaleTimeString('en-US');
+	document.getElementById('toStringOutput').innerHTML = todaysDate.toString();
+	document.getElementById('toTimeStringOutput').innerHTML = todaysDate.toTimeString();
+	document.getElementById('toUTCStringOutput').innerHTML = todaysDate.toUTCString();
+</script>
+	
 </body>
 </html>
