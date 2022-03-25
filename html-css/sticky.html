@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Sticky Header & Footer | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	
+	<style>
+		#results { border: 1px solid lightgray; height: 300px; overflow-y: scroll; }
+		#results .top-container { background-color: #f1f1f1; padding: 1em; text-align: center; }
+		#results .header { padding: 10px 16px; background: #555; color: #f1f1f1; position: sticky; top: 0; }
+		#results .header h2 { font-size: 1.25rem; }
+		#results .content { padding: 16px; }
+		#results .sticky { position: fixed; top: 0; width: 100%; }
+		#results .sticky + .content { padding-top: 102px; }	
+	</style>
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Sticky Header &amp; Footer</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Fixed navbars</h2>
+			
+			<h3>Using plain CSS</h3>
+			
+			<p>To fix a navbar to the top of the viewport, use the following CSS rules:</p>
+			
+			<p><code>position: fixed;<br>
+				top: 0;<br>
+				left: 0;<br>
+				right: 0;<br>
+				z-index: 10;</code></p>
+			
+			<h3>Using Bootstrap</h3>
+			
+			<p>Bootstrap has an easy utility class to do it all for you: <code>fixed-top</code>.  Add it to the <code>nav</code> element containing your navbar.</p>
+			
+			<h2>Sticky header blocks</h2>
+			
+			<p>To allow a header section to stick to the top of the container, use the following code:</p>
+			
+			<article class="row row-cols-1 row-cols-lg-2 code-blocks">
+				<div class="col code-html">
+					<h3>HTML</h3>
+					<pre><span class="tag-purple">&lt;div</span> <span class="tag-orange">class</span><span class="tag-blue">="top-container"</span><span class="tag-purple">&gt;</span>
+  <span class="tag-purple">&lt;h1&gt;</span>Scroll Down<span class="tag-purple">&lt;/h1&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Scroll down to see the sticky effect.<span class="tag-purple">&lt;/p&gt;</span>
+<span class="tag-purple">&lt;/div&gt;</span>
+
+<span class="tag-purple">&lt;div</span> <span class="tag-orange">class</span><span class="tag-blue">="header"</span> <span class="tag-orange">id</span><span class="tag-blue">="myHeader"</span><span class="tag-purple">&gt;</span>
+  <span class="tag-purple">&lt;h2&gt;</span>My Header<span class="tag-purple">&lt;/h2&gt;</span>
+<span class="tag-purple">&lt;/div&gt;</span>
+
+<span class="tag-purple">&lt;div</span> <span class="tag-orange">class</span><span class="tag-blue">="content"</span><span class="tag-purple">&gt;</span>
+  <span class="tag-purple">&lt;h3&gt;</span>On Scroll Sticky Header<span class="tag-purple">&lt;/h3&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>The header will stick to the top when you reach its scroll position.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Scroll back up to remove the sticky effect.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>
+  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>  <span class="tag-purple">&lt;p&gt;</span>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.<span class="tag-purple">&lt;/p&gt;</span>
+<span class="tag-purple">&lt;/div&gt;</span></pre>
+				</div>
+				<div class="col code-css">
+					<h3>CSS</h3>
+					<pre><span class="tag-cyan">body</span> {
+  <span class="tag-ltpurple">margin</span>: <span class="tag-cyan">0</span>;
+  <span class="tag-ltpurple">font-family</span>: Arial, Helvetica, <span class="tag-ltorange">sans-serif</span>;
+}
+
+<span class="tag-green">.top-container</span> {
+  <span class="tag-ltpurple">background-color</span>: <span class="tag-ltorange">#f1f1f1</span>;
+  <span class="tag-ltpurple">padding</span>: <span class="tag-cyan">30px</span>;
+  <span class="tag-ltpurple">text-align</span>: <span class="tag-ltorange">center</span>;
+}
+
+<span class="tag-green">.header</span> {
+  <span class="tag-ltpurple">padding</span>: <span class="tag-cyan">10px 16px</span>;
+  <span class="tag-ltpurple">background</span>: <span class="tag-ltorange">#555</span>;
+  <span class="tag-ltpurple">color</span>: <span class="tag-ltorange">#f1f1f1</span>;
+}
+
+<span class="tag-green">.content</span> {
+  <span class="tag-ltpurple">padding</span>: <span class="tag-cyan">16px</span>;
+}
+
+<span class="tag-green">.sticky</span> {
+  <span class="tag-ltpurple">position</span>: <span class="tag-ltorange">fixed</span>;
+  <span class="tag-ltpurple">top</span>: <span class="tag-cyan">0</span>;
+  <span class="tag-ltpurple">width</span>: <span class="tag-cyan">100%</span>;
+}
+
+<span class="tag-green">.sticky</span> + <span class="tag-green">.content</span> {
+  <span class="tag-ltpurple">padding-top</span>: <span class="tag-cyan">102px</span>;
+}</pre>
+				</div>
+				<div class="col code-js">
+					<h3>JavaScript</h3>
+					<pre><span class="tag-cyan">window</span>.onscroll = <span class="tag-purple">function</span>() {myFunction()};
+
+<span class="tag-purple">const</span> <span class="tag-cyan">header</span> = document.<span class="tag-cyan">getElementById</span>(<span class="tag-orange">"myHeader"</span>);
+<span class="tag-purple">const</span> <span class="tag-cyan">sticky</span> = header.<span class="tag-cyan">offsetTop</span>;
+
+<span class="tag-purple">function</span> <span class="tag-cyan">myFunction</span>() {
+  <span class="tag-purple">if</span> (window.<span class="tag-cyan">pageYOffset</span> &gt; sticky) {
+    header.<span class="tag-cyan">classList</span>.<span class="tag-cyan">add</span>(<span class="tag-orange">"sticky"</span>);
+  } <span class="tag-purple">else</span> {
+    header.<span class="tag-cyan">classList</span>.<span class="tag-cyan">remove</span>(<span class="tag-orange">"sticky"</span>);
+  }
+}</pre>
+				</div>
+				<div class="col code-render">
+					<h3>End Result</h3>
+					<div id="results">
+						<div class="top-container">
+							<h1>Scroll Down</h1>
+							<p>Scroll down to see the sticky effect.</p>
+						</div>
+
+						<div class="header" id="myHeader">
+							<h2>My Header</h2>
+						</div>
+
+						<div class="content">
+							<h3>On Scroll Sticky Header</h3>
+							<p>The header will stick to the top when you reach its scroll position.</p>
+							<p>Scroll back up to remove the sticky effect.</p>
+							<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+							<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+							<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+							<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+							<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			
+			<h2>Sticky footer</h2>
+			
+			<p>The easiest way to implement this is by using the <a href="https://getbootstrap.com/">Bootstrap framework</a> and their built-in utilities.  They have two example pages, <a href="https://getbootstrap.com/docs/5.1/examples/sticky-footer/">one with just the sticky footer</a>, <a href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">and one with a sticky footer and fixed header</a>, to use as templates.</p>
+				
+			<p><strong>Note:</strong> a common error when adding this to existing pages is forgetting to add <code>class="h-100"</code> to the <code>html</code> and <code>body</code> tags to enable sticky footer positioning.</p>
+			
+			<h3>Without Bootstrap</h3>
+			
+			<p>Use the following CSS as a starting point to develop your sticky footer implementation without Bootstrap:</p>
+			
+			<p><code>html, body { height: 100%;}<br><br>
+				body &gt; footer {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: sticky;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 100vh;<br>
+				}</code></p>
+	
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+	
+<script>
+	window.onscroll = function() {myFunction()};
+
+	const header = document.getElementById("myHeader");
+	const sticky = header.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+	  } else {
+		header.classList.remove("sticky");
+	  }
+	}
+</script>
+	
+</body>
+</html>

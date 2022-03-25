@@ -68,6 +68,18 @@ table.definitions td:nth-of-type(1) { font-weight: bold; }
 #color-palette span { border: 1px solid black; padding: 4px 8px; }
 .form-table th:nth-of-type(even), .form-table td:nth-of-type(even) { display: none; }
 
+/* ################################ CODE MARKUP STYLES ################################ */
+
+.code-blocks {  }
+.code-blocks .col pre { border: 1px solid lightgray; background-color: #fbfbfb; padding: 0.5em; white-space: pre-wrap; overflow-y: scroll; height: 300px; }
+.code-blocks span.tag-purple { color: #ad01a0; }
+.code-blocks span.tag-ltpurple { color: #b64ce1; }
+.code-blocks span.tag-orange { color: #d36100; }
+.code-blocks span.tag-ltorange { color: #ca770a; }
+.code-blocks span.tag-blue { color: #0404d3; }
+.code-blocks span.tag-cyan { color: #008bc9; }
+.code-blocks span.tag-green { color: #00b776; }
+
 /* ################################## MEDIA QUERIES ################################## */
 
 @media only screen and (min-width: 576px) {

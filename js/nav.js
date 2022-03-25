@@ -76,6 +76,11 @@ const navItems = {
 				link:	"/Reference/html-css/semantic.html",
 				id:		"nav-semantic"
 			},
+			sticky: {
+				title:	"Sticky Header &amp; Footer",
+				link:	"/Reference/html-css/sticky.html",
+				id:		"nav-sticky"
+			},
 			tables: {
 				title:	"Tables",
 				link:	"/Reference/html-css/tables.html",

@@ -90,6 +90,12 @@ const cardItems = {
 				link:	"./html-css/semantic.html",
 				image:	"./assets/homepage/semantic.svg"
 			},
+			sticky: {
+				title:	"Sticky Header &amp; Footer",
+				copy:	"Fixed navbar, sticky header blocks, and sticky footer",
+				link:	"./html-css/sticky.html",
+				image:	"./assets/homepage/sticky.svg"
+			},
 			tables: {
 				title:	"Tables",
 				copy:	"Rows, data cells, headings, and&nbsp;formatting",
