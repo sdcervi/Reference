@@ -26,6 +26,11 @@ const navItems = {
 				link:	"/Reference/html-css/selectors.html",
 				id:		"nav-selectors"
 			},
+			cursor: {
+				title:	"Cursors",
+				link:	"/Reference/html-css/cursor.html",
+				id:		"nav-cursor"
+			},
 			display: {
 				title:	"Display, Position &amp; Float",
 				link:	"/Reference/html-css/display-position.html",

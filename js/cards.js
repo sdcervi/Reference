@@ -30,6 +30,12 @@ const cardItems = {
 				link:	"./html-css/selectors.html",
 				image:	"./assets/homepage/selectors.svg"
 			},
+			cursor: {
+				title:	"Cursors",
+				copy:	"The various options for mouse pointer symbols and when to use them",
+				link:	"./html-css/cursor.html",
+				image:	"./assets/homepage/cursor.svg"
+			},
 			display: {
 				title:	"Display, Position &amp; Float",
 				copy:	"Controlling the flow, positioning, and layering of elements in the page",
