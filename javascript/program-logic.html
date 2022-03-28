@@ -73,6 +73,7 @@
 					<li><a href="#if">If statements and ternary operators</a></li>
 					<li><a href="#switch">Switch statements</a></li>
 					<li><a href="#for">For loops</a></li>
+					<li><a href="#while">While loops and do...while</a></li>
 				</ul>
 			</nav>
 			
@@ -307,6 +308,36 @@
 			
 			<p><code>const fruits = ['apple', 'orange', 'banana'];<br>
 				fruits.forEach([code to execute]);</code></p>
+			
+			<h2 id="while">While loops and do...while</h2>
+			
+			<h3>While loops</h3>
+			
+			<p>While loops iterate repeatedly while a specified condition evaluates to true.  Make sure to define the initial value of whatever is getting evaluated outside of the loop.</p>
+			
+			<p><code>while ([condition]) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</code></p>
+			
+			<p>For example, the following code will loop through the <code>while</code> loop until <code>counter</code> is no longer less than 20.</p>
+			
+			<p><code>let counter = 5;<br>
+				while (counter &lt; 20) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter++;<br>
+				}</code></p>
+			
+			<p>The biggest thing to be aware of with <code>while</code> loops is to make sure the evaluated condition will eventually evaluate to <code>false</code>, otherwise you could get stuck in a <strong>forever loop</strong>.</p>
+			
+			<h3>Do...while</h3>
+			
+			<p>These are a form of <code>while</code> loops that execute the contained tasks at least once, no matter the condition, then repeats them while the specified condition evaluates to <code>true</code>.  This is best if you want to make sure the code runs once no matter what.</p>
+			
+			<p><code>let counter = 5;<br>
+				do {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter++;<br>
+				} while (counter &lt; 20);</code></p>
 			
 		</main>
 		

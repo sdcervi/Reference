@@ -342,16 +342,28 @@
 							<td>Returns a new array containing all elements that satisfy the filtering <code>function</code></td>
 						</tr>
 						<tr>
+							<td><code>.findIndex([function])</code></td>
+							<td>Returns the index of the first element where the <code>function</code> returns <code>true</code></td>
+						</tr>
+						<tr>
 							<td><code>.forEach([function])</code></td>
-							<td>Calls a function for each element in the array; <a href="program-logic.html#for">more on forEach() loops here</a></td>
+							<td>Executes a function for each element in the array; <a href="program-logic.html#for">more on forEach() loops here</a></td>
 						</tr>
 						<tr>
 							<td><code>.join()</code></td>
 							<td>Joins all array elements together into one string</td>
 						</tr>
 						<tr>
+							<td><code>.map([function])</code></td>
+							<td>Executes a <code>function</code> for each element in the array, and returns a new array of the results</td>
+						</tr>
+						<tr>
 							<td><code>.reverse()</code></td>
 							<td>Reverses the elements of an array in place; first becomes last, and vice versa</td>
+						</tr>
+						<tr>
+							<td><code>.some([function])</code></td>
+							<td>Returns <code>true</code> if at least one element in the array satisfies the <code>function</code></td>
 						</tr>
 						<tr>
 							<td><code>.sort()</code></td>
@@ -364,7 +376,12 @@
 			
 			<h3>Objects</h3>
 			
-			<p>Objects are collections of related data organized into key-value pairs.  They are similar to arrays, except properties can be accessed by name using dot notation: <code>object.property</code>, and their order within the object may change without warning.</p>
+			<p>Objects are collections of related data organized into key-value pairs.  They are similar to arrays, except values can be accessed by name using dot notation: <code>object.key1</code>, and their order within the object may change without warning.  For keys with spaces, variable names as keys, or key names that are enclosed with quotes, use bracket notation: <code>object['key 2']</code>.  Access keys of child objects using <code>object.childname.keyname</code>.</p>
+			
+			<p><code>const objectName = {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key1: value1,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'key 2': 'value 2'<br>
+				};</code></p>
 			
 			<p>Object properties can also be accessed with bracket notation: <code>object[property]</code>, and this is most useful when iterating through an object.  For example:</p>
 			
@@ -372,6 +389,8 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let property = objectName[propertyName];<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute for each iteration]<br>
 				}</code></p>
+			
+			<p>To remove a key or child object from an object, use <code>delete objectName.key</code>.</p>
 				
 		</main>
 		
