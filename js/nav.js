@@ -49,6 +49,8 @@ const navItems = {
 		title: "JavaScript",
 		id:		"javascript",
 		links: {
+			functions: {		title:	"Functions",								link:	"/Reference/javascript/functions.html",			id:		"nav-functions",
+								copy:	"Reusable blocks of code used to manipulate data",								image:	"./assets/homepage/functions.svg"			},
 			logic: {			title:	"Program Logic: Loops &amp; Conditionals",	link:	"/Reference/javascript/program-logic.html",		id:		"nav-program-logic",
 								copy:	"Loops, conditionals, and other logical operators",								image:	"./assets/homepage/program-logic.svg"		},
 			time_date: {		title:	"Time &amp; Date",							link:	"/Reference/javascript/time-date.html",			id:		"nav-time-date",
