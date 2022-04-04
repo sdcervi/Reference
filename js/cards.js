@@ -15,7 +15,7 @@ function createCards () {
 		cardContent += "<div class='row row-cols-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-4'>";
 		for (const cardIndex in cardGroup.links) {
 			const cardData = cardGroup.links[cardIndex];
-			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='" + cardData.link + "' class='btn btn-primary stretched-link'>Read now</a></div></div></div>";
+			cardContent += "<div class='col'><div class='card h-100'><img src='" + cardData.image + "' class='card-img-top' alt=''><div class='card-body'><h5 class='card-title'>" + cardData.title + "</h5><p class='card-text'>" + cardData.copy + "</p></div><div class='card-footer text-center'><a href='./" + cardData.link + "' class='btn btn-primary stretched-link'>Read now</a></div></div></div>";
 		}
 		cardContent += "</div></section>";
 	}

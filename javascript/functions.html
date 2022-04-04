@@ -67,7 +67,9 @@
 			
 			<h2>Basics</h2>
 
-			<p>A function is a reusable block of code that performs the same tasks every time it is <strong>called</strong> by another block of code.  Functions can also accept <strong>parameters</strong> as inputs to perform tasks on.</p>
+			<p>A function is a reusable block of code that performs the same tasks every time it is <strong>called</strong> by another block of code.  Functions can also accept <strong>parameters</strong> as inputs to perform tasks on; these are treated like pre-declared variables within the function.</p>
+			
+			<p>Functions are <strong>hoisted</strong>, meaning that they can be accessed before they are defined.  However, relying on this is not considered best practice and can sometimes lead to frustrating and unexpected bugs.</p>
 			
 			<p>Functions also often have <code>return</code> statements that send a final output back to the code block that called them.</p>
 			
@@ -92,7 +94,9 @@
 			
 			<p><code>const variableName = function ([parameters]) {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</code></p>
+				};</code></p>
+			
+			<p>A function without a name is an <strong>anonymous function</strong>; these are almost always part of function expressions.  It&rsquo;s best practice to use <code>const</code> to declare function expressions.</p>
 			
 			<h3>Arrow functions</h3>
 			
@@ -100,15 +104,15 @@
 			
 			<p><code>const variableName = ([parameters]) =&gt; {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</code></p>
+				};</code></p>
 			
 			<p>Arrow functions without parameters still need to have empty parentheses:</p>
 			
 			<p><code>const variableName = () =&gt; {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</code></p>
+				};</code></p>
 			
-			<p>Arrow functions can also be condensed into a single line, without using curly braces:</p>
+			<p>Arrow functions with only one line of code to execute can also be condensed into a single line, without using curly braces:</p>
 			
 			<p><code>const variableName = ([parameters]) =&gt; [code];</code></p>
 			
