@@ -402,6 +402,60 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
 				};</code></p>
+			
+			<h4>Getters and setters</h4>
+			
+			<p>Getters and setters are two special types of methods that allow you to retrieve and set data within an object without exposing the object&rsquo;s properties.  For example:</p>
+			
+			<p><code>const menu = {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_courses: {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appetizers: [],<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mains: [],<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desserts: [],<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br><br>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get appetizers () {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this._courses.appetizers;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set appetizers (appetizer) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._courses.appetizers = appetizer;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				}</code></p>
+			
+			<p>While almost all problems that can be solved with getters and setters can also be solved by directly accessing the data, the best use case justification is when you need to perform operations on the data before returning or setting it.</p>
+			
+			<p><strong>Note:</strong> getters and setters can&rsquo;t share the same name with any other object properties.  One workaround is to add an underscore before the property name.  Getters and setters can, however, share names with each other; if you want to have a getter and setter for the same property, they can be named the same.</p>
+			
+			<p>Possible use cases:</p>
+			
+			<ul>
+				<li>Capitalizing a string for output</li>
+				<li>Retrieving a user&rsquo;s full name by concatenating their first and last names</li>
+				<li>Verifying data is of the correct type and not falsy/null before saving to the object&rsquo;s property</li>
+			</ul>
+			
+			<p>When passing parameters to a setter method, use the same syntax you would to assign a variable:</p>
+			
+			<p><code>objectName.setterName = value;</code></p>
+			
+			<h4><code>this</code></h4>
+			
+			<p>When using a method, getter, or setter, if you try to access an object&rsquo;s property from that function, it won&rsquo;t be able to because that&rsquo;s outside of the method&rsquo;s scope, unless you use <code>this</code>.  USe the syntax <code>this.propertyName</code> to allow methods to access the object&rsquo;s properties.</p>
+			
+			<p><code>this</code> references the calling object, the object that contains the method that is being called.</p>
+			
+			<p><strong>Arrow functions</strong> inherentely <strong>bind</strong> an already defined <code>this</code> that is not the calling object when used for an object method.  This makes them not well suited to being object methods that need to access object properties.  TL;DR: don&rsquo;t use arrow functions for object methods.</p>
+			
+			<h4>Privacy</h4>
+			
+			<p>JavaScript does not have any built-in ability to make object properties private (unable to be changed or mutated) or public.  However, you can notate that properties are supposed to be treated as private by adding an underscore to the beginning of the property name:</p>
+			
+			<p><code>const objectName = {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_key1: value1,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'key 2': 'value 2'<br>
+				};</code></p>
+			
+			<p>This is most applicable when needing to retain data types for performing operations on data.  For example, if you have a number, you may want to add or subtract a value.  Indicate the property is private to remind yourself not to access or change that value.  The best way to work with this is to set the property to private and use a setter to verify the value is of the correct data type before saving the new value.</p>
 				
 		</main>
 		
