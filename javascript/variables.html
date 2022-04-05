@@ -456,6 +456,34 @@
 				};</code></p>
 			
 			<p>This is most applicable when needing to retain data types for performing operations on data.  For example, if you have a number, you may want to add or subtract a value.  Indicate the property is private to remind yourself not to access or change that value.  The best way to work with this is to set the property to private and use a setter to verify the value is of the correct data type before saving the new value.</p>
+			
+			<h4>Factory functions</h4>
+			
+			<p>When you need to create several objects with the same keys but different values, a <strong>factory function</strong> is the best way to do that.  They accept the values as parameters, create the object, and return the complete object.</p>
+			
+			<p><code>const factoryFunctionName = ([parameters]) =&gt; {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param1: param1,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param2: param2,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method1 () {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute on param3]<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				}<br><br>
+				const newObject = factoryFunctionName ([parameters]);</code></p>
+			
+			<p>This can also be <strong>destructured</strong> and shortened by using property-value shorthand:</p>
+			
+			<p><code>const factoryFunctionName = ([parameters]) =&gt; {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param1,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param2,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method1 () {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute on param3]<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				}<br><br>
+				const newObject = factoryFunctionName ([parameters]);</code></p>
 				
 		</main>
 		
