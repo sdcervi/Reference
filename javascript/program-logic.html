@@ -312,10 +312,12 @@
 			
 			<h4><code>forEach</code></h4>
 			
-			<p>For arrays, you can also use the <code>.forEach(...)</code> method to easily operate on each element without having to know the array size.</p>
+			<p>For arrays, you can also use the <code>.forEach(...)</code> method to easily operate on each element without having to know the array size.  This normally takes an argument of a callback function, either as a parameter or an anonymous function.</p>
 			
 			<p><code>const fruits = ['apple', 'orange', 'banana'];<br>
-				fruits.forEach([code to execute]);</code></p>
+				fruits.forEach(fruit =&gt; {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute]<br>
+				});</code></p>
 			
 			<h2 id="while">While loops and do...while</h2>
 			

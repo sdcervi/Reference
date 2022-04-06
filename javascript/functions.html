@@ -123,6 +123,20 @@
 			<p><code>&lt;button onclick="myFunction('abc', '5')"&gt;Click to call function&lt;/button&gt;</code></p>
 			
 			<p>If doing this via JavaScript-generated HTML (for example, a delete button on each block of data generated when iterating through a data structure), use <a href="./variables.html#strings">template literals</a> to avoid breaking the JavaScript or the HTML.</p>
+			
+			<h2>Higher-order functions</h2>
+			
+			<p>These are functions that accept other functions as arguments (<strong>callback functions</strong>), and/or return functions as output.  This enables a high degree of abstraction, allowing us to break sub-tasks into sub-functions.  For example, <code>hostBirthdayParty()</code> could abstract <code>sendInvites()</code> and <code>bakeCake()</code>.  One use case is to separate tasks into modules that can be called from multiple other functions as helper functions; the higher-order functions abstract and delegate tasks to the helper functions.</p>
+			
+			<p>To pass a callback function as a parameter, invoke the function with just the name and no parentheses:</p>
+			
+			<p><code>higherOrderFunction (callbackFunction);</code></p>
+			
+			<p>Anonymous functions can also be passed as arguments:</p>
+			
+			<p><code>higherOrderFunc(() =&gt; {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute]<br>
+				});</code></p>
 	
 		</main>
 		
