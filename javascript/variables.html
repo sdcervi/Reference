@@ -79,6 +79,7 @@
 						<li><a href="#simple-data">Simple data types (number, boolean, null, undefined)</a></li>
 						<li><a href="#strings">Strings</a></li>
 						<li><a href="#arrays">Arrays</a></li>
+						<li><a href="#objects">Objects</a></li>
 					</ul>
 				</ul>
 			</nav>
@@ -374,7 +375,7 @@
 
 			</div>
 			
-			<h3>Objects</h3>
+			<h3 id="objects">Objects</h3>
 			
 			<p>Objects are collections of related data organized into key-value pairs.  They are similar to arrays, except values can be accessed by name using dot notation: <code>object.key1</code>, and their order within the object may change without warning.  For keys with spaces, variable names as keys, or key names that are enclosed with quotes, use bracket notation: <code>object['key 2']</code>.  Access keys of child objects using <code>object.childname.keyname</code>.</p>
 			
@@ -484,6 +485,29 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 				}<br><br>
 				const newObject = factoryFunctionName ([parameters]);</code></p>
+			
+			<h4>Destructured assignment</h4>
+			
+			<p>We can use a shorthand to extract values from an object:</p>
+			
+			<p><code>const value = objectName.value<br>
+				const { value } = objectName;</code></p>
+			
+			<p>To grab multiple values to store in their own variables, use the following syntax:</p>
+			
+			<p><code>const { value1, value2, value3 } = objectName;</code></p>
+			
+			<p>We can also use destructured assignment to grab child properties:</p>
+			
+			<p><code>const { childValue } = objectName.childProperty;</code></p>
+			
+			<p>Nested child objects can also be accessed and destructured:</p>
+			
+			<p><code>const { value1, value2, childObject: {childValue1, childValue2} } = objectName;</code></p>
+			
+			<p><strong>Note:</strong> be careful with destructured variable names.  They must exactly match the properties they&rsquo;s referencing, unless you specify a new variable name:</p>
+			
+			<p><code>const { value1: newVar1, value2: newVar2, value3: newVar3 } = objectName;</code></p>
 				
 		</main>
 		
