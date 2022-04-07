@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Integrating JavaScript and HTML | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Integrating JavaScript and HTML</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Adding JavaScript to an HTML page</h2>
+			
+			<h3>Inline scripting</h3>
+			
+			<p>Javascript can be added inline, just like an HTML element.  Use this for simple, quick operations not requiring a lot of logic or render time.</p>
+			
+			<p><code>&lt;p id="output"&gt;&lt;/p&gt;<br>
+				&lt;script&gt;document.getElementById('output').innerHTML = new Date();&lt;/script&gt;</code></p>
+			
+			<p id="output"></p>
+			<script>document.getElementById('output').innerHTML = new Date();</script>
+			
+			<p>This is generally not considered best practice; best practice is to put all JavaScript into a separate file and link to it.</p>
+			
+			<h3>External file</h3>
+			
+			<p>Keeping JavaScript in an external file allows for <strong>separation of concerns</strong>, a development principle that separates a program or website into sections that each address a specific &lsquo;concern&rsquo; of the project.  Generall this is implemented with the HTML file only containing HTML markup, all of the styling being in a separate CSS file, and all of the Javascript being in its own file or files.</p>
+			
+			<p>Add a JavaScript file to a page using <code>&lt;script src="path/to/file.js"&gt;&lt;/script&gt;</code>.</p>
+			
+			<h2>Loading JavaScript</h2>
+			
+			<p>HTML loads sequentially, meaning that it executes each line of code in the order it appears in the page.  This leads to a few problems when integrating JavaScript, since this can negatively impact user experience.</p>
+			
+			<p>Best practice is to place any <code>&lt;script&gt;</code> integrations at the bottom of the document, before the <code>&lt;/body&gt;</code> tag.  This enables the entire page to render before the scripts load, and prevents scripts from delaying page render.</p>
+			
+			<h3><code>defer</code> and <code>async</code></h3>
+			
+			<p>Using the <code>defer</code> attribute tells the browser to wait until the page is fully parsed and loaded before executing the script.  Use this when a script requires interaction with the DOM to make sure the DOM is fully loaded before the script executes.</p>
+				
+			<p>Using the <code>async</code> attribute will load the script asynchronously and still load the rest of the page while the script downloads.  However, unlike <code>defer</code> delaying code execution until after the page is fully rendered, <code>async</code> delays code execution until the script itself is fully downloaded.  This is best for scripts that have no dependency on other scripts, and have no other scripts dependent on them; it doesn&rsquo;t matter exactly when the scripts execute.  When done right, this improves page performance by speeding up load times.</p>
+			
+			<h2>The Document Object Model</h2>
+			
+			<p>The Document Object Model (DOM) is a hierarchical tree representing the entire structure of an HTML page; this allows developers to traverse the tree using JavaScript.</p>
+			
+			<p>Each element is represented as a node, and functions as a child object of its parent objects.  Within the object are all the properties that JavaScript can access and alter; for example, the CSS classes, an <code>img</code>&rsquo;s <code>src</code> attribute, or the element&rsquo;s <code>id</code>.</p>
+	
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>

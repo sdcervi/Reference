@@ -344,7 +344,7 @@
 						</tr>
 						<tr>
 							<td><code>.findIndex([function])</code></td>
-							<td>Returns the index of the first element where the <code>function</code> returns <code>true</code></td>
+							<td>Returns the index of the first element where the <code>function</code> returns <code>true</code>. This is different from <code>.indexOf([input])</code> because it allows you to check a logical condition. <code>.indexOf()</code> only returns the first element in the array whose contents match the input.</td>
 						</tr>
 						<tr>
 							<td><code>.forEach([function])</code></td>
@@ -368,7 +368,36 @@
 						</tr>
 						<tr>
 							<td><code>.sort()</code></td>
-							<td>Sorts the elements of an array in place</td>
+							<td><p>Sorts the elements of an array in place by converting all elements to strings and comparing their values. The original array is modified. The default sort order is ascending; to specify a different sort order, include a function as a parameter. Note that since numbers are converted to strings, with the default sort method, <code>80</code> will be placed before <code>9</code>. <code>undefined</code> elements will be sorted to the end of the array. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">More information on the <code>.sort()</code> method</a></p>
+								<p>When comparing two elements, the return value governs how those elements are sorted relative to each other.</p>
+								<ul>
+									<li><code>&gt; 0</code>: sorts the second element before the first</li>
+									<li><code>&lt; 0</code>: sorts the first element before the second</li>
+									<li><code>=== 0</code>: keeps the original order of the first and second element</li>
+								</ul>
+								<p>Example, sorting ascending:</p>
+								<p><code>function sortArray (inputArray) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return inputArray.sort((input1, input2) =&gt; {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (input1 &lt; input2) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (input1 &gt; input2) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspreturn 0;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+									}</code></p>
+								<p>Example, sorting descending:</p>
+								<p><code>function sortArray (inputArray) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return inputArray.sort((input1, input2) =&gt; {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (input1 &lt; input2) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (input1 &gt; input2) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspreturn 0;<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+									}</code></p>
+								<p>To easily sort numbers, you can use <code>numbersArray.sort((input1, input2) =&gt; input1 - input2);</code> for ascending, and <code>numbersArray.sort((input1, input2) =&gt; input2 - input1);</code> for descending.</p></td>
 						</tr>
 					</tbody>
 				</table>
