@@ -65,7 +65,18 @@
         <!-- Main content well of website, to right of fixed-position navigation bar -->
         <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
 			
-			<h2>Adding JavaScript to an HTML page</h2>
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#adding">Adding JavaScript to an HTML page</a></li>
+					<li><a href="#loading">Loading JavaScript</a></li>
+					<li><a href="#dom">The Document Object Model</a></li>
+					<li><a href="#css">Altering CSS</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="adding">Adding JavaScript to an HTML page</h2>
 			
 			<h3>Inline scripting</h3>
 			
@@ -81,11 +92,11 @@
 			
 			<h3>External file</h3>
 			
-			<p>Keeping JavaScript in an external file allows for <strong>separation of concerns</strong>, a development principle that separates a program or website into sections that each address a specific &lsquo;concern&rsquo; of the project.  Generall this is implemented with the HTML file only containing HTML markup, all of the styling being in a separate CSS file, and all of the Javascript being in its own file or files.</p>
+			<p>Keeping JavaScript in an external file allows for <strong>separation of concerns</strong>, a development principle that separates a program or website into sections that each address a specific &lsquo;concern&rsquo; of the project.  Generally this is implemented with the HTML file only containing HTML markup, all of the styling being in a separate CSS file, and all of the Javascript being in its own file or files.</p>
 			
 			<p>Add a JavaScript file to a page using <code>&lt;script src="path/to/file.js"&gt;&lt;/script&gt;</code>.</p>
 			
-			<h2>Loading JavaScript</h2>
+			<h2 id="loading">Loading JavaScript</h2>
 			
 			<p>HTML loads sequentially, meaning that it executes each line of code in the order it appears in the page.  This leads to a few problems when integrating JavaScript, since this can negatively impact user experience.</p>
 			
@@ -97,11 +108,160 @@
 				
 			<p>Using the <code>async</code> attribute will load the script asynchronously and still load the rest of the page while the script downloads.  However, unlike <code>defer</code> delaying code execution until after the page is fully rendered, <code>async</code> delays code execution until the script itself is fully downloaded.  This is best for scripts that have no dependency on other scripts, and have no other scripts dependent on them; it doesn&rsquo;t matter exactly when the scripts execute.  When done right, this improves page performance by speeding up load times.</p>
 			
-			<h2>The Document Object Model</h2>
+			<h2 id="dom">The Document Object Model</h2>
 			
 			<p>The Document Object Model (DOM) is a hierarchical tree representing the entire structure of an HTML page; this allows developers to traverse the tree using JavaScript.</p>
 			
 			<p>Each element is represented as a node, and functions as a child object of its parent objects.  Within the object are all the properties that JavaScript can access and alter; for example, the CSS classes, an <code>img</code>&rsquo;s <code>src</code> attribute, or the element&rsquo;s <code>id</code>.</p>
+			
+			<p>To access the DOM, start with the <code>document</code> object.  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Here is a complete list of all the properties and methods included on the <code>document</code> object</a>.</p>
+				
+			<h3>Accessing the DOM</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Code</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>document.getElementById(...)</code></td>
+							<td>Returns an HTML element based on its unique <code>id</code>; when you need to work with an element more than once, store the result of this query in a variable</td>
+						</tr>
+						<tr>
+							<td><code>document.querySelector(...)</code></td>
+							<td>Returns the first element with the specified <a href="../html-css/selectors.html">CSS selector</a></td>
+						</tr>
+						<tr>
+							<td><code>document.getElementsByClassName(...)</code></td>
+							<td>Returns all emements with the specified CSS class applied to them as an indexed array.  This method is faster than <code>document.querySelectorAll(...)</code>, so use this when referencing by CSS class.</td>
+						</tr>
+						<tr>
+							<td><code>document.getElementsByTagName(...)</code></td>
+							<td>Returns all elements with the specified tag as an indexed array, e.g. all <code>p</code> or <code>h5</code> elements.  This method is faster than <code>document.querySelectorAll(...)</code>, so use this when referencing by element tag.</td>
+						</tr>
+						<tr>
+							<td><code>document.querySelectorAll(...)</code></td>
+							<td>Returns all elements with the specified <a href="../html-css/selectors.html">CSS selector</a> as an indexed array</td>
+						</tr>
+						<tr>
+							<td><code>.parentNode</code></td>
+							<td>Returns the parent of the current element node</td>
+						</tr>
+						<tr>
+							<td><code>.previousSibling</code></td>
+							<td>Returns the previous adjacent sibling from the current node&rsquo;s parent&rsquo;s children.  If there is no previous sibling, this returns <code>null</code>.</td>
+						</tr>
+						<tr>
+							<td><code>.nextSibling</code></td>
+							<td>Returns the next adjacent sibling from the current node&rsquo;s parent&rsquo;s children.  If there is no next sibling, this returns <code>null</code>.</td>
+						</tr>
+						<tr>
+							<td><code>.firstChild</code></td>
+							<td>Returns the first child of the current node.  If there are no children, this returns <code>null</code>.</td>
+						</tr>
+						<tr>
+							<td><code>.lastChild</code></td>
+							<td>Returns the last child of the current node.  If there is are no children, this returns <code>null</code>.</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+				
+			<h3>Modifying the DOM</h3>
+			
+			<p>When generating HTML to add into a webpage, use the following properties and methods.  HTML can be generated as plain strings, using either <code>'single quotes'</code> or <code>"double quotes"</code>, or as <code>`template literals with ${variables}`</code>.  Store these strings in a variable to easily add to the DOM, or add directly for simpler operations.  Make sure to properly escape any special characters including quotes, to prevent the HTML and/or JavaScript from breaking.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Code</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>.nodeValue</code></td>
+							<td>Lets you access or update contents of a text node; does not include any child elements</td>
+						</tr>
+						<tr>
+							<td><code>.innerHTML</code></td>
+							<td>Lets you access or update contents of an element, including child elements.  <strong>Note:</strong> this overwrites the element&rsquo;s HTML content every time.</td>
+						</tr>
+						<tr>
+							<td><code>.insertAdjacentHTML([position], [content])</code></td>
+							<td><p>Adds HTML content next to or under a specified node; does not overwrite the element&rsquo;s contents like <code>.innerHTML</code>.</p>
+								<p><code>beforebegin</code> adds it before the specified node, only if the node has a valid parent node in the DOM<br>
+								<code>afterbegin</code> adds it before the first child of the specified node<br>
+								<code>beforeend</code> adds it after the last child of the specified node<br>
+								<code>beforebegin</code> adds it after the specified node, only if the node has a valid parent node in the DOM</p></td>
+						</tr>
+						<tr>
+							<td><code>.textContent</code></td>
+							<td>Lets you access or update just the text contents of a node</td>
+						</tr>
+						<tr>
+							<td><code>.createElement(...)</code></td>
+							<td>Creates a new element; store this in a variable to use later when adding to the DOM</td>
+						</tr>
+						<tr>
+							<td><code>.createTextNode(...)</code></td>
+							<td>Creates a new text node; store this in a variable to use later when adding to the DOM</td>
+						</tr>
+						<tr>
+							<td><code>.appendChild(...)</code></td>
+							<td>Allows you to add a node as a child of another node, whether that&rsquo;s in a variable or to the DOM itself.</td>
+						</tr>
+						<tr>
+							<td><code>.removeChild(...)</code></td>
+							<td>Allows removal of a node from the DOM; best used after selecting a node and storing it in a variable</td>
+						</tr>
+						<tr>
+							<td><code>.classList</code></td>
+							<td>Accesses the CSS classes for a particular element.  Use <code>elementName.classList.add([class])</code> to add CSS classes; separate by commas if adding multiple classes.  To remove classes, use the <code>.remove([class])</code> method.</td>
+						</tr>
+						<tr>
+							<td><code>.id</code></td>
+							<td>Accesses the element&rsquo;s unique <code>id</code></td>
+						</tr>
+						<tr>
+							<td><code>.hasAttribute(...)</code></td>
+							<td>Checks whether an element has a particular attribute</td>
+						</tr>
+						<tr>
+							<td><code>.getAttribute(...)</code></td>
+							<td>Gets the value of an element&rsquo;s specified attribute</td>
+						</tr>
+						<tr>
+							<td><code>.setAttribute(...)</code></td>
+							<td>Sets the value of an element&rsquo;s specified attribute</td>
+						</tr>
+						<tr>
+							<td><code>.removeAttribute(...)</code></td>
+							<td>Removes an element&rsquo;s specified attribute</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="css">Altering CSS</h2>
+			
+			<p>To alter the CSS of a particular element, access the <code>style</code> property.  Syntax is a bit different; any hyphenated CSS styles are written in camelCase instead.</p>
+			
+			<p><code>document.getElementById('divID').style.marginTop = '1em';</code></p>
+			
+			<section class="sources">
+				<h2>Sources</h2>
+				<p>Duckett, Jon. &ldquo;5: Document Object Model.&rdquo; <i>JavaScript &amp; jQuery: interactive front-end web development</i>, John Wiley &amp; Sons, Inc., Indianapolis, IN, 2014, pp. 188&ndash;227. Publisher Series: Subseries.</p>
+			</section>
 	
 		</main>
 		
