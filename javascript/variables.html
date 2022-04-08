@@ -359,6 +359,11 @@
 							<td>Executes a <code>function</code> for each element in the array, and returns a new array of the results</td>
 						</tr>
 						<tr>
+							<td><code>.reduce((previous, current) =&gt; [function], initial)</code></td>
+							<td><p>Executes a user-supplied callback reducer function on each element of the array, passing in the return value from the previous execution.  An <code>initialValue</code> may be supplied to use as the &lsquo;previous value&rsquo; for the first iteration.  A common use case is summing up all the values in an array, or concatenating an array into a string.</p>
+								<p>This method is not inherently mutating; it doesn&rsquo;t change the array, but code inside the callback function might.</td>
+						</tr>
+						<tr>
 							<td><code>.reverse()</code></td>
 							<td>Reverses the elements of an array in place; first becomes last, and vice versa</td>
 						</tr>

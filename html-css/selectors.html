@@ -148,7 +148,7 @@
 				<li><strong>ID:</strong> <code>#id</code></li>
 			</ol>
 			
-			<h3>Link pseudo elements</h3>
+			<h3>Link pseudo-classes</h3>
 			
 			<p>It&rsquo;s recommended to define link pseudo-classes in this order:</p>
 			
@@ -226,6 +226,88 @@
 							<td>Adding an s (or S) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).</td>
 							<td class="d-none d-md-table-cell"><code>a[href*="cAsE" s] { ... }</code><br>
 								Links with <code>"cAsE"</code> anywhere in the URL, with matching capitalization</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2>Pseudo-elements</h2>
+			
+			<p>These are keywords added to a selector that allow you to style specific parts of a selector.  Indicate them with <code>::</code> instead of <code>:</code> to distinguish them from pseudo-classes.</p>
+			
+			<p>Pseudo-elements can&rsquo;t be stacked as selectors.  You can only apply one at a time.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Pseudo-element</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>::after</code></td>
+							<td>Creates a pseudo-element that is the last child of the selected element, usually to add cosmetic design elements.  This is inline by default, and contained within the selected element&rsquo;s formatting box.</td>
+							<td><code>a::after&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;"→";<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::before</code></td>
+							<td>Creates a pseudo-element that is the first child of the selected element, usually to add cosmetic design elements.  This is inline by default, and contained within the selected element&rsquo;s formatting box.</td>
+							<td><code>h2::before&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border&#8209;top:&nbsp;1px&nbsp;solid&nbsp;gray;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::first-letter</code></td>
+							<td><p>Applies styles to the first letter of the first line of a block-level element.  This doesn&rsquo;t work when preceded by other content like images or tables.  A common use case is for decorative drop-cap letters.</p>
+								<p><strong>Note:</strong> this applies to the first character, whether or not it&rsquo;s a letter.  Languages with digraphs (such as <code>IJ</code> in Dutch) should be paired if the language is set correctly.</p></td>
+							<td><code>h2::first-letter&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font&#8209;size:&nbsp;3em;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding&#8209;right:&nbsp;0.5em;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding&#8209;bottom:&nbsp;0.5em;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::first-line</code></td>
+							<td>Applies styles to the first line of a block-level element.  This doesn&rsquo;t work when preceded by other content like images or tables.</td>
+							<td><code>p::first-line&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::file-selector-button</code></td>
+							<td>Applies styles to the button of an <code>input</code> element used to upload a file.</td>
+							<td><code>input[type=file]::file&#8209;selector&#8209;button&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding&#8209;left:&nbsp;1em;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::marker</code></td>
+							<td>Selects the marker of a list item, usually a bullet or number/letter</td>
+							<td><code>li::marker&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::placeholder</code></td>
+							<td>Selects the placeholder text in an <code>input</code> or <code>textarea</code> element</td>
+							<td><code>::placeholder&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;lightgray;<br>
+								}</code></td>
+						</tr>
+						<tr>
+							<td><code>::selection</code></td>
+							<td>Applies styles to the part of a document that has been highlighted by the user, usually by clicking and dragging the mouse over text</td>
+							<td><code>::selection&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background&#8209;color:&nbsp;slategray;<br>
+								}</code></td>
 						</tr>
 					</tbody>
 				</table>
