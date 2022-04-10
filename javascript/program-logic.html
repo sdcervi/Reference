@@ -258,7 +258,7 @@
 			
 			<p>Define a <code>case</code> for each option you want to execute unique code for, and use <code>default</code> to handle any cases that don&rsquo;t trigger the other cases.</p>
 			
-			<p><code>switch [variable] {<br>
+			<p><code>switch ([variable]) {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case [first option] :<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute]<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
@@ -302,12 +302,22 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute for each iteration]<br>
 				}</code></p>
 			
-			<h3><code>forEach</code></h3>
+			<h3>Iterating through arrays and strings</h3>
 			
-			<p>For arrays, you can use the <code>.forEach(...)</code> method to easily operate on each element without having to know the array size.</p>
+			<p>To iterate through an array or string, you can use a <code>for ... of</code> loop, similar to the <code>for ... in</code> loop for objects.</p>
+			
+			<p><code>for ([variable] of [array or string]) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute for each iteration]<br>
+				}</code></p>
+			
+			<h4><code>forEach</code></h4>
+			
+			<p>For arrays, you can also use the <code>.forEach(...)</code> method to easily operate on each element without having to know the array size.  This normally takes an argument of a callback function, either as a parameter or an anonymous function.</p>
 			
 			<p><code>const fruits = ['apple', 'orange', 'banana'];<br>
-				fruits.forEach([code to execute]);</code></p>
+				fruits.forEach(fruit =&gt; {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute]<br>
+				});</code></p>
 			
 			<h2 id="while">While loops and do...while</h2>
 			
