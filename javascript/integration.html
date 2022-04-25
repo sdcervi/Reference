@@ -71,8 +71,9 @@
 				<ul>
 					<li><a href="#adding">Adding JavaScript to an HTML page</a></li>
 					<li><a href="#loading">Loading JavaScript</a></li>
-					<li><a href="#dom">The Document Object Model</a></li>
 					<li><a href="#css">Altering CSS</a></li>
+					<li><a href="#dom">The Document Object Model</a></li>
+					<li><a href="#domEvents">DOM events</a></li>
 				</ul>
 			</nav>
 			
@@ -107,6 +108,12 @@
 			<p>Using the <code>defer</code> attribute tells the browser to wait until the page is fully parsed and loaded before executing the script.  Use this when a script requires interaction with the DOM to make sure the DOM is fully loaded before the script executes.</p>
 				
 			<p>Using the <code>async</code> attribute will load the script asynchronously and still load the rest of the page while the script downloads.  However, unlike <code>defer</code> delaying code execution until after the page is fully rendered, <code>async</code> delays code execution until the script itself is fully downloaded.  This is best for scripts that have no dependency on other scripts, and have no other scripts dependent on them; it doesn&rsquo;t matter exactly when the scripts execute.  When done right, this improves page performance by speeding up load times.</p>
+			
+			<h2 id="css">Altering CSS</h2>
+			
+			<p>To alter the CSS of a particular element, access the <code>style</code> property.  Syntax is a bit different; any hyphenated CSS styles are written in camelCase instead.</p>
+			
+			<p><code>document.getElementById('divID').style.marginTop = '1em';</code></p>
 			
 			<h2 id="dom">The Document Object Model</h2>
 			
@@ -256,11 +263,77 @@
 
 			</div>
 			
-			<h2 id="css">Altering CSS</h2>
+			<h2 id="domEvents">DOM Events</h2>
 			
-			<p>To alter the CSS of a particular element, access the <code>style</code> property.  Syntax is a bit different; any hyphenated CSS styles are written in camelCase instead.</p>
+			<p>Javascript events occur when a user interacts with the webpage.  For example, a user might click on an element, scroll to a specific point, or upload a file via a dialog box.  By assigning event listeners to detect these interactions, we can make pages respond to them.</p>
 			
-			<p><code>document.getElementById('divID').style.marginTop = '1em';</code></p>
+			<p>Using <code>.on[event]</code> allows for assignment of one function, but <code>.addEventListener(...)</code> allows for chaining of functions.</p>
+			
+			<p><code>let eventTarget = document.getElementById('targetElement');<br><br>
+				eventTarget.addEventListener('click', function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[code to execute]<br>
+				});</code></p>
+			
+			<p>or</p>
+			
+			<p><code>let element = document.querySelector('button');<br><br>
+				element.onclick = function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.backgroundColor = 'blue';<br>
+				};</code></p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Event</th>
+							<th scope="col">Property</th>
+							<th scope="col">Event listener</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Mouse click</td>
+							<td><code>onclick</code></td>
+							<td><code>click</code></td>
+							<td>Assigns a function to run when the element is clicked on.  This can either be assigned an anonymous function, or set to reference a named function.</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>The <code>event</code> object</h3>
+			
+			<p>JavaScript stores events as <code>Event</code> objects with their related data and functionalities as properties and methods. When an event is triggered, the event object can be passed as an argument to the event handler function.  Access these properties with <code>eventVariable.propertyName</code>.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Property</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>target</code></td>
+							<td>References the element that the event is registered to</td>
+						</tr>
+						<tr>
+							<td><code>timeStamp</code></td>
+							<td>Returns the time in milliseconds from the beginning of the time origin until the event was created.  In most webpages, this is the time from when the window was loaded to the time the event was fired.</td>
+						</tr>
+						<tr>
+							<td><code>type</code></td>
+							<td>Returns a string containing the event&rsquo;s type</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
 			
 			<section class="sources">
 				<h2>Sources</h2>
