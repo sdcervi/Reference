@@ -267,7 +267,9 @@
 			
 			<p>Javascript events occur when a user interacts with the webpage.  For example, a user might click on an element, scroll to a specific point, or upload a file via a dialog box.  By assigning event listeners to detect these interactions, we can make pages respond to them.</p>
 			
-			<p>Using <code>.on[event]</code> allows for assignment of one function, but <code>.addEventListener(...)</code> allows for chaining of functions.</p>
+			<p>Using <code>.on[event]</code> allows for assignment of one function, but <code>.addEventListener(...)</code> allows for chaining of functions.  Best practice is to create a named function, then reference via name.</p>
+			
+			<p>Using the <code>document</code> element for the event listener will allow for globally-fired events if needed (e.g. for keystrokes).</p>
 			
 			<p><code>let eventTarget = document.getElementById('targetElement');<br><br>
 				eventTarget.addEventListener('click', function() {<br>
@@ -297,7 +299,49 @@
 							<td>Mouse click</td>
 							<td><code>onclick</code></td>
 							<td><code>click</code></td>
-							<td>Assigns a function to run when the element is clicked on.  This can either be assigned an anonymous function, or set to reference a named function.</td>
+							<td>The element is clicked on (click and release)</td>
+						</tr>
+						<tr>
+							<td>Mouse down</td>
+							<td><code>onmousedown</code></td>
+							<td><code>mousedown</code></td>
+							<td>The mouse button is pressed down</td>
+						</tr>
+						<tr>
+							<td>Mouse up</td>
+							<td><code>onmouseup</code></td>
+							<td><code>mouseup</code></td>
+							<td>The mouse button is released</td>
+						</tr>
+						<tr>
+							<td>Mouse over</td>
+							<td><code>onmouseover</code></td>
+							<td><code>mouseover</code></td>
+							<td>The cursor is moved into an element&rsquo;s bounding box</td>
+						</tr>
+						<tr>
+							<td>Mouse out</td>
+							<td><code>onmouseout</code></td>
+							<td><code>mouseout</code></td>
+							<td>The cursor is moved out of an element&rsquo;s bounding box</td>
+						</tr>
+						<tr>
+							<td>Key press</td>
+							<td><code>onkeypress</code></td>
+							<td><code>keypress</code></td>
+							<td>A keyboard key is pressed down and released.  The <code>.key</code> property tracks specifically which key was pressed.</td>
+						</tr>
+						<tr>
+							<td>Key down</td>
+							<td><code>onkeydown</code></td>
+							<td><code>keydown</code></td>
+							<td>A keyboard key is pressed down.  The <code>.key</code> property tracks specifically which key was pressed.</td>
+						</tr>
+						<tr>
+							<td>Key up</td>
+							<td><code>onkeyup</code></td>
+							<td><code>keyup</code></td>
+							<td>A keyboard key is released.  The <code>.key</code> property tracks specifically which key was pressed.</td>
 						</tr>
 					</tbody>
 				</table>
