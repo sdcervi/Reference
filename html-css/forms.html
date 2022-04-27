@@ -186,7 +186,7 @@
 							<td>Text area (multi-line)</td>
 							<td><code>&lt;textarea name="inputName"&gt;</code>Placeholder text<code>&lt;textarea&gt;</code></td>
 							<td><textarea name="sampleTextArea">Placeholder text</textarea></td>
-							<td>Use for longer, multi-line areas of text, such as messages and comments. Any placeholder text entered via HTML will be submitted with the form if the user does not replace it with their own entry.</td>
+							<td>Use for longer, multi-line areas of text, such as messages and comments. Any default text entered via HTML between the <code>textarea</code> tags will be submitted with the form if the user does not replace it with their own entry.  Use the <code>placeholder</code> attribute to specify placeholder text that disappears and won&rsquo;t be submitted by accident.</td>
 						</tr>
 						<tr>
 							<td>Date</td>
@@ -423,7 +423,7 @@
 					<tbody>
 						<tr>
 							<td><code>pattern</code></td>
-							<td><code>pattern</code> attributes follow <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, to define a four-digit number, use <code>[0-9]{4}</code>. For accessibility, when a control has a <code>pattern</code> attribute, the title must describe the pattern.</td>
+							<td><code>pattern</code> attributes follow <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (<a href="https://www.rexegg.com/regex-quickstart.html#quantifiers">cheat sheet here</a>, and <a href="https://regexr.com/">testing sandbox here</a>). For example, to define a four-digit number, use <code>[0-9]{4}</code>. For accessibility, when a control has a <code>pattern</code> attribute, the title must describe the pattern.</td>
 						</tr>
 						<tr>
 							<td><code>required</code></td>
