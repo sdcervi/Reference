@@ -93,6 +93,10 @@ const navItems = {
 		title: "Accessibility",
 		id:		"accessibility",
 		links: {
+			basics: {			title:	"Accessibility Basics",						link:	"accessibility/basics.html",		id:		"nav-basics",
+								copy:	"Principles and basic concepts of accessibility",								image:	"./assets/homepage/acc-basics.svg"			},
+			aria: {				title:	"ARIA Standards, Roles &amp; Attributes",										link:	"accessibility/aria.html",			id:		"nav-aria",
+								copy:	"Accessible Rich Internet Applications and accessibiltiy standards",			image:	"./assets/homepage/acc-aria.svg"			},
 			color: {			title:	"Color Accessibility",						link:	"accessibility/color.html",			id:		"nav-color",
 								copy:	"Colorblind accessibility and safe color&nbsp;palettes",						image:	"./assets/homepage/acc-color.svg"			}
 		}

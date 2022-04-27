@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Accessibility Basics | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Accessibility Basics</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<!--h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#what">What is accessibility?</a></li>
+					<li><a href="#improve">Improving accessibility</a></li>
+					<li><a href="#resources">Resources</a></li>
+				</ul>
+			</nav-->
+			
+			<h2 id="what">What is accessibility?</h2>
+
+			<p>Accessibility in design allows users of all ability types and levels to use a product or service.  It means building in alternative ways to navigate an interface for people with impairments, and considering other usage patterns.  In the real world, this is frequently seen with curb cuts and ramps for wheelchair users.</p>
+			
+			<p>Impairments include but are not limited to <strong>sensory impairments</strong>, <strong>cognitive impairments</strong>, and <strong>physical limitations</strong>.  The ADA requires that public and private spaces be made accessible to those with impairments via reasonable accomodations.  These legally defined requirements don&rsquo;t yet extend to digital spaces (As of 2022), but there are a number of best practices to follow.</p>
+			
+			<p>To build accessibility into your design the right way, build it in from the beginning.  Many interfaces with poor accessibility only include it as an afterthought.  Given that <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">roughly 15% of the world&rsquo;s population and 26% of Americans have some form of disability</a>, not planning accessibility into the core design of a product is a significant oversight.</p>
+			
+			<h3>Universal Design</h3>
+			
+			<p>Thankfully, many of the changes necessary are straightforward and easy to implement, and align with current best practices anyway.  The principle of <strong>Universal Design</strong> states that accessibility for one group has benefits for everyone.  For example, users with temporary wrist injuries may navigate with a keyboard while they heal.  Wheelchair access ramps also benefit people with baby strollers and bicycles.  Screen readers allow people to listen to a book, webpage, article, etc. without having to be seated at their computer reading.  Properly implementing <code>alt</code> tags and captions on images and graphics helps users with connectivity problems, so they can see what the images contain even if they don&rsquo;t load correctly.</p>
+			
+			<h3>Accessibility devices</h3>
+			
+			<p>Common accessibility devices used with websites, applications, and other interfaces include:</p>
+			
+			<ul>
+				<li><strong>Screen readers</strong> and text-to-speech engines for readers with visual impairments</li>
+				<li><strong>Closed captions</strong> on videos for users with hearing impairments</li>
+				<li><strong>Alt text</strong> to indicate the contents of an image, for people using screen readers</li>
+				<li><strong>Keyboard navigation</strong> for users that are unable to use a mouse</li>
+			</ul>
+			
+			<h2 id="improve">Improving accessibility</h2>
+			
+			<h3>Contrast</h3>
+			
+			<p>Use contrast between elements, whether it&rsquo;s with color, size, font face, or other visual property.  This helps viewers differentiate between sections of your interface more effectively.</p>
+			
+			<h3>Size</h3>
+			
+			<p>Make sure font sizes are large enough to be legible, and that they have sufficient contrast against their backgrounds.  Larger font sizes can get away with a lower contrast ratio than smaller font sizes, since smaller text needs higher contrast to be as easily readable.</p>
+			
+			<h3>Color</h3>
+			
+			<p>Create interfaces that are enhanced by, but not dependent on, color.  Make sure that any color-based interactions are just as effective for color vision impairment as well as in grayscale.  <a href="./color.html">More information on color vision impairment and accessible color palettes</a></p>
+			
+			<h3>Semantic HTML</h3>
+			
+			<p>Use <a href="../html-css/semantic.html">semantic HTML tags</a> to better organize and indicate content structure, as well as allow screen readers to better identify the content structure of the page to users.</p>
+			
+			<h2 id="resources">Resources</h2>
+			
+			<p><a href="https://www.a11yproject.com/">The A11Y Project</a> is a community-driven effort to make digital accessibilty easier.  They have a <a href="https://www.a11yproject.com/checklist/">checklist to audit your digital products for accessibilty compliance</a> and various other <a href="https://www.a11yproject.com/resources/">resources</a> including software, books, blog posts, and online tools.</p>
+			
+			<p><a href="https://khan.github.io/tota11y/">tota11y</a> is a JavaScript-based tool that applies an overlay to websites to check various elements for compliance.  Drag <a href="javascript:(function(){var%20tota11y=document.createElement('SCRIPT');tota11y.type='text/javascript';tota11y.src='https://khan.github.io/tota11y/dist/tota11y.min.js';document.getElementsByTagName('head')[0].appendChild(tota11y);})();">this bookmarklet link</a> into your bookmarks toolbar for a one-click method to apply the overlay to any webpage.</p>
+	
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>
