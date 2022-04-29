@@ -79,6 +79,7 @@
 						<li><a href="#window">Window roles</a></li>
 						<li><a href="#abstract">Abstract roles</a></li>
 					</ol>
+					<li><a href="#attributes">ARIA attributes</a></li>
 				</ul>
 			</nav>
 			
@@ -200,6 +201,11 @@
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role">ARIA&nbsp;Roles:&nbsp;switch</a></td>
 						</tr>
 						<tr>
+							<td><code>combobox</code></td>
+							<td>An input that controls another element, such as a <code>listbox</code> or <code>grid</code>, that can dynamically pop up to help the user set the value of the input.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA&nbsp;Roles:&nbsp;combobox</a></td>
+						</tr>
+						<tr>
 							<td><code>tab</code></td>
 							<td>An interactive element inside a <code>tablist</code> that, when activated, displays its associated <code>tabpanel</code>.</td>
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role">ARIA&nbsp;Roles:&nbsp;tab</a></td>
@@ -210,14 +216,172 @@
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">ARIA&nbsp;Roles:&nbsp;tabpanel</a></td>
 						</tr>
 						<tr>
+							<td><code>tablist</code></td>
+							<td>The element that serves as the container for a set of <code>tab</code>s.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role">ARIA&nbsp;Roles:&nbsp;tablist</a></td>
+						</tr>
+						<tr>
 							<td><code>treeitem</code></td>
 							<td>An item in a hierarchical tree.</td>
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role">ARIA&nbsp;Roles:&nbsp;treeitem</a></td>
+						</tr>
+						<tr>
+							<td><code>tree</code></td>
+							<td>A widget that allows the user to select one or more <code>treeitem</code>s from a hierarchically organized collection.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role">ARIA&nbsp;Roles:&nbsp;tree</a></td>
+						</tr>
+						<tr>
+							<td><code>treegrid</code></td>
+							<td>An element which is a grid whose rows can be expanded and collapsed in the same manner as a <code>tree</code>.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role">ARIA&nbsp;Roles:&nbsp;treegrid</a></td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
+			
+			<h3 id="landmark">Landmark roles</h3>
+			
+			<p>These provide a way to identify the organization and structure of a webpage, when other implicit or explicit roles don&rsquo;t fill in all the gaps.  Use these sparingly; too many landmark roles can clog up a screen reader and make it more difficult to understand the structure of the page.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Role</th>
+							<th scope="col">Usage</th>
+							<th scope="col">MDN&nbsp;documentation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>banner</code></td>
+							<td>Defines a global site header that repeats sitewide.  Usually includes a logo, company name, search bar, and possibly the navigation and/or slogan.  The <code>header</code> element, when used for the site&rsquo;s global header, has this role implicitly.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role">ARIA&nbsp;Roles:&nbsp;banner</a></td>
+						</tr>
+						<tr>
+							<td><code>complementary</code></td>
+							<td>Designates a supporting section that relates to the page&rsquo;s primary content, but can stand on its own when separated.  These are usually sidebars or call-out boxes.  When possible, use the <code>aside</code> element instead.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role">ARIA&nbsp;Roles:&nbsp;complementary</a></td>
+						</tr>
+						<tr>
+							<td><code>contentinfo</code></td>
+							<td>Defines a global site footer that repeats sidewide.  Usually include copyright information, navigation links, privacy policy and terms of use links, etc.  Use the <code>footer</code> element instead when possible for semantic clarity.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">ARIA&nbsp;Roles:&nbsp;contentinfo</a></td>
+						</tr>
+						<tr>
+							<td><code>form</code></td>
+							<td>Identifies a group of elements that function as a form.  Use the <code>form</code> element instead when possible for semantic clarity.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">ARIA&nbsp;Roles:&nbsp;form</a></td>
+						</tr>
+						<tr>
+							<td><code>main</code></td>
+							<td>Indicates the primary content of the page.  Only use this once per page.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/main_role">ARIA&nbsp;Roles:&nbsp;main</a></td>
+						</tr>
+						<tr>
+							<td><code>navigation</code></td>
+							<td>Used to identify major groups of links for navigating a site or section of content.  Use the <code>nav</code> element instead when possible for semantic clarity.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role">ARIA&nbsp;Roles:&nbsp;navigation</a></td>
+						</tr>
+						<tr>
+							<td><code>region</code></td>
+							<td>Generic role for areas deemed significant but other landmark roles do not apply.  Use the <code>section</code> element instead when possible for semantic clarity.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/region_role">ARIA&nbsp;Roles:&nbsp;region</a></td>
+						</tr>
+						<tr>
+							<td><code>search</code></td>
+							<td>Identifies the section of the page used to conduct a search of any variety (sitewide, pagewide, or a collection of sites).  Use this on the parent element containing the entire search module related to an <code>input</code> with <code>type="search"</code>.  When a <code>form</code> is solely dedicated to search, use the <code>search</code> role instead of the default <code>form</code> role.</td>
+							<td><a href="">ARIA&nbsp;Roles:&nbsp;search</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="live">Live region roles</h3>
+			
+			<p>These define elements with content that can be dynamically changed.  Using one of these roles helps screen readers identify when visual content has changed, so they can alert the user.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Role</th>
+							<th scope="col">Usage</th>
+							<th scope="col">MDN&nbsp;documentation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>alert</code></td>
+							<td>Indicates important, time-sensitive information.  Only use this for elements that requre the user&rsquo;s immediate attention, such as invalid form values, login session timeout warnings, etc.  Add it to the element containing the alert message, <strong>not</strong> the element triggering the alert.  This is considered an intrusive role, so use it sparingly and only where necessary.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">ARIA&nbsp;Roles:&nbsp;alert</a></td>
+						</tr>
+						<tr>
+							<td><code>log</code></td>
+							<td>Identifies a region where new information is added in a meaningful order, and old information may disappear.  This includes chat logs, message history, and error logs.  New information is only added to the end, and existing information is ordered sequentially.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role">ARIA&nbsp;Roles:&nbsp;log</a></td>
+						</tr>
+						<tr>
+							<td><code>marquee</code></td>
+							<td>Contains non-essential information that changes frequently.  For example: stock tickers, ad banners, latest posts in a topic or channel.  The main difference between <code>marquee</code> and <code>log</code> is that <code>log</code> is presented sequentially.  Make sure that <code>marquee</code>s have an accessible label, either with <code>aria-label</code> or <code>aria-labelledby</code>.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role">ARIA&nbsp;Roles:&nbsp;marquee</a></td>
+						</tr>
+						<tr>
+							<td><code>status</code></td>
+							<td>Defines a region containing new information for the user that isn&rsquo;t important enough to justify an <code>alert</code>.  This is usually presented as a status bar.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role">ARIA&nbsp;Roles:&nbsp;status</a></td>
+						</tr>
+						<tr>
+							<td><code>timer</code></td>
+							<td>Indicates that an element is a numerical counter, counting up or down.  Its contents should continuously update until the timer is paused or reaches its endpoint.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role">ARIA&nbsp;Roles:&nbsp;timer</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="window">Window roles</h3>
+			
+			<p>These define sub-windows within the main window, such as modals and other pop-ups.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Role</th>
+							<th scope="col">Usage</th>
+							<th scope="col">MDN&nbsp;documentation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>dialog</code></td>
+							<td>Used to mark up an HTML-based application dialog or window that separates content from the rest of the page, such as a modal.  These are generally placed on top of the rest of the page content using an overlay.  <code>dialog</code>s can be either <strong>non-modal</strong> (can still interact with page content) or <strong>modal</strong> (only the content in the <code>dialog</code> can be interacted with).</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">ARIA&nbsp;Roles:&nbsp;dialog</a></td>
+						</tr>
+						<tr>
+							<td><code>alertdialog</code></td>
+							<td>Used on modal alert <code>dialog</code>s that interrupt a user&rsquo;s workflow to communicate an important message and require a response.  Examples include error messages that require confirmation, or other confirmation prompts such as permanently deleting information.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">ARIA&nbsp;Roles:&nbsp;alertdialog</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="abstract">Abstract roles</h3>
+			
+			<p>Abstract roles are only intended for browsers to use behind the scenes to organize and streamline documents.  They should not be used by developers writing HTML markup.</p>
+			
+			<h2>ARIA attributes</h2>
+			
+			<p>ARIA attributes allow you to set specific properties and states to improve and streamline accessibility</p>
 			
 			<section class="sources">
 				<h2>Sources</h2>
