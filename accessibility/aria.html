@@ -388,16 +388,411 @@
 				<table class="table table-striped table-hover definitions">
 					<thead>
 						<tr>
-							<th scope="col">Role</th>
+							<th scope="col">Attribute</th>
 							<th scope="col">Usage</th>
 							<th scope="col">MDN&nbsp;documentation</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
+							<td><code>aria-activedescendant</code></td>
+							<td>Identifies the currently active element when focus is on a <code>composite</code> widget, <code>combobox</code>, <code>textbox</code>, <code>group</code>, or <code>application</code>.  Set its value to the <code>id</code> of the currently focused element.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant">ARIA&nbsp;Attributes:&nbsp;aria-activedescendant</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-atomic</code></td>
+							<td>Indicates whether assistive technologies like a screen reader present all or only parts of a changed live region, based on the change notifications defined with <code>aria-relevant</code>.  Value is boolean.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic">ARIA&nbsp;Attributes:&nbsp;aria-atomic</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-autocomplete</code></td>
+							<td>Indicates whether inputting text could trigger an autocomplete display.  It can have two values: <code>inline</code> (displays a single predicted value, in place), or <code>list</code> (displays a list of possible values as a pop-out or drop-down).</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete">ARIA&nbsp;Attributes:&nbsp;aria-autocomplete</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-braillelabel</code></td>
+							<td>Defines a string value that labels the current element, with the intent to convert that value into Braille.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel">ARIA&nbsp;Attributes:&nbsp;aria-braillelabel</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-brailleroledescription</code></td>
+							<td>Defines a human-readable, author-localized abbreviated description for the role of an element, with the intent to convert that value into Braille.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription">ARIA&nbsp;Attributes:&nbsp;aria-brailleroledescription</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-busy</code></td>
+							<td>Indicates an element is being modified, and assistive technologies should wait until changes are complete before informing the user about the update.  Value is boolean.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy">ARIA&nbsp;Attributes:&nbsp;aria-busy</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-checked</code></td>
+							<td>Indicates the current <code>checked</code> state of checkboxes, radio buttons, and other widgets.  Value is <code>true</code>, <code>false</code>, or <code>mixed</code> (as if in a folder tree where only some child folders are checked).  When possible, use an <code>input</code> element with <code>type="checkbox"</code> as this has built-in semantics and does not require ARIA attributes.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked">ARIA&nbsp;Attributes:&nbsp;aria-checked</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-colcount</code></td>
+							<td>Defines the total number of colums in a <code>table</code>, <code>grid</code>, or <code>treegrid</code> when not all columns are present in the DOM.  Value is an integer greater than or equal to 1.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount">ARIA&nbsp;Attributes:&nbsp;aria-colcount</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-colindex</code></td>
+							<td>Defines an element&rsquo;s column index or position with respect to the total number of columns within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.  Value is an integer greater than or equal to 1.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex">ARIA&nbsp;Attributes:&nbsp;aria-colindex</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-colindextext</code></td>
+							<td>Defines a human-readable alternative to <code>aria-colindex</code>.  For example, &ldquo;Value at start of 2022.&rdquo;</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext">ARIA&nbsp;Attributes:&nbsp;aria-colindextext</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-colspan</code></td>
+							<td>Defines the number of columns spanned by a cell or gridcell within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.  Value is an integer greater than or equal to 1.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan">ARIA&nbsp;Attributes:&nbsp;aria-colspan</a></td>
+						</tr>
+						<tr>
+							<td><code>aria-controls</code></td>
+							<td>Identifies the element or elements whose contents or presence are controlled by the element that has this attribute.  Set its value to the <code>id</code> or space-separated <code>id</code>s of the controlled element.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls">ARIA&nbsp;Attributes:&nbsp;aria-controls</a></td>
+						</tr>
+						<tr>
 							<td><code></code></td>
 							<td></td>
-							<td><a href="">ARIA&nbsp;Roles:&nbsp;</a></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+						</tr>
+						<tr>
+							<td><code></code></td>
+							<td></td>
+							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
 						</tr>
 					</tbody>
 				</table>
