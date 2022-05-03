@@ -481,178 +481,187 @@
 						</tr>
 						<tr>
 							<td><code>aria-dropeffect</code></td>
-							<td></td>
+							<td>Indicates what functions may be performed when a dragged object is released onto a drop target.  Values can be:<br>
+								<code>copy</code> (a duplicate of the dragged object is dropped into the target),<br>
+								<code>execute</code> (a function is executed, using the dragged object as input),<br>
+								<code>link</code> (a reference or shortcut of the dragged object is created),<br>
+								<code>move</code> (the dragged object moves from its source location to the new location),<br>
+								<code>none</code> (default; nothing can be done. Ignored if combined with another value, e.g. <code>none copy</code>), or<br>
+								<code>popup</code> (a pop-up menu allows the user to choose the drag functionality).</td>
 							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect">ARIA&nbsp;Attributes:&nbsp;aria-dropeffect</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-errormessage</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Identifies the element that provides an error message for that object.  The value is a single <code>id</code> for the element that contains the error message.  Use with <code>aria-invalid="true"</code> to enable correctly.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage">ARIA&nbsp;Attributes:&nbsp;aria-errormessage</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-expanded</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates whether a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded">ARIA&nbsp;Attributes:&nbsp;aria-expanded</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-flowto</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Identifies the next element by <code>id</code>, for a reading order alternative to the DOM order.  If given a space-separated list of <code>id</code>s, this gives the user a list of options to choose from.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-flowto">ARIA&nbsp;Attributes:&nbsp;aria-flowto</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-grabbed</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates an element&rsquo;s grabbed state in a drag-and-drop operation.  Value is boolean.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed">ARIA&nbsp;Attributes:&nbsp;aria-grabbed</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-haspopup</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates the availability and type of pop-up that can be triggered by an element.  Values include <code>menu</code>, <code>listbox</code>, <code>tree</code>, <code>grid</code>, <code>dialog</code>, or <code>true</code> (<code>true</code> is treated as <code>menu</code>).  A <code>tooltip</code> is not considered a pop-up in this context since it is not interactive.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup">ARIA&nbsp;Attributes:&nbsp;aria-haspopup</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-hidden</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates whether an element is exposed to an accessibility API.  This doesn&rsquo;t affect its visibility in the rendered DOM, only whether accessibility technology can see it.  Don&rsquo;t use this on focusable elements.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden">ARIA&nbsp;Attributes:&nbsp;aria-hidden</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-invalid</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates the entered value in a form field doesn&rsquo;t match the expected format.  Change this state with JavaScript as part of the validation process.  For best results, set <code>aria-invalid="true"</code> <em>and</em> inform the user there is an error as well as suggestions to correct it.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid">ARIA&nbsp;Attributes:&nbsp;aria-invalid</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-keyshortcuts</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates keyboard shortcuts or hotkeys to activate or focus an element.  Make these visible to both sighted and impaired users; best practices include providing a guided walkthrough, accessibility guide, cheat sheet, or tooltip.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts">ARIA&nbsp;Attributes:&nbsp;aria-keyshortcuts</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-label</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines a string value that labels an interactive element.  This is similar to <code>aria-description</code>; <code>aria-label</code> should be short and concise, while <code>aria-description</code> can have more detail.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label">ARIA&nbsp;Attributes:&nbsp;aria-label</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-labelledby</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Identifies the element that provides a descriptive label for that object; for example, a heading  (and possibly subheading) for a section.  The value is a single or space-separated list of <code>id</code>s for the element(s) that contains the label.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby">ARIA&nbsp;Attributes:&nbsp;aria-labelledby</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-level</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the hierarchical level of an element within a structure.  Value is an integer greater than or equal to 1; levels increase with depth.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level">ARIA&nbsp;Attributes:&nbsp;aria-level</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-live</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates that the element wil be updated, and describes the type of updates a user can expect.  Set on an empty element.  Values are:<br>
+								<code>assertive</code> (element is given the highest priority and is presented to the user immediately),<br>
+								<code>off</code> (default; updates should not be presented to the user unless the user is currently focused on that region, or<br>
+								<code>polite</code> (updates should be presented at the next graceful opportunity).</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">ARIA&nbsp;Attributes:&nbsp;aria-live</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-multiline</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates whether a <code>textbox</code> accepts multiple lines of input or only a single line.  Value is boolean.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline">ARIA&nbsp;Attributes:&nbsp;aria-multiline</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-multiselectable</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates whether a user may select more than one item from the currently selectable descendents.  The default behavior of <code>select</code> lists is single-select; use <code>aria-multiselectable="true"</code> to tell assistive technology users that they can select more than one item.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable">ARIA&nbsp;Attributes:&nbsp;aria-multiselectable</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-orientation</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates whether an element&rsquo;s orientation is <code>horizontal</code>, <code>vertical</code>, or unknown/ambiguous (<code>undefined</code>).  This is most commonly used on scroll bars, lists, and sliders.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation">ARIA&nbsp;Attributes:&nbsp;aria-orientation</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-owns</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Identifies an element or elements by <code>id</code> to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy can&rsquo;t be used to represent the relationship.  DOM children will come before <code>aria-owns</code> children, unless the DOM children are also included in the list of <code>id</code>s.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns">ARIA&nbsp;Attributes:&nbsp;aria-owns</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-placeholder</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines a short hint (a word or short phrase) to help the user with data entry when a form control has no value.  It can be either a sample value or a brief description of the expected format.  The <code>placeholder</code> attribute provides this by default, so use <code>aria-placeholder</code> on elements that don&rsquo;t support it.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder">ARIA&nbsp;Attributes:&nbsp;aria-placeholder</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-posinset</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines an element&rsquo;s number or position in the current set of <code>listitem</code>s or <code>treeitem</code>s when not all items are present in the DOM.  Value is an integer greater than or equal to 1 and less than or equal to the size of the set, if known.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset">ARIA&nbsp;Attributes:&nbsp;aria-posinset</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-pressed</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates current pressed state of a toggle button.  Value is <code>true</code>, <code>false</code>, or <code>mixed</code>.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed">ARIA&nbsp;Attributes:&nbsp;aria-pressed</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-readonly</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates that an element is not editable but is otherwise operable.  For example, the total in a shopping cart, row and column headers in a table, and form elements which shouldn&rsquo;t be changed.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly">ARIA&nbsp;Attributes:&nbsp;aria-readonly</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-relevant</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Used in ARIA live regions, this indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.  Values can be <code>additions</code>, <code>removals</code>, <code>text</code>, <code>additions text</code>, or <code>all</code> as shorthand for all three values.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant">ARIA&nbsp;Attributes:&nbsp;aria-relevant</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-required</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates that user input is required on the element before a form may be submitted.  Semantic elements that can use the <code>required</code> attribute don&rsquo;t need this, but non-semantic elements do, when their input is required.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required">ARIA&nbsp;Attributes:&nbsp;aria-required</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-roledescription</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines a human-readable, author-localized description for the role of an element.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription">ARIA&nbsp;Attributes:&nbsp;aria-roledescription</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-rowcount</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the total number of rows in a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.  Value is the total number of rows as an integer, or <code>-1</code> if the number is unknown.  If all the rows are loaded and in the DOM, <code>aria-rowcount</code>isn&rsquo;t necessary.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount">ARIA&nbsp;Attributes:&nbsp;aria-rowcount</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-rowindex</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines an element&rsquo;s row index or position with respect to the total number of rows within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.  Value is an integer greater than or equal to 1.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex">ARIA&nbsp;Attributes:&nbsp;aria-rowindex</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-rowindextext</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines a human-readable alternative to <code>aria-rowindex</code>.  For example, &ldquo;Software&rdquo; as a line item.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext">ARIA&nbsp;Attributes:&nbsp;aria-rowindextext</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-rowspan</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the number of rows spanned by a cell or gridcell within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.  Value is an integer greater than or equal to 1.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan">ARIA&nbsp;Attributes:&nbsp;aria-rowspan</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-selected</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates the current selected state of various widgets and elements.  Value is boolean, or undefined.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected">ARIA&nbsp;Attributes:&nbsp;aria-selected</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-setsize</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the number of items in the curret set of <code>listitem</code>s or <code>treeitem</code>s when not all items are present in the DOM.  Value is an integer greater than or equal to 1, or -1 if the set size is unknown.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize">ARIA&nbsp;Attributes:&nbsp;aria-setsize</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-sort</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Indicates if items in a <code>table</code> or <code>grid</code> are sorted in ascending or descending order.  Set this on the currently sorted column or row.  When a different row/column becomes sorted, move the attribute to that row/column and update accordingly.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort">ARIA&nbsp;Attributes:&nbsp;aria-sort</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-valuemax</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the maximum allowed value for a range widget.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax">ARIA&nbsp;Attributes:&nbsp;aria-valuemax</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-valuemin</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the minimum allowed value for a range widget.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin">ARIA&nbsp;Attributes:&nbsp;aria-valuemin</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-valuenow</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines the current value for a range widget.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow">ARIA&nbsp;Attributes:&nbsp;aria-valuenow</a></td>
 						</tr>
 						<tr>
 							<td><code>aria-valuetext</code></td>
-							<td></td>
-							<td><a href="">ARIA&nbsp;Attributes:&nbsp;</a></td>
+							<td>Defines a human-readable text alternative for <code>aria-valuenow</code>.  For example: <code>aria-valuetext="8% (34 minutes) remaining"</code>.</td>
+							<td><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext">ARIA&nbsp;Attributes:&nbsp;aria-valuetext</a></td>
 						</tr>
 					</tbody>
 				</table>
