@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Regular Expressions | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Regular Expressions</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#blocks">Building blocks</a></li>
+					<ul>
+						<li><a href="#characters">Characters</a></li>
+						<li><a href="#quantifiers">Quantifiers</a></li>
+						<li><a href="#logic">Logic</a></li>
+					</ul>
+					<li><a href="#examples">Examples</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="about">About regular expressions</h2>
+
+			<p><strong>Regular expressions</strong> define patterns of characters that can be used to modify, validate, or perform other operations on strings.  These patterns can include sequences of specific characters, uppercase or lowercase, numbers, punctuation, or other symbols.</p>
+			
+			<h3>Documentation and resources</h3>
+			
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">MDN Web Docs documentation</a></li>
+				<li><a href="https://www.rexegg.com/regex-quickstart.html#quantifiers">Rexegg.com Cheat Sheet</a></li>
+				<li><a href="https://regexr.com/">RegExr sandbox</a></li>
+			</ul>
+			
+			<h2 id="blocks">Building blocks</h2>
+			
+			<h3 id="characters">Characters</h3>
+			
+			<p>To specific an exact character, insert that character into the regular expression.  To specify a pattern a specific character must match, use the table below.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Operand</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Example match</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>\d</code></td>
+							<td>A single digit from 0 to 9</td>
+							<td><code>file_\d\d</code></td>
+							<td>file_25</td>
+						</tr>
+						<tr>
+							<td><code>\w</code></td>
+							<td>A single word character (letter, digit, or underscore)</td>
+							<td><code>\w-\w\w\w</code></td>
+							<td>A-b_1</td>
+						</tr>
+						<tr>
+							<td><code>\s</code></td>
+							<td>A single whitespace character (space, tab newline, carriage return, vertical tab)</td>
+							<td><code>a\sb\sc</code></td>
+							<td>a b<br>c</td>
+						</tr>
+						<tr>
+							<td><code>\D</code></td>
+							<td>A single character that is <code>not</code> a digit from 0-9</td>
+							<td><code>\D\D\D</code></td>
+							<td>ABC</td>
+						</tr>
+						<tr>
+							<td><code>\W</code></td>
+							<td>A single character that is <code>not</code> a word character (letter, digit, or underscore)</td>
+							<td><code>\W\W\W\W\W</code></td>
+							<td>*-+=)</td>
+						</tr>
+						<tr>
+							<td><code>\S</code></td>
+							<td>A single character that is <code>not</code> a whitespace character (space, tab newline, carriage return, vertical tab)</td>
+							<td><code>\S\S\S\S</code></td>
+							<td>Yoyo</td>
+						</tr>
+						<tr>
+							<td><code>.</code></td>
+							<td>Any single character, except a new line</td>
+							<td><code>a.c</code></td>
+							<td>abc</td>
+						</tr>
+						<tr>
+							<td><code>\.</code></td>
+							<td>A period; needs to be escaped with \</td>
+							<td><code>a\.c</code></td>
+							<td>a.c</td>
+						</tr>
+						<tr>
+							<td><code>\</code></td>
+							<td>Escapes a special character for use as a dedicated character in a pattern</td>
+							<td><code>\.\*\+\?<br>\$\^\/\\</code></td>
+							<td>.*+?<br>$^/\</td>
+						</tr>
+						<tr>
+							<td><code>\t</code></td>
+							<td>Tab</td>
+							<td><code>T\t\w{2}</code></td>
+							<td>T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ab</td>
+						</tr>
+						<tr>
+							<td><code>\n</code></td>
+							<td>Line feed (advances one line sequentially, i.e. a typewritter scrolling one line)</td>
+							<td><code></code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><code>\r</code></td>
+							<td>Carriage return (cursor returns to beginning of line, i.e. a typewriter returning the carriage to the line start)</td>
+							<td><code></code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><code>\r\n</code></td>
+							<td>Line separator on Windows; two-part operation hailing from the typewriter days</td>
+							<td><code>AB\r\nCD</code></td>
+							<td>AB<br>CD</td>
+						</tr>
+						<tr>
+							<td><code>\H</code></td>
+							<td>A single character that is not a horizontal whitespace character (tab or space)</td>
+							<td><code></code></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><code>[...]</code></td>
+							<td>One of the characters within the brackets</td>
+							<td><code>[AEIOU]<br>T[ao]p</code></td>
+							<td>One uppercase vowel<br>Tap <em>or</em> Top</td>
+						</tr>
+						<tr>
+							<td><code>-</code></td>
+							<td>Range indicator; the match must fall within the indicated range</td>
+							<td><code>[a-z]<br>[A-Z]+<br>[AB1-5w-z]</code></td>
+							<td>One lowercase letter<br>GREAT<br>One of: A, B, 1, 2, 3, 4, 5, w, x, y, z</td>
+						</tr>
+						<tr>
+							<td><code>[^x]</code></td>
+							<td>One character that is not x</td>
+							<td><code>[^m]</code></td>
+							<td>s</td>
+						</tr>
+						<tr>
+							<td><code>[^...]</code></td>
+							<td>One character that is not within the brackets</td>
+							<td><code>[^a-z]{3}</code></td>
+							<td>A1!</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="quantifiers">Quantifiers</h3>
+			
+			<p>To specify how many times a specific character or match can occur in a pattern, use the table below.</p>
+			
+			<p><strong>Greedy</strong> quantifiers match as much as possible, every time; <strong>lazy</strong> quantifiers only proceed to the first match.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Operand</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Example match</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>+</code></td>
+							<td>The preceding element match occurs one or more times (greedy)</td>
+							<td><code>Version \w-w+</code></td>
+							<td>Version A-b1_1</td>
+						</tr>
+						<tr>
+							<td><code>+?</code></td>
+							<td>The preceding element match occurs one or more times (lazy)</td>
+							<td><code>\d+?</code></td>
+							<td>1 in <strong>1</strong>2345</td>
+						</tr>
+						<tr>
+							<td><code>{n}</code></td>
+							<td>The preceding element match occurs exactly <code>n</code> times</td>
+							<td><code>\D{3}</code></td>
+							<td>ABC</td>
+						</tr>
+						<tr>
+							<td><code>{m,n}</code></td>
+							<td>The preceding element match occurs at least <code>m</code> but no more than <code>n</code> times (greedy)</td>
+							<td><code>\d{2,4}</code></td>
+							<td>156</td>
+						</tr>
+						<tr>
+							<td><code>{m,n}?</code></td>
+							<td>The preceding element match occurs at least <code>m</code> but no more than <code>n</code> times (lazy)</td>
+							<td><code>\d{2,4}</code></td>
+							<td>ab of <strong>ab</strong>cd</td>
+						</tr>
+						<tr>
+							<td><code>{n,}</code></td>
+							<td>The preceding element match occurs at least <code>n</code> times</td>
+							<td><code>\w{3,}</code></td>
+							<td>regex_tutorial</td>
+						</tr>
+						<tr>
+							<td><code>*</code></td>
+							<td>The preceding element match occurs zero or more times (greedy)</td>
+							<td><code>A*B*C</code></td>
+							<td>AAACC</td>
+						</tr>
+						<tr>
+							<td><code>*</code></td>
+							<td>The preceding element match occurs zero or more times (lazy)</td>
+							<td><code>A*?</code></td>
+							<td>empty in AAA (because it matches at zero)</td>
+						</tr>
+						<tr>
+							<td><code>?</code></td>
+							<td>The preceding element match occurs once or no times</td>
+							<td><code>plurals?</code></td>
+							<td>plural</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3 id="logic">Logic</h3>
+			
+			<p>To perform basic logic on a pattern, use the following table.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Operand</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Example match</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>|</code></td>
+							<td>Alternation/OR operand; must match either of the specified sub-patterns</td>
+							<td><code>AA|BB</code></td>
+							<td>BB</td>
+						</tr>
+						<tr>
+							<td><code>( ... )</code></td>
+							<td>Capturing group; groups a sub-pattern, also called a block or sub-expression.  Captures the group for later re-use with a group index number.</td>
+							<td>A(nt|pple)<code></code></td>
+							<td>Apple (captures "pple")</td>
+						</tr>
+						<tr>
+							<td><code>\1</code></td>
+							<td>Contents of capturing group 1, usually to repeat later in an expression.  Captures the group for later re-use with a group index number.</td>
+							<td><code>r(\w)g\1x</code></td>
+							<td>regex</td>
+						</tr>
+						<tr>
+							<td><code>\n</code></td>
+							<td>Contents of capturing group <code>n</code>, usually to repeat later in an expression; requires at least <code>n</code> capturing groups.  <code>n</code> is a digit from 1-9.</td>
+							<td><code>(\d\d)\+(\d\d)=\2\+\1</code></td>
+							<td>12+65=65+12</td>
+						</tr>
+						<tr>
+							<td><code>(?: ... )</code></td>
+							<td>Non-capturing group; matches a sub-pattern without saving it for later re-use.  Same basic functionality as a capture group other than that, just without the storage overhead of saving the group for reuse.</td>
+							<td><code>A(?:nt|pple)</code></td>
+							<td>Apple</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h2 id="examples">Examples</h2>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Regular expression</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example matches</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>.*</code></td>
+							<td>Any character, any number of times, except for a line break</td>
+							<td>This is a regular expression.</td>
+						</tr>
+						<tr>
+							<td><code>/^\d+$/</code></td>
+							<td>Any number</td>
+							<td>534</td>
+						</tr>
+						<tr>
+							<td><code>/^[ \s]+/</code></td>
+							<td>Whitespace at start of line; can be used to remove leading whitespace in form entries during validation</td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This starts with a tab.</td>
+						</tr>
+						<tr>
+							<td><code>/[^@]+@[^@]+/</code></td>
+							<td>Email addresses.  <strong>Note:</strong> validating emails with regular expressions is considered bad practice and can actually cause harm.  Send a verification email with a link instead.</td>
+							<td>user@domain.com</td>
+						</tr>
+						<tr>
+							<td><code>/^#[a-fA-F0-9]{6}$/</code></td>
+							<td>Hex color value; can contain exactly 6 characters from the specified ranges of a-f, A-F, and 0-9.  Hex color codes are not case sensitive, but this regular expression allows for matching both uppercase and lowercase letters for better compatibility.</td>
+							<td>#af2126</td>
+						</tr>
+						<tr>
+							<td><code>/^(\d{2}\-\d{2}\-\d{4})|(\d{4}\-\d{2}\-\d{4})$/</code></td>
+							<td>Matches dates in YY-MM-DD format or YYYY-MM-DD format</td>
+							<td>2022-05-05</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<section class="sources">
+				<h2>Sources</h2>
+				<p>Duckett, Jon. &ldquo;13: Form Enhancement &amp; Validation.&rdquo; <i>JavaScript &amp; jQuery: interactive front-end web development</i>, John Wiley &amp; Sons, Inc., Indianapolis, IN, 2014, pp. 612&ndash;613.</p>
+				<p>&ldquo;Regex Cheat Sheet.&rdquo; <em>RexEgg</em>, 05 May 2022, <a href="https://www.rexegg.com/regex-quickstart.html#quantifiers">https://www.rexegg.com/regex-quickstart.html#quantifiers</a>.</p>
+			</section>
+	
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>
