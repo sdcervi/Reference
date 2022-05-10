@@ -74,13 +74,14 @@
 						<li><a href="#assign">Assigning values and performing arithmetic</a></li>
 					</ul>
 					<li><a href="#defaults">Setting default values</a></li>
-					<li><a href="#types">Data types</a></li>
+					<li><a href="#types">Simple data types</a></li>
 					<ul>
-						<li><a href="#simple-data">Simple data types (number, boolean, null, undefined)</a></li>
+						<li><a href="#simple-data">Number, boolean, null, undefined</a></li>
 						<li><a href="#strings">Strings</a></li>
-						<li><a href="#arrays">Arrays</a></li>
-						<li><a href="#objects">Objects</a></li>
 					</ul>
+					<li><a href="#arrays">Arrays</a></li>
+					<li><a href="#objects">Objects</a></li>
+					<li><a href="#classes">Classes</a></li>
 				</ul>
 			</nav>
 			
@@ -263,9 +264,9 @@
 			
 			<p>This is known as short-circuit evaluation and allows for failsafes in case of invalid or null input.</p>
 			
-			<h2 id="types">Data types</h2>
+			<h2 id="types">Simple data types</h2>
 			
-			<h3 id="simple-data">Simple data types (number, boolean, null, undefined)</h3>
+			<h3 id="simple-data">Number, boolean, null, undefined</h3>
 			
 			<p><strong>Numbers</strong> can be any number, either a whole number (integer) or with decimal points (float).</p>
 			<p><strong>Booleans</strong> are a binary <code>true</code> or <code>false</code>, usually used as an indicator flag or an on/off switch.</p>
@@ -290,13 +291,13 @@
 			
 			<p><code>`Use template literals to add in ${variables} directly to a string.`;</code></p>
 				
-			<h3 id="arrays">Arrays</h3>
+			<h2 id="arrays">Arrays</h2>
 			
 			<p>Arrays are best used to hold sets of data that need to remain in a specific order.  Their data can be accessed by numerical index, starting at 0.</p>
 			
 			<p>To get the size of an array, use <code>arrayName.length</code>.</p>
 			
-			<h4>Methods</h4>
+			<h3>Methods</h3>
 			
 			<p>Arrays come with default methods attached to them, to perform basic operations.  Use these methods with <code>arrayName.method()</code>.</p>
 			
@@ -361,7 +362,7 @@
 						<tr>
 							<td><code>.reduce((previous, current) =&gt; [function], initial)</code></td>
 							<td><p>Executes a user-supplied callback reducer function on each element of the array, passing in the return value from the previous execution.  An <code>initialValue</code> may be supplied to use as the &lsquo;previous value&rsquo; for the first iteration.  A common use case is summing up all the values in an array, or concatenating an array into a string.</p>
-								<p>This method is not inherently mutating; it doesn&rsquo;t change the array, but code inside the callback function might.</td>
+								<p>This method is not inherently mutating; it doesn&rsquo;t change the array, but code inside the callback function might.</p></td>
 						</tr>
 						<tr>
 							<td><code>.reverse()</code></td>
@@ -409,7 +410,7 @@
 
 			</div>
 			
-			<h3 id="objects">Objects</h3>
+			<h2 id="objects">Objects</h2>
 			
 			<p>Objects are collections of related data organized into key-value pairs.  They are similar to arrays, except values can be accessed by name using dot notation: <code>object.key1</code>, and their order within the object may change without warning.  For keys with spaces, variable names as keys, or key names that are enclosed with quotes, use bracket notation: <code>object['key 2']</code>.  Access keys of child objects using <code>object.childname.keyname</code>.</p>
 			
@@ -427,7 +428,7 @@
 			
 			<p>To remove a key or child object from an object, use <code>delete objectName.key</code>.</p>
 			
-			<h4>Object methods</h4>
+			<h3>Object methods</h3>
 			
 			<p>Methods can be added to an object just like any other key-value pair; they can then be used with <code>object.method([parameters])</code> syntax.</p>
 			
@@ -438,7 +439,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
 				};</code></p>
 			
-			<h4>Built-in methods</h4>
+			<h3>Built-in methods</h3>
 			
 			<p><code>Object.keys(objectName)</code> returns an array of all top-level keys in the object, converted to strings.</p>
 			
@@ -446,7 +447,7 @@
 			
 			<p>For more built-in methods, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">read the MDN Object documentation</a>.</p>
 			
-			<h4>Getters and setters</h4>
+			<h3>Getters and setters</h3>
 			
 			<p>Getters and setters are two special types of methods that allow you to retrieve and set data within an object without exposing the object&rsquo;s properties.  For example:</p>
 			
@@ -481,7 +482,7 @@
 			
 			<p><code>objectName.setterName = value;</code></p>
 			
-			<h4><code>this</code></h4>
+			<h3><code>this</code></h3>
 			
 			<p>When using a method, getter, or setter, if you try to access an object&rsquo;s property from that function, it won&rsquo;t be able to because that&rsquo;s outside of the method&rsquo;s scope, unless you use <code>this</code>.  USe the syntax <code>this.propertyName</code> to allow methods to access the object&rsquo;s properties.</p>
 			
@@ -489,7 +490,7 @@
 			
 			<p><strong>Arrow functions</strong> inherentely <strong>bind</strong> an already defined <code>this</code> that is not the calling object when used for an object method.  This makes them not well suited to being object methods that need to access object properties.  TL;DR: don&rsquo;t use arrow functions for object methods.</p>
 			
-			<h4>Privacy</h4>
+			<h3>Privacy</h3>
 			
 			<p>JavaScript does not have any built-in ability to make object properties private (unable to be changed or mutated) or public.  However, you can notate that properties are supposed to be treated as private by adding an underscore to the beginning of the property name:</p>
 			
@@ -500,9 +501,11 @@
 			
 			<p>This is most applicable when needing to retain data types for performing operations on data.  For example, if you have a number, you may want to add or subtract a value.  Indicate the property is private to remind yourself not to access or change that value.  The best way to work with this is to set the property to private and use a setter to verify the value is of the correct data type before saving the new value.</p>
 			
-			<h4>Factory functions</h4>
+			<h3>Factory functions</h3>
 			
 			<p>When you need to create several objects with the same keys but different values, a <strong>factory function</strong> is the best way to do that.  They accept the values as parameters, create the object, and return the complete object.</p>
+			
+			<p>Using a factory function is different than using a <a href="#classes">class constructor</a> since a class functions as a template but a factory function returns a complete object.  Factory functions are more reliable and flexible, and less prone to bugs especially involving <code>this</code>.  Additionally, factory functions can perform logic on values passed to them to determine what values to put in the object they create.</p>
 			
 			<p><code>const factoryFunctionName = ([parameters]) =&gt; {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {<br>
@@ -528,7 +531,7 @@
 				}<br><br>
 				const newObject = factoryFunctionName ([parameters]);</code></p>
 			
-			<h4>Destructured assignment</h4>
+			<h3>Destructured assignment</h3>
 			
 			<p>We can use a shorthand to extract values from an object:</p>
 			
@@ -550,6 +553,8 @@
 			<p><strong>Note:</strong> be careful with destructured variable names.  They must exactly match the properties they&rsquo;s referencing, unless you specify a new variable name:</p>
 			
 			<p><code>const { value1: newVar1, value2: newVar2, value3: newVar3 } = objectName;</code></p>
+			
+			<h2 id="classes">Classes</h2>
 				
 		</main>
 		
