@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>CSS Variables | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>CSS Variables</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<!--h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#"></a></li>
+				</ul>
+			</nav-->
+			
+			<h2>Why use CSS variables?</h2>
+			
+			<p>CSS variables allow you to store specific values in a reusable custom property.</p>
+
+			<p>One of the most intuitive use cases is for managing a color palette, or adjusting a stylesheet to be responsive.  Rather than having to change every single instance of a color in a CSS document, variables allow you to change it just where the variable is defined and have it propagate through the document accordingly.</p>
+			
+			<h2>How to use CSS variables</h2>
+			
+			<p>Define variables using this syntax: <code>--variablename</code>.  All variable names must begin with a double hyphen.  Names are case sensitive; avoid using capital letters, to prevent confusion.  Common practice is to hyphenate multiple words rather than camelCase them.</p>
+			
+			<p><code>h1 {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--main-header-color: #DADECC;<br>
+				}</code></p>
+			
+			<p>Use variables by referencing them:</p>
+			
+			<p><code>h1 {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--main-header-color: #DADECC;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: var(--main-background-color);<br>
+				}</code></p>
+			
+			<p>Variables can also be set to other variables.  This allows you to create modular CSS rules and manage color schemes more effectively (for example, a dark mode vs light mode scheme).</p>
+			
+			<p><code>html {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--custom-purple: #FF64ED;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--main-color: var(--custom-purple);<br>
+				}</code></p>
+			
+			<h3>Fallback values</h3>
+			
+			<p>To prevent any errors with variables being invalid, you can provide fallback values as failsafes.</p>
+			
+			<p><code>h1 {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--main-header-font-size, 3rem);<br>
+				}</code></p>
+			
+			<p>The fallback value can also be a variable, at which point you can use nested <code>var(...)</code> function calls.  This can be done as many times as needed, but avoid making fallback chains too long or you risk negatively impacting readability and maintainability.</p>
+			
+			<p><code>h1 {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--main-header-font-size, var(--fallback-header-font-size, 3rem));<br>
+				}</code></p>
+			
+			<p><strong>Note:</strong> fallback variables will not fix browser compatibility issues, especially if a browser doesn&rsquo;t support CSS variables.</p>
+			
+			<h2>Variable scope</h2>
+			
+			<p>Scope determines where a variable will work, or where value overrides are in effect.  Variables can either be <strong>local</strong> or <strong>global</strong> scope.</p>
+			
+			<p><strong>Locally-scoped</strong> variables will only affect the specific HTML element that it is declared in, and any child elements.  Parent elements and other unrelated elements won&rsquo;t be able to access the variable&rsquo;s value.</p>
+			
+			<p><strong>Globally-scoped</strong> variables are declared in the <code>:root</code> pseudo-class, and can be used across the entire HTML document.  It&rsquo;s common practice to define variables in the <code>:root</code> selecor, with any local overrides declared within their relevant selectors.</p>
+			
+			<p>Since scoping limits how variables are defined and accessed, you can have multiple variables with the same name, in different scopes.</p>
+			
+			<h2>Inheritance</h2>
+			
+			<p>CSS variable values are inherited just like any other CSS property; if a variable is not explicitly redefined in a child element, it inherits the value from its parent element.  Possible reasons to override an inherited value include redefining a color within one specific instance or element.</p>
+			
+			<p><code>:root {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--orange-color: #FF933A;<br>
+				}<br><br>
+				body {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: var(--orange-color);<br>
+				} // References the color from root<br><br>
+				button {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--orange-color: #BF6317;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: var(--orange-color);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br>
+				} // Redefines the color and references its own redefinition</code></p>
+
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>

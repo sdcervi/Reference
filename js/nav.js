@@ -17,6 +17,8 @@ const navItems = {
 								copy:	"Examples and usage for specificity, selectors, and&nbsp;inheritance",			image:	"./assets/homepage/selectors.svg"			},
 			transitions: {		title:	"CSS Transitions &amp; Transforms",			link:	"html-css/transitions.html",		id:		"nav-transitions",
 								copy:	"Animations, state changes, acceleration curves, and other alterations",		image:	"./assets/homepage/transitions.svg"			},
+			css_variables: {	title:	"CSS Variables",							link:	"html-css/css-variables.html",		id:		"nav-css-variables",
+								copy:	"Variables allow for easier repeated property-value management",				image:	"./assets/homepage/css-variables.svg"		},
 			cursor: {			title:	"Cursors",									link:	"html-css/cursor.html",				id:		"nav-cursor",
 								copy:	"The various options for mouse pointer symbols and when to use them",			image:	"./assets/homepage/cursor.svg"				},
 			display: {			title:	"Display, Position &amp; Float",			link:	"html-css/display-position.html",	id:		"nav-display-position",
