@@ -83,7 +83,11 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: function-name(argument);<br>
 				}</code></p>
 			
-			<p><a href="transitions.html#transforms">CSS transforms</a> are a kind of function.  Other functions include the following: </p>
+			<p><a href="transitions.html#transforms">CSS transforms</a> are one kind of function.  Other functions include the following; this isn&rsquo;t an exhaustive list but rather just commonly used ones.</p>
+			
+			<p><a href="css-grid.html">Click here for information on CSS grid and its related functions</a>.</p>
+			
+			<h3>Math functions</h3>
 			
 			<div class="table-responsive">
 			
@@ -104,67 +108,265 @@
 						<tr>
 							<td><code>clamp([min], [ideal], [max])</code></td>
 							<td>This clamps a value (<code>ideal</code>) between an upper (<code>max</code>) and lower (<code>min</code>) bound.  The final value will never be less than <code>min</code> or greater than <code>max</code>, and will be <code>ideal</code> when possible.  This can be used anywhere a length, frequency, angle, time, percentage, or number is expected.  Separate specified values with commas.</td>
-							<td><code>clamp(100px,&nbsp;20%,&nbsp;800px);</code></td>
+							<td><code>width:&nbsp;clamp(100px,&nbsp;20%,&nbsp;800px);</code></td>
 						</tr>
 						<tr>
 							<td><code>max([values])</code></td>
 							<td>Takes one or more comma-separated expressions and returns the largest value from that list.  This can be used anywhere a length, frequency, angle, time, percentage, or number is expected.</td>
-							<td><code>max(40vw,&nbsp;5em,&nbsp;300px);</code></td>
+							<td><code>width:&nbsp;max(40vw,&nbsp;5em,&nbsp;300px);</code></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>min([values])</code></td>
+							<td>Takes one or more comma-separated expressions and returns the smallest value from that list.  This can be used anywhere a length, frequency, angle, time, percentage, or number is expected.</td>
+							<td><code>width:&nbsp;min(40vw,&nbsp;5em,&nbsp;300px);</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Filter functions</h3>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Result</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>blur([radius])</code></td>
+							<td>Applies a Gaussian blur to an element.  Larger values will have more blur.</td>
+							<td><code>filter:&nbsp;blur(2px);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: blur(2px);" alt="Example of blur filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>brightness([value])</code></td>
+							<td>Applies a linear multiplier to an element, making it look brighter or darker.  A value over <code>100%</code> or <code>1</code> will brighten the element, while a value under <code>100%</code> or <code>1</code> will darken it.  <code>0</code> will turn an element completely black.</td>
+							<td><code>filter:&nbsp;brightness(200%);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: brightness(200%);" alt="Example of brightness filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>contrast([value])</code></td>
+							<td>Adjusts the contrast of an element.  A value over <code>100%</code> or <code>1</code> will increase the contrast, while a value under <code>100%</code> or <code>1</code> will decrease it.  <code>0</code> will turn an element completely gray.</td>
+							<td><code>filter:&nbsp;contrast(0.3);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: contrast(0.3);" alt="Example of contrast filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>drop-shadow([x-offset] [y-offset] [radius] [color])</code></td>
+							<td>Applies a drop shadow to an element.  This works with images and elements that have transparency within their bounding box, such as PNGs and SVGs.</td>
+							<td><code>filter:&nbsp;drop&#8209;shadow(3px&nbsp;3px&nbsp;1px&nbsp;gray);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: drop-shadow(3px 3px 1px gray);" alt="Example of drop shadow filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>grayscale([value])</code></td>
+							<td>Converts an element to grayscape.  A value of <code>100%</code> or <code>1</code> will turn an element completely grayscale, while a value under <code>100%</code> or <code>1</code> will decrease the saturation.  <code>0</code> will keep the element fully colored.</td>
+							<td><code>filter&nbsp;grayscale(80%);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: grayscale(80%);" alt="Example of grayscale filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>hue-rotate([value])</code></td>
+							<td>Rotates the hue of an element.  Values can be in angles, radians, or turns.  A full turn (<code>360deg</code>, <code>1turn</code>, <code>6.28rad</code>) will be equivalent to <code>0</code> and have no effect.</td>
+							<td><code>filter&nbsp;hue&#8209;rotate(180deg);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: hue-rotate(180deg);" alt="Example of hue rotation filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>invert([value])</code></td>
+							<td>Inverts the colors of an element.  A value of <code>100%</code> or <code>1</code> will fully invert the colors, while a value of <code>0%</code> or <code>0</code> will have no effect.  <code>0.5</code> or <code>50%</code> will turn an element completely grayscale.</td>
+							<td><code>filter:&nbsp;invert(1);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: invert(1);" alt="Example of invert filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>opacity([value])</code></td>
+							<td>Sets the transparency of an element.  A value of <code>100%</code> or <code>1</code> will be fully opaque, while a value of <code>0%</code> or <code>0</code> will have be fully transparent.</td>
+							<td><code>filter&nbsp;opacity(0.3);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: opacity(0.3);" alt="Example of opacity filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>saturate([value])</code></td>
+							<td>Hyper-saturates or desaturates an element.  A value under <code>100%</code> or <code>1</code> will desaturate the element, while a value over <code>100%</code> or <code>1</code> will hyper-saturate it.  <code>0</code> will fully desaturate the element, while <code>100%</code> or <code>1</code> will leave the element unchanged.</td>
+							<td><code>filter:&nbsp;saturate(0.3);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: saturate(0.3);" alt="Example of saturate filter"></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>sepia([value])</code></td>
+							<td>Applies a warm, yellow-brown filter to an element.  A value of <code>100%</code> or <code>1</code> will fully apply the filter, while a value of <code>0%</code> or <code>0</code> will have no effect.</td>
+							<td><code>filter&nbsp;sepia(1);</code></td>
+							<td><img src="../assets/sample.png" width="75" height="75" style="filter: sepia(1);" alt="Example of sepia filter"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Color functions</h3>
+			
+			<p>These can be used anywhere a <code>color</code> value is valid.  <a href="../design/color-theory.html">More information on color spaces  &raquo;</a></p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Result</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>hsl([hue], [saturation], [lightness])</code></td>
+							<td>Specifies a color by its hue, saturation, and lightness.</td>
+							<td><code>hsl(225,&nbsp;100%,&nbsp;50%)</code></td>
+							<td><div style="width: 75px; height: 75px; background-color: hsl(225, 100%, 50%)"></div></td>
 						</tr>
 						<tr>
-							<td><code></code></td>
-							<td></td>
-							<td><code></code></td>
+							<td><code>hsla([hue], [saturation], [lightness], [opacity])</code></td>
+							<td>Specifies a color by its hue, saturation, lightness and alpha (opacity).</td>
+							<td><code>hsla(225,&nbsp;100%,&nbsp;50%,&nbsp;0.5)</code></td>
+							<td><div style="width: 75px; height: 75px; background-color: hsl(225, 100%, 50%, 0.5)"></div></td>
+						</tr>
+						<tr>
+							<td><code>rgb([red], [green], [blue])</code></td>
+							<td>Specifies a color by its hue, saturation, and lightness.</td>
+							<td><code>rgb(74,&nbsp;133,&nbsp;18)</code></td>
+							<td><div style="width: 75px; height: 75px; background-color: rgb(74, 133, 18)"></div></td>
+						</tr>
+						<tr>
+							<td><code>rgba([red], [green], [blue], [opacity])</code></td>
+							<td>Specifies a color by its hue, saturation, lightness and alpha (opacity).</td>
+							<td><code>rgba(74,&nbsp;133,&nbsp;18,&nbsp;0.5)</code></td>
+							<td><div style="width: 75px; height: 75px; background-color: rgba(74, 133, 18, 0.5)"></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Image functions</h3>
+			
+			<p>These can be used wherever an image is valid as the value for a property.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+							<th scope="col">Result</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>conic-gradient(from [angle] at [x-center] [y-center], <wbr>[color1] [angle-start] [angle-stop], <wbr>[color2] [angle-start] [angle-stop], ...)</code></td>
+							<td>Creates a gradient with color transitions rotated around a defined center point, rather than radiating outward in rings.  Use the optional <code>from</code> keyword to denote the angle that the gradient starts at, and <code>at</code> to set the center point.  Color stops then follow, with optional angles for each stop.</td>
+							<td><code>background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);</code></td>
+							<td><div style="width: 75px; height: 75px; background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);"></div></td>
+						</tr>
+						<tr>
+							<td><code>linear-gradient([starting point] [angle], <wbr>[color stop 1], [color stop 2], ...)</code></td>
+							<td>Creates a gradient with color transitions in a linear direction.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient">Read the MDN docs for available keywords and syntax</a>.</td>
+							<td><code>background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);</code></td>
+							<td><div style="width: 75px; height: 75px; background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);"></div></td>
+						</tr>
+						<tr>
+							<td><code>radial-gradient([shape] at [position], <wbr>[color stop 1], <wbr>[color stop 2], ...)</code></td>
+							<td>Creates a gradient that radiates outward from a center point in rings.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient">Read the MDN docs for available keywords and syntax</a>.</td>
+							<td><code>background: radial-gradient(#e66465, #9198e5);</code></td>
+							<td><div style="width: 75px; height: 75px; background: radial-gradient(#e66465, #9198e5);"></div></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Shape functions</h3>
+			
+			<p>These are used for defining shapes for various CSS properties such as <code>clip-path</code>, <code>offset-path</code> or <code>shape-outside</code>.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions#shape_functions">Read the documentation on these functions here</a>.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>circle([radius] at [x-center] [y-center])</code></td>
+							<td>Defines a circular path</td>
+							<td><code>clip-path:&nbsp;circle(6rem&nbsp;at&nbsp;12rem&nbsp;8rem);</code></td>
+						</tr>
+						<tr>
+							<td><code>ellipse([x-radius] [y-radius] at <wbr>[x-center] [y-center])</code></td>
+							<td>Defines an ellipse path</td>
+							<td><code>shape-outside:&nbsp;ellipse(40%&nbsp;50%&nbsp;at&nbsp;left);</code></td>
+						</tr>
+						<tr>
+							<td><code>inset([offset-top] [offset-right] <wbr>[offset-bottom] [offset-left] <wbr>[border-corner-shape] [border-radius])</code></td>
+							<td>Defines an inset rectangle path </td>
+							<td><code>shape-outside: inset(20px 50px 10px 0 round 50px);</code></td>
+						</tr>
+						<tr>
+							<td><code>polygon([fill rule], [corner1], [corner2], [corner3], ...)</code></td>
+							<td>Defines a polygone path</td>
+							<td><code>clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%);</code></td>
+						</tr>
+						<tr>
+							<td><code>path([fill rule], [string])</code></td>
+							<td>Defines a shape based on an SVG path string</td>
+							<td><code>path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<h3>Reference functions</h3>
+			
+			<p>These are used to reference values defined elsewhere.</p>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Function</th>
+							<th scope="col">Usage</th>
+							<th scope="col">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>attr([value] [type], [fallback])</code></td>
+							<td>Retrieves the value of an attribute of the selected element and uses it in the stylesheet.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/attr">MDN documentation here</a></td>
+							<td><code>width:&nbsp;attr(data&#8209;width&nbsp;px,&nbsp;inherit);</code></td>
+						</tr>
+						<tr>
+							<td><code>env([value], [fallback])</code></td>
+							<td>References an environment variable, for example with use for a desktop Progressive Web App.  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/env">MDN documentation here</a></td>
+							<td><code>margin&#8209;top:&nbsp;env(safe&#8209;area&#8209;inset&#8209;top, 20px);</code></td>
+						</tr>
+						<tr>
+							<td><code>url([value])</code></td>
+							<td>Used to include a file in a CSS property&rsquo;s value, i.e. as a background image, font, or external stylesheet.  The URL can be wrapped in single or double quotes as needed, if it includes special characters.</td>
+							<td><code>background&#8209;image:&nbsp;url(https://example.com/images/myImg.jpg);</code></td>
+						</tr>
+						<tr>
+							<td><code>var([value])</code></td>
+							<td>Used to reference a <a href="css-variables.html">CSS variable (custom property)</a></td>
+							<td><code>border&#8209;color:&nbsp;var(&#8209;&#8209;color&#8209;a);</code></td>
 						</tr>
 					</tbody>
 				</table>
