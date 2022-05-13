@@ -555,6 +555,61 @@
 			<p><code>const { value1: newVar1, value2: newVar2, value3: newVar3 } = objectName;</code></p>
 			
 			<h2 id="classes">Classes</h2>
+			
+			<p>Classes allow you to quickly create similar objects, where they all have the same keys but may have different values.  Classes have a <strong>constructor method</strong> which takes passed-in values and builds a new object with them.  Child objects will also inherit any methods or properties from the class.</p>
+			
+			<p>Convention dictates class names are capitalized, instead of camelCase.  Method and getter/setter syntax is the same as with objects, except classes don&rsquo;t have commas after each item.</p>
+			
+			<p><code>class Classname {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor (param1, param2, ...) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._param1 = param1;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._param2 = param2;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[getters, setters, and methods go here]<br>
+				}</code></p>
+				
+			<p>Create a new object (a new instance of a class) by referencing the class with <code>new</code>:</p>
+			
+			<p><code>const newObject = new Classname (param1, param2, ...);</code></p>
+			
+			<h3>Inheritance</h3>
+			
+			<p>If you have two classes with similar properties, for example a class that adds a few properties to an existing class (<code>extends</code> that class), you can set up <strong>inheritance</strong> so that the new class is a <strong>child class</strong> of the <strong>parent class</strong>.  Reference inherited properties with the <code>super</code> keyword.  Child classes also inherit all the methods of the parent.</p>
+			
+			<ul>
+				<li><strong>Parent class:</strong> Animal</li>
+				<ul>
+					<li><strong>Child class:</strong> Dog</li>
+					<li><strong>Child class:</strong> Cat</li>
+				</ul>
+			</ul>
+			
+			<p><code>class Cat extends Animal {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor (name, usesLitter, ...) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super (name);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._usesLitter = usesLitter;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[additional getters, setters, and methods go here]<br>
+				}</code></p>
+			
+			<h3>Static methods</h3>
+			
+			<p>These are methods that aren&rsquo;t available in child instances of a class, but you can call them directly from the class itself.  Use the <code>static</code> keyword before the method name to denote this.</p>
+			
+			<p>One of the most common examples is with the <code>Date</code> class; new <code>Date</code> objects don&rsquo;t have all the methods from their parent class available to them, and you&rsquo;ll often need to call <code>Date.[method]</code> to perform operations.</p>
+			
+			<p><code>class Classname {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor (param1, param2, ...) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._param1 = param1;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._param2 = param2;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static methodName {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				}</code></p>
 				
 		</main>
 		
