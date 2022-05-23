@@ -28,7 +28,7 @@ jobs:
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
     
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4.0.2
+      uses: peter-evans/create-pull-request@v4
       with:
         title: "Automated sitemap update"
         body: > 
@@ -40,3 +40,9 @@ jobs:
         committer: Vincent A. Cicirello <cicirello@users.noreply.github.com>
         branch: create-pull-request/sitemap
         delete-branch: true
+        
+    - name: Auto-merge Pull Request
+      uses: peter-evans/enable-pull-request-automerge@v2
+      with:
+          token: ${{ secrets.PAT }}
+          pull-request-number: 1
