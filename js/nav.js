@@ -59,6 +59,8 @@ const navItems = {
 								copy:	"Reusable blocks of code used to manipulate data",								image:	"./assets/homepage/functions.svg"			},
 			integration: {		title:	"Integrating JavaScript and HTML",			link:	"javascript/integration.html",		id:		"nav-integration",
 								copy:	"Loading JavaScript into an HTML page for interactivity",						image:	"./assets/homepage/integration.svg"			},
+			localstorage: {		title:	"localStorage",								link:	"javascript/localstorage.html",		id:		"nav-localstorage",
+								copy:	"Storing and retrieving data between user sessions",							image:	"./assets/homepage/localstorage.svg"		},
 			logic: {			title:	"Program Logic: Loops &amp; Conditionals",	link:	"javascript/program-logic.html",	id:		"nav-program-logic",
 								copy:	"Loops, conditionals, and other logical operators",								image:	"./assets/homepage/program-logic.svg"		},
 			math: {				title:	"Math Built-In Object",						link:	"javascript/math.html",				id:		"nav-math",
