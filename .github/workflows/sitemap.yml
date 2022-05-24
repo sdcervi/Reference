@@ -42,7 +42,13 @@ jobs:
         delete-branch: true
         
     - name: Auto-merge Pull Request
+      if: >-
+        ${{
+          contains(fromJSON(env.USER_ALLOWLIST), github.actor) &&
+          contains(fromJSON(env.USER_ALLOWLIST), github.event.pull_request.user.login)
+        }}
       uses: peter-evans/enable-pull-request-automerge@v2
       with:
-          token: ${{ secrets.PAT }}
-          pull-request-number: 1
+        token: ${{secrets.GITHUB_TOKEN}}
+        pull-request-number: ${{github.event.pull_request.number}}
+        merge-method: squash
