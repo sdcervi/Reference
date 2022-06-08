@@ -176,6 +176,7 @@ const currentPage = document.location.pathname;
 let filename = currentPage.substring(currentPage.lastIndexOf('/')+1);
 filename = filename.substring(0, filename.length - 5);
 let navID = "nav-" + filename;
+console.log (navID);
 
 if (navID != 'nav-index') {
 	const navElement = document.getElementById(navID);
