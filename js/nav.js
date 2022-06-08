@@ -33,6 +33,8 @@ const navItems = {
 								copy:	"Entering, validating, and submitting user&nbsp;data",							image:	"./assets/homepage/forms.svg"				},
 			entities: {			title:	"HTML Entities",							link:	"html-css/entities.html",			id:		"nav-entities",
 								copy:	"Special characters and how to encode&nbsp;them",								image:	"./assets/homepage/entities.svg"			},
+			images: {			title:	"Images",									link:	"html-css/images-in-html.html",		id:		"nav-images-im-html",
+								copy:	"Image formats, responsive capabilities, and how they work with HTML",			image:	"./assets/homepage/images.svg"				},
 			links: {			title:	"Links",									link:	"html-css/links.html",				id:		"nav-links",
 								copy:	"Links, attributes and their values, and&nbsp;usage",							image:	"./assets/homepage/links.svg"				},
 			margin: {			title:	"Margin, Padding &amp; Borders",			link:	"html-css/margin.html",				id:		"nav-margin",
