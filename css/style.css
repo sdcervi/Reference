@@ -2,7 +2,7 @@
 
 body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
-main { margin-top: 1em!important; padding-bottom: 1em; }
+main { margin-top: 1em!important; padding-bottom: 1em; padding-top: 80px!important; }
 
 .searchbar { width: 100%; }
 .gsc-control-cse { border: none!important; background-color: transparent!important; }
@@ -97,7 +97,7 @@ table.definitions td:nth-of-type(1) { font-weight: bold; white-space: nowrap; }
 }
 
 @media only screen and (min-width: 768px) {
-	main { margin-top: 1em!important; }
+	main { margin-top: 1em!important; padding-top: 48px!important; }
 	.copyright { display: block; }
 }
 

@@ -75,25 +75,6 @@
 <!-- Bootstrap core JavaScript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-	
-<script>
-	const mobileNav = document.getElementById('navbar-container-mbl');
-	const mobileNavParent = mobileNav.parentNode;
-	const nav = document.getElementById('navbar-container');
-	const navParent = nav.parentNode;
-	
-	const searchBar = document.createElement('div');
-	searchBar.classList.add('searchbar');
-	searchBar.innerHTML = `<div class="gcse-search"></div>`;
-	
-	const searchBarMbl = document.createElement('div');
-	searchBarMbl.classList.add('searchbar');
-	searchBarMbl.innerHTML = `<div class="gcse-search"></div>`;
-	
-	navParent.insertBefore(searchBar, nav.parentNode.children[0]);
-	mobileNavParent.insertBefore(searchBarMbl, mobileNav);
-	
-</script>
 <script async src="https://cse.google.com/cse.js?cx=406f7bbdef813e0ad"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="./bootstrap/js/popper.min.js"></script> 

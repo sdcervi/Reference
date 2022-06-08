@@ -33,7 +33,7 @@ const navItems = {
 								copy:	"Entering, validating, and submitting user&nbsp;data",							image:	"./assets/homepage/forms.svg"				},
 			entities: {			title:	"HTML Entities",							link:	"html-css/entities.html",			id:		"nav-entities",
 								copy:	"Special characters and how to encode&nbsp;them",								image:	"./assets/homepage/entities.svg"			},
-			images: {			title:	"Images",									link:	"html-css/images-in-html.html",		id:		"nav-images-im-html",
+			images: {			title:	"Images",									link:	"html-css/images-in-html.html",		id:		"nav-images-in-html",
 								copy:	"Image formats, responsive capabilities, and how they work with HTML",			image:	"./assets/homepage/images.svg"				},
 			links: {			title:	"Links",									link:	"html-css/links.html",				id:		"nav-links",
 								copy:	"Links, attributes and their values, and&nbsp;usage",							image:	"./assets/homepage/links.svg"				},
@@ -188,3 +188,20 @@ if (navID != 'nav-index') {
 } else {
 	document.getElementById('nav-home').classList.add('active');
 }
+
+// Add search bar
+const mobileNav = document.getElementById('navbar-container-mbl');
+const mobileNavParent = mobileNav.parentNode;
+const nav = document.getElementById('navbar-container');
+const navParent = nav.parentNode;
+
+const searchBar = document.createElement('div');
+searchBar.classList.add('searchbar');
+searchBar.innerHTML = `<div class="gcse-search"></div>`;
+
+const searchBarMbl = document.createElement('div');
+searchBarMbl.classList.add('searchbar');
+searchBarMbl.innerHTML = `<div class="gcse-search"></div>`;
+
+navParent.insertBefore(searchBar, nav.parentNode.children[0]);
+mobileNavParent.insertBefore(searchBarMbl, mobileNav);
