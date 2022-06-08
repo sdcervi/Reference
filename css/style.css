@@ -4,8 +4,9 @@ body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
 main { margin-top: 1em!important; padding-bottom: 1em; }
 
-.gsc-control-cse { border: none; background-color: transparent; }
-.gsc-search-button-v2 { padding: 6px 8px; }
+.gsc-control-cse { border: none!important; background-color: transparent!important; }
+.gsc-search-button-v2 { padding: 6px 8px!important; }
+.gsc-input-box { border-radius: 3px!important; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
@@ -28,7 +29,7 @@ img.logo { max-width: 2em; height: auto; }
 .btn-primary:focus, .btn-primary:hover, .btn-primary:active { background-color: #B36F37; border-color: #B36F37; } 
 
 .sidebar-sticky { padding-top: 1.5rem; }
-.sidebar-sticky>ul.flex-column { margin-bottom: 1em; }
+.sidebar-sticky>ul.flex-column { margin-bottom: 0; }
 .sidebar-sticky>ul.flex-column li.nav-item { font-size: 1rem; font-weight: bold; }
 .sidebar-sticky>ul.flex-column li.nav-item a.nav-link { padding-left: 1.5rem }
 .sidebar-heading { font-size: 1rem; }
