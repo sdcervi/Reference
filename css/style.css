@@ -4,6 +4,9 @@ body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
 main { margin-top: 1em!important; padding-bottom: 1em; }
 
+.gsc-control-cse { border: none; background-color: transparent; }
+.gsc-search-button-v2 { padding: 6px 8px; }
+
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
 h2 { font: bold 1.5rem Arial, sans-serif; padding-top: 0.75em; }
