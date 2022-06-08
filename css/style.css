@@ -3,7 +3,6 @@
 body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
 main { margin-top: 1em!important; padding-bottom: 1em; }
-#adBlock { display: none; }
 
 /* Type styles */
 h1 { font: bold 2rem Arial, sans-serif; }
