@@ -178,7 +178,7 @@ filename = filename.substring(0, filename.length - 5);
 let navID = "nav-" + filename;
 console.log (navID);
 
-if (navID != 'nav-index') {
+if (navID != 'nav-index' && navID != 'nav-') {
 	const navElement = document.getElementById(navID);
 
 	navElement.classList.add('active');
