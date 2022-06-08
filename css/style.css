@@ -4,6 +4,7 @@ body { margin: 0; border: 0; }
 div.container { margin-bottom: 2em; }
 main { margin-top: 1em!important; padding-bottom: 1em; }
 
+.searchbar { width: 100%; }
 .gsc-control-cse { border: none!important; background-color: transparent!important; }
 .gsc-search-button-v2 { padding: 6px 8px!important; }
 .gsc-input-box { border-radius: 3px!important; }

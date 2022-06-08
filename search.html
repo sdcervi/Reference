@@ -42,7 +42,6 @@
 	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
 	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="./assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
 	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Home</h1></div>
-	<div class="searchbar"><div class="gcse-search"></div></div>
 	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
 </nav>
 
@@ -53,8 +52,6 @@
         <!-- Left-hand navigation, fixed position -->
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
-	
-				<div class="searchbar"><div class="gcse-search"></div></div>
 				
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
@@ -85,5 +82,21 @@
 <script src="./js/nav.js"></script>
 <script src="./js/cards.js"></script>
 <script src="./js/back-to-top.js"></script>
+	
+<script>
+	const mobileNav = document.getElementById('navbar-container-mbl');
+	const mobileNavParent = mobileNav.parentNode;
+	const nav = document.getElementById('navbar-container');
+	const navParent = nav.parentNode;
+	
+	const searchBar = document.createElement('div');
+	searchBar.classList.add('searchbar');
+	searchBar.innerHTML = `<div class="gcse-search"></div>`;
+	
+	navParent.insertBefore(searchBar, nav.previousSibling);
+	mobileNavParent.insertBefore(searchBar, mobileNav);
+	
+</script>	
+	
 </body>
 </html>
