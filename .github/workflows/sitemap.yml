@@ -28,3 +28,5 @@ jobs:
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
     
     - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Automated sitemap.xml update
