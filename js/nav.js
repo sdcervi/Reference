@@ -57,6 +57,8 @@ const navItems = {
 		title: "JavaScript",
 		id:		"javascript",
 		links: {
+			error_handling: {	title:	"Error handling",							link:	"javascript/error-handling.html",	id:		"nav-error-handling",
+								copy:	"Setting up effective error handling and recovery",								image:	"./assets/homepage/error-handling.svg"		},
 			functions: {		title:	"Functions",								link:	"javascript/functions.html",		id:		"nav-functions",
 								copy:	"Reusable blocks of code used to manipulate data",								image:	"./assets/homepage/functions.svg"			},
 			integration: {		title:	"Integrating JavaScript and HTML",			link:	"javascript/integration.html",		id:		"nav-integration",
