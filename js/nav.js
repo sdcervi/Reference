@@ -190,6 +190,8 @@ let filename = currentPage.substring(currentPage.lastIndexOf('/')+1);
 filename = filename.substring(0, filename.length - 5);
 let navID = `nav-${groupname}-${filename}`;
 
+console.log (navID);
+
 if (navID != 'nav-index' && navID != 'nav-' && filename != 'index' && filename != 'search' && filename != 'contact') {
 	const navElement = document.getElementById(navID);
 

@@ -29,7 +29,8 @@ img.logo { max-width: 2em; height: auto; }
 .btn-primary { background-color: #28814C; border-color: #28814C; }
 .btn-primary:focus, .btn-primary:hover, .btn-primary:active { background-color: #B36F37; border-color: #B36F37; } 
 
-.sidebar-sticky { padding-top: 1.5rem; }
+.sidebar { padding: 56px 0 0; }
+.sidebar-sticky { padding-top: 1rem; }
 .sidebar-sticky>ul.flex-column { margin-bottom: 0; }
 .sidebar-sticky>ul.flex-column li.nav-item { font-size: 1rem; font-weight: bold; }
 .sidebar-sticky>ul.flex-column li.nav-item a.nav-link { padding-left: 1.5rem }
@@ -97,7 +98,7 @@ table.definitions td:nth-of-type(1) { font-weight: bold; white-space: nowrap; }
 }
 
 @media only screen and (min-width: 768px) {
-	main { margin-top: 1em!important; padding-top: 48px!important; }
+	main { margin-top: 1em!important; padding-top: 56px!important; }
 	.copyright { display: block; }
 }
 
