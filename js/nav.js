@@ -192,7 +192,7 @@ let navID = `nav-${groupname}-${filename}`;
 
 console.log (navID);
 
-if (navID != 'nav-index' && navID != 'nav-' && filename != 'index' && filename != 'search' && filename != 'contact') {
+if (navID != 'nav-index' && navID != 'nav-Reference-' && filename != 'index' && filename != 'search' && filename != 'contact') {
 	const navElement = document.getElementById(navID);
 
 	navElement.classList.add('active');
