@@ -120,7 +120,9 @@ const navItems = {
 		id:		"sketchup",
 		links: {
 			features: {			title:	"2D &amp; 3D Features",						link:	"sketchup/features.html",
-								copy:	"Creating and editing 2D &amp; 3D features",									image:	"./assets/homepage/sketchup-features.webp"			}
+								copy:	"Creating and editing 2D &amp; 3D features",									image:	"./assets/homepage/sketchup-features.webp"			},
+			lighting: {			title:	"Lighting &amp; Shadows",					link:	"sketchup/lighting.html",
+								copy:	"Setting and controlling lighting and shadows",									image:	"./assets/homepage/sketchup-lighting.webp"			}
 		}
 	},
 	navResources: {
@@ -188,7 +190,7 @@ let filename = currentPage.substring(currentPage.lastIndexOf('/')+1);
 filename = filename.substring(0, filename.length - 5);
 let navID = `nav-${groupname}-${filename}`;
 
-if (navID != 'nav-index' && navID != 'nav-' && filename != 'index') {
+if (navID != 'nav-index' && navID != 'nav-' && filename != 'index' && filename != 'search' && filename != 'contact') {
 	const navElement = document.getElementById(navID);
 
 	navElement.classList.add('active');
