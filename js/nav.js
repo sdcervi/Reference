@@ -122,7 +122,9 @@ const navItems = {
 			features: {			title:	"2D &amp; 3D Features",						link:	"sketchup/features.html",
 								copy:	"Creating and editing 2D &amp; 3D features",									image:	"./assets/homepage/sketchup-features.webp"			},
 			lighting: {			title:	"Lighting &amp; Shadows",					link:	"sketchup/lighting.html",
-								copy:	"Setting and controlling lighting and shadows",									image:	"./assets/homepage/sketchup-lighting.webp"			}
+								copy:	"Setting and controlling lighting and shadows",									image:	"./assets/homepage/sketchup-lighting.webp"			},
+			visual: {			title:	"Visual features",							link:	"sketchup/visual.html",
+								copy:	"Display modes and viewing options",											image:	"./assets/homepage/sketchup-visual.webp"			}
 		}
 	},
 	navResources: {

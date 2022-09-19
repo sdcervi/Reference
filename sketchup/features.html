@@ -71,7 +71,10 @@
 			<nav class="quick-links">
 				<ul>
 					<li><a href="#basics">The basics</a></li>
+					<li><a href="#shapes">Shapes</a></li>
+					<li><a href="#moving">Moving, grouping, &amp; copying</a></li>
 					<li><a href="#dimensions">Adding dimensions</a></li>
+					<li><a href="#pushpull">Push-pull tool</a></li>
 					<li><a href="#fillet-chamfer">Fillets &amp; chamfers</a></li>
 				</ul>
 			</nav>
@@ -88,9 +91,101 @@
 			
 			<p><strong>Pan on the viewing plane</strong> by holding shift, clicking the scroll wheel, and dragging while clicked.</p>
 			
+			<p><strong>Single click</strong> to select just a point, edge, or face.  <strong>Double click</strong> to select a face and its bounding edges.  <strong>Triple click</strong> to select an entire entity.</p>
+			
 			<h3>Snapping to points/edges/etc</h3>
 			
 			<p>When moving an object, the refernce point is the point you clicked on.  If you want to snap an edge to another edge, a midpoint to another point/midpoint, start the move command from that entity to enable snapping.</p>
+			
+			<h3>Units</h3>
+			
+			<p>SketchUp can understand almost any variation of dimension in a variety of units, fraction or decimal. Each file has a default unit specified; for this unit, you can simply enter numbers.  For any other unit, to convert, you&rsquo;ll need to specify the unit.  <strong>Note:</strong> fractions only work with the default unit.</p>
+			
+			<p><strong>Example:</strong> with a default unit of millimeters, you can simply type <code>10</code> for 10mm.  To input 1cm, you&rsquo;ll need to include <code>cm</code> to trigger unit conversion correctly.</p>
+			
+			<p>Change units through <code>Window</code> &gt; <code>Model info</code> &gt; <code>Units</code>.</p>
+			
+			<h2 id="shapes">Shapes</h2>
+			
+			<h3>Lines</h3>
+			
+			<p>Click once to place the first point of a line, move the cursor in the direction you want the line to go (either inferenced or freeform), and either click to place the second point, or type a dimension and press enter.</p>
+			
+			<h3>Circles</h3>
+			
+			<p>Click once to place the center point, move the cursor to define the radius (either inferenced or freeform), and either click to place the radius reference point, or type a dimension and press enter.</p>
+			
+			<p>Circles are actually made up of a number of lines; the default is 24.  This can be changed up or down, but adding more sides will add more load on the program.  The key difference between sided circles and polygons is that the circle is rendered with smooth sides when extruded into a cylinder, and the polygon has discrete faces.</p>
+			
+			<h3>Polygons</h3>
+			
+			<p>Click once to place the center point, move the cursor to define the radius (either inferenced or freeform), and either click to place the radius reference point, or type a dimension and press enter.</p>
+			
+			<p>To change how many sides the polygon has while drawing it, type <code>8s</code> (for 8 sides) and press enter.  You can also do this immediately after drawing the shape.</p>
+			
+			<p>Use <code>Ctrl</code>/<code>Option</code> to toggle whether the polygon is circumscribed inside (cursor indicates distance to corner) or outside (cursor indicates distance to midpoint of edge) the reference circle.</p>
+			
+			<p><strong>Resize</strong> circles and polygons with the <strong>Move</strong> tool.  Make sure nothing is selected, then hover the Move tool over an endpoint on one of the sides until you find a point that highlights just that point.  You can now drag the defined radius in and out to change the size of the shape.</p>
+			
+			<h3>Arcs</h3>
+			
+			<p>There are a few different types of arcs; they all take three clicks to define, and the icons are fairly self-explanatory for how the points affect the final arc.</p>
+			
+			<p>Use the <strong>Entity Info</strong> palette to change the number of sides or radius of an arc while it&rsquo;s still flat.</p>
+			
+			<p><strong>Center-point arcs</strong> are defined by clicking to place the center, clicking again to set the radius, and clicking a third time to set the length of the arc.  This tool will snap to quarters of a circle and also displays a protractor while drawing.</p>
+			
+			<p><strong>Two-point arcs</strong> are defined by clicking to place each end point, then clicking again to set the <strong>bulge</strong> or the distance between the line connecting the endpoints and the high point of the curve.  This tool will snap to a half-circle as a handy reference.</p>
+			
+			<p>You can also draw tangent arcs by using the cyan guide indicator; this works for drawing arcs tangent to lines as well as other arcs.  Arcs tangent to two edges will turn magenta instead of cyan.  To repeat tangent arcs (for example, filleted corners), simply double-click on the next corner to repeat that arc.</p>
+			
+			<p><strong>Three-point arcs</strong> are defined by clicking to place the starting point, then the pass-through point, then the other endpoint.  SketchUp will generate an arc that connects all three of these points.  This tool will snap to quarters of a circle.</p>
+			
+			<p>The <strong>Pie tool</strong> works just like a center-point arc but adds radial lines to define a pie-slice shape from the defined arc.  This tool will snap to quarters of a circle and also displays a protractor while drawing</p>
+			
+			<h3>Rectangles</h3>
+			
+			<p>Click once to place the first point, then move the cursor diagonally to define which direction the rectangle will go in.  They try to align with the plane most parallel to the screen; orbit the viewing angle as necessary to get a rectangle on the correct plane.  You can either click to place a second point, or type in dimensions (example: <code>2,4</code> for a 2' x 4' rectangle).</p>
+			
+			<h3>Rotated rectangles</h3>
+			
+			<p>Click once to place the first point, move the cursor and either enter a dimension or click to place the second point. This is now your &ldquo;hinge&rdquo; line, and the third point you place in three-space will define the angle of rotation of the rectangle.  When defining degrees, don&rsquo;t include a unit (example: <code>2',30</code> for a 2' wide rectangle rotated 30&deg;).</p>
+			
+			<h3>Freehand</h3>
+			
+			<p>This tool lets you place an edge along a hand-drawn path.  Best with a tablet screen.  Use this by clicking <em>and holding</em> the left mouse button down while drawing.</p>
+			
+			<h3>Offset</h3>
+			
+			<p>This allows you to expand or contract a contiguous series (loop) of edges.  Click once to select the surface inside the edges, then move the cursor and click again to define the offset, or type in a dimension and press enter.  Double-click to apply the same direction and magnitude of offset to another surface.  You can also select specific edges and apply an offset to them; edges must be in a contiguous loop for this to work.</p>
+			
+			<h3>Eraser</h3>
+			
+			<p>This tool only works on edges; it won&rsquo;t erase surfaces.  To erase a surface, select the surface, then press delete on the keyboard.  To select multiple entities easily, click, hold the mouse button down, then scrub over the entities you want to delete to highlight them.  Release the mouse button to complete the command.</p>
+			
+			<p><strong>Hide an edge</strong> by holding <code>shift</code> while clicking on an edge.</p>
+			
+			<p><strong>Soften an edge</strong> by holding <code>Ctrl</code>/<code>Option</code> while clicking on an edge.</p>
+			
+			<h2 id="moving">Moving, grouping, &amp; copying</h2>
+			
+			<p>When moving an entity, reference lines show up to guide you along specific axes.  These are usually dashed and the color of the axis they reference.</p>
+			
+			<p>To copy an entity while moving it, tap the <code>Ctrl</code> key on PC or <code>Option</code> on Mac once. Tap again to toggle copying off.</p>
+			
+			<h3>Groups &amp; components</h3>
+			
+			<p><strong>Group</strong> individual entities that you need to move or edit as a unit.</p>
+			
+			<p><strong>Make components</strong> out of entities that you&rsquo;ll be copying as a unit, or any entities you commonly use.</p>
+			
+			<p>To edit a component or group, double-click on it with the <strong>Select</strong> tool.  Single-click outside the component to close editing that component.  Editing one instance of a component will update all instances of it within the model.</p>
+			
+			<h3>Arrays</h3>
+			
+			<p>Start an array by copying a component, then typing in a multiplier such as &ldquo;4x&rdquo;.  This will create additional copies of the component (four of them in total including the first, for 4x) along the same movement path, at the offset specified, and in the number that was entered.</p>
+			
+			<p>You need to use the array function immediately after beginning the first copy of the component.  Clicking away from the component will close out the array function and you will need to start over.</p>
 			
 			<h2 id="dimensions">Adding dimensions</h2>
 			
@@ -98,13 +193,34 @@
 			
 			<h3>Changing dimensions after the fact</h3>
 			
-			<p>This is oddly tricky in SketchUp compared to most other CAD programs.  The easiest way to do this is via <strong>guides and scaling:</strong> use the measuring tape tool to add guides at the exact distance/location you want to resize the entity to.  You can place guides from either the axes, or a reference point on the entity itself.  Then, use the scaling tool to resize the entity and snap to the guide.</p>
+			<p>This is oddly tricky in SketchUp compared to most other CAD programs.  The easiest way to do this is via <strong>guides and scaling:</strong> use the measuring tape tool to add guides at the exact distance/location you want to resize the entity to.  You can place guides from either the axes, or a reference point on the entity itself.  To place a guide parallel to an edge, click the edge, drag the mouse to the general area the guide should be, then enter its dimension.  Then, use the scaling tool to resize the entity and snap to the guide.</p>
 			
 			<p>For reference while resizing and moving, you can use the <strong>Dimension</strong> tool to display the current dimensions of a specific entity or part of an entity.</p>
+			
+			<h3>Inferenced dimensions</h3>
+			
+			<p>When editing an entity, click once to start the edit command (move, push/pull, etc.).  Once you&rsquo;ve started the command, you can then move the cursor to any other part of the model geometry.  This allows easy inferences and snapping to other entities.</p>
+			
+			<p>To reference another point and place an entity relative to that point (for example, drawing a circle to float above a square), hover over the inference point, then move the cursor to allow snapping to axis inferences from that point.</p>
+			
+			<h2 id="pushpull">Push-pull tool</h2>
+			
+			<p>The <strong>Push-Pull tool</strong> creates extruded bosses or cuts from a face out of or into a surface.  To push or pull to a specific depth, click once on the face, move the mouse in the correct direction, then type in the measurement and press enter.  To match another point, edge, or face, start the command, then move the cursor to the inference point.</p>
+			
+			<p>Note that typed-in depths are magnitude and are therefore always positive.</p>
+			
+			<p>The tool remembers the last depth used.  To push/pull entities to the same depth, simply double-click on the next entity.  This will push or pull that surface the same depth and in the same relative direction (in or out).</p>
 
 			<h2 id="fillet-chamfer">Fillets &amp; Chamfers</h2>
 			
 			<p>Create simple fillets and chamfers on an edge or face by drawing the profile of the fillet or chamfer and using the <strong>Follow Me</strong> tool.</p>
+			
+			<ol>
+				<li>Draw the fillet/chamfer profile on one of the side faces</li>
+				<li>Select the top face</li>
+				<li>Select the <strong>Follow Me</strong> tool</li>
+				<li>Click the fillet/chamfer profile</li>
+			</ol>
 			
 			<p><a href="https://www.youtube.com/watch?v=0zJYUt0awLc" target="_blank">Click here to watch a video tutorial</a>.</p>
 	
