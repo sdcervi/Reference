@@ -143,12 +143,12 @@
 				</div>
 				<div class="col code-js">
 					<h3>JavaScript</h3>
-					<pre><span class="tag-cyan">window</span>.onscroll = <span class="tag-purple">function</span>() {myFunction()};
+					<pre><span class="tag-cyan">window</span>.onscroll = <span class="tag-purple">function</span>() {makeSticky()};
 
 <span class="tag-purple">const</span> <span class="tag-cyan">header</span> = document.<span class="tag-cyan">getElementById</span>(<span class="tag-orange">"myHeader"</span>);
 <span class="tag-purple">const</span> <span class="tag-cyan">sticky</span> = header.<span class="tag-cyan">offsetTop</span>;
 
-<span class="tag-purple">function</span> <span class="tag-cyan">myFunction</span>() {
+<span class="tag-purple">function</span> <span class="tag-cyan">makeSticky</span>() {
   <span class="tag-purple">if</span> (window.<span class="tag-cyan">pageYOffset</span> &gt; sticky) {
     header.<span class="tag-cyan">classList</span>.<span class="tag-cyan">add</span>(<span class="tag-orange">"sticky"</span>);
   } <span class="tag-purple">else</span> {
@@ -216,12 +216,12 @@
 <script src="../js/back-to-top.js"></script>
 	
 <script>
-	window.onscroll = function() {myFunction()};
+	window.onscroll = function() {makeSticky()};
 
 	const header = document.getElementById("myHeader");
 	const sticky = header.offsetTop;
 
-	function myFunction() {
+	function makeSticky() {
 	  if (window.pageYOffset > sticky) {
 		header.classList.add("sticky");
 	  } else {
