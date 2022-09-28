@@ -93,6 +93,8 @@ const navItems = {
 								copy:	"Coming up with use cases, scenarios, and stories",								image:	"./assets/homepage/audience.svg"			},
 			images: {			title:	"Images",									link:	"design/images.html",
 								copy:	"Image formats, use cases, and pros and&nbsp;cons",								image:	"./assets/homepage/images.svg"				},
+			presenting: {		title:	"Presenting Design Work",					link:	"design/presenting.html",
+								copy:	"Presenting and explaining your design work to non-designers",					image:	"./assets/homepage/presenting.svg"			},
 			seo: {				title:	"SEO: Search Engine Optimization",			link:	"design/seo.html",
 								copy:	"Techniques to improve rankings in search results",								image:	"./assets/homepage/seo.svg"					},
 			sitemap: {			title:	"Sitemaps &amp; Wireframes",				link:	"design/sitemap.html",
@@ -191,8 +193,6 @@ let groupname = filepath[filepath.length-2];
 let filename = currentPage.substring(currentPage.lastIndexOf('/')+1);
 filename = filename.substring(0, filename.length - 5);
 let navID = `nav-${groupname}-${filename}`;
-
-console.log (navID);
 
 if (navID != 'nav-index' && navID != 'nav-Reference-' && filename != 'index' && filename != 'search' && filename != 'contact') {
 	const navElement = document.getElementById(navID);
