@@ -122,7 +122,7 @@ const navItems = {
 		id:		"sketchup",
 		links: {
 			features: {			title:	"Basic Features",						link:	"sketchup/features.html",
-								copy:	"Basic features, functionality, &amp; usage",									image:	"./assets/homepage/sketchup-features.webp"			},
+								copy:	"Basic features, functionality, tools, &amp; usage",									image:	"./assets/homepage/sketchup-features.webp"			},
 			lighting: {			title:	"Lighting &amp; Shadows",					link:	"sketchup/lighting.html",
 								copy:	"Setting and controlling lighting and shadows",									image:	"./assets/homepage/sketchup-lighting.webp"			},
 			visual: {			title:	"Visual features",							link:	"sketchup/visual.html",

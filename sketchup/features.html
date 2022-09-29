@@ -75,7 +75,9 @@
 					<li><a href="#moving">Moving, grouping, &amp; copying</a></li>
 					<li><a href="#dimensions">Adding dimensions</a></li>
 					<li><a href="#pushpull">Push-pull tool</a></li>
+					<li><a href="#followme">Follow Me tool</a></li>
 					<li><a href="#fillet-chamfer">Fillets &amp; chamfers</a></li>
+					<li><a href="#protractor">Protractor tool</a></li>
 				</ul>
 			</nav>
 			
@@ -187,7 +189,9 @@
 			
 			<h3>Arrays</h3>
 			
-			<p>Start an array by copying a component, then typing in a multiplier such as &ldquo;4x&rdquo;.  This will create additional copies of the component (four of them in total including the first, for 4x) along the same movement path, at the offset specified, and in the number that was entered.</p>
+			<p>Start an array by copying a component, then typing in a multiplier such as <code>4x</code>.  This will create additional copies of the component (four of them in total including the first, for 4x) along the same movement path, at the offset specified, and in the number that was entered.</p>
+			
+			<p>To create copies within the distance instead of extending the distance, use the <code>/</code> modifier.  Example: <code>4/</code> which will create 4 copies including the final copy, within the distance specified with the move tool.</p>
 			
 			<p>You need to use the array function immediately after beginning the first copy of the component.  Clicking away from the component will close out the array function and you will need to start over.</p>
 			
@@ -207,6 +211,21 @@
 			
 			<p>To reference another point and place an entity relative to that point (for example, drawing a circle to float above a square), hover over the inference point, then move the cursor to allow snapping to axis inferences from that point.</p>
 			
+			<h4>Locking inferences</h4>
+			
+			<p>There are two ways to lock inferences:</p>
+			
+			<ul>
+				<li><strong>Arrow keys:</strong> tap an arrow key to lock that direction</li>
+				<ul>
+					<li><strong>Right:</strong> red axis</li>
+					<li><strong>Up:</strong> blue axis</li>
+					<li><strong>Left:</strong> green axis</li>
+					<li><strong>Down:</strong> start drawing a line, hover over a reference edge already in place, and tap once to lock to parallel.  Tap again to lock to perpendicular.  Once you have a lock active, inferencing to a point will track to the perpendicular, and inferencing to another edge will track to where those two lines intersect.</li>
+				</ul>
+				<li><strong>Shift key:</strong> Start moving in a direction, then hold the <code>Shift</code> key to lock it along that axis.</li>
+			</ul>
+			
 			<h2 id="pushpull">Push-pull tool</h2>
 			
 			<p>The <strong>Push-Pull tool</strong> creates extruded bosses or cuts from a face out of or into a surface.  To push or pull to a specific depth, click once on the face, move the mouse in the correct direction, then type in the measurement and press enter.  To match another point, edge, or face, start the command, then move the cursor to the inference point.</p>
@@ -214,6 +233,20 @@
 			<p>Note that typed-in depths are magnitude and are therefore always positive.</p>
 			
 			<p>The tool remembers the last depth used.  To push/pull entities to the same depth, simply double-click on the next entity.  This will push or pull that surface the same depth and in the same relative direction (in or out).</p>
+			
+			<h2 id="followme">Follow Me tool</h2>
+			
+			<p>You can use the Follow Me tool to take a profile and extrude it along a path.  Examples include applying crown molding around the perimeter of a ceiling, picture frames, fillets and chamfers (see next section) or belt lines around a room.  The follow path doesn&rsquo;t have to intersect or touch the profile; you can use any path as the follow path as long as it works with the geometry.  Any series of connected edges can function as the follow path.</p>
+			
+			<p>You can either click the Follow Me tool, select the profile, then trace the follow path for manual generation, or select the follow path or surface (which will select the edges of the surface), click the Follow Me tool, and select the profile for an automatic generation.</p>
+			
+			<p>The result of the Follow Me tool will always start and end at the follow path&rsquo;s endpoints, regardless of the shape&rsquo;s offset from those endpoints along the path.  If the shape is offset from the path along the cross-section, its offset will continue along the path.  For example, a shape that starts on the same cross-section of the path&rsquo;s start point but is offset 3" to the left will remain offset 3" to that side along the full path.</p>
+			
+			<p>If the profile is skewed relative to the cross-section, the Follow Me tool will use the projection of that profile onto the cross-section as the follow profile.</p>
+			
+			<h3>Follow Me as a lathe</h3>
+			
+			<p>You can use this tool to create rotationally defined objects (like a wine glass) from the edge profile.  Define the edge profile, then sketch a circle to use as the rotation path.  Select the circle, select the edge profile, and you&rsquo;ll be able to create the entity easily.</p>
 
 			<h2 id="fillet-chamfer">Fillets &amp; Chamfers</h2>
 			
@@ -227,6 +260,10 @@
 			</ol>
 			
 			<p><a href="https://www.youtube.com/watch?v=0zJYUt0awLc" target="_blank">Click here to watch a video tutorial</a>.</p>
+			
+			<h2 id="protractor">Protractor tool</h2>
+			
+			<p>To use the protractor tool to place an angled guide, you click once to set the vertex, again to set the base of the angle, and then either click or type to define the angle itself.  When placing the vertex, you can use the arrow keys to inference-lock the protractor on a specific axis.  You can also hover over the tick marks on the protractor overlay to snap to 15&deg; increments.</p>
 	
 		</main>
 		
