@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="robots" content="noindex">  <!-- Remove this for indexed pages -->
-	<title>Visual features | Reference</title>
+	<title>Display & Lighting | Reference</title>
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
 	<!-- Bootstrap core CSS -->
@@ -42,7 +42,7 @@
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
 	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
 	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
-	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Visual features</h1></div>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>Display &amp; Lighting</h1></div>
 	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
 </nav>
 
@@ -71,12 +71,78 @@
 			<nav class="quick-links">
 				<ul>
 					<li><a href="#viewing">Viewing modes</a></li>
+					<li><a href="#lighting">Lighting &amp; shadows</a></li>
+					<li><a href="#palette">Shadows palette options</a></li>
 				</ul>
 			</nav>
 
 			<h2 id="viewing">Viewing modes</h2>
 			
 			<p><strong>X-ray mode:</strong> makes entities transparent to allow you to see through them, sort of like a model made from semi-transparent acrylic.  This is particularly useful to find and work with surfaces within solids that are normally hidden.</p>
+			
+			<h2 id="lighting">Lighting &amp; shadows</h2>
+			
+			<p>If you want shadows that are a bit more real-world and dynamic than the default shadows, you can use the <strong>Shadows</strong> palette to control that.  You can access that either through the graphical toolbar or the palette menu on the right of the window.  Real-world shadows are calculated based on a few factors:</p>
+			
+			<ul>
+				<li>The model&rsquo;s geolocation, if specified</li>
+				<li>The model&rsquo;s compass orientation</li>
+				<li>The selected time zone</li>
+				<li>The specified time and date in the Shadows palette</li>
+			</ul>
+			
+			<p><strong>Note:</strong> Shadows are not corrected for dayling saving time.</p>
+			
+			<h2 id="palette">Shadows palette options</h2>
+			
+			<div class="table-responsive">
+			
+				<table class="table table-striped table-hover definitions">
+					<thead>
+						<tr>
+							<th scope="col">Option</th>
+							<th scope="col">Usage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Display Shadows button</td>
+							<td>Toggles dymanically generated shadows on and off<br><span class="small">(in the upper left corner)</span></td>
+						</tr>
+						<tr>
+							<td>Time Zone</td>
+							<td>Selects the time zone or allows changes to the existing time zone.  If the model is geolocated, this should be accurate.</td>
+						</tr>
+						<tr>
+							<td>Light</td>
+							<td>Changes the intensity of highlights on illuminated surfaces</td>
+						</tr>
+						<tr>
+							<td>Dark</td>
+							<td>Changes the intensity of shadows</td>
+						</tr>
+						<tr>
+							<td>Use Sun for Shading</td>
+							<td>The simulated sun shades part of the model even when shadows are toggled off</td>
+						</tr>
+						<tr>
+							<td>On faces</td>
+							<td>Faces can cast shadows on other faces.  Note that this requires more graphics processing power, especially for larger and more complex models.</td>
+						</tr>
+						<tr>
+							<td>On ground</td>
+							<td>Entities can cast shadows on the ground plane</td>
+						</tr>
+						<tr>
+							<td>From edges</td>
+							<td>Edges not associated with a face can cast a shadow (off by default)</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			
+			<p>Faces with opacity less than 70% will not cast a shadow.  If you want a face to cast a shadow, set the face&rsquo;s opacity to 70% or higher.</p>
 	
 		</main>
 		

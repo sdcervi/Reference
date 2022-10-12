@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="robots" content="noindex">  <!-- Remove this for indexed pages -->
+	<title>V-Ray Rendering | Reference</title>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link href="../css/dashboard.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	
+<!-- Top dark header bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 mb-4 shadow">
+	<button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-container-mbl" aria-controls="navbar-container-mbl" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 10px; top: 10px;"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand col-4 col-sm-3 col-md-2" href="/Reference/"><img src="../assets/logo-white.svg" alt="Logo" class="logo"> Reference</a>
+	<div class="navbar-text col-8 col-sm-9 col-md-10 m-0"><h1>V-Ray Rendering</h1></div>
+	<div class="collapse navbar-collapse d-md-none" id="navbar-container-mbl"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+</nav>
+
+<!-- Primary website container -->
+<div class="container-fluid">
+    <div class="row"> 
+        
+        <!-- Left-hand navigation, fixed position -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+				
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" id="nav-home" href="/Reference/">Home</a></li>
+                </ul>
+				
+				<div class="accordion" id="navbar-container"><noscript>It looks like you&rsquo;ve disabled JavaScript, or your browser doesn&rsquo;t support it. To see the navigation for this website, please enable JavaScript.</noscript></div>
+		
+            </div>
+        </nav>
+        
+        <!-- Main content well of website, to right of fixed-position navigation bar -->
+        <main role="main" class="col-md-10 ml-sm-auto px-4 offset-md-2">
+			
+			<h2>Quick links</h2>
+			
+			<nav class="quick-links">
+				<ul>
+					<li><a href="#asset">The Asset Editor</a></li>
+					<ul>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#proxy">Proxy objects</a></li>
+					</ul>
+					<li><a href="#materials">Materials</a></li>
+					<ul>
+						<li><a href="#built-in">Using built-in V-Ray materials</a></li>
+						<li><a href="#materials-org">Organization</a></li>
+						<li><a href="#properties">Properties &amp; parameters</a></li>
+						<li><a href="#materials-purge">Removing unused materials</a></li>
+					</ul>
+					<li><a href="#components">V-Ray components</a></li>
+					<ul>
+						<li><a href="#groundplane">The ground plane</a></li>
+						<li><a href="#lighting">Lighting</a></li>
+						<li><a href="#camera">Camera</a></li>
+					</ul>
+					<li><a href="#rendering">Rendering</a></li>
+				</ul>
+			</nav>
+			
+			<h2 id="asset">The Asset Editor</h2>
+			
+			<p>This is the main hub for everything V-Ray.  Use this to work with materials and adjust their properties, define and adjust lighting, change render settings, and more.</p>
+			
+			<h3 id="settings">Settings</h3>
+			
+			<p>The settings panel includes these tabs:</p>
+			
+			<ul>
+				<li><strong>Render:</strong> change which rendering engine is used (CPU or GPU/CUDA), the output quality, and whether to use a denoiser filter.  Higher quality settings will take longer to render, especially on computers with lower specs.  <code>Progressive</code> toggles the render method between progressive and bucket; progressive renders the image in passes, and bucket renders the image in chunks.  <strong>Note:</strong> if your render is going to take a long time, set the <code>Save image</code> property to export the final image once the render is complete.</li>
+				<li><strong>Camera:</strong> change camera settings and view properties</li>
+				<li><strong>Render Output:</strong> change the dimensions and aspect ratio of your renders, and turn the <strong>Safe Frame</strong> on and off (this applies an overlay to help you compose your renders by showing you what will be within the frame)</li>
+				<li><strong>Material Override:</strong> allows you to toggle a &ldquo;clay model&rdquo; view on and off; this replaces all materials with a flat neutral texture and can make adjusting lighting eaiser especially when working with surfaces with different textures, glossiness, and transparency.  You can toggle which materials are immune to the override in their material properties.  Making glass immune to override is usually a good idea.</li>
+			</ul>
+			
+			<h3 id="proxy">Proxy objects</h3>
+			
+			<p>Proxies can be used for high-poly assets that would otherwise slow down a model&rsquo;s performance (example: trees, couches, chairs with plus cushions).  Creating a proxy essentially creates a low-poly placeholder within the SketchUp file that V-Ray then replaces with the high-poly asset at render time.</p>
+			
+			<p><strong>Note:</strong> the link file that V-Ray creates needs to retain its name and file location to work correctly.  If it is moved or renamed, you&rsquo;ll need to re-link it through the file path menu.</p>
+			
+			<h2 id="materials">Materials</h2>
+			
+			<h3 id="built-in">Using built-in V-Ray materials</h3>
+			
+			<p>As of October 2020, V-Ray 6 uses the Chaos interface for its material library.  Open this with the Chaos button in the V-Ray toolbar, find the material you want, then import it into your model.</p>
+			
+			<p>Once a material is imported:</p>
+			
+			<ul>
+				<li><strong>Adjust its properties</strong> with the right-hand pane in the Asset Editor</li>
+				<li><strong>Replace an existing material</strong> by right-clicking on the new material, selecting <code>Use as replacement</code>, then right-clicking on the target material and selecting <code>Replace in scene</code></li>
+				<li><strong>Apply to entities</strong> by selecting the entities, then right-clicking the new material and selecting <code>Apply to selection</code></li>
+				<li><strong>Apply to tags</strong> by making sure your model is tagged correctly (usually by material), right-clicking on the material in the Asset Editor, then selecting <code>Apply to tag</code></li>
+			</ul>
+			
+			<h4>Fur</h4>
+			
+			<p>V-Ray has a <strong>Fur</strong> tool to create fur-like or grass-like textures by applying a mesh without adding more geometry to the model itself.  Fur only applies at render time and therefore doesn&rsquo;t add any processing load to the SketchUp model.</p>
+			
+			<p><a href="https://docs.chaos.com/display/VSKETCHUP/Fur">Click here for more information about the Fur tool</a>.</p>
+			
+			<h3 id="materials-org">Organization</h3>
+			
+			<p>When working with materials, especially in large or complicated models, it&rsquo;s a good idea to name all your materials according to what they are.  For example, <code>Conference table veneer</code>, <code>Conference table legs plastic</code>, and <code>Conference table legs steel.</code>  Since materials can&rsquo;t be grouped into folders and are sorted alphabetically, name them so they are sorted in a way that makes sense.</p>
+			
+			<p>You really don&rsquo;t want to have eighteen instances of <code>Color_001</code> and have no idea what each applies to.</p>
+			
+			<h3 id="properties">Properties &amp; parameters</h3>
+			
+			<p>Use the right pane to adjust materials.  Select the material, then adjust the following options:</p>
+			
+			<h4>Diffuse</h4>
+			
+			<p>Use this to adjust the base color of a material, and/or the texture applied to it.  Some textures are opaque and changing the base color won&rsquo;t have any effect, but most built-in V-Ray textures are transparent and apply over the base color for easy adjustment.</p>
+			
+			<h4>Reflection</h4>
+			
+			<ul>
+				<li><strong>Reflection Color:</strong> this sets the highlight color within the reflection in the surface.  Shadows will be the opposite color (example: red highlights, green shadows).  Use a neutral gray for color-accurate reflections.  The luminosity of the color affects how reflective the surface is.</li>
+				<li><strong>Reflection Glossiness:</strong> how sharp reflections are.  <code>1</code> is perfectly sharp reflections, lower numbers get blurrier the closer they get to <code>0</code>.</li>
+				<li><strong>Fresnel:</strong> changes reflectiveness based on viewing angle.  This enables surfaces to be more reflective the further the camera gets from perpendicular to the surface.</li>
+				<li><strong>Reflection IOR:</strong> changes how the reflected image displays on the surface</li>
+				<li><strong>Metalness:</strong> sets how the surface behaves from a scale of <code>0</code> (non-conductive and non-metal) to <code>1</code> (conductive, metal).  Basically, this affects diffusion of reflections on surfaces.  Lower numbers will have smoothed, blurred reflections.</li>
+				<li><strong>Surface Control:</strong> changes how the glossiness properties apply to the surface (i.e. whether Glossy or Rough evaluates to <code>1</code>)</li>
+			</ul>
+			
+			<h4>Refraction</h4>
+			
+			<p>This affects only transparent materials.</p>
+			
+			<ul>
+				<li><strong>Refraction Color:</strong> changes what color light refracting through the surface is.  Set to black to disable.  If set to red, the material will look as if it only filters red light through.  White or neutral gray will allow for color-accurate refraction.  The luminosity of the color affects how refractive the surface is.</li>
+				<li><strong>IOR:</strong> Index of Refraction.  This affects how light bends when traveling through the surface.  A value of <code>1</code> means light will not bend and the surface will function like a transparent window.</li>
+				<li><strong>Refraction Glossiness:</strong> how sharp refractions are.  <code>1</code> is perfectly sharp refractions (transparent window glass), lower numbers get blurrier the closer they get to <code>0</code> (frosted glass).</li>
+				<li><strong>Thin-Walled:</strong> allows for single-surface refractive materials such as soap bubbles, curtains, or leaves.</li>
+				<li><strong>Fog Color:</strong> Thicker objects are often less transparent than thin objects; this allows for that &ldquo;fog&rdquo; as an object thins or thickens.</li>
+				<li><strong>Depth (cm):</strong> The depth at which fog begins to take effect.  Higher values mean more translucency, lower values mean less translucency.</li>
+				<li><strong>Translucency:</strong> sets how translucency works in the material.  <code>Volumetric</code> is for fully translucent materials like liquids and glass; <code>SSS</code> enables non-transparent material scattering for materials such as skin, wax, marble, and other mostly-opaque materials.</li>
+			</ul>
+			
+			<h4>Opacity</h4>
+			
+			<p>This sets the overall transparency of any entities with this material applied.  Note that this is different from transparency/translucency with materials such as glass.  One use case might be to place a semi-transparent object in the scene to suggest how an environment might be used.</p>
+			
+			<h4>Bump</h4>
+			
+			<p>A <strong>bump map</strong> allows you to apply depth to a surface texture, such as for wood.  To create a bump map for a texture, desaturate the surface texture, boost the contrast and brightness, and then save as a separate file to apply as the map via the <code>Bitmap</code> option.  This works best when a material&rsquo;s dark areas are in relief and bright areas protrude, such as with wood planking.  Adjust the strength with <code>Amount</code>.</p>
+			
+			<h4>Binding</h4>
+			
+			<p>Binds paramters to each other.  For example, changing the base V-Ray material color will change the application color in SketchUp.</p>
+			
+			<h3 id="materials-purge">Removing unused materials</h3>
+			
+			<p>Use <code>Window</code> &gt; <code>Model Info</code> &gt; <code>Statistics</code> &gt; <code>Purge Unused</code> (the button at the bottom) to remove any unused materials from your model to reduce processing load.</p>
+			
+			<h2 id="components">V-Ray components</h2>
+			
+			<h3 id="groundplane">The ground plane</h3>
+			
+			<p>If your model isn&rsquo;t placed on top of other geometry, you can insert an <code>infinite ground plane</code> from the V-Ray toolbar.  Move it so that it&rsquo;s aligned with the bottom of your model (or at the desired offset), then apply a color or material to it.  The color or material won&rsquo;t show in the SketchUp interface, but will be visible in the rendering buffer.  This is most useful when you have a standalone object and want a surface for it to reflect and cast shadows on.</p>
+			
+			<p>One excellent use of the infite plane is to generate grass or carpet using the <strong>Fur</strong> tool, or a natural flat surface like sand or dirt.  You may wish to increase the size of a ground plane&rsquo;s texture to help reduce visible tiling.</p>
+			
+			<h3 id="lighting">Lighting</h3>
+			
+			<p>Adding lights to the model using the various V-Ray tools helps to make your renders look more realistic and finished.</p>
+			
+			<p><strong>Note:</strong> any copies of an existing light will be treated as instances of the same light (just like SketchUp components), and all of them will be affected by changes in the Asset Editor.  For unique lights, create new light entities or right-click and select <code>Make unique</code>.</p>
+			
+			<h4>Ambient occlusion</h4>
+			
+			<p>This calculates how much each point in the scene is exposed to ambient lighting, and can create more realistic lighting easily.  Toggle this on or off in the <strong>Settings</strong> tab of the Asset Editor, in the right parameters pane.  It&rsquo;s only available in CPU render mode.  The difference is subtle but adds a lot.  Pair with a denoiser for best results.</p>
+			
+			<div class="row row-cols-1 row-cols-sm-2">
+				
+				<div class="col">
+					<figure>
+						<img src="../assets/pages/ambient-occlusion-off.webp" alt="">
+						<figcaption class="mt-2">Ambient Occusion off, denoiser off</figcaption>
+					</figure>
+				</div>
+				
+				<div class="col">
+					<figure>
+						<img src="../assets/pages/ambient-occlusion-intel.webp" alt="">
+						<figcaption class="mt-2">Ambient Occusion on with Intel denoiser</figcaption>
+					</figure>
+				</div>
+				
+			</div>
+			
+			<h4>Sunlight</h4>
+			
+			<p>By default, SketchUp&rsquo;s sunlight renders as crisp, direct, and bright.  To change this, go to the Lighting tab in the Asset Editor, select the <code>Sunlight</code> element, then expand the right pane.</p>
+			
+			<ul>
+				<li><strong>Color:</strong> controls the color of the light source.  Use warmer colors for a sunrise or sunset, or cooler colors for a more stormy look.</li>
+				<li><strong>Intensity:</strong> controls the brightness of the light source.  Turning this up too much will blow out the image and cause it to look over-exposed.</li>
+				<li><strong>Size Multiplier:</strong> controls the softness of the shadows.  <code>0</code> is crisp edges; higher numbers mean blurrier/softer shadow edges.</li>
+			</ul>
+			
+			<h4>Dome lights and HDRIs</h4>
+			
+			<p>Dome lights scatter light inward at the scene as if from a hemispherical dome over the scene.  Dome lights are ideal for applying HDRI (High Dynamic Range Image) textures.  You place the center of the dome in the model, then rotate it laterally to align the HDRI lighting with your renders&rsquo;s lighting needs (make sure to enable the <code>Use Transform</code> option).</p>
+			
+			<p><strong>Note:</strong> most HDRIs render a bit dark and require increasing the intensity to look natural.</p>
+			
+			<h4>Sphere lights</h4>
+			
+			<p>These scatter light in all directions outward from the light source.  Use sphere lights for lamp posts, light bulbs, or supplemental environmental lighting to illuminate features that are left a bit too dark by the model&rsquo;s lights.  Make sure to place the sphere lights so that they aren&rsquo;t half inside, half outside of the model or component, since that can cause unexpected results.</p>
+			
+			<p>Sphere lights will show in renders as large discs, unless set to <code>Invisible</code> and with <code>Affect Reflections</code> disabled (the <strong>Options</strong> tab of the parameters pane).</p>
+			
+			<h4>Rectangle light</h4>
+			
+			<p>Sphere lights might not cast enough light into a scene, so you can use rectangle lights to supplement them.  These cast light in a single direction, indicated by an arrow in the SketchUp component.</p>
+			
+			<h4>Fog (volumetric environment)</h4>
+			
+			<p>Fog can be used to create atmospheric perspective, and make background elements less obtrusive.  This also creates more depth in the image to add drama and visual interest.</p>
+			
+			<h3 id="camera">Camera</h3>
+			
+			<p>SketchUp&rsquo;s default field of view is 35mm, like a typical point-and-shoot camera.  The human eye, however, has a field of view of usually 40&ndash;60mm; 50mm is a safe bet.  Change this via <code>View</code> &gt; <code>Field of View</code>, then type in your desired measurement.</p>
+			
+			<p>For easy camera placement, use guides or lines to define the position and height of the camera.  Anywhere between 5'6" and 5'10" should give a natural-feeling height to the camera, but if you know your intended audience is shorter or taller on average, you might want to adjust the camera height accordingly.</p>
+			
+			<p>Use the Position Camera tool to place the camera for the scene.  Click on your reference point for camera placement, then drag in the direction you want the camera to face.</p>
+			
+			<p>Once you&rsquo;re happy with the camera placement and direction, save the scene through the <strong>Scenes</strong> palette.  This should also create a tab at the top for easy movement between scenes.</p>
+			
+			<p>You can also use scenes to create different lighting scenarios for the same camera placement.  Organize lighting elements by tags, then toggle tag visibility on and off for each scene as necessary.</p>
+			
+			<h2 id="rendering">Rendering</h2>
+			
+			<p>There are two types of renders that V-Ray can do:</p>
+			
+			<ul>
+				<li><strong>Interactive:</strong> a lower-quality option that updates in real-time to reflect changes made in SketchUp and the V-Ray Asset Editor.  Perfect for testing out different view angles and material properties.</li>
+				<li><strong>Final:</strong> a higher-quality option best used for final renders for exporting.  Does not update in realtime.</li>
+			</ul>
+			
+			<p>You&rsquo;ll need to balance the rendering time against the quality needed.  Higher quality renders will require longer to process.</p>
+	
+		</main>
+		
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/><path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/><title>Back to top</title></svg></button>
+		
+	</div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script async src="https://cse.google.com/cse.js?cx=406f7bbdef813e0ad"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="../bootstrap/js/popper.min.js"></script> 
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>

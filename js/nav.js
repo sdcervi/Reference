@@ -121,12 +121,12 @@ const navItems = {
 		title: "SketchUp",
 		id:		"sketchup",
 		links: {
-			features: {			title:	"Basic Features",						link:	"sketchup/features.html",
+			features: {			title:	"Basic Features",							link:	"sketchup/features.html",
 								copy:	"Basic features, functionality, tools, &amp; usage",									image:	"./assets/homepage/sketchup-features.webp"			},
-			lighting: {			title:	"Lighting &amp; Shadows",					link:	"sketchup/lighting.html",
-								copy:	"Setting and controlling lighting and shadows",									image:	"./assets/homepage/sketchup-lighting.webp"			},
-			visual: {			title:	"Visual features",							link:	"sketchup/visual.html",
-								copy:	"Display modes and viewing options",											image:	"./assets/homepage/sketchup-visual.webp"			}
+			display: {			title:	"Display &amp; Lighting",					link:	"sketchup/display.html",
+								copy:	"Display modes, lighting, and shadows",													image:	"./assets/homepage/sketchup-visual.webp"			},
+			vray: {				title:	"V-Ray Rendering",							link:	"sketchup/vray.html",
+								copy:	"Photorealistic renders with the V-Ray extension",										image:	"./assets/homepage/sketchup-vray.webp"			}
 		}
 	},
 	navResources: {
